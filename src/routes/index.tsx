@@ -23,7 +23,7 @@ function Index() {
   const totalWeeks = totalDays / 7;
   const wakingYears = totalHours / (16 * 365);
 
-  const shareText = `${formatNumber(totalDays, 1)} days of my life — spent ${activity.toLowerCase()}.`;
+  const shareText = `${formatNumber(totalDays, 1)} days of my life spent ${activity.toLowerCase()}.`;
 
   return (
     <>
@@ -40,8 +40,7 @@ function Index() {
           have you spent?
         </h1>
         <p className="mx-auto mt-10 max-w-xl text-sm leading-relaxed text-muted-foreground">
-          A quiet inventory of the minutes we surrender, and the years they
-          quietly become. Measure a habit. Read its true weight.
+          Pick something you do every day. Put in the hours. See where your years actually go.
         </p>
       </section>
 
@@ -121,9 +120,8 @@ function Index() {
           On the arithmetic of attention.
         </h2>
         <p className="mx-auto max-w-lg font-serif text-[17px] leading-[1.85] text-foreground/75">
-          We rarely keep accounts of the hours. They arrive in small denominations —
-          a glance at a notification, a scroll before sleep — and we spend them
-          as if they were free. They are not.
+          Nobody tracks their hours the way they track their money.
+          The math is simple once you do it. The number is usually surprising.
         </p>
         <Link
           to="/philosophy"
@@ -185,7 +183,7 @@ function ShareCard({ activity, text }: { activity: string; text: string }) {
   return (
     <aside className="mt-16 border border-border p-8">
       <div className="mb-6 flex items-center justify-between">
-        <span className="text-[10px] uppercase tracking-[0.32em] text-muted-foreground">Share — a postcard</span>
+        <span className="text-[10px] uppercase tracking-[0.32em] text-muted-foreground">Share</span>
         <span className="font-mono text-[10px] text-muted-foreground">№ 001</span>
       </div>
       <p className="font-serif text-2xl italic leading-snug tracking-tight text-foreground">"{text}"</p>
