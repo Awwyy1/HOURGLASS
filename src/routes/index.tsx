@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
+import { ShareButton } from "../components/ShareCard";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -22,8 +23,6 @@ function Index() {
   const totalDays = totalHours / 24;
   const totalWeeks = totalDays / 7;
   const wakingYears = totalHours / (16 * 365);
-
-  const shareText = `${formatNumber(totalDays, 1)} days of my life spent ${activity.toLowerCase()}.`;
 
   return (
     <>
@@ -106,7 +105,13 @@ function Index() {
               <Stat label="Weeks" value={formatNumber(totalWeeks, 1)} />
               <Stat label="Waking years" value={formatNumber(wakingYears, 2)} />
             </dl>
-            <ShareCard activity={activity} text={shareText} />
+            <ShareButton
+                activity={activity}
+                totalDays={totalDays}
+                totalHours={totalHours}
+                totalWeeks={totalWeeks}
+                wakingYears={wakingYears}
+              />
           </div>
         </div>
       </section>
@@ -179,25 +184,3 @@ function Stat({ label, value }: { label: string; value: string }) {
   );
 }
 
-function ShareCard({ activity, text }: { activity: string; text: string }) {
-  return (
-    <aside className="mt-16 border border-border p-8">
-      <div className="mb-6 flex items-center justify-between">
-        <span className="text-[10px] uppercase tracking-[0.32em] text-muted-foreground">Share</span>
-        <span className="font-mono text-[10px] text-muted-foreground">№ 001</span>
-      </div>
-      <p className="font-serif text-2xl italic leading-snug tracking-tight text-foreground">"{text}"</p>
-      <div className="mt-8 flex items-center justify-between border-t border-border pt-5">
-        <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-muted-foreground">
-          {activity || "—"}
-        </span>
-        <button
-          onClick={() => navigator.clipboard?.writeText(text)}
-          className="text-[10px] uppercase tracking-[0.32em] text-foreground transition hover:text-muted-foreground"
-        >
-          Copy →
-        </button>
-      </div>
-    </aside>
-  );
-}
