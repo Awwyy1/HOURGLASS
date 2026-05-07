@@ -13,8 +13,7 @@ type Article = {
 };
 
 const articles: Article[] = [
-  // Articles will be added here as they are written.
-  // Example structure:
+  // Add articles here as they are written.
   // {
   //   slug: "how-much-time-do-you-spend-on-instagram",
   //   title: "How much of your life do you spend on Instagram?",
@@ -43,8 +42,7 @@ function Journal() {
           The long calculation.
         </h1>
         <p className="mt-6 max-w-lg font-serif text-[17px] leading-relaxed text-muted-foreground">
-          Articles on time, habit, and what the numbers actually mean.
-          Written for the long view, not the quick fix.
+          Articles about time and habit. What the numbers mean in practice.
         </p>
       </header>
 
@@ -54,11 +52,11 @@ function Journal() {
             Issue I &nbsp;·&nbsp; In preparation
           </p>
           <p className="font-serif text-[17px] leading-[1.85] text-foreground/75 max-w-md">
-            The first articles are being written. Each one takes a single
-            habit, runs the numbers, and reports back honestly.
+            The first articles are being written. Each one looks at a single
+            habit and runs the numbers.
           </p>
-          <p className="mt-6 font-serif text-[17px] leading-[1.85] text-muted-foreground max-w-md">
-            Check back soon — or start with the calculator in the meantime.
+          <p className="mt-4 font-serif text-[17px] leading-[1.85] text-muted-foreground max-w-md">
+            Check back soon.
           </p>
           <Link
             to="/"

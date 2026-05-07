@@ -18,35 +18,25 @@ function About() {
 
       <div className="font-serif text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>
-          HOURGLASS started as a personal calculation. Not a complicated one —
-          just trying to figure out, roughly, how much of the last few years
-          had gone to things I hadn't consciously chosen.
+          HOURGLASS started as a personal calculation. Trying to figure out
+          how much of the last few years had gone to things I had not
+          consciously chosen.
         </p>
 
         <p>
-          The math wasn't hard. Multiply daily hours by 365, then by years.
+          The math was not hard. Multiply daily hours by 365, then by years.
           The result was harder to look at than expected.
         </p>
 
         <p>
-          That gap — between how a habit feels in the moment and what it
-          actually accumulates into — is what this tool is for. One page,
-          one calculation, one number. No advice attached.
+          That gap between how a habit feels in the moment and what it
+          actually adds up to is what this tool is for. One page, one
+          calculation, one number. No advice attached.
         </p>
 
         <p>
           The design is intentional. No dashboard, no streaks, no score.
-          An editorial aesthetic, because the question deserves to be taken
-          seriously — not gamified, not optimised, not turned into a product
-          that tries to change your behaviour.
-        </p>
-
-        <p>
-          It shows you a number. That's the whole thing.
-        </p>
-
-        <p>
-          What you do with it is yours to decide.
+          Just the number. What you do with it is yours to decide.
         </p>
       </div>
 
