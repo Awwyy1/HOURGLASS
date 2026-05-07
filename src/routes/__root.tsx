@@ -72,14 +72,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "HOURGLASS — How many hours of your life?" },
+      { name: "description", content: "An editorial calculator that turns the small hours of your day into the long weeks of your life." },
+      { name: "author", content: "HOURGLASS" },
+      { property: "og:title", content: "HOURGLASS" },
+      { property: "og:description", content: "An editorial calculator that turns the small hours of your day into the long weeks of your life." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@HOURGLASS" },
     ],
     links: [
       {
