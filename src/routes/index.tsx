@@ -5,7 +5,7 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Liferate — How many hours of your life?" },
+      { title: "HOURGLASS — How many hours of your life?" },
       {
         name: "description",
         content:
@@ -50,7 +50,7 @@ function Index() {
       {/* Header */}
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-8 text-[11px] uppercase tracking-[0.28em] text-muted-foreground">
         <a href="/" className="font-serif text-sm normal-case tracking-normal text-foreground italic">
-          Liferate<span className="text-muted-foreground">.</span>
+          HOURGLASS<span className="text-muted-foreground">.</span>
         </a>
         <nav className="hidden items-center gap-10 md:flex">
           <a href="#philosophy" className="transition hover:text-foreground">Philosophy</a>
@@ -124,7 +124,7 @@ function Index() {
                   step={0.1}
                   value={hoursPerDay}
                   onChange={(e) => setHoursPerDay(parseFloat(e.target.value))}
-                  className="liferate-range w-full"
+                  className="hourglass-range w-full"
                 />
               </Field>
 
@@ -136,7 +136,7 @@ function Index() {
                   step={1}
                   value={years}
                   onChange={(e) => setYears(parseInt(e.target.value))}
-                  className="liferate-range w-full"
+                  className="hourglass-range w-full"
                 />
               </Field>
             </div>
@@ -189,8 +189,8 @@ function Index() {
           quietly, by the years.
         </p>
         <p className="mb-6">
-          <span className="font-serif text-3xl italic leading-none mr-2 float-left mt-1">L</span>
-          iferate is not a productivity tool. It is a mirror. It takes a single
+          <span className="font-serif text-3xl italic leading-none mr-2 float-left mt-1">H</span>
+          OURGLASS is not a productivity tool. It is a mirror. It takes a single
           unremarkable habit, multiplies it by the patience of time, and returns
           the figure that was always there. The number is rarely flattering. It
           is, however, accurate.
@@ -207,7 +207,7 @@ function Index() {
       </section>
 
       <footer className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 border-t border-border px-6 py-10 text-[10px] uppercase tracking-[0.32em] text-muted-foreground md:flex-row">
-        <span>© {new Date().getFullYear()} Liferate</span>
+        <span>© {new Date().getFullYear()} HOURGLASS</span>
         <span className="font-serif text-xs italic normal-case tracking-normal">
           Set in Playfair Display & JetBrains Mono.
         </span>
@@ -215,14 +215,14 @@ function Index() {
       </footer>
 
       <style>{`
-        .liferate-range {
+        .hourglass-range {
           -webkit-appearance: none;
           appearance: none;
           height: 1px;
           background: var(--color-border);
           outline: none;
         }
-        .liferate-range::-webkit-slider-thumb {
+        .hourglass-range::-webkit-slider-thumb {
           -webkit-appearance: none;
           appearance: none;
           width: 10px; height: 10px;
@@ -231,8 +231,8 @@ function Index() {
           cursor: pointer;
           transition: transform 200ms ease, background 200ms ease;
         }
-        .liferate-range::-webkit-slider-thumb:hover { background: var(--highlight); transform: scale(1.4); }
-        .liferate-range::-moz-range-thumb {
+        .hourglass-range::-webkit-slider-thumb:hover { background: var(--highlight); transform: scale(1.4); }
+        .hourglass-range::-moz-range-thumb {
           width: 10px; height: 10px; border: 0;
           border-radius: 9999px; background: var(--color-foreground); cursor: pointer;
         }
