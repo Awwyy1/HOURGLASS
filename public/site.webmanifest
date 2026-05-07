@@ -1,0 +1,12 @@
+{
+  "name": "HOURGLASS",
+  "short_name": "HOURGLASS",
+  "description": "An editorial calculator that turns the small hours of your day into the long weeks of your life.",
+  "icons": [
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" }
+  ],
+  "theme_color": "#0a0a0a",
+  "background_color": "#f5f0eb",
+  "display": "browser",
+  "start_url": "/"
+}
