@@ -13,14 +13,14 @@ type Article = {
 };
 
 const articles: Article[] = [
-  // Add articles here as they are written.
-  // {
-  //   slug: "how-much-time-do-you-spend-on-instagram",
-  //   title: "How much of your life do you spend on Instagram?",
-  //   date: "2026-05-01",
-  //   readingTime: "4 min",
-  //   excerpt: "The average user opens the app 30 times a day. Over a year, that adds up to something worth knowing.",
-  // },
+  {
+    slug: "how-much-of-your-life-do-you-spend-on-instagram",
+    title: "How much of your life do you spend on Instagram?",
+    date: "2026-05-07",
+    readingTime: "6 min",
+    excerpt:
+      "The average person checks Instagram 20 to 30 times a day. Each session feels short. Over ten years, the total approaches 75 days. Over a lifetime of use, it gets closer to six months.",
+  },
 ];
 
 function formatDate(iso: string) {
