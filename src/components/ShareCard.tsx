@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 
 // ── Helpers ────────────────────────────────────────────────────────────────
 
@@ -229,20 +229,18 @@ interface Props {
 export function ShareButton({ activity, totalDays, totalHours, totalWeeks, wakingYears }: Props) {
   const [open, setOpen] = useState(false);
   const [imageUrl, setImageUrl] = useState<string | null>(null);
-  const [blob, setBlob] = useState<Blob | null>(null);
   const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
+  const [hint, setHint] = useState(false);
   const prevUrl = useRef<string | null>(null);
 
   const generate = useCallback(async () => {
     if (prevUrl.current) URL.revokeObjectURL(prevUrl.current);
     setStatus("loading");
     setImageUrl(null);
-    setBlob(null);
     try {
       const b = await generateCardBlob({ activity, totalDays, totalHours, totalWeeks, wakingYears });
       const url = URL.createObjectURL(b);
       prevUrl.current = url;
-      setBlob(b);
       setImageUrl(url);
       setStatus("done");
     } catch {
@@ -252,6 +250,7 @@ export function ShareButton({ activity, totalDays, totalHours, totalWeeks, wakin
 
   const handleOpen = () => {
     setOpen(true);
+    setHint(false);
     generate();
   };
 
@@ -265,29 +264,13 @@ export function ShareButton({ activity, totalDays, totalHours, totalWeeks, wakin
     a.click();
   };
 
-  const shareText = `${fmt(totalDays, 1)} days of my life spent ${(activity || "this").toLowerCase()}.`;
+  const showScreenshotHint = () => setHint(true);
 
-  const shareToX = () =>
-    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`, "_blank");
-
-  const shareToWhatsApp = () =>
-    window.open(`https://wa.me/?text=${encodeURIComponent(shareText)}`, "_blank");
-
-  const canNativeShare = typeof navigator !== "undefined" && !!navigator.share;
-
-  const nativeShare = async () => {
-    if (!blob) return;
-    const file = new File([blob], "hourglass.png", { type: "image/png" });
-    try {
-      if (navigator.canShare?.({ files: [file] })) {
-        await navigator.share({ files: [file], title: "HOURGLASS", text: shareText });
-      } else {
-        await navigator.share({ title: "HOURGLASS", text: shareText });
-      }
-    } catch {
-      // user cancelled
-    }
-  };
+  useEffect(() => {
+    if (!hint) return;
+    const t = setTimeout(() => setHint(false), 3000);
+    return () => clearTimeout(t);
+  }, [hint]);
 
   return (
     <>
@@ -355,35 +338,14 @@ export function ShareButton({ activity, totalDays, totalHours, totalWeeks, wakin
                 Download image
               </button>
 
-              <div className="grid grid-cols-2 gap-3">
-                <button
-                  onClick={shareToX}
-                  className="border border-border py-3 text-[10px] uppercase tracking-[0.28em] text-muted-foreground transition hover:border-foreground hover:text-foreground"
-                >
-                  Share on X
-                </button>
-                <button
-                  onClick={shareToWhatsApp}
-                  className="border border-border py-3 text-[10px] uppercase tracking-[0.28em] text-muted-foreground transition hover:border-foreground hover:text-foreground"
-                >
-                  WhatsApp
-                </button>
-              </div>
-
-              {canNativeShare && (
-                <button
-                  onClick={nativeShare}
-                  disabled={status !== "done"}
-                  className="w-full border border-border py-3 text-[10px] uppercase tracking-[0.28em] text-muted-foreground transition hover:border-foreground hover:text-foreground disabled:opacity-25 disabled:cursor-not-allowed"
-                >
-                  Share via...
-                </button>
-              )}
+              <button
+                onClick={showScreenshotHint}
+                disabled={status !== "done"}
+                className="w-full border border-border py-3 text-[10px] uppercase tracking-[0.28em] text-muted-foreground transition hover:border-foreground hover:text-foreground disabled:opacity-25 disabled:cursor-not-allowed"
+              >
+                {hint ? "Scroll up and screenshot the card" : "Take a screenshot"}
+              </button>
             </div>
-
-            <p className="mt-5 text-[9px] uppercase tracking-[0.24em] text-muted-foreground/50 leading-relaxed">
-              X and WhatsApp share text. Download the image to post on Instagram.
-            </p>
           </div>
         </div>
       )}
