@@ -3,16 +3,6 @@ import { useEffect, useMemo, useState } from "react";
 
 export const Route = createFileRoute("/")({
   component: Index,
-  head: () => ({
-    meta: [
-      { title: "HOURGLASS — How many hours of your life?" },
-      {
-        name: "description",
-        content:
-          "An editorial calculator that turns the small hours of your day into the long weeks of your life.",
-      },
-    ],
-  }),
 });
 
 function useTheme() {
@@ -282,7 +272,7 @@ function ShareCard({ activity, text }: { activity: string; text: string }) {
         <span className="font-mono text-[10px] text-muted-foreground">№ 001</span>
       </div>
       <p className="font-serif text-2xl italic leading-snug tracking-tight text-foreground">
-        “{text}”
+        "{text}"
       </p>
       <div className="mt-8 flex items-center justify-between border-t border-border pt-5">
         <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-muted-foreground">
