@@ -14,6 +14,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-time-do-you-spend-shopping-online",
+    title: "How much time do you spend shopping online?",
+    date: "2026-05-08",
+    readingTime: "3 min",
+    excerpt:
+      "The average online shopper spends five hours a week browsing and buying. Over a lifetime of peak consumer activity that adds up to a year and a half of waking time. Most sessions do not end in a purchase.",
+  },
+  {
     slug: "how-much-of-your-life-do-you-spend-reading-news",
     title: "How much of your life do you spend reading news?",
     date: "2026-05-08",
