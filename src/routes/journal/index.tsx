@@ -14,6 +14,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-of-your-life-do-you-spend-cooking",
+    title: "How much of your life do you spend cooking?",
+    date: "2026-05-08",
+    readingTime: "3 min",
+    excerpt:
+      "The average person spends about 40 minutes a day cooking. Over a lifetime that is two and a half waking years in the kitchen. It is one of the few large time categories that actually produces something.",
+  },
+  {
     slug: "how-much-time-do-you-spend-shopping-online",
     title: "How much time do you spend shopping online?",
     date: "2026-05-08",
