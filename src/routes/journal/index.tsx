@@ -14,6 +14,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-time-does-the-average-person-spend-on-email",
+    title: "How much time does the average person spend on email?",
+    date: "2026-05-08",
+    readingTime: "6 min",
+    excerpt:
+      "McKinsey put it at 28 percent of the workweek. Adobe found people self-reporting three hours a day. Either way, across a full career the total approaches five waking years spent in an inbox.",
+  },
+  {
     slug: "how-much-of-your-life-do-you-spend-working",
     title: "How much of your life do you spend working?",
     date: "2026-05-08",
