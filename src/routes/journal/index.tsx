@@ -14,10 +14,18 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-of-your-life-do-you-spend-on-tiktok",
+    title: "How much of your life do you spend on TikTok?",
+    date: "2026-05-08",
+    readingTime: "3 min",
+    excerpt:
+      "The average US user spends 54 minutes a day on TikTok. Over a lifetime of use that comes to roughly two waking years. The app is the first major platform built around an algorithm rather than people you chose to follow.",
+  },
+  {
     slug: "how-much-time-do-you-spend-on-your-phone",
     title: "How much time do you spend on your phone per day?",
     date: "2026-05-08",
-    readingTime: "7 min",
+    readingTime: "3 min",
     excerpt:
       "The average is close to four hours a day. Most people guess around two. Across a lifetime of smartphone use, the total comes to roughly 15 waking years spent looking at a screen.",
   },
@@ -25,7 +33,7 @@ const articles: Article[] = [
     slug: "how-much-time-does-the-average-person-spend-on-email",
     title: "How much time does the average person spend on email?",
     date: "2026-05-08",
-    readingTime: "6 min",
+    readingTime: "3 min",
     excerpt:
       "McKinsey put it at 28 percent of the workweek. Adobe found people self-reporting three hours a day. Either way, across a full career the total approaches five waking years spent in an inbox.",
   },
@@ -33,7 +41,7 @@ const articles: Article[] = [
     slug: "how-much-of-your-life-do-you-spend-working",
     title: "How much of your life do you spend working?",
     date: "2026-05-08",
-    readingTime: "7 min",
+    readingTime: "3 min",
     excerpt:
       "The standard answer is 40 hours a week. Over a full career that becomes 80,000 hours. In waking years, it is somewhere between 17 and 20 years of your life spent on work and everything that surrounds it.",
   },
@@ -41,7 +49,7 @@ const articles: Article[] = [
     slug: "how-much-of-your-life-do-you-spend-on-instagram",
     title: "How much of your life do you spend on Instagram?",
     date: "2026-05-07",
-    readingTime: "6 min",
+    readingTime: "3 min",
     excerpt:
       "The average person checks Instagram 20 to 30 times a day. Each session feels short. Over ten years, the total approaches 75 days. Over a lifetime of use, it gets closer to six months.",
   },

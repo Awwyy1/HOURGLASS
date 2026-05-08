@@ -22,7 +22,7 @@ function Article() {
         <div className="mb-6 flex items-center gap-4 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
           <time dateTime="2026-05-08">May 8, 2026</time>
           <span>·</span>
-          <span>7 min read</span>
+          <span>3 min read</span>
         </div>
         <h1 className="font-serif text-4xl italic tracking-tight text-foreground md:text-5xl leading-tight">
           How much of your life do you spend working?
