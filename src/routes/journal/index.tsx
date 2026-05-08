@@ -14,6 +14,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-time-do-you-spend-on-your-phone",
+    title: "How much time do you spend on your phone per day?",
+    date: "2026-05-08",
+    readingTime: "7 min",
+    excerpt:
+      "The average is close to four hours a day. Most people guess around two. Across a lifetime of smartphone use, the total comes to roughly 15 waking years spent looking at a screen.",
+  },
+  {
     slug: "how-much-time-does-the-average-person-spend-on-email",
     title: "How much time does the average person spend on email?",
     date: "2026-05-08",
