@@ -41,7 +41,7 @@ function formatDate(iso: string) {
 
 function Journal() {
   return (
-    <div className="mx-auto max-w-3xl px-6 py-24">
+    <div className="mx-auto max-w-2xl px-6 py-24">
       <header className="mb-20">
         <p className="mb-6 font-sans text-[10px] uppercase tracking-[0.36em] text-muted-foreground">
           Journal

@@ -32,7 +32,7 @@ function Article() {
         </p>
       </header>
 
-      <div className="font-serif text-[17px] leading-[1.85] text-foreground/85 space-y-6">
+      <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>
           The average person checks Instagram somewhere between 20 and 30 times a day. You probably
           already know this about yourself without needing a study to confirm it. There is the check

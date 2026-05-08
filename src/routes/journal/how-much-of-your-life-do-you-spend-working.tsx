@@ -33,7 +33,7 @@ function Article() {
         </p>
       </header>
 
-      <div className="font-serif text-[17px] leading-[1.85] text-foreground/85 space-y-6">
+      <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>
           If you started a full-time job at 22 and plan to retire somewhere around 65, you have
           roughly 43 years of working life in front of you from that point. The standard figure

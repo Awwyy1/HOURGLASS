@@ -2,38 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://hourglass.app/</loc>
+    <loc>https://www.justhourglass.me/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://hourglass.app/philosophy</loc>
+    <loc>https://www.justhourglass.me/philosophy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://hourglass.app/about</loc>
+    <loc>https://www.justhourglass.me/about</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://hourglass.app/journal</loc>
+    <loc>https://www.justhourglass.me/journal</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://hourglass.app/journal/how-much-of-your-life-do-you-spend-working</loc>
+    <loc>https://www.justhourglass.me/journal/how-much-of-your-life-do-you-spend-working</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://hourglass.app/journal/how-much-of-your-life-do-you-spend-on-instagram</loc>
+    <loc>https://www.justhourglass.me/journal/how-much-of-your-life-do-you-spend-on-instagram</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>

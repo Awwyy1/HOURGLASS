@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hourglass.app/sitemap.xml
+Sitemap: https://www.justhourglass.me/sitemap.xml
