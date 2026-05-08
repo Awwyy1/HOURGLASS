@@ -14,6 +14,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-of-your-life-do-you-spend-sleeping",
+    title: "How much of your life do you spend sleeping?",
+    date: "2026-05-08",
+    readingTime: "3 min",
+    excerpt:
+      "About a third. Over a 79-year life that comes to 25 years spent unconscious. The number bothers most people, and the reason it bothers them says something worth examining.",
+  },
+  {
     slug: "how-much-of-your-life-do-you-spend-cooking",
     title: "How much of your life do you spend cooking?",
     date: "2026-05-08",
