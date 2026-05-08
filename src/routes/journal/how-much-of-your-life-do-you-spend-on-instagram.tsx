@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { Breadcrumbs } from "../../components/Breadcrumbs";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-on-instagram",
@@ -9,6 +10,14 @@ export const Route = createFileRoute(
 function Article() {
   return (
     <article className="mx-auto max-w-2xl px-6 py-24">
+      <Breadcrumbs
+        crumbs={[
+          { label: "Hourglass", to: "/" },
+          { label: "Journal", to: "/journal" },
+          { label: "How much of your life do you spend on Instagram?" },
+        ]}
+      />
+
       <header className="mb-16">
         <div className="mb-6 flex items-center gap-4 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
           <time dateTime="2026-05-07">May 7, 2026</time>
