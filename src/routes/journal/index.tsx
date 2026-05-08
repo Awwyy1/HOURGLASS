@@ -14,6 +14,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-time-do-you-spend-on-youtube",
+    title: "How much time do you spend on YouTube?",
+    date: "2026-05-08",
+    readingTime: "3 min",
+    excerpt:
+      "Regular users spend around 45 minutes a day on YouTube. Over 40 years that is two waking years. The recommendation algorithm drives 70 percent of total watch time, and it is optimised to extend sessions past the point where you would have stopped.",
+  },
+  {
     slug: "how-much-of-your-life-do-you-spend-sleeping",
     title: "How much of your life do you spend sleeping?",
     date: "2026-05-08",
