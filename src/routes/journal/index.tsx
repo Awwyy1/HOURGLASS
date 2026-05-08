@@ -14,6 +14,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-of-your-life-do-you-spend-reading-news",
+    title: "How much of your life do you spend reading news?",
+    date: "2026-05-08",
+    readingTime: "3 min",
+    excerpt:
+      "The average person spends an hour a day with the news. Over 40 years that is two and a half waking years. Studies find people remember about 20 percent of what they read. The math raises a question about what all that time is actually producing.",
+  },
+  {
     slug: "how-much-time-does-the-average-person-spend-watching-netflix",
     title: "How much time does the average person spend watching Netflix?",
     date: "2026-05-08",
