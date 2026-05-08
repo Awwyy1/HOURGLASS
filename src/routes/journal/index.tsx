@@ -14,6 +14,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-time-does-the-average-person-spend-watching-netflix",
+    title: "How much time does the average person spend watching Netflix?",
+    date: "2026-05-08",
+    readingTime: "3 min",
+    excerpt:
+      "Netflix subscribers watch an average of two hours a day. That is 45 waking days per year. Over a lifetime it becomes more than seven years of conscious time spent on a single streaming platform.",
+  },
+  {
     slug: "how-much-of-your-life-do-you-spend-on-tiktok",
     title: "How much of your life do you spend on TikTok?",
     date: "2026-05-08",
