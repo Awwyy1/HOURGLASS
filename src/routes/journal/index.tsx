@@ -14,6 +14,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-of-your-life-do-you-spend-working",
+    title: "How much of your life do you spend working?",
+    date: "2026-05-08",
+    readingTime: "7 min",
+    excerpt:
+      "The standard answer is 40 hours a week. Over a full career that becomes 80,000 hours. In waking years, it is somewhere between 17 and 20 years of your life spent on work and everything that surrounds it.",
+  },
+  {
     slug: "how-much-of-your-life-do-you-spend-on-instagram",
     title: "How much of your life do you spend on Instagram?",
     date: "2026-05-07",
