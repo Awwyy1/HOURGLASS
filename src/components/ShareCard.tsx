@@ -197,7 +197,7 @@ async function generateCardBlob(data: CardData): Promise<Blob> {
   ctx.font = '300 24px "Inter", sans-serif';
   ctx.fillStyle = MUTED;
   ctx.textAlign = "left";
-  ctx.fillText("hourglass.app", PAD, 1238);
+  ctx.fillText("justhourglass.me", PAD, 1238);
   ctx.restore();
 
   ctx.save();
