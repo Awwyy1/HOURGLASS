@@ -20,8 +20,27 @@
   </url>
 
   <url>
+    <loc>https://www.justhourglass.me/privacy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://www.justhourglass.me/terms</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
     <loc>https://www.justhourglass.me/journal</loc>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.justhourglass.me/journal/how-much-time-do-you-spend-on-youtube</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
 
