@@ -109,6 +109,14 @@ const articles: Article[] = [
     excerpt:
       "The US Census puts the average one-way commute at 27.6 minutes. Round trip, five days a week, 48 weeks a year: that is 220 hours annually. Over a 40-year career, the total reaches one and a half waking years spent in transit.",
   },
+  {
+    slug: "how-much-of-your-life-do-you-spend-in-meetings",
+    title: "How much of your life do you spend in meetings?",
+    date: "2026-05-14",
+    readingTime: "3 min",
+    excerpt:
+      "Microsoft's Work Trend Index put it at 57 percent of the working week spent in meetings and communication. At three hours per working day over a 40-year career, the total comes to just under two waking years spent in conference rooms and video calls.",
+  },
 ];
 
 function formatDate(iso: string) {
