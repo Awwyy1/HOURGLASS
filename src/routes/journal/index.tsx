@@ -117,6 +117,14 @@ const articles: Article[] = [
     excerpt:
       "Microsoft's Work Trend Index put it at 57 percent of the working week spent in meetings and communication. At three hours per working day over a 40-year career, the total comes to just under two waking years spent in conference rooms and video calls.",
   },
+  {
+    slug: "how-much-time-do-you-spend-using-ai",
+    title: "How much time do you spend using AI?",
+    date: "2026-05-14",
+    readingTime: "3 min",
+    excerpt:
+      "OpenAI reported 200 million weekly active users in 2024, a figure that doubled in under a year. Regular users spend between 30 and 90 minutes a day across AI tools. The technology was introduced as a time-saving tool. For many it has become a place where time goes.",
+  },
 ];
 
 function formatDate(iso: string) {
