@@ -20,7 +20,7 @@ function Article() {
 
       <header className="mb-16">
         <div className="mb-6 flex items-center gap-4 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
-          <time dateTime="2026-05-07">May 7, 2026</time>
+          <time dateTime="2026-03-06">March 6, 2026</time>
           <span>·</span>
           <span>3 min read</span>
         </div>
