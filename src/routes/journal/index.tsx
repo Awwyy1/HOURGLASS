@@ -101,6 +101,14 @@ const articles: Article[] = [
     excerpt:
       "The average person checks Instagram 20 to 30 times a day. Each session feels short. Over ten years, the total approaches 75 days. Over a lifetime of use, it gets closer to six months.",
   },
+  {
+    slug: "how-much-of-your-life-do-you-spend-commuting",
+    title: "How much of your life do you spend commuting?",
+    date: "2026-05-14",
+    readingTime: "3 min",
+    excerpt:
+      "The US Census puts the average one-way commute at 27.6 minutes. Round trip, five days a week, 48 weeks a year: that is 220 hours annually. Over a 40-year career, the total reaches one and a half waking years spent in transit.",
+  },
 ];
 
 function formatDate(iso: string) {
