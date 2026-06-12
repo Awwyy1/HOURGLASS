@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
+import { ArticleSchema } from "../../components/ArticleSchema";
+import { FAQSection } from "../../components/FAQSection";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-sleeping",
@@ -14,6 +16,12 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend sleeping?"
         description="About a third of your life — 25 years out of 79 spent unconscious. The number is fixed. What you do with the other two-thirds is not."
+      />
+      <ArticleSchema
+        title="How much of your life do you spend sleeping?"
+        description="About a third of your life — 25 years out of 79 spent unconscious. The number is fixed. What you do with the other two-thirds is not."
+        datePublished="2026-03-20"
+        slug="how-much-of-your-life-do-you-spend-sleeping"
       />
       <Breadcrumbs
         crumbs={[
@@ -118,6 +126,13 @@ function Article() {
           Twenty-five years asleep is not the problem. What matters is what happens in the 54.
         </p>
       </div>
+
+      <FAQSection
+        faqs={[
+          { q: "Is sleeping 8 hours a night actually necessary?", a: "For most adults, 7 to 9 hours is where functioning is best — 8 is the median. There is genuine genetic variation: some people run well on 6 hours and others need 9. The problem is that people who think they are fine on 6 hours have usually adapted to feeling somewhat impaired without noticing it anymore. The test is whether you fall asleep within five minutes of lying down in a quiet room during the day. If you do, you are sleep-deprived." },
+          { q: "What percentage of your life is spent sleeping?", a: "About 33 percent if you sleep 8 hours a night. Over a 79-year lifespan that is roughly 26 years spent unconscious. It is the single largest category of how humans spend time — larger than work, larger than any recreational activity. The reason most people find this surprising is that they have never added it up before." }
+        ]}
+      />
 
       <div className="mt-14 border-t border-border pt-10">
         <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">

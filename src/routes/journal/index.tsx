@@ -14,6 +14,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-time-do-you-spend-on-linkedin",
+    title: "How much time do you spend on LinkedIn?",
+    date: "2026-05-27",
+    readingTime: "3 min",
+    excerpt:
+      "LinkedIn has over a billion members but most use it in short bursts — a few minutes a week when employed, hours a day when job hunting. The split between those two groups explains why the averages are so misleading.",
+  },
+  {
     slug: "how-much-time-do-you-spend-on-dating-apps",
     title: "How much time do you spend on dating apps?",
     date: "2026-05-20",

@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
+import { ArticleSchema } from "../../components/ArticleSchema";
+import { FAQSection } from "../../components/FAQSection";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-using-ai",
@@ -14,6 +16,12 @@ function Article() {
       <PageSEO
         title="How much time do you spend using AI?"
         description="OpenAI reported 200 million weekly users in 2024, a figure that doubled in under a year. Regular users spend 30 to 90 minutes a day across AI tools — and the number keeps growing."
+      />
+      <ArticleSchema
+        title="How much time do you spend using AI?"
+        description="OpenAI reported 200 million weekly users in 2024, a figure that doubled in under a year. Regular users spend 30 to 90 minutes a day across AI tools — and the number keeps growing."
+        datePublished="2026-05-14"
+        slug="how-much-time-do-you-spend-using-ai"
       />
       <Breadcrumbs
         crumbs={[
@@ -116,6 +124,13 @@ function Article() {
           habits tracked on this site, this one is still at the beginning of its curve.
         </p>
       </div>
+
+      <FAQSection
+        faqs={[
+          { q: "How long does the average ChatGPT session last?", a: "OpenAI does not publish session length data. Independent app analytics suggest average sessions in the 10 to 20 minute range for typical users, with significant variance. Power users — developers, writers, researchers using it for multi-step tasks — often run much longer. The average is pulled down by people who ask a single question and close the tab." },
+          { q: "Is using AI tools a productive use of time?", a: "That depends entirely on what you are using it for. For tasks where it produces accurate output — code review, document summarisation, finding starting points for research — it saves more time than it costs. For tasks where it produces confident-sounding but wrong output, it creates more work through checking and correction. Most people are still learning which category their tasks fall into, and the proportion that benefits from AI tools shifts as the models improve." }
+        ]}
+      />
 
       <div className="mt-14 border-t border-border pt-10">
         <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">

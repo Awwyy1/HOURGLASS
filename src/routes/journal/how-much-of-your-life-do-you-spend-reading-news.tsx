@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
+import { ArticleSchema } from "../../components/ArticleSchema";
+import { FAQSection } from "../../components/FAQSection";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-reading-news",
@@ -14,6 +16,12 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend reading news?"
         description="The average person spends an hour a day with the news. Over 40 years that is two and a half waking years. Studies find people remember about 20 percent of what they read."
+      />
+      <ArticleSchema
+        title="How much of your life do you spend reading news?"
+        description="The average person spends an hour a day with the news. Over 40 years that is two and a half waking years. Studies find people remember about 20 percent of what they read."
+        datePublished="2026-05-08"
+        slug="how-much-of-your-life-do-you-spend-reading-news"
       />
       <Breadcrumbs
         crumbs={[
@@ -110,6 +118,13 @@ function Article() {
           different thing entirely.
         </p>
       </div>
+
+      <FAQSection
+        faqs={[
+          { q: "How much time should you spend reading the news each day?", a: "There is no agreed answer, but the research suggests diminishing returns start earlier than most people expect. Above around 30 minutes of news per day, additional consumption does not consistently improve understanding of events and often increases anxiety. Two long sessions do not seem to produce twice the understanding of one. The relationship between time spent and knowledge gained is not linear." },
+          { q: "Does reading more news make you better informed?", a: "More complicated than yes. People who read more news are better at recognising major events, but not consistently better at understanding causes and context. A Reuters Institute study found that heavy news consumers and selective readers had similar levels of comprehension on most topics, while heavy consumers reported significantly higher fatigue and pessimism. Knowing more headlines is not the same as knowing more." }
+        ]}
+      />
 
       <div className="mt-14 border-t border-border pt-10">
         <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">

@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
+import { ArticleSchema } from "../../components/ArticleSchema";
+import { FAQSection } from "../../components/FAQSection";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-commuting",
@@ -14,6 +16,12 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend commuting?"
         description="The US Census puts the average one-way commute at 27.6 minutes. Over a 40-year career the total reaches 8,800 hours — one and a half waking years spent in transit."
+      />
+      <ArticleSchema
+        title="How much of your life do you spend commuting?"
+        description="The US Census puts the average one-way commute at 27.6 minutes. Over a 40-year career the total reaches 8,800 hours — one and a half waking years spent in transit."
+        datePublished="2026-05-12"
+        slug="how-much-of-your-life-do-you-spend-commuting"
       />
       <Breadcrumbs
         crumbs={[
@@ -110,6 +118,13 @@ function Article() {
           of the deal before you sign the lease.
         </p>
       </div>
+
+      <FAQSection
+        faqs={[
+          { q: "What is the average commute time in the US?", a: "27.6 minutes one way, according to the most recent US Census Bureau data — just under an hour round trip. That figure has been rising slowly for three decades. In major cities the number is higher: the average New York commuter spends about 80 minutes in transit per day, London is around 74 minutes, and in cities like Chicago and LA the figure regularly exceeds an hour each way for people who live outside the urban core." },
+          { q: "Does commuting affect your health?", a: "The research is consistent here. Commute length is one of the strongest predictors of self-reported wellbeing among working adults, more reliably than income above a certain threshold or job satisfaction score. Longer commutes correlate with lower satisfaction, more stress, and reduced time for sleep and exercise. The commute does not stay in the commute — it arrives home with the person doing it." }
+        ]}
+      />
 
       <div className="mt-14 border-t border-border pt-10">
         <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">

@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
+import { ArticleSchema } from "../../components/ArticleSchema";
+import { FAQSection } from "../../components/FAQSection";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-does-the-average-person-spend-watching-netflix",
@@ -14,6 +16,12 @@ function Article() {
       <PageSEO
         title="How much time does the average person spend watching Netflix?"
         description="Netflix subscribers watch an average of two hours a day — 45 waking days per year. Over a lifetime it becomes more than seven years spent on a single streaming platform."
+      />
+      <ArticleSchema
+        title="How much time does the average person spend watching Netflix?"
+        description="Netflix subscribers watch an average of two hours a day — 45 waking days per year. Over a lifetime it becomes more than seven years spent on a single streaming platform."
+        datePublished="2026-04-10"
+        slug="how-much-time-does-the-average-person-spend-watching-netflix"
       />
       <Breadcrumbs
         crumbs={[
@@ -107,6 +115,13 @@ function Article() {
           those evenings to contain.
         </p>
       </div>
+
+      <FAQSection
+        faqs={[
+          { q: "How many hours does the average Netflix subscriber watch per day?", a: "About two hours, based on Netflix's own reported engagement data. That is higher than most subscribers estimate for themselves. The autoplay feature, which starts the next episode after a short countdown, reduces the decision friction that would otherwise end a session. Stopping requires action; continuing is the default." },
+          { q: "How does Netflix compare to YouTube on time spent?", a: "They are close, with Netflix slightly ahead for active subscribers on daily minutes. The difference is that Netflix is subscription-based and primarily evening viewing, while YouTube reaches more people and is more distributed through the day. Over a full year, a two-hour-per-day Netflix subscriber watches about 730 hours — roughly 30 full days of continuous viewing." }
+        ]}
+      />
 
       <div className="mt-14 border-t border-border pt-10">
         <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">

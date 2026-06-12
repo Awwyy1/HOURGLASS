@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
+import { ArticleSchema } from "../../components/ArticleSchema";
+import { FAQSection } from "../../components/FAQSection";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-on-youtube",
@@ -14,6 +16,12 @@ function Article() {
       <PageSEO
         title="How much time do you spend on YouTube?"
         description="Regular users spend around 45 minutes a day on YouTube. Over 40 years that becomes two waking years. The recommendation algorithm drives 70 percent of total watch time."
+      />
+      <ArticleSchema
+        title="How much time do you spend on YouTube?"
+        description="Regular users spend around 45 minutes a day on YouTube. Over 40 years that becomes two waking years. The recommendation algorithm drives 70 percent of total watch time."
+        datePublished="2026-03-13"
+        slug="how-much-time-do-you-spend-on-youtube"
       />
       <Breadcrumbs
         crumbs={[
@@ -111,6 +119,13 @@ function Article() {
           Two years is a long time. It matters what the algorithm filled it with.
         </p>
       </div>
+
+      <FAQSection
+        faqs={[
+          { q: "How many hours a day does the average person spend on YouTube?", a: "Around 45 minutes for regular users, though the range is very wide. Casual viewers might watch 15 minutes. People who have it on during meals or while doing other things are often above two hours. The platform reports that the average viewing session is around 40 minutes, which suggests most regular users are having one meaningful session per day plus a few shorter ones." },
+          { q: "Does the YouTube algorithm actually extend your viewing time?", a: "Consistently, and by design. The autoplay feature loads the next video before the current one ends, which means stopping requires a deliberate action rather than a default. YouTube has confirmed in regulatory filings that watch time is a core optimisation metric. The recommendation engine is explicitly tuned to predict what will keep you watching, not what you asked to watch." }
+        ]}
+      />
 
       <div className="mt-14 border-t border-border pt-10">
         <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">

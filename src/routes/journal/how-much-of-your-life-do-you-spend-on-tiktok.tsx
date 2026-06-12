@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
+import { ArticleSchema } from "../../components/ArticleSchema";
+import { FAQSection } from "../../components/FAQSection";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-on-tiktok",
@@ -14,6 +16,12 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend on TikTok?"
         description="The average US user spends 54 minutes a day on TikTok. Over a lifetime of use that comes to roughly two waking years given to an algorithm you never chose to follow."
+      />
+      <ArticleSchema
+        title="How much of your life do you spend on TikTok?"
+        description="The average US user spends 54 minutes a day on TikTok. Over a lifetime of use that comes to roughly two waking years given to an algorithm you never chose to follow."
+        datePublished="2026-04-03"
+        slug="how-much-of-your-life-do-you-spend-on-tiktok"
       />
       <Breadcrumbs
         crumbs={[
@@ -105,6 +113,13 @@ function Article() {
           Two years is a long time. It is worth knowing that is where it went.
         </p>
       </div>
+
+      <FAQSection
+        faqs={[
+          { q: "How many minutes a day does the average person spend on TikTok?", a: "Around 54 minutes for US users, based on app analytics data from 2023. That puts it above Instagram and approaching YouTube for daily time spent. The gap has been growing since the recommendation algorithm was tuned specifically for retention rather than social connection — a different design goal from any platform that came before it." },
+          { q: "Why does TikTok keep people on it longer than other apps?", a: "The algorithm does not rely on following people you know. It builds a model of what you engage with and serves content based purely on that, regardless of who made it. Within a few sessions it predicts your preferences more accurately than most people can predict their own. Combined with the short format — where stopping feels low-cost at every single point — the result is sessions that extend much further than intended." }
+        ]}
+      />
 
       <div className="mt-14 border-t border-border pt-10">
         <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
