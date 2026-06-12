@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
+import { PageSEO } from "../../components/PageSEO";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-in-meetings",
@@ -10,6 +11,10 @@ export const Route = createFileRoute(
 function Article() {
   return (
     <article className="mx-auto max-w-2xl px-6 py-24">
+      <PageSEO
+        title="How much of your life do you spend in meetings?"
+        description="Microsoft found 57 percent of the working week goes to meetings and communication. At three hours per day over a career, that is two waking years spent in conference rooms."
+      />
       <Breadcrumbs
         crumbs={[
           { label: "Hourglass", to: "/" },
@@ -105,6 +110,36 @@ function Article() {
           same hour. Multiply that across an organisation and a career and the total
           becomes large enough to notice. Most people have not done the calculation.
           The ones who have tend to treat meeting invitations differently afterward.
+        </p>
+      </div>
+
+      <div className="mt-14 border-t border-border pt-10">
+        <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
+          Related
+        </p>
+        <div className="space-y-3">
+          <Link
+            to="/journal/how-much-of-your-life-do-you-spend-working"
+            className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
+          >
+            How much of your life do you spend working? →
+          </Link>
+          <Link
+            to="/journal/how-much-of-your-life-do-you-spend-commuting"
+            className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
+          >
+            How much of your life do you spend commuting? →
+          </Link>
+        </div>
+      </div>
+
+      <div className="mt-10 border-t border-border pt-8">
+        <p className="font-serif text-[17px] italic text-foreground/75">
+          Put your own numbers into the{" "}
+          <Link to="/" className="underline underline-offset-2 hover:text-foreground transition">
+            Hourglass calculator
+          </Link>{" "}
+          and see where your years actually go.
         </p>
       </div>
 

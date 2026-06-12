@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
+import { PageSEO } from "../../components/PageSEO";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-commuting",
@@ -10,6 +11,10 @@ export const Route = createFileRoute(
 function Article() {
   return (
     <article className="mx-auto max-w-2xl px-6 py-24">
+      <PageSEO
+        title="How much of your life do you spend commuting?"
+        description="The US Census puts the average one-way commute at 27.6 minutes. Over a 40-year career the total reaches 8,800 hours — one and a half waking years spent in transit."
+      />
       <Breadcrumbs
         crumbs={[
           { label: "Hourglass", to: "/" },
@@ -103,6 +108,36 @@ function Article() {
         <p className="text-muted-foreground">
           One and a half years on a train or in traffic. It is worth knowing that is part
           of the deal before you sign the lease.
+        </p>
+      </div>
+
+      <div className="mt-14 border-t border-border pt-10">
+        <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
+          Related
+        </p>
+        <div className="space-y-3">
+          <Link
+            to="/journal/how-much-of-your-life-do-you-spend-working"
+            className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
+          >
+            How much of your life do you spend working? →
+          </Link>
+          <Link
+            to="/journal/how-much-of-your-life-do-you-spend-in-meetings"
+            className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
+          >
+            How much of your life do you spend in meetings? →
+          </Link>
+        </div>
+      </div>
+
+      <div className="mt-10 border-t border-border pt-8">
+        <p className="font-serif text-[17px] italic text-foreground/75">
+          Put your own numbers into the{" "}
+          <Link to="/" className="underline underline-offset-2 hover:text-foreground transition">
+            Hourglass calculator
+          </Link>{" "}
+          and see where your years actually go.
         </p>
       </div>
 

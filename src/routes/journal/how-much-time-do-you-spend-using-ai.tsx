@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
+import { PageSEO } from "../../components/PageSEO";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-using-ai",
@@ -10,6 +11,10 @@ export const Route = createFileRoute(
 function Article() {
   return (
     <article className="mx-auto max-w-2xl px-6 py-24">
+      <PageSEO
+        title="How much time do you spend using AI?"
+        description="OpenAI reported 200 million weekly users in 2024, a figure that doubled in under a year. Regular users spend 30 to 90 minutes a day across AI tools — and the number keeps growing."
+      />
       <Breadcrumbs
         crumbs={[
           { label: "Hourglass", to: "/" },
@@ -109,6 +114,36 @@ function Article() {
           direction: more users, longer sessions, deeper integration into the working
           day. The number will be larger next year than it is now. Unlike most of the
           habits tracked on this site, this one is still at the beginning of its curve.
+        </p>
+      </div>
+
+      <div className="mt-14 border-t border-border pt-10">
+        <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
+          Related
+        </p>
+        <div className="space-y-3">
+          <Link
+            to="/journal/how-much-time-does-the-average-person-spend-on-email"
+            className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
+          >
+            How much time does the average person spend on email? →
+          </Link>
+          <Link
+            to="/journal/how-much-of-your-life-do-you-spend-in-meetings"
+            className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
+          >
+            How much of your life do you spend in meetings? →
+          </Link>
+        </div>
+      </div>
+
+      <div className="mt-10 border-t border-border pt-8">
+        <p className="font-serif text-[17px] italic text-foreground/75">
+          Put your own numbers into the{" "}
+          <Link to="/" className="underline underline-offset-2 hover:text-foreground transition">
+            Hourglass calculator
+          </Link>{" "}
+          and see where your years actually go.
         </p>
       </div>
 
