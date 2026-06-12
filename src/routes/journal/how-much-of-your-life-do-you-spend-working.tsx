@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
+import { ArticleSchema } from "../../components/ArticleSchema";
+import { FAQSection } from "../../components/FAQSection";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-working",
@@ -14,6 +16,12 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend working?"
         description="The standard answer is 40 hours a week. Over a full career: 80,000 hours — somewhere between 17 and 20 waking years of your life given to work."
+      />
+      <ArticleSchema
+        title="How much of your life do you spend working?"
+        description="The standard answer is 40 hours a week. Over a full career: 80,000 hours — somewhere between 17 and 20 waking years of your life given to work."
+        datePublished="2026-04-16"
+        slug="how-much-of-your-life-do-you-spend-working"
       />
       <Breadcrumbs
         crumbs={[
@@ -128,6 +136,13 @@ function Article() {
         </p>
       </div>
 
+      <FAQSection
+        faqs={[
+          { q: "How many hours does the average person work in a lifetime?", a: "The standard figure is 80,000 hours over a 40-year career at 40 hours per week. In practice the number is higher. Overtime, work-adjacent tasks like commuting and email outside hours, and the unpaid time many knowledge workers spend thinking about work all add to the total. A more honest career figure for most professionals is somewhere between 90,000 and 100,000 hours." },
+          { q: "What percentage of your life do you spend working?", a: "Around 20 to 25 percent of waking hours over a full career, depending on actual hours per week and how long you work. That makes it the second largest category of time use after sleep, and the largest category of conscious directed activity. Most people have never added it up. The number is usually larger than expected when they do." }
+        ]}
+      />
+
       <div className="mt-14 border-t border-border pt-10">
         <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
           Related
@@ -151,9 +166,9 @@ function Article() {
       <div className="mt-10 border-t border-border pt-8">
         <p className="font-serif text-[17px] italic text-foreground/75">
           Put your own numbers into the{" "}
-          <Link to="/" className="underline underline-offset-2 hover:text-foreground transition">
+          <a href="/#calculator" className="underline underline-offset-2 hover:text-foreground transition">
             Hourglass calculator
-          </Link>{" "}
+          </a>{" "}
           and see where your years actually go.
         </p>
       </div>

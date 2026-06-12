@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
+import { ArticleSchema } from "../../components/ArticleSchema";
+import { FAQSection } from "../../components/FAQSection";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-cooking",
@@ -14,6 +16,12 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend cooking?"
         description="The average person spends about 40 minutes a day cooking. Over a lifetime that is two and a half waking years in the kitchen — one of the few large time categories that produces something."
+      />
+      <ArticleSchema
+        title="How much of your life do you spend cooking?"
+        description="The average person spends about 40 minutes a day cooking. Over a lifetime that is two and a half waking years in the kitchen — one of the few large time categories that produces something."
+        datePublished="2026-04-30"
+        slug="how-much-of-your-life-do-you-spend-cooking"
       />
       <Breadcrumbs
         crumbs={[
@@ -108,6 +116,13 @@ function Article() {
         </p>
       </div>
 
+      <FAQSection
+        faqs={[
+          { q: "How long does the average person spend cooking each day?", a: "Around 37 to 40 minutes in most Western countries, based on time-use survey data. That includes prep, cooking, and cleaning up. It has been declining for decades — the same surveys showed 60-plus minutes per day in the 1960s — partly because of convenience food and partly because fewer households eat meals that require extended preparation." },
+          { q: "Is cooking at home actually faster than ordering delivery?", a: "Often yes, once you factor in the full time. Cooking a meal takes 30 to 45 minutes. Ordering delivery takes 5 minutes to place and 30 to 50 minutes to arrive. The actual time saved by not cooking is usually smaller than it feels, and the cost difference is significant — restaurant and delivery meals typically cost three to four times what the ingredients cost for the same dish." }
+        ]}
+      />
+
       <div className="mt-14 border-t border-border pt-10">
         <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
           Related
@@ -131,9 +146,9 @@ function Article() {
       <div className="mt-10 border-t border-border pt-8">
         <p className="font-serif text-[17px] italic text-foreground/75">
           Put your own numbers into the{" "}
-          <Link to="/" className="underline underline-offset-2 hover:text-foreground transition">
+          <a href="/#calculator" className="underline underline-offset-2 hover:text-foreground transition">
             Hourglass calculator
-          </Link>{" "}
+          </a>{" "}
           and see where your years actually go.
         </p>
       </div>

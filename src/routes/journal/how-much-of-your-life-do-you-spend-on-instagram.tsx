@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
+import { ArticleSchema } from "../../components/ArticleSchema";
+import { FAQSection } from "../../components/FAQSection";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-on-instagram",
@@ -14,6 +16,12 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend on Instagram?"
         description="The average person checks Instagram 20 to 30 times a day. Over a lifetime of use, the total approaches six months of waking time spent on a single platform."
+      />
+      <ArticleSchema
+        title="How much of your life do you spend on Instagram?"
+        description="The average person checks Instagram 20 to 30 times a day. Over a lifetime of use, the total approaches six months of waking time spent on a single platform."
+        datePublished="2026-03-06"
+        slug="how-much-of-your-life-do-you-spend-on-instagram"
       />
       <Breadcrumbs
         crumbs={[
@@ -139,6 +147,13 @@ function Article() {
         </p>
       </div>
 
+      <FAQSection
+        faqs={[
+          { q: "How much time does the average person spend on Instagram per day?", a: "Around 30 minutes for the average user, though the range is wide. Most people open it five or six times a day in sessions of five minutes or so. Heavy users are consistently above an hour. The morning check, the one during lunch that extends past the end of lunch, a few more in the evening — it adds up faster than a single sitting would." },
+          { q: "Is Instagram the most time-consuming social media app?", a: "TikTok has overtaken it on daily minutes for most demographics. Instagram sits closer to 30 minutes a day, TikTok closer to 50. But Instagram has been around longer and for people over 30 it tends to have stronger habitual pull — the social graph is richer and the stakes of what you post feel higher, which keeps people coming back to check." }
+        ]}
+      />
+
       <div className="mt-14 border-t border-border pt-10">
         <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
           Related
@@ -162,9 +177,9 @@ function Article() {
       <div className="mt-10 border-t border-border pt-8">
         <p className="font-serif text-[17px] italic text-foreground/75">
           Put your own numbers into the{" "}
-          <Link to="/" className="underline underline-offset-2 hover:text-foreground transition">
+          <a href="/#calculator" className="underline underline-offset-2 hover:text-foreground transition">
             Hourglass calculator
-          </Link>{" "}
+          </a>{" "}
           and see where your years actually go.
         </p>
       </div>

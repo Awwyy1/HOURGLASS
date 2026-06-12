@@ -44,7 +44,7 @@ function Index() {
       </section>
 
       {/* Calculator */}
-      <section className="mx-auto max-w-5xl px-6 pb-24">
+      <section id="calculator" className="mx-auto max-w-5xl px-6 pb-24">
         <div className="grid grid-cols-1 gap-16 border-t border-border pt-16 md:grid-cols-12">
           {/* Inputs */}
           <div className="md:col-span-5 md:border-r md:border-border md:pr-12">

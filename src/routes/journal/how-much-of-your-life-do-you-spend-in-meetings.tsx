@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
+import { ArticleSchema } from "../../components/ArticleSchema";
+import { FAQSection } from "../../components/FAQSection";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-in-meetings",
@@ -14,6 +16,12 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend in meetings?"
         description="Microsoft found 57 percent of the working week goes to meetings and communication. At three hours per day over a career, that is two waking years spent in conference rooms."
+      />
+      <ArticleSchema
+        title="How much of your life do you spend in meetings?"
+        description="Microsoft found 57 percent of the working week goes to meetings and communication. At three hours per day over a career, that is two waking years spent in conference rooms."
+        datePublished="2026-05-13"
+        slug="how-much-of-your-life-do-you-spend-in-meetings"
       />
       <Breadcrumbs
         crumbs={[
@@ -113,6 +121,13 @@ function Article() {
         </p>
       </div>
 
+      <FAQSection
+        faqs={[
+          { q: "How many meetings does the average office worker attend per week?", a: "Around 8 to 12 for the average knowledge worker, based on calendar data from enterprise studies. For senior employees the number is considerably higher — executives average closer to 23 hours per week in meetings, which is more than half the working week. The trend has been upward for six decades and accelerated with remote tools that made scheduling across time zones easier." },
+          { q: "What percentage of meetings are a waste of time?", a: "Various surveys put it between 30 and 70 percent. Atlassian found executives felt 67 percent of meetings were failures. The problem is usually not that a meeting should have been cancelled entirely — it is that it was too long, had too many attendees, or had no clear outcome defined before it started. The unnecessary ones are not always identifiable in advance. They look like necessary meetings until they finish." }
+        ]}
+      />
+
       <div className="mt-14 border-t border-border pt-10">
         <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
           Related
@@ -136,9 +151,9 @@ function Article() {
       <div className="mt-10 border-t border-border pt-8">
         <p className="font-serif text-[17px] italic text-foreground/75">
           Put your own numbers into the{" "}
-          <Link to="/" className="underline underline-offset-2 hover:text-foreground transition">
+          <a href="/#calculator" className="underline underline-offset-2 hover:text-foreground transition">
             Hourglass calculator
-          </Link>{" "}
+          </a>{" "}
           and see where your years actually go.
         </p>
       </div>

@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
+import { ArticleSchema } from "../../components/ArticleSchema";
+import { FAQSection } from "../../components/FAQSection";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-on-dating-apps",
@@ -14,6 +16,12 @@ function Article() {
       <PageSEO
         title="How much time do you spend on dating apps?"
         description="The average active user spends 30 to 90 minutes a day on dating apps. Over two to three years of use, the total reaches hundreds of hours spent swiping and messaging."
+      />
+      <ArticleSchema
+        title="How much time do you spend on dating apps?"
+        description="The average active user spends 30 to 90 minutes a day on dating apps. Over two to three years of use, the total reaches hundreds of hours spent swiping and messaging."
+        datePublished="2026-05-20"
+        slug="how-much-time-do-you-spend-on-dating-apps"
       />
       <Breadcrumbs
         crumbs={[
@@ -109,6 +117,13 @@ function Article() {
         </p>
       </div>
 
+      <FAQSection
+        faqs={[
+          { q: "Which dating app takes the most time per day?", a: "Tinder generally shows the highest session times in independent analytics, often around an hour per day for active users. Hinge markets a lower figure — around 30 minutes — which reflects its different design. Bumble sits in the middle. Running multiple apps at once, which many users do because each platform pulls from a different user pool, compounds the daily total significantly." },
+          { q: "How long does the average person use dating apps before finding a relationship?", a: "The data on this is thin because apps do not track what happens after you delete them. Survey data suggests the median active period is somewhere between six months and two years, with wide variance. Most people cycle — active for a few months, worn out and pausing, restarting later. The total time of engagement often ends up longer than any single active period would suggest." }
+        ]}
+      />
+
       <div className="mt-14 border-t border-border pt-10">
         <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
           Related
@@ -132,9 +147,9 @@ function Article() {
       <div className="mt-10 border-t border-border pt-8">
         <p className="font-serif text-[17px] italic text-foreground/75">
           Put your own numbers into the{" "}
-          <Link to="/" className="underline underline-offset-2 hover:text-foreground transition">
+          <a href="/#calculator" className="underline underline-offset-2 hover:text-foreground transition">
             Hourglass calculator
-          </Link>{" "}
+          </a>{" "}
           and see where your years actually go.
         </p>
       </div>

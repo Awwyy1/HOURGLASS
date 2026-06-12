@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
+import { ArticleSchema } from "../../components/ArticleSchema";
+import { FAQSection } from "../../components/FAQSection";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-on-your-phone",
@@ -14,6 +16,12 @@ function Article() {
       <PageSEO
         title="How much time do you spend on your phone per day?"
         description="The average is close to four hours a day — most people guess two. Over a lifetime of smartphone use, the total comes to roughly 15 waking years spent looking at a screen."
+      />
+      <ArticleSchema
+        title="How much time do you spend on your phone per day?"
+        description="The average is close to four hours a day — most people guess two. Over a lifetime of smartphone use, the total comes to roughly 15 waking years spent looking at a screen."
+        datePublished="2026-03-27"
+        slug="how-much-time-do-you-spend-on-your-phone"
       />
       <Breadcrumbs
         crumbs={[
@@ -135,6 +143,13 @@ function Article() {
         </p>
       </div>
 
+      <FAQSection
+        faqs={[
+          { q: "What is the average daily screen time on a phone?", a: "Close to four hours for adults in most Western countries. Teenagers are higher — often five to seven hours. When people estimate their own usage before looking at the data, they usually say around two hours. The gap between estimate and reality is consistent across studies. The discrepancy happens because phone use is spread across many short sessions that are easy to forget individually." },
+          { q: "How do you actually reduce phone screen time?", a: "Structural changes work better than willpower-based ones. Moving specific apps off the home screen, disabling most notifications, and switching the display to greyscale all reduce usage without requiring ongoing decisions. The greyscale change works because a lot of the pull is colour-based — the red notification badge, the bright feed. A grey screen is functionally identical but noticeably less compelling." }
+        ]}
+      />
+
       <div className="mt-14 border-t border-border pt-10">
         <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
           Related
@@ -158,9 +173,9 @@ function Article() {
       <div className="mt-10 border-t border-border pt-8">
         <p className="font-serif text-[17px] italic text-foreground/75">
           Put your own numbers into the{" "}
-          <Link to="/" className="underline underline-offset-2 hover:text-foreground transition">
+          <a href="/#calculator" className="underline underline-offset-2 hover:text-foreground transition">
             Hourglass calculator
-          </Link>{" "}
+          </a>{" "}
           and see where your years actually go.
         </p>
       </div>

@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
+import { ArticleSchema } from "../../components/ArticleSchema";
+import { FAQSection } from "../../components/FAQSection";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-shopping-online",
@@ -14,6 +16,12 @@ function Article() {
       <PageSEO
         title="How much time do you spend shopping online?"
         description="The average online shopper spends five hours a week browsing and buying. Over a lifetime that adds up to a year and a half of waking time — most sessions ending without a purchase."
+      />
+      <ArticleSchema
+        title="How much time do you spend shopping online?"
+        description="The average online shopper spends five hours a week browsing and buying. Over a lifetime that adds up to a year and a half of waking time — most sessions ending without a purchase."
+        datePublished="2026-05-06"
+        slug="how-much-time-do-you-spend-shopping-online"
       />
       <Breadcrumbs
         crumbs={[
@@ -109,6 +117,13 @@ function Article() {
         </p>
       </div>
 
+      <FAQSection
+        faqs={[
+          { q: "How much time per week does the average person spend shopping online?", a: "Around five hours per week for active online shoppers, including browsing sessions that do not end in a purchase. That figure has roughly doubled since 2015, driven by mobile shopping, which made it possible to browse during commutes, meetings, and other time that previously could not be used for it." },
+          { q: "Why do people spend so long shopping online without buying anything?", a: "Most online shopping sessions are not goal-directed in the way a trip to a specific shop is. E-commerce sites are designed to extend browsing time and surface things you were not looking for. Algorithmic recommendations, customers-also-viewed sections, and limited-time notifications all keep you in the session. Buying is one possible outcome but not the only one the platform is built around." }
+        ]}
+      />
+
       <div className="mt-14 border-t border-border pt-10">
         <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
           Related
@@ -132,9 +147,9 @@ function Article() {
       <div className="mt-10 border-t border-border pt-8">
         <p className="font-serif text-[17px] italic text-foreground/75">
           Put your own numbers into the{" "}
-          <Link to="/" className="underline underline-offset-2 hover:text-foreground transition">
+          <a href="/#calculator" className="underline underline-offset-2 hover:text-foreground transition">
             Hourglass calculator
-          </Link>{" "}
+          </a>{" "}
           and see where your years actually go.
         </p>
       </div>

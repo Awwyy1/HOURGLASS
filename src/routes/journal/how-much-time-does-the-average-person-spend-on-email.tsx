@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
+import { ArticleSchema } from "../../components/ArticleSchema";
+import { FAQSection } from "../../components/FAQSection";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-does-the-average-person-spend-on-email",
@@ -14,6 +16,12 @@ function Article() {
       <PageSEO
         title="How much time does the average person spend on email?"
         description="McKinsey put it at 28 percent of the workweek. Across a full career the total approaches five waking years spent reading, writing, and managing an inbox."
+      />
+      <ArticleSchema
+        title="How much time does the average person spend on email?"
+        description="McKinsey put it at 28 percent of the workweek. Across a full career the total approaches five waking years spent reading, writing, and managing an inbox."
+        datePublished="2026-04-23"
+        slug="how-much-time-does-the-average-person-spend-on-email"
       />
       <Breadcrumbs
         crumbs={[
@@ -126,6 +134,13 @@ function Article() {
         </p>
       </div>
 
+      <FAQSection
+        faqs={[
+          { q: "How many emails does the average worker get per day?", a: "Around 120 emails per day in and out, according to Radicati Group data. That figure has been roughly stable since 2015, which is surprising given how much communication has moved to Slack and other messaging tools. The inbox has not shrunk — it has been supplemented by additional channels rather than replaced by them." },
+          { q: "Is email really the biggest time drain at work?", a: "By some measures, yes. The McKinsey figure of 28 percent of the workweek is specifically for reading, writing, and managing email. Meetings are tracked separately and consume more time for senior employees. The two together often account for the majority of a working week, leaving a narrow window for the actual work that neither emails nor meetings are substitutes for." }
+        ]}
+      />
+
       <div className="mt-14 border-t border-border pt-10">
         <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
           Related
@@ -149,9 +164,9 @@ function Article() {
       <div className="mt-10 border-t border-border pt-8">
         <p className="font-serif text-[17px] italic text-foreground/75">
           Put your own numbers into the{" "}
-          <Link to="/" className="underline underline-offset-2 hover:text-foreground transition">
+          <a href="/#calculator" className="underline underline-offset-2 hover:text-foreground transition">
             Hourglass calculator
-          </Link>{" "}
+          </a>{" "}
           and see where your years actually go.
         </p>
       </div>
