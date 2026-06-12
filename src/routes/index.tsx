@@ -136,6 +136,46 @@ function Index() {
         </Link>
       </section>
 
+      {/* Journal teaser */}
+      <section className="mx-auto max-w-3xl border-t border-border px-6 py-24">
+        <div className="flex items-start justify-between gap-8 flex-col sm:flex-row sm:items-center mb-14">
+          <div>
+            <p className="mb-3 font-sans text-[10px] uppercase tracking-[0.36em] text-muted-foreground">
+              Journal
+            </p>
+            <h2 className="font-serif text-3xl italic tracking-tight text-foreground md:text-4xl">
+              The long calculation.
+            </h2>
+          </div>
+          <Link
+            to="/journal"
+            className="shrink-0 text-[10px] uppercase tracking-[0.32em] text-muted-foreground transition hover:text-foreground"
+          >
+            All articles →
+          </Link>
+        </div>
+        <div className="divide-y divide-border">
+          <div className="pb-8">
+            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">May 20, 2026</p>
+            <Link to="/journal/how-much-time-do-you-spend-on-dating-apps" className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground">
+              How much time do you spend on dating apps? →
+            </Link>
+          </div>
+          <div className="py-8">
+            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">May 14, 2026</p>
+            <Link to="/journal/how-much-time-do-you-spend-using-ai" className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground">
+              How much time do you spend using AI? →
+            </Link>
+          </div>
+          <div className="pt-8">
+            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">May 13, 2026</p>
+            <Link to="/journal/how-much-of-your-life-do-you-spend-in-meetings" className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground">
+              How much of your life do you spend in meetings? →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <style>{`
         .hourglass-range {
           -webkit-appearance: none;

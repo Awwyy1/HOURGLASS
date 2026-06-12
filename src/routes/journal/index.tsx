@@ -14,6 +14,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-time-do-you-spend-on-dating-apps",
+    title: "How much time do you spend on dating apps?",
+    date: "2026-05-20",
+    readingTime: "3 min",
+    excerpt:
+      "Tinder has 75 million monthly active users. The average active user spends 30 to 90 minutes a day swiping and messaging. Over two to three years, the total reaches hundreds of hours — most of it spent on conversations that never leave the app.",
+  },
+  {
     slug: "how-much-time-do-you-spend-using-ai",
     title: "How much time do you spend using AI?",
     date: "2026-05-14",
