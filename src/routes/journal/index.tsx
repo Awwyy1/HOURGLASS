@@ -14,6 +14,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-of-your-life-do-you-spend-playing-video-games",
+    title: "How much of your life do you spend playing video games?",
+    date: "2026-06-03",
+    readingTime: "3 min",
+    excerpt:
+      "There are over three billion active gamers worldwide. The average player logs 7 to 8 hours a week. Over 40 years of regular gaming that comes to just under ten waking years — a number most casual gamers find hard to believe until they run it.",
+  },
+  {
     slug: "how-much-time-do-you-spend-on-linkedin",
     title: "How much time do you spend on LinkedIn?",
     date: "2026-05-27",
