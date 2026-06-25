@@ -14,6 +14,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-many-hours-are-in-a-lifetime",
+    title: "How many hours are in a lifetime?",
+    date: "2026-06-10",
+    readingTime: "3 min",
+    excerpt:
+      "A human life contains around 692,000 hours in total. Subtract sleep and you have roughly 461,000 waking hours. After work, childhood, and daily maintenance, the truly discretionary portion is somewhere between 150,000 and 175,000 hours — about five hours a day across an adult life.",
+  },
+  {
     slug: "how-much-of-your-life-do-you-spend-playing-video-games",
     title: "How much of your life do you spend playing video games?",
     date: "2026-06-03",
