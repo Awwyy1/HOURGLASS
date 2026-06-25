@@ -20,7 +20,7 @@ function Article() {
       <ArticleSchema
         title="How much time do you spend watching sports?"
         description="Nielsen found Americans spend an average of around 3.5 hours a week watching live sports. For dedicated fans the number is much higher. Over 50 years, even the average adds up to well over a year of waking time."
-        datePublished="2026-07-22"
+        datePublished="2026-06-25"
         slug="how-much-time-do-you-spend-watching-sports"
       />
       <Breadcrumbs
@@ -33,7 +33,7 @@ function Article() {
 
       <header className="mb-16">
         <div className="mb-6 flex items-center gap-4 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
-          <time dateTime="2026-07-22">July 22, 2026</time>
+          <time dateTime="2026-06-25">June 25, 2026</time>
           <span>·</span>
           <span>3 min read</span>
         </div>

@@ -20,7 +20,7 @@ function Article() {
       <ArticleSchema
         title="How much time do you spend on Twitter / X?"
         description="The average active user spends around 30 minutes a day on Twitter / X. Over a decade of use that adds up to more than 75 waking days spent reading posts that mostly disappear within hours."
-        datePublished="2026-06-17"
+        datePublished="2026-06-15"
         slug="how-much-time-do-you-spend-on-twitter-x"
       />
       <Breadcrumbs
@@ -33,7 +33,7 @@ function Article() {
 
       <header className="mb-16">
         <div className="mb-6 flex items-center gap-4 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
-          <time dateTime="2026-06-17">June 17, 2026</time>
+          <time dateTime="2026-06-15">June 15, 2026</time>
           <span>·</span>
           <span>3 min read</span>
         </div>

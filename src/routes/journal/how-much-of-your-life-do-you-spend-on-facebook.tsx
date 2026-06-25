@@ -20,7 +20,7 @@ function Article() {
       <ArticleSchema
         title="How much of your life do you spend on Facebook?"
         description="Facebook has 3 billion monthly active users and the average session runs around 33 minutes a day. Over 15 years of use, the total approaches six months of waking time."
-        datePublished="2026-06-24"
+        datePublished="2026-06-20"
         slug="how-much-of-your-life-do-you-spend-on-facebook"
       />
       <Breadcrumbs
@@ -33,7 +33,7 @@ function Article() {
 
       <header className="mb-16">
         <div className="mb-6 flex items-center gap-4 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
-          <time dateTime="2026-06-24">June 24, 2026</time>
+          <time dateTime="2026-06-20">June 20, 2026</time>
           <span>·</span>
           <span>3 min read</span>
         </div>

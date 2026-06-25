@@ -16,7 +16,7 @@ const articles: Article[] = [
   {
     slug: "how-much-time-do-you-spend-watching-sports",
     title: "How much time do you spend watching sports?",
-    date: "2026-07-22",
+    date: "2026-06-25",
     readingTime: "3 min",
     excerpt:
       "Nielsen found Americans spend an average of 3.5 hours a week watching live sports. For dedicated fans following multiple leagues the annual total can reach 370 hours. Over 50 years that comes to more than three waking years spent watching other people compete.",
@@ -24,42 +24,42 @@ const articles: Article[] = [
   {
     slug: "how-much-of-your-life-do-you-spend-on-your-laptop",
     title: "How much of your life do you spend on your laptop?",
-    date: "2026-07-15",
+    date: "2026-06-23",
     readingTime: "3 min",
     excerpt:
       "Between work and personal use, most adults spend five to six hours a day in front of a laptop screen. Over a 40-year career and adult life, the combined total approaches 40 waking years — making the laptop the primary location where most of adult life actually happens.",
   },
   {
-    slug: "how-much-time-do-you-spend-reading-books",
-    title: "How much time do you spend reading books in a lifetime?",
-    date: "2026-07-08",
-    readingTime: "3 min",
-    excerpt:
-      "The Bureau of Labor Statistics found Americans spend an average of 17 minutes a day reading for pleasure. Over 60 years of adult life that adds up to just over a year of waking time — less than most people assume, and far less than the hours that went to screens instead.",
-  },
-  {
-    slug: "how-much-time-do-you-spend-listening-to-music",
-    title: "How much time do you spend listening to music?",
-    date: "2026-07-01",
-    readingTime: "3 min",
-    excerpt:
-      "Nielsen found Americans spend around 32 hours a month listening to music across all platforms. Over a 60-year listening life that adds up to nearly four waking years — more than most people accumulate on any single social media platform.",
-  },
-  {
     slug: "how-much-of-your-life-do-you-spend-on-facebook",
     title: "How much of your life do you spend on Facebook?",
-    date: "2026-06-24",
+    date: "2026-06-20",
     readingTime: "3 min",
     excerpt:
       "Facebook has 3 billion monthly active users and the average session runs around 33 minutes a day. Over 15 years of regular use the total approaches six months of waking time — accumulated in portions small enough that they never felt like a meaningful investment.",
   },
   {
-    slug: "how-much-time-do-you-spend-on-twitter-x",
-    title: "How much time do you spend on Twitter / X?",
+    slug: "how-much-time-do-you-spend-reading-books",
+    title: "How much time do you spend reading books in a lifetime?",
     date: "2026-06-17",
     readingTime: "3 min",
     excerpt:
+      "The Bureau of Labor Statistics found Americans spend an average of 17 minutes a day reading for pleasure. Over 60 years of adult life that adds up to just over a year of waking time — less than most people assume, and far less than the hours that went to screens instead.",
+  },
+  {
+    slug: "how-much-time-do-you-spend-on-twitter-x",
+    title: "How much time do you spend on Twitter / X?",
+    date: "2026-06-15",
+    readingTime: "3 min",
+    excerpt:
       "The average active user spends around 30 minutes a day on Twitter / X. Over a decade of use that adds up to more than 75 waking days spent reading posts that mostly disappear within hours of being written.",
+  },
+  {
+    slug: "how-much-time-do-you-spend-listening-to-music",
+    title: "How much time do you spend listening to music?",
+    date: "2026-06-12",
+    readingTime: "3 min",
+    excerpt:
+      "Nielsen found Americans spend around 32 hours a month listening to music across all platforms. Over a 60-year listening life that adds up to nearly four waking years — more than most people accumulate on any single social media platform.",
   },
   {
     slug: "how-many-hours-are-in-a-lifetime",

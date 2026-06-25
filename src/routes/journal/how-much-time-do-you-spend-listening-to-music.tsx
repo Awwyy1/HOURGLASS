@@ -20,7 +20,7 @@ function Article() {
       <ArticleSchema
         title="How much time do you spend listening to music?"
         description="Nielsen found Americans spend around 32 hours a month listening to music across all platforms. Over a lifetime that comes to roughly four waking years — more than most people spend on any single social media platform."
-        datePublished="2026-07-01"
+        datePublished="2026-06-12"
         slug="how-much-time-do-you-spend-listening-to-music"
       />
       <Breadcrumbs
@@ -33,7 +33,7 @@ function Article() {
 
       <header className="mb-16">
         <div className="mb-6 flex items-center gap-4 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
-          <time dateTime="2026-07-01">July 1, 2026</time>
+          <time dateTime="2026-06-12">June 12, 2026</time>
           <span>·</span>
           <span>3 min read</span>
         </div>
