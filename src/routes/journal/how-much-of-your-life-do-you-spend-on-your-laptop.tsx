@@ -20,7 +20,7 @@ function Article() {
       <ArticleSchema
         title="How much of your life do you spend on your laptop?"
         description="Between work and personal use, most adults spend five to seven hours a day in front of a laptop or desktop screen. Over a career and adult life, that total reaches decades — making it the single largest category of waking time for many people."
-        datePublished="2026-07-15"
+        datePublished="2026-06-23"
         slug="how-much-of-your-life-do-you-spend-on-your-laptop"
       />
       <Breadcrumbs
@@ -33,7 +33,7 @@ function Article() {
 
       <header className="mb-16">
         <div className="mb-6 flex items-center gap-4 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
-          <time dateTime="2026-07-15">July 15, 2026</time>
+          <time dateTime="2026-06-23">June 23, 2026</time>
           <span>·</span>
           <span>3 min read</span>
         </div>

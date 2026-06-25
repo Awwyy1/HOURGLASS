@@ -20,7 +20,7 @@ function Article() {
       <ArticleSchema
         title="How much time do you spend reading books in a lifetime?"
         description="The average American reads about 12 books a year and spends around 17 minutes a day reading for pleasure. Over a lifetime that adds up to just over a year of waking time — less than most people assume."
-        datePublished="2026-07-08"
+        datePublished="2026-06-17"
         slug="how-much-time-do-you-spend-reading-books"
       />
       <Breadcrumbs
@@ -33,7 +33,7 @@ function Article() {
 
       <header className="mb-16">
         <div className="mb-6 flex items-center gap-4 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
-          <time dateTime="2026-07-08">July 8, 2026</time>
+          <time dateTime="2026-06-17">June 17, 2026</time>
           <span>·</span>
           <span>3 min read</span>
         </div>
