@@ -14,6 +14,30 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-time-do-you-spend-listening-to-music",
+    title: "How much time do you spend listening to music?",
+    date: "2026-07-01",
+    readingTime: "3 min",
+    excerpt:
+      "Nielsen found Americans spend around 32 hours a month listening to music across all platforms. Over a 60-year listening life that adds up to nearly four waking years — more than most people accumulate on any single social media platform.",
+  },
+  {
+    slug: "how-much-of-your-life-do-you-spend-on-facebook",
+    title: "How much of your life do you spend on Facebook?",
+    date: "2026-06-24",
+    readingTime: "3 min",
+    excerpt:
+      "Facebook has 3 billion monthly active users and the average session runs around 33 minutes a day. Over 15 years of regular use the total approaches six months of waking time — accumulated in portions small enough that they never felt like a meaningful investment.",
+  },
+  {
+    slug: "how-much-time-do-you-spend-on-twitter-x",
+    title: "How much time do you spend on Twitter / X?",
+    date: "2026-06-17",
+    readingTime: "3 min",
+    excerpt:
+      "The average active user spends around 30 minutes a day on Twitter / X. Over a decade of use that adds up to more than 75 waking days spent reading posts that mostly disappear within hours of being written.",
+  },
+  {
     slug: "how-many-hours-are-in-a-lifetime",
     title: "How many hours are in a lifetime?",
     date: "2026-06-10",
