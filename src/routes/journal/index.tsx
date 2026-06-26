@@ -14,6 +14,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-time-do-you-spend-waiting",
+    title: "How much time do you spend waiting in a lifetime?",
+    date: "2026-06-26",
+    readingTime: "3 min",
+    excerpt:
+      "Americans spend an estimated 37 minutes a day in passive waiting — checkout lines, hold music, waiting rooms, traffic lights. Over 60 years of adult life that adds up to more than two waking years spent doing nothing by requirement.",
+  },
+  {
     slug: "how-much-time-do-you-spend-watching-sports",
     title: "How much time do you spend watching sports?",
     date: "2026-06-25",
