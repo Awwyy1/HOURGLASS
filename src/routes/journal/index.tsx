@@ -14,6 +14,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-of-your-life-do-you-spend-exercising",
+    title: "How much of your life do you spend exercising?",
+    date: "2026-06-27",
+    readingTime: "3 min",
+    excerpt:
+      "Americans average 17 minutes of intentional exercise per day. Over a lifetime that adds up to just over a year of waking time — less than the hours spent waiting in lines, and about a quarter of what goes to television.",
+  },
+  {
     slug: "how-much-time-do-you-spend-waiting",
     title: "How much time do you spend waiting in a lifetime?",
     date: "2026-06-26",
