@@ -14,6 +14,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-time-do-you-spend-getting-ready",
+    title: "How much time do you spend getting ready in the morning?",
+    date: "2026-07-03",
+    readingTime: "3 min",
+    excerpt:
+      "The Bureau of Labor Statistics puts grooming — showering, dressing, hair, personal care — at around 45 minutes a day. Over a full life that is nearly four waking years, and it can double for anyone with a more involved routine.",
+  },
+  {
     slug: "how-much-time-do-you-spend-stuck-in-traffic",
     title: "How much time do you spend stuck in traffic?",
     date: "2026-06-30",
