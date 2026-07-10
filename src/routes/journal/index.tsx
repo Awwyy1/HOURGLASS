@@ -14,6 +14,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-time-do-you-spend-stuck-in-traffic",
+    title: "How much time do you spend stuck in traffic?",
+    date: "2026-06-30",
+    readingTime: "3 min",
+    excerpt:
+      "INRIX found the average US driver lost 43 hours to congestion in 2023, on top of the baseline commute itself. In the worst cities, the figure exceeds 100 hours a year. Over a 40-year driving career, that is more than two-thirds of a waking year spent purely on delay.",
+  },
+  {
     slug: "how-much-of-your-life-do-you-spend-exercising",
     title: "How much of your life do you spend exercising?",
     date: "2026-06-27",
