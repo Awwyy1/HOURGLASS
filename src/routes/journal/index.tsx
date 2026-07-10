@@ -14,6 +14,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-time-do-you-spend-grocery-shopping",
+    title: "How much time do you spend grocery shopping?",
+    date: "2026-07-18",
+    readingTime: "3 min",
+    excerpt:
+      "The average American grocery trip takes about 43 minutes, plus a weekly top-up run. Over a lifetime, including driving time, that adds up to a full waking year spent keeping a kitchen stocked — a task online delivery has barely touched.",
+  },
+  {
     slug: "how-much-time-do-you-spend-on-household-chores",
     title: "How much time do you spend on household chores?",
     date: "2026-07-13",
