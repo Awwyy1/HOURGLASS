@@ -14,6 +14,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-time-do-you-spend-texting",
+    title: "How much time do you spend texting?",
+    date: "2026-07-08",
+    readingTime: "3 min",
+    excerpt:
+      "Americans send and receive an average of around 94 texts a day. At roughly 30 seconds of attention per message, that adds up to nearly 40 minutes daily and more than two and a half waking years across a lifetime, before counting the cost of the interruptions.",
+  },
+  {
     slug: "how-much-time-do-you-spend-getting-ready",
     title: "How much time do you spend getting ready in the morning?",
     date: "2026-07-03",
