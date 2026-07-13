@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { PageSEO } from "../../components/PageSEO";
 
 export const Route = createFileRoute("/journal/")({
   component: Journal,
@@ -274,6 +275,10 @@ function formatDate(iso: string) {
 function Journal() {
   return (
     <div className="mx-auto max-w-2xl px-6 py-24">
+      <PageSEO
+        title="Journal — how much time habits actually cost"
+        description="A running series that takes one habit at a time — phone use, sleep, work, commuting, social media — and runs the lifetime math. Real sources, waking-year totals, and what the numbers actually mean."
+      />
       <header className="mb-20">
         <p className="mb-6 font-sans text-[10px] uppercase tracking-[0.36em] text-muted-foreground">
           Journal
@@ -283,6 +288,15 @@ function Journal() {
         </h1>
         <p className="mt-6 max-w-lg font-serif text-[17px] leading-relaxed text-muted-foreground">
           Articles about time and habit. What the numbers mean in practice.
+        </p>
+        <p className="mt-4 max-w-lg font-serif text-[17px] leading-relaxed text-muted-foreground">
+          Each piece takes a single habit — a platform, a chore, a daily routine — and
+          runs it through the same math the Hourglass calculator uses: hours a day,
+          multiplied across a lifetime, converted into waking days and years. The
+          sources are named. The numbers are shown in full, not rounded to make a
+          better headline. The goal is not to tell you an activity is good or bad. It
+          is to show you what the hours actually add up to, so you can decide that
+          for yourself.
         </p>
       </header>
 

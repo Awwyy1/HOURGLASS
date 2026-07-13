@@ -15,11 +15,11 @@ function Article() {
     <article className="mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much of your life do you spend playing video games?"
-        description="The average gamer spends around 7 to 8 hours a week playing. Over a lifetime of regular play that adds up to years — and for the roughly 10 percent who qualify as heavy users, the total is considerably larger."
+        description="The average gamer spends 7 to 8 hours a week playing — just under 10 waking years over a lifetime. For the top 10 percent of players, the total exceeds 30 years."
       />
       <ArticleSchema
         title="How much of your life do you spend playing video games?"
-        description="The average gamer spends around 7 to 8 hours a week playing. Over a lifetime of regular play that adds up to years — and for the roughly 10 percent who qualify as heavy users, the total is considerably larger."
+        description="The average gamer spends 7 to 8 hours a week playing — just under 10 waking years over a lifetime. For the top 10 percent of players, the total exceeds 30 years."
         datePublished="2026-06-03"
         slug="how-much-of-your-life-do-you-spend-playing-video-games"
       />
@@ -148,10 +148,10 @@ function Article() {
             How much time do you spend on your phone per day? →
           </Link>
           <Link
-            to="/journal/how-much-time-does-the-average-person-spend-watching-netflix"
+            to="/journal/how-many-hours-are-in-a-lifetime"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much time does the average person spend watching Netflix? →
+            How many hours are in a lifetime? →
           </Link>
         </div>
       </div>
