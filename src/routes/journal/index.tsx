@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { PageSEO } from "../../components/PageSEO";
 
 export const Route = createFileRoute("/journal/")({
   component: Journal,
@@ -13,6 +14,62 @@ type Article = {
 };
 
 const articles: Article[] = [
+  {
+    slug: "how-much-time-do-you-spend-grocery-shopping",
+    title: "How much time do you spend grocery shopping?",
+    date: "2026-07-18",
+    readingTime: "3 min",
+    excerpt:
+      "The average American grocery trip takes about 43 minutes, plus a weekly top-up run. Over a lifetime, including driving time, that adds up to a full waking year spent keeping a kitchen stocked — a task online delivery has barely touched.",
+  },
+  {
+    slug: "how-much-time-does-the-average-person-spend-on-social-media",
+    title: "How much time does the average person spend on social media?",
+    date: "2026-07-15",
+    readingTime: "3 min",
+    excerpt:
+      "The average user spends 2 hours and 23 minutes a day across all platforms combined. Over 50 years of adult use that adds up to roughly seven and a half waking years, assembled from four or five habits that each felt small enough to keep.",
+  },
+  {
+    slug: "how-much-time-do-you-spend-on-household-chores",
+    title: "How much time do you spend on household chores?",
+    date: "2026-07-13",
+    readingTime: "3 min",
+    excerpt:
+      "The Bureau of Labor Statistics puts household activities at around two hours a day for the average American. Over a 60-year adult life that is more than seven and a half waking years — and the gap between how much men and women spend on it has narrowed but not closed.",
+  },
+  {
+    slug: "how-many-days-are-in-a-lifetime",
+    title: "How many days are in a lifetime?",
+    date: "2026-07-10",
+    readingTime: "3 min",
+    excerpt:
+      "An average life contains about 28,900 days. Around 6,600 belong to childhood, sleep removes the equivalent of 9,600 more, and a 79-year life holds roughly 4,100 Saturdays. Measured in days rather than years, a lifetime becomes a number you can actually hold in your head.",
+  },
+  {
+    slug: "how-much-time-do-you-spend-texting",
+    title: "How much time do you spend texting?",
+    date: "2026-07-08",
+    readingTime: "3 min",
+    excerpt:
+      "Americans send and receive an average of around 94 texts a day. At roughly 30 seconds of attention per message, that adds up to nearly 40 minutes daily and more than two and a half waking years across a lifetime, before counting the cost of the interruptions.",
+  },
+  {
+    slug: "how-much-time-do-you-spend-getting-ready",
+    title: "How much time do you spend getting ready in the morning?",
+    date: "2026-07-03",
+    readingTime: "3 min",
+    excerpt:
+      "The Bureau of Labor Statistics puts grooming — showering, dressing, hair, personal care — at around 45 minutes a day. Over a full life that is nearly four waking years, and it can double for anyone with a more involved routine.",
+  },
+  {
+    slug: "how-much-time-do-you-spend-stuck-in-traffic",
+    title: "How much time do you spend stuck in traffic?",
+    date: "2026-06-30",
+    readingTime: "3 min",
+    excerpt:
+      "INRIX found the average US driver lost 43 hours to congestion in 2023, on top of the baseline commute itself. In the worst cities, the figure exceeds 100 hours a year. Over a 40-year driving career, that is more than two-thirds of a waking year spent purely on delay.",
+  },
   {
     slug: "how-much-of-your-life-do-you-spend-exercising",
     title: "How much of your life do you spend exercising?",
@@ -234,6 +291,10 @@ function formatDate(iso: string) {
 function Journal() {
   return (
     <div className="mx-auto max-w-2xl px-6 py-24">
+      <PageSEO
+        title="Journal — how much time habits actually cost"
+        description="A running series that takes one habit at a time — phone use, sleep, work, commuting, social media — and runs the lifetime math. Real sources, waking-year totals, and what the numbers actually mean."
+      />
       <header className="mb-20">
         <p className="mb-6 font-sans text-[10px] uppercase tracking-[0.36em] text-muted-foreground">
           Journal
@@ -243,6 +304,15 @@ function Journal() {
         </h1>
         <p className="mt-6 max-w-lg font-serif text-[17px] leading-relaxed text-muted-foreground">
           Articles about time and habit. What the numbers mean in practice.
+        </p>
+        <p className="mt-4 max-w-lg font-serif text-[17px] leading-relaxed text-muted-foreground">
+          Each piece takes a single habit — a platform, a chore, a daily routine — and
+          runs it through the same math the Hourglass calculator uses: hours a day,
+          multiplied across a lifetime, converted into waking days and years. The
+          sources are named. The numbers are shown in full, not rounded to make a
+          better headline. The goal is not to tell you an activity is good or bad. It
+          is to show you what the hours actually add up to, so you can decide that
+          for yourself.
         </p>
       </header>
 
