@@ -152,10 +152,10 @@ function Article() {
         </p>
         <div className="space-y-3">
           <Link
-            to="/journal/how-much-of-your-life-do-you-spend-working"
+            to="/journal/how-many-days-are-in-a-lifetime"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much of your life do you spend working? →
+            How many days are in a lifetime? →
           </Link>
           <Link
             to="/journal/how-much-of-your-life-do-you-spend-sleeping"

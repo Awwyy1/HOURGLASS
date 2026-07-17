@@ -23,12 +23,28 @@ const articles: Article[] = [
       "The average American grocery trip takes about 43 minutes, plus a weekly top-up run. Over a lifetime, including driving time, that adds up to a full waking year spent keeping a kitchen stocked — a task online delivery has barely touched.",
   },
   {
+    slug: "how-much-time-does-the-average-person-spend-on-social-media",
+    title: "How much time does the average person spend on social media?",
+    date: "2026-07-15",
+    readingTime: "3 min",
+    excerpt:
+      "The average user spends 2 hours and 23 minutes a day across all platforms combined. Over 50 years of adult use that adds up to roughly seven and a half waking years, assembled from four or five habits that each felt small enough to keep.",
+  },
+  {
     slug: "how-much-time-do-you-spend-on-household-chores",
     title: "How much time do you spend on household chores?",
     date: "2026-07-13",
     readingTime: "3 min",
     excerpt:
       "The Bureau of Labor Statistics puts household activities at around two hours a day for the average American. Over a 60-year adult life that is more than seven and a half waking years — and the gap between how much men and women spend on it has narrowed but not closed.",
+  },
+  {
+    slug: "how-many-days-are-in-a-lifetime",
+    title: "How many days are in a lifetime?",
+    date: "2026-07-10",
+    readingTime: "3 min",
+    excerpt:
+      "An average life contains about 28,900 days. Around 6,600 belong to childhood, sleep removes the equivalent of 9,600 more, and a 79-year life holds roughly 4,100 Saturdays. Measured in days rather than years, a lifetime becomes a number you can actually hold in your head.",
   },
   {
     slug: "how-much-time-do-you-spend-texting",
