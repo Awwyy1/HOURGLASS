@@ -15,6 +15,22 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-of-your-life-do-you-spend-eating",
+    title: "How much of your life do you spend eating?",
+    date: "2026-07-24",
+    readingTime: "3 min",
+    excerpt:
+      "The average person spends a little over an hour a day eating and drinking as a focused activity. Over a lifetime that comes to around four and a half waking years at the table — and unlike most entries here, the honest advice is not to trim it.",
+  },
+  {
+    slug: "how-much-of-your-life-do-you-spend-sitting",
+    title: "How much of your life do you spend sitting?",
+    date: "2026-07-21",
+    readingTime: "3 min",
+    excerpt:
+      "The average adult sits for around nine hours of every waking day. Over an adult lifetime that comes to more than 30 waking years in a chair — the largest number in this series, because the posture runs underneath work, meals, commuting, and screens all at once.",
+  },
+  {
     slug: "how-much-time-do-you-spend-grocery-shopping",
     title: "How much time do you spend grocery shopping?",
     date: "2026-07-18",

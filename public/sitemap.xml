@@ -268,4 +268,18 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://www.justhourglass.me/journal/how-much-of-your-life-do-you-spend-sitting</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.justhourglass.me/journal/how-much-of-your-life-do-you-spend-eating</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
