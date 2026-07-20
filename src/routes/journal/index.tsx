@@ -15,6 +15,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-of-your-life-do-you-spend-in-the-shower",
+    title: "How much of your life do you spend in the shower?",
+    date: "2026-07-27",
+    readingTime: "3 min",
+    excerpt:
+      "The average shower runs about eight minutes, once a day — roughly seven months of waking time and 400,000 gallons of water over a lifetime. The number is small, but the shower has quietly become the last part of the day without a screen.",
+  },
+  {
     slug: "how-much-of-your-life-do-you-spend-eating",
     title: "How much of your life do you spend eating?",
     date: "2026-07-24",
