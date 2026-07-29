@@ -15,6 +15,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-time-do-you-have-left-with-your-parents",
+    title: "How much time do you have left with your parents?",
+    date: "2026-07-30",
+    readingTime: "3 min",
+    excerpt:
+      "Time-use data shows the hours spent with parents collapse around the age people leave home. For an adult who visits twice a year, what remains is under 70 waking days — and it is the one total in this journal that responds quickly to a single decision.",
+  },
+  {
     slug: "how-much-of-your-life-do-you-spend-in-the-shower",
     title: "How much of your life do you spend in the shower?",
     date: "2026-07-27",
