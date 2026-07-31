@@ -15,6 +15,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-of-your-life-do-you-spend-driving",
+    title: "How much of your life do you spend driving?",
+    date: "2026-08-02",
+    readingTime: "3 min",
+    excerpt:
+      "The AAA Foundation found the average American driver spends about 51 minutes a day behind the wheel across all trips, not just the commute. Over a driving life that comes to more than three waking years, and it is the only large total here with a plausible expiry date.",
+  },
+  {
     slug: "how-much-time-do-you-have-left-with-your-parents",
     title: "How much time do you have left with your parents?",
     date: "2026-07-30",
