@@ -15,6 +15,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-of-your-life-do-you-spend-in-school",
+    title: "How much of your life do you spend in school?",
+    date: "2026-08-05",
+    readingTime: "3 min",
+    excerpt:
+      "Thirteen years of American schooling comes to roughly 15,200 hours in the building, or about two and a half waking years. It is a modest figure next to a career, and it largely decides what that career will be.",
+  },
+  {
     slug: "how-much-of-your-life-do-you-spend-driving",
     title: "How much of your life do you spend driving?",
     date: "2026-08-02",
