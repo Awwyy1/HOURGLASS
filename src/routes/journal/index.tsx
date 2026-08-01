@@ -15,6 +15,22 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-time-do-you-spend-with-your-friends",
+    title: "How much time do you spend with your friends?",
+    date: "2026-08-08",
+    readingTime: "3 min",
+    excerpt:
+      "Time with friends peaks in the late teens at over two hours a day and falls to twenty minutes by the late thirties. Research puts a new close friendship at around 200 hours, which is why adult friendship is a problem of arithmetic rather than effort.",
+  },
+  {
+    slug: "how-much-of-your-life-do-you-spend-in-school",
+    title: "How much of your life do you spend in school?",
+    date: "2026-08-05",
+    readingTime: "3 min",
+    excerpt:
+      "Thirteen years of American schooling comes to roughly 15,200 hours in the building, or about two and a half waking years. It is a modest figure next to a career, and it largely decides what that career will be.",
+  },
+  {
     slug: "how-much-of-your-life-do-you-spend-driving",
     title: "How much of your life do you spend driving?",
     date: "2026-08-02",
