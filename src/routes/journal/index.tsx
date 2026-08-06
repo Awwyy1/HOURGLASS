@@ -15,6 +15,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-time-do-parents-spend-with-their-children",
+    title: "How much time do parents spend with their children?",
+    date: "2026-08-11",
+    readingTime: "3 min",
+    excerpt:
+      "Parents today spend more hours with their children than parents did in the 1960s, despite working far more. There are 940 Saturdays between birth and a child's eighteenth birthday, and most of them are spent before the child turns ten.",
+  },
+  {
     slug: "how-much-time-do-you-spend-with-your-friends",
     title: "How much time do you spend with your friends?",
     date: "2026-08-08",
