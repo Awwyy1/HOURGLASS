@@ -15,6 +15,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-vacation-time-do-you-get-in-a-lifetime",
+    title: "How much vacation time do you get in a lifetime?",
+    date: "2026-08-14",
+    readingTime: "3 min",
+    excerpt:
+      "An American career yields roughly 645 days of paid vacation against 80,000 hours of work, and around half of workers never use everything they are owed. It is the one category here where people consume less time than they are entitled to.",
+  },
+  {
     slug: "how-much-time-do-parents-spend-with-their-children",
     title: "How much time do parents spend with their children?",
     date: "2026-08-11",
