@@ -170,10 +170,10 @@ function Article() {
             How much of your life do you spend commuting? →
           </Link>
           <Link
-            to="/journal/how-much-time-do-you-spend-stuck-in-traffic"
+            to="/journal/how-much-time-do-you-spend-listening-to-music"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much time do you spend stuck in traffic? →
+            How much time do you spend listening to music? →
           </Link>
         </div>
       </div>

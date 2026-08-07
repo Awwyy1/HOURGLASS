@@ -138,6 +138,12 @@ function Article() {
         </p>
         <div className="space-y-3">
           <Link
+            to="/journal/how-much-of-your-life-do-you-spend-driving"
+            className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
+          >
+            How much of your life do you spend driving? →
+          </Link>
+          <Link
             to="/journal/how-much-of-your-life-do-you-spend-commuting"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >

@@ -151,10 +151,10 @@ function Article() {
             How much time do you spend getting ready in the morning? →
           </Link>
           <Link
-            to="/journal/how-much-time-do-you-spend-on-your-phone"
+            to="/journal/how-much-time-do-you-spend-alone"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much time do you spend on your phone per day? →
+            How much time do you spend alone? →
           </Link>
         </div>
       </div>

@@ -156,16 +156,22 @@ function Article() {
         </p>
         <div className="space-y-3">
           <Link
-            to="/journal/how-much-of-your-life-do-you-spend-on-tiktok"
+            to="/journal/how-much-time-do-you-spend-on-your-phone-in-bed"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much of your life do you spend on TikTok? →
+            How much time do you spend on your phone in bed? →
           </Link>
           <Link
-            to="/journal/how-much-of-your-life-do-you-spend-on-instagram"
+            to="/journal/how-much-time-does-the-average-person-spend-on-social-media"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much of your life do you spend on Instagram? →
+            How much time does the average person spend on social media? →
+          </Link>
+          <Link
+            to="/journal/how-much-time-do-you-spend-texting"
+            className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
+          >
+            How much time do you spend texting? →
           </Link>
         </div>
       </div>

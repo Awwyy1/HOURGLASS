@@ -155,10 +155,10 @@ function Article() {
             How much time do you have left with your parents? →
           </Link>
           <Link
-            to="/journal/how-many-days-are-in-a-lifetime"
+            to="/journal/how-much-of-your-life-do-you-spend-in-school"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How many days are in a lifetime? →
+            How much of your life do you spend in school? →
           </Link>
         </div>
       </div>

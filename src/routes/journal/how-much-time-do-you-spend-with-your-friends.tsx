@@ -150,16 +150,16 @@ function Article() {
         </p>
         <div className="space-y-3">
           <Link
-            to="/journal/how-much-time-do-you-have-left-with-your-parents"
+            to="/journal/how-much-time-do-you-spend-alone"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much time do you have left with your parents? →
+            How much time do you spend alone? →
           </Link>
           <Link
-            to="/journal/how-much-time-does-the-average-person-spend-on-social-media"
+            to="/journal/how-much-time-do-you-spend-texting"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much time does the average person spend on social media? →
+            How much time do you spend texting? →
           </Link>
         </div>
       </div>
