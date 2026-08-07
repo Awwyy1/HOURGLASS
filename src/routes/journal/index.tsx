@@ -15,6 +15,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-time-do-you-spend-on-your-phone-in-bed",
+    title: "How much time do you spend on your phone in bed?",
+    date: "2026-08-20",
+    readingTime: "3 min",
+    excerpt:
+      "Most adults spend between thirty and sixty minutes on a phone after getting into bed, which comes to nearly three waking years. It is the only category here that charges twice, since the hour is taken directly out of the night that follows it.",
+  },
+  {
     slug: "how-much-time-do-you-spend-alone",
     title: "How much time do you spend alone?",
     date: "2026-08-17",
