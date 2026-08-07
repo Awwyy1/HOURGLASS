@@ -15,6 +15,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-time-do-you-spend-alone",
+    title: "How much time do you spend alone?",
+    date: "2026-08-17",
+    readingTime: "3 min",
+    excerpt:
+      "Americans spend around five and a half waking hours a day alone, and the figure has climbed for two decades. Over an adult life that is roughly twenty waking years, larger than the total for work — though the data cannot tell you which of those hours were lonely.",
+  },
+  {
     slug: "how-much-vacation-time-do-you-get-in-a-lifetime",
     title: "How much vacation time do you get in a lifetime?",
     date: "2026-08-14",
