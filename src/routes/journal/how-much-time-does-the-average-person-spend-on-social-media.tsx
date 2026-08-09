@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time does the average person spend on social media?"
         description="The average user now spends about 2 hours and 23 minutes a day on social media across all platforms. Over 50 years of adult use that adds up to roughly seven and a half waking years."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time does the average person spend on social media?"

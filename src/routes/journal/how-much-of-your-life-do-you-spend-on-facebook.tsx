@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend on Facebook?"
         description="Facebook has 3 billion monthly active users and the average session runs around 33 minutes a day. Over 15 years of use, the total approaches six months of waking time."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend on Facebook?"

@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend in meetings?"
         description="Microsoft found 57 percent of the working week goes to meetings and communication. At three hours per day over a career, that is two waking years spent in conference rooms."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend in meetings?"

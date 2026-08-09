@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend watching sports?"
         description="Nielsen found Americans spend an average of around 3.5 hours a week watching live sports. For dedicated fans the number is much higher. Over 50 years, even the average adds up to well over a year of waking time."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend watching sports?"

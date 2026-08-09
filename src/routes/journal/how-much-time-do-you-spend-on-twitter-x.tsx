@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend on Twitter / X?"
         description="The average active user spends around 30 minutes a day on Twitter / X. Over a decade of use that adds up to more than 75 waking days spent reading posts that mostly disappear within hours."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend on Twitter / X?"

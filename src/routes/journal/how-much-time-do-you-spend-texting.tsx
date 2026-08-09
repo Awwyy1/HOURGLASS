@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend texting?"
         description="Americans send and receive an average of around 94 texts a day. At roughly 30 seconds of attention per message, that adds up to nearly an hour daily and more than four waking years across a lifetime."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend texting?"

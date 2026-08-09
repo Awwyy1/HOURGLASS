@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend sleeping?"
         description="About a third of your life — 25 years out of 79 spent unconscious. The number is fixed. What you do with the other two-thirds is not."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend sleeping?"

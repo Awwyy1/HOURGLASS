@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend playing video games?"
         description="The average gamer spends 7 to 8 hours a week playing — just under 10 waking years over a lifetime. For the top 10 percent of players, the total exceeds 30 years."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend playing video games?"

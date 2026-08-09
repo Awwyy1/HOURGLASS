@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time does the average person spend on email?"
         description="McKinsey put it at 28 percent of the workweek. Across a full career the total approaches five waking years spent reading, writing, and managing an inbox."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time does the average person spend on email?"

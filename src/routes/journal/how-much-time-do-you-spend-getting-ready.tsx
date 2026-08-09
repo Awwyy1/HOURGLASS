@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend getting ready in the morning?"
         description="The Bureau of Labor Statistics found Americans spend about 45 minutes a day on grooming — showering, dressing, hair, and personal care. Over a lifetime that adds up to nearly three waking years spent getting ready to start the day."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend getting ready in the morning?"

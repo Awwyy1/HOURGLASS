@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend with your friends?"
         description="Time with friends peaks in the late teens and falls steeply through the thirties. Research puts the cost of a new close friendship at around 200 hours, which is why adult friendship is less about willingness than arithmetic."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend with your friends?"

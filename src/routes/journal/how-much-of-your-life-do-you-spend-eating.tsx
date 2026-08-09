@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend eating?"
         description="The average person spends a little over an hour a day eating and drinking. Over a lifetime that comes to around four and a half waking years at the table, and the trend has been moving toward doing it faster and alone."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend eating?"

@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { PageSEO } from "../components/PageSEO";
 
 export const Route = createFileRoute("/about")({
   component: About,
@@ -7,6 +8,10 @@ export const Route = createFileRoute("/about")({
 function About() {
   return (
     <article className="mx-auto max-w-2xl px-6 py-24">
+      <PageSEO
+        title="About"
+        description="What HOURGLASS is, why it exists, and how the calculator turns a daily habit into a lifetime figure."
+      />
       <header className="mb-16">
         <p className="mb-6 font-sans text-[10px] uppercase tracking-[0.36em] text-muted-foreground">
           About

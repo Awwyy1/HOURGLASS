@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you have left with your parents?"
         description="Time-use data shows that most of the hours you will ever spend with your parents were already spent before you turned eighteen. For an adult who visits twice a year, what remains is measured in weeks, not years."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you have left with your parents?"

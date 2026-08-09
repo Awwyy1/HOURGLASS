@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend in school?"
         description="Thirteen years of American schooling comes to roughly 15,000 hours in the building, or about two and a half waking years. It is the only large block of a life that someone else chose in full."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend in school?"

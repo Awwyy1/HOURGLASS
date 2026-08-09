@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend reading news?"
         description="The average person spends an hour a day with the news. Over 40 years that is two and a half waking years. Studies find people remember about 20 percent of what they read."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend reading news?"

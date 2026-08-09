@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend on TikTok?"
         description="The average US user spends 54 minutes a day on TikTok. Over a lifetime of use that comes to roughly two waking years given to an algorithm you never chose to follow."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend on TikTok?"

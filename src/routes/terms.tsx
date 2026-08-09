@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { PageSEO } from "../components/PageSEO";
 
 export const Route = createFileRoute("/terms")({
   component: Terms,
@@ -7,6 +8,10 @@ export const Route = createFileRoute("/terms")({
 function Terms() {
   return (
     <article className="mx-auto max-w-2xl px-6 py-24">
+      <PageSEO
+        title="Terms of Service"
+        description="The terms that apply to using the HOURGLASS calculator and journal."
+      />
       <header className="mb-16">
         <p className="mb-6 font-sans text-[10px] uppercase tracking-[0.36em] text-muted-foreground">
           Legal

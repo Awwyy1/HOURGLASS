@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do parents spend with their children?"
         description="Parents today spend more hours with their children than parents did in the 1960s, despite working far more. There are 940 Saturdays between a child's birth and their eighteenth birthday, and most of the total is spent before either side notices."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do parents spend with their children?"

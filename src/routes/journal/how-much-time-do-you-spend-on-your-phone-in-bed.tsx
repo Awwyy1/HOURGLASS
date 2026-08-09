@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend on your phone in bed?"
         description="Most adults spend between thirty and sixty minutes on a phone after getting into bed. Over a lifetime that is nearly three waking years, and it is the only category in this journal that charges you twice for the same hour."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend on your phone in bed?"

@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend reading books in a lifetime?"
         description="The average American reads about 12 books a year and spends around 17 minutes a day reading for pleasure. Over a lifetime that adds up to just over a year of waking time — less than most people assume."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend reading books in a lifetime?"

@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend waiting in a lifetime?"
         description="Americans spend an estimated 37 minutes a day waiting — in lines, on hold, at traffic lights, in waiting rooms. Over a lifetime that adds up to more than two waking years spent doing nothing by requirement."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend waiting in a lifetime?"

@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend on Instagram?"
         description="The average person checks Instagram 20 to 30 times a day. Over a lifetime of use, the total approaches six months of waking time spent on a single platform."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend on Instagram?"

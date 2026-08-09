@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { PageSEO } from "../components/PageSEO";
 
 export const Route = createFileRoute("/privacy")({
   component: Privacy,
@@ -7,6 +8,10 @@ export const Route = createFileRoute("/privacy")({
 function Privacy() {
   return (
     <article className="mx-auto max-w-2xl px-6 py-24">
+      <PageSEO
+        title="Privacy Policy"
+        description="How HOURGLASS handles data. The calculator runs entirely in your browser and nothing you enter is sent anywhere."
+      />
       <header className="mb-16">
         <p className="mb-6 font-sans text-[10px] uppercase tracking-[0.36em] text-muted-foreground">
           Legal

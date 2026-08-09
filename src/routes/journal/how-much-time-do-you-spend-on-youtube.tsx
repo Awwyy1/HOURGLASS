@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend on YouTube?"
         description="Regular users spend around 45 minutes a day on YouTube. Over 40 years that becomes two waking years. The recommendation algorithm drives 70 percent of total watch time."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend on YouTube?"

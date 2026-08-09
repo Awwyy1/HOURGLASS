@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend on your laptop?"
         description="Between work and personal use, most adults spend five to seven hours a day in front of a laptop or desktop screen. Over a career and adult life, that total reaches decades — making it the single largest category of waking time for many people."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend on your laptop?"

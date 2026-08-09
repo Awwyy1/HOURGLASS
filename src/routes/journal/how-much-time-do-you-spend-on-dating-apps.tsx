@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend on dating apps?"
         description="The average active user spends 30 to 90 minutes a day on dating apps. Over two to three years of use, the total reaches hundreds of hours spent swiping and messaging."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend on dating apps?"

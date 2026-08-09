@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend on LinkedIn?"
         description="LinkedIn has over a billion members but most use it in short bursts — a few minutes a week when employed, hours a day when job hunting. The split between those two groups explains why the averages are so misleading."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend on LinkedIn?"

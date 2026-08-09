@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend commuting?"
         description="The US Census puts the average one-way commute at 27.6 minutes. Over a 40-year career the total reaches 8,800 hours — one and a half waking years spent in transit."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend commuting?"

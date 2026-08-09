@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend exercising?"
         description="The Bureau of Labor Statistics found Americans average 17 minutes of intentional exercise per day. Over a lifetime that is just over a year of waking time — and only 23 percent of adults meet the minimum health guidelines."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend exercising?"

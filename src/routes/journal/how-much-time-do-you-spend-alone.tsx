@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend alone?"
         description="Americans spend around five and a half waking hours a day alone, and the figure has been climbing for two decades. Over an adult life that comes to roughly twenty waking years, though the data cannot tell you which of them were lonely."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend alone?"

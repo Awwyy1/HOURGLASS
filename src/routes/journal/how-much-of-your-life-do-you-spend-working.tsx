@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend working?"
         description="The standard answer is 40 hours a week. Over a full career: 80,000 hours — somewhere between 17 and 20 waking years of your life given to work."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend working?"

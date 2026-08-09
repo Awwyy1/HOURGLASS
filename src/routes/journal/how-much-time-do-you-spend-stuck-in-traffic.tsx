@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend stuck in traffic?"
         description="INRIX found the average US driver lost 43 hours to congestion in 2023. In the worst cities, the figure exceeds 60 hours a year. Over a driving lifetime, that is more than two waking years spent not moving."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend stuck in traffic?"

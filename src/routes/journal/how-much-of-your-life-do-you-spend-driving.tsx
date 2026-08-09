@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend driving?"
         description="The AAA Foundation found the average American driver spends about 51 minutes a day behind the wheel. Over a driving life that comes to more than three waking years, and it is the one large category a technology shift could plausibly erase."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend driving?"

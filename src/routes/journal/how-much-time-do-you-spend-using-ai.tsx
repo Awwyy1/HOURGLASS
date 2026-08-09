@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend using AI?"
         description="OpenAI reported 200 million weekly users in 2024, a figure that doubled in under a year. Regular users spend 30 to 90 minutes a day across AI tools — and the number keeps growing."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend using AI?"

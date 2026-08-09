@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend on your phone per day?"
         description="The average is close to four hours a day — most people guess two. Over a lifetime of smartphone use, the total comes to roughly 15 waking years spent looking at a screen."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend on your phone per day?"

@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much vacation time do you get in a lifetime?"
         description="An American career yields roughly 645 days of paid vacation, against 80,000 hours of work. It is the one large category in this journal that most people consume less of than they are owed."
+        ogType="article"
       />
       <ArticleSchema
         title="How much vacation time do you get in a lifetime?"

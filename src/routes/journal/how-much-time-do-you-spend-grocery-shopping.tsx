@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend grocery shopping?"
         description="The average American spends about 43 minutes on a single grocery trip and shops roughly 1.5 times a week. Over a lifetime that adds up to more than two waking years spent walking store aisles."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend grocery shopping?"

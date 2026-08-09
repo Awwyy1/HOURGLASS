@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend shopping online?"
         description="The average online shopper spends five hours a week browsing and buying. Over a lifetime that adds up to a year and a half of waking time — most sessions ending without a purchase."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend shopping online?"

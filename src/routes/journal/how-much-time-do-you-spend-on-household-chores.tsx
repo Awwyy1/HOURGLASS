@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend on household chores?"
         description="The Bureau of Labor Statistics puts household activities — cleaning, laundry, organizing — at around two hours a day for the average American. Over a lifetime that is more than six waking years, and the split between men and women remains wide."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend on household chores?"

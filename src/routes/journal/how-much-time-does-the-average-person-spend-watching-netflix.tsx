@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time does the average person spend watching Netflix?"
         description="Netflix subscribers watch an average of two hours a day — 45 waking days per year. Over a lifetime it becomes more than seven years spent on a single streaming platform."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time does the average person spend watching Netflix?"

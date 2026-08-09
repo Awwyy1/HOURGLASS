@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend cooking?"
         description="The average person spends about 40 minutes a day cooking. Over a lifetime that is two and a half waking years in the kitchen — one of the few large time categories that produces something."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend cooking?"

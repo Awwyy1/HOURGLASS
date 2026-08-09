@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend listening to music?"
         description="Nielsen found Americans spend around 32 hours a month listening to music across all platforms. Over a lifetime that comes to roughly four waking years — more than most people spend on any single social media platform."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend listening to music?"
