@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend reading news?"
         description="The average person spends an hour a day with the news. Over 40 years that is two and a half waking years. Studies find people remember about 20 percent of what they read."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend reading news?"
@@ -132,16 +133,16 @@ function Article() {
         </p>
         <div className="space-y-3">
           <Link
-            to="/journal/how-much-time-do-you-spend-on-your-phone"
+            to="/journal/how-much-time-do-you-spend-reading-books"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much time do you spend on your phone per day? →
+            How much time do you spend reading books in a lifetime? →
           </Link>
           <Link
-            to="/journal/how-much-time-does-the-average-person-spend-on-email"
+            to="/journal/how-much-time-do-you-spend-on-twitter-x"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much time does the average person spend on email? →
+            How much time do you spend on Twitter / X? →
           </Link>
         </div>
       </div>

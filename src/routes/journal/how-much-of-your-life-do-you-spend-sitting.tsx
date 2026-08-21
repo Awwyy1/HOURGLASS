@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend sitting?"
         description="The average adult sits for around nine hours of every waking day. Over an adult lifetime that comes to more than 30 waking years spent in a chair, and the health research on that posture has grown hard to ignore."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend sitting?"

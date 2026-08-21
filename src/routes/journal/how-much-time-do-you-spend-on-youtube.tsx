@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend on YouTube?"
         description="Regular users spend around 45 minutes a day on YouTube. Over 40 years that becomes two waking years. The recommendation algorithm drives 70 percent of total watch time."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend on YouTube?"
@@ -133,16 +134,16 @@ function Article() {
         </p>
         <div className="space-y-3">
           <Link
-            to="/journal/how-much-of-your-life-do-you-spend-on-tiktok"
+            to="/journal/how-much-time-does-the-average-person-spend-watching-netflix"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much of your life do you spend on TikTok? →
+            How much time does the average person spend watching Netflix? →
           </Link>
           <Link
-            to="/journal/how-many-hours-are-in-a-lifetime"
+            to="/journal/how-much-of-your-life-do-you-spend-playing-video-games"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How many hours are in a lifetime? →
+            How much of your life do you spend playing video games? →
           </Link>
         </div>
       </div>

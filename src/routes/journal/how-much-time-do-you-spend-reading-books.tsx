@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend reading books in a lifetime?"
         description="The average American reads about 12 books a year and spends around 17 minutes a day reading for pleasure. Over a lifetime that adds up to just over a year of waking time — less than most people assume."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend reading books in a lifetime?"
@@ -134,16 +135,16 @@ function Article() {
         </p>
         <div className="space-y-3">
           <Link
+            to="/journal/how-much-time-do-you-spend-listening-to-music"
+            className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
+          >
+            How much time do you spend listening to music? →
+          </Link>
+          <Link
             to="/journal/how-much-of-your-life-do-you-spend-reading-news"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
             How much of your life do you spend reading news? →
-          </Link>
-          <Link
-            to="/journal/how-many-hours-are-in-a-lifetime"
-            className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
-          >
-            How many hours are in a lifetime? →
           </Link>
         </div>
       </div>

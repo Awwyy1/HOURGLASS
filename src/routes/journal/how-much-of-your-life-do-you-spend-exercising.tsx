@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend exercising?"
         description="The Bureau of Labor Statistics found Americans average 17 minutes of intentional exercise per day. Over a lifetime that is just over a year of waking time — and only 23 percent of adults meet the minimum health guidelines."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend exercising?"
@@ -143,16 +144,16 @@ function Article() {
         </p>
         <div className="space-y-3">
           <Link
-            to="/journal/how-many-hours-are-in-a-lifetime"
+            to="/journal/how-much-of-your-life-do-you-spend-sitting"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How many hours are in a lifetime? →
+            How much of your life do you spend sitting? →
           </Link>
           <Link
-            to="/journal/how-much-time-do-you-spend-on-your-phone"
+            to="/journal/how-much-time-do-you-spend-watching-sports"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much time do you spend on your phone per day? →
+            How much time do you spend watching sports? →
           </Link>
         </div>
       </div>

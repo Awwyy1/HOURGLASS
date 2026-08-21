@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend in the shower?"
         description="The average shower runs about eight minutes, once a day. Over a lifetime that comes to roughly seven months of waking time and hundreds of thousands of gallons of water — spent in what may be the last unstimulated space most people have left."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend in the shower?"
@@ -151,10 +152,10 @@ function Article() {
             How much time do you spend getting ready in the morning? →
           </Link>
           <Link
-            to="/journal/how-much-time-do-you-spend-on-your-phone"
+            to="/journal/how-much-time-do-you-spend-alone"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much time do you spend on your phone per day? →
+            How much time do you spend alone? →
           </Link>
         </div>
       </div>

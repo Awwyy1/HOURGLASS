@@ -1,13 +1,48 @@
+import { useEffect } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
 } from "@tanstack/react-router";
 import { ThemeProvider } from "../lib/theme";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+
+const SITE = "https://www.justhourglass.me";
+
+/**
+ * Keeps the canonical link and og:url pointing at the page actually being
+ * viewed. This lives at the root rather than in PageSEO so that routes
+ * without a PageSEO call still get a correct canonical instead of inheriting
+ * the previous page's URL during client-side navigation.
+ */
+function useCanonicalUrl() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+
+  useEffect(() => {
+    const clean = pathname === "/" ? "/" : pathname.replace(/\/+$/, "");
+    const url = SITE + clean;
+
+    let link = document.head.querySelector('link[rel="canonical"]');
+    if (!link) {
+      link = document.createElement("link");
+      link.setAttribute("rel", "canonical");
+      document.head.appendChild(link);
+    }
+    link.setAttribute("href", url);
+
+    let og = document.head.querySelector('meta[property="og:url"]');
+    if (!og) {
+      og = document.createElement("meta");
+      og.setAttribute("property", "og:url");
+      document.head.appendChild(og);
+    }
+    og.setAttribute("content", url);
+  }, [pathname]);
+}
 
 function NotFoundComponent() {
   return (
@@ -81,6 +116,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  useCanonicalUrl();
 
   return (
     <QueryClientProvider client={queryClient}>

@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend using AI?"
         description="OpenAI reported 200 million weekly users in 2024, a figure that doubled in under a year. Regular users spend 30 to 90 minutes a day across AI tools — and the number keeps growing."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend using AI?"
@@ -138,16 +139,16 @@ function Article() {
         </p>
         <div className="space-y-3">
           <Link
+            to="/journal/how-much-of-your-life-do-you-spend-on-your-laptop"
+            className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
+          >
+            How much of your life do you spend on your laptop? →
+          </Link>
+          <Link
             to="/journal/how-much-time-does-the-average-person-spend-on-email"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
             How much time does the average person spend on email? →
-          </Link>
-          <Link
-            to="/journal/how-much-of-your-life-do-you-spend-in-meetings"
-            className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
-          >
-            How much of your life do you spend in meetings? →
           </Link>
         </div>
       </div>

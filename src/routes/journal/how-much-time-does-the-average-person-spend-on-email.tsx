@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time does the average person spend on email?"
         description="McKinsey put it at 28 percent of the workweek. Across a full career the total approaches five waking years spent reading, writing, and managing an inbox."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time does the average person spend on email?"
@@ -153,10 +154,10 @@ function Article() {
             How much of your life do you spend in meetings? →
           </Link>
           <Link
-            to="/journal/how-many-hours-are-in-a-lifetime"
+            to="/journal/how-much-time-do-you-spend-using-ai"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How many hours are in a lifetime? →
+            How much time do you spend using AI? →
           </Link>
         </div>
       </div>

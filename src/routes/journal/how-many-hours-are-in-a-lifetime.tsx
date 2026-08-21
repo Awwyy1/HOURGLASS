@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How many hours are in a lifetime?"
         description="A human life contains around 692,000 hours in total. Subtract sleep and you have roughly 461,000 waking hours. The number sounds large until you see where it actually goes."
+        ogType="article"
       />
       <ArticleSchema
         title="How many hours are in a lifetime?"

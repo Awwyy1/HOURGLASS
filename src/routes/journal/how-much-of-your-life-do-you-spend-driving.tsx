@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend driving?"
         description="The AAA Foundation found the average American driver spends about 51 minutes a day behind the wheel. Over a driving life that comes to more than three waking years, and it is the one large category a technology shift could plausibly erase."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend driving?"
@@ -170,10 +171,16 @@ function Article() {
             How much of your life do you spend commuting? →
           </Link>
           <Link
-            to="/journal/how-much-time-do-you-spend-stuck-in-traffic"
+            to="/journal/how-much-time-do-you-spend-listening-to-music"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much time do you spend stuck in traffic? →
+            How much time do you spend listening to music? →
+          </Link>
+          <Link
+            to="/journal/how-much-time-do-you-spend-listening-to-podcasts"
+            className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
+          >
+            How much time do you spend listening to podcasts? →
           </Link>
         </div>
       </div>

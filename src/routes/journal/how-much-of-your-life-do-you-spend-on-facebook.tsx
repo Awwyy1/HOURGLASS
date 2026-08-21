@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend on Facebook?"
         description="Facebook has 3 billion monthly active users and the average session runs around 33 minutes a day. Over 15 years of use, the total approaches six months of waking time."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend on Facebook?"
@@ -134,16 +135,16 @@ function Article() {
         </p>
         <div className="space-y-3">
           <Link
-            to="/journal/how-much-of-your-life-do-you-spend-on-instagram"
+            to="/journal/how-much-time-do-you-spend-on-twitter-x"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much of your life do you spend on Instagram? →
+            How much time do you spend on Twitter / X? →
           </Link>
           <Link
-            to="/journal/how-much-time-do-you-spend-on-your-phone"
+            to="/journal/how-much-time-does-the-average-person-spend-on-social-media"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much time do you spend on your phone per day? →
+            How much time does the average person spend on social media? →
           </Link>
         </div>
       </div>

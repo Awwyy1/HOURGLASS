@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend on dating apps?"
         description="The average active user spends 30 to 90 minutes a day on dating apps. Over two to three years of use, the total reaches hundreds of hours spent swiping and messaging."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend on dating apps?"
@@ -130,10 +131,10 @@ function Article() {
         </p>
         <div className="space-y-3">
           <Link
-            to="/journal/how-much-time-do-you-spend-on-your-phone"
+            to="/journal/how-much-time-do-you-spend-with-your-friends"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much time do you spend on your phone per day? →
+            How much time do you spend with your friends? →
           </Link>
           <Link
             to="/journal/how-much-of-your-life-do-you-spend-on-instagram"

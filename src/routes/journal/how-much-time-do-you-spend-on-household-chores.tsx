@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend on household chores?"
         description="The Bureau of Labor Statistics puts household activities — cleaning, laundry, organizing — at around two hours a day for the average American. Over a lifetime that is more than six waking years, and the split between men and women remains wide."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend on household chores?"
@@ -142,16 +143,22 @@ function Article() {
         </p>
         <div className="space-y-3">
           <Link
-            to="/journal/how-much-of-your-life-do-you-spend-cooking"
+            to="/journal/how-much-of-your-life-do-you-spend-eating"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much of your life do you spend cooking? →
+            How much of your life do you spend eating? →
           </Link>
           <Link
-            to="/journal/how-many-hours-are-in-a-lifetime"
+            to="/journal/how-much-time-do-you-spend-getting-ready"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How many hours are in a lifetime? →
+            How much time do you spend getting ready in the morning? →
+          </Link>
+          <Link
+            to="/journal/how-much-time-do-you-spend-looking-for-lost-things"
+            className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
+          >
+            How much time do you spend looking for lost things? →
           </Link>
         </div>
       </div>

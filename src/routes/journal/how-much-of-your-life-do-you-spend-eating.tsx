@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend eating?"
         description="The average person spends a little over an hour a day eating and drinking. Over a lifetime that comes to around four and a half waking years at the table, and the trend has been moving toward doing it faster and alone."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend eating?"
@@ -148,10 +149,10 @@ function Article() {
             How much of your life do you spend cooking? →
           </Link>
           <Link
-            to="/journal/how-many-hours-are-in-a-lifetime"
+            to="/journal/how-much-of-your-life-do-you-spend-in-the-shower"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How many hours are in a lifetime? →
+            How much of your life do you spend in the shower? →
           </Link>
         </div>
       </div>

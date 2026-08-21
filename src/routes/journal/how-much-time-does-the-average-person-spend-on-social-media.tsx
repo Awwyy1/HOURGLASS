@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time does the average person spend on social media?"
         description="The average user now spends about 2 hours and 23 minutes a day on social media across all platforms. Over 50 years of adult use that adds up to roughly seven and a half waking years."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time does the average person spend on social media?"
@@ -170,16 +171,22 @@ function Article() {
         </p>
         <div className="space-y-3">
           <Link
-            to="/journal/how-much-time-do-you-spend-on-your-phone"
+            to="/journal/how-much-of-your-life-do-you-spend-on-tiktok"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much time do you spend on your phone per day? →
+            How much of your life do you spend on TikTok? →
           </Link>
           <Link
-            to="/journal/how-many-hours-are-in-a-lifetime"
+            to="/journal/how-much-of-your-life-do-you-spend-on-instagram"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How many hours are in a lifetime? →
+            How much of your life do you spend on Instagram? →
+          </Link>
+          <Link
+            to="/journal/how-much-of-your-life-do-you-spend-on-facebook"
+            className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
+          >
+            How much of your life do you spend on Facebook? →
           </Link>
         </div>
       </div>

@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend in meetings?"
         description="Microsoft found 57 percent of the working week goes to meetings and communication. At three hours per day over a career, that is two waking years spent in conference rooms."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend in meetings?"
@@ -140,10 +141,16 @@ function Article() {
             How much of your life do you spend working? →
           </Link>
           <Link
-            to="/journal/how-much-of-your-life-do-you-spend-commuting"
+            to="/journal/how-much-time-do-you-spend-on-linkedin"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much of your life do you spend commuting? →
+            How much time do you spend on LinkedIn? →
+          </Link>
+          <Link
+            to="/journal/how-much-time-do-you-spend-on-video-calls"
+            className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
+          >
+            How much time do you spend on video calls? →
           </Link>
         </div>
       </div>

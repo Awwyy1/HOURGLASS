@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time does the average person spend watching Netflix?"
         description="Netflix subscribers watch an average of two hours a day — 45 waking days per year. Over a lifetime it becomes more than seven years spent on a single streaming platform."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time does the average person spend watching Netflix?"
@@ -129,16 +130,16 @@ function Article() {
         </p>
         <div className="space-y-3">
           <Link
+            to="/journal/how-much-time-do-you-spend-watching-sports"
+            className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
+          >
+            How much time do you spend watching sports? →
+          </Link>
+          <Link
             to="/journal/how-much-time-do-you-spend-on-youtube"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
             How much time do you spend on YouTube? →
-          </Link>
-          <Link
-            to="/journal/how-much-of-your-life-do-you-spend-on-tiktok"
-            className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
-          >
-            How much of your life do you spend on TikTok? →
           </Link>
         </div>
       </div>

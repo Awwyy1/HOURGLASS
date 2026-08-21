@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend playing video games?"
         description="The average gamer spends 7 to 8 hours a week playing — just under 10 waking years over a lifetime. For the top 10 percent of players, the total exceeds 30 years."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend playing video games?"
@@ -142,16 +143,16 @@ function Article() {
         </p>
         <div className="space-y-3">
           <Link
-            to="/journal/how-much-time-do-you-spend-on-your-phone"
+            to="/journal/how-much-time-do-you-spend-using-ai"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much time do you spend on your phone per day? →
+            How much time do you spend using AI? →
           </Link>
           <Link
-            to="/journal/how-many-hours-are-in-a-lifetime"
+            to="/journal/how-much-of-your-life-do-you-spend-on-tiktok"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How many hours are in a lifetime? →
+            How much of your life do you spend on TikTok? →
           </Link>
         </div>
       </div>

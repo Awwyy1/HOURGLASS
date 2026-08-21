@@ -15,6 +15,62 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-time-do-you-spend-looking-for-lost-things",
+    title: "How much time do you spend looking for lost things?",
+    date: "2026-08-21",
+    readingTime: "3 min",
+    excerpt:
+      "Surveys put the average American at two and a half days a year hunting for misplaced keys, phones, and wallets. Over a lifetime that is about seven months, and it is the only total in this journal that returns absolutely nothing.",
+  },
+  {
+    slug: "how-much-time-do-you-spend-on-your-phone-in-bed",
+    title: "How much time do you spend on your phone in bed?",
+    date: "2026-08-20",
+    readingTime: "3 min",
+    excerpt:
+      "Most adults spend between thirty and sixty minutes on a phone after getting into bed, which comes to nearly three waking years. It is the only category here that charges twice, since the hour is taken directly out of the night that follows it.",
+  },
+  {
+    slug: "how-much-time-do-you-spend-on-video-calls",
+    title: "How much time do you spend on video calls?",
+    date: "2026-08-19",
+    readingTime: "3 min",
+    excerpt:
+      "Remote and hybrid workers average two to three hours a day on camera, which comes to roughly three waking years over a career. It is the newest large category here, and the only one with a fatigue mechanism named after the software.",
+  },
+  {
+    slug: "how-much-time-do-you-spend-listening-to-podcasts",
+    title: "How much time do you spend listening to podcasts?",
+    date: "2026-08-18",
+    readingTime: "3 min",
+    excerpt:
+      "Weekly listeners average around eight hours a week, or nearly three waking years across an adult life. Podcasts are unusual because most of those hours were not taken from anything else, which makes them the best-value entry in this journal.",
+  },
+  {
+    slug: "how-much-time-do-you-spend-alone",
+    title: "How much time do you spend alone?",
+    date: "2026-08-17",
+    readingTime: "3 min",
+    excerpt:
+      "Americans spend around five and a half waking hours a day alone, and the figure has climbed for two decades. Over an adult life that is roughly twenty waking years, larger than the total for work — though the data cannot tell you which of those hours were lonely.",
+  },
+  {
+    slug: "how-much-vacation-time-do-you-get-in-a-lifetime",
+    title: "How much vacation time do you get in a lifetime?",
+    date: "2026-08-14",
+    readingTime: "3 min",
+    excerpt:
+      "An American career yields roughly 645 days of paid vacation against 80,000 hours of work, and around half of workers never use everything they are owed. It is the one category here where people consume less time than they are entitled to.",
+  },
+  {
+    slug: "how-much-time-do-parents-spend-with-their-children",
+    title: "How much time do parents spend with their children?",
+    date: "2026-08-11",
+    readingTime: "3 min",
+    excerpt:
+      "Parents today spend more hours with their children than parents did in the 1960s, despite working far more. There are 940 Saturdays between birth and a child's eighteenth birthday, and most of them are spent before the child turns ten.",
+  },
+  {
     slug: "how-much-time-do-you-spend-with-your-friends",
     title: "How much time do you spend with your friends?",
     date: "2026-08-08",

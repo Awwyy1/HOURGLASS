@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { PageSEO } from "../components/PageSEO";
 
 export const Route = createFileRoute("/philosophy")({
   component: Philosophy,
@@ -7,6 +8,10 @@ export const Route = createFileRoute("/philosophy")({
 function Philosophy() {
   return (
     <article className="mx-auto max-w-2xl px-6 py-24">
+      <PageSEO
+        title="Philosophy"
+        description="On the arithmetic of attention: why a small daily habit becomes a large share of a life, and what the numbers are and are not good for."
+      />
       <header className="mb-16 text-center">
         <p className="mb-6 font-sans text-[10px] uppercase tracking-[0.36em] text-muted-foreground">
           An essay

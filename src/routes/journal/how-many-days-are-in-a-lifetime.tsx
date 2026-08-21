@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How many days are in a lifetime?"
         description="An average human life contains about 28,900 days. Around 6,600 of them belong to childhood, a third of the rest goes to sleep, and the discretionary remainder is smaller than almost anyone expects."
+        ogType="article"
       />
       <ArticleSchema
         title="How many days are in a lifetime?"
@@ -148,10 +149,10 @@ function Article() {
             How many hours are in a lifetime? →
           </Link>
           <Link
-            to="/journal/how-much-of-your-life-do-you-spend-sleeping"
+            to="/journal/how-much-time-do-you-have-left-with-your-parents"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much of your life do you spend sleeping? →
+            How much time do you have left with your parents? →
           </Link>
         </div>
       </div>

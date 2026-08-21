@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend on your laptop?"
         description="Between work and personal use, most adults spend five to seven hours a day in front of a laptop or desktop screen. Over a career and adult life, that total reaches decades — making it the single largest category of waking time for many people."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend on your laptop?"
@@ -142,16 +143,22 @@ function Article() {
         </p>
         <div className="space-y-3">
           <Link
-            to="/journal/how-much-time-do-you-spend-on-your-phone"
+            to="/journal/how-much-of-your-life-do-you-spend-sitting"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much time do you spend on your phone per day? →
+            How much of your life do you spend sitting? →
           </Link>
           <Link
             to="/journal/how-much-time-does-the-average-person-spend-on-email"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
             How much time does the average person spend on email? →
+          </Link>
+          <Link
+            to="/journal/how-much-time-do-you-spend-on-video-calls"
+            className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
+          >
+            How much time do you spend on video calls? →
           </Link>
         </div>
       </div>

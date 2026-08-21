@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend grocery shopping?"
         description="The average American spends about 43 minutes on a single grocery trip and shops roughly 1.5 times a week. Over a lifetime that adds up to more than two waking years spent walking store aisles."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend grocery shopping?"
@@ -142,16 +143,16 @@ function Article() {
         </p>
         <div className="space-y-3">
           <Link
-            to="/journal/how-much-time-do-you-spend-shopping-online"
-            className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
-          >
-            How much time do you spend shopping online? →
-          </Link>
-          <Link
             to="/journal/how-much-of-your-life-do-you-spend-cooking"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
             How much of your life do you spend cooking? →
+          </Link>
+          <Link
+            to="/journal/how-much-time-do-you-spend-shopping-online"
+            className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
+          >
+            How much time do you spend shopping online? →
           </Link>
         </div>
       </div>

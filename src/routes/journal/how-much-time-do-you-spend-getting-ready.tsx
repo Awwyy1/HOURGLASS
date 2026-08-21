@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend getting ready in the morning?"
         description="The Bureau of Labor Statistics found Americans spend about 45 minutes a day on grooming — showering, dressing, hair, and personal care. Over a lifetime that adds up to nearly three waking years spent getting ready to start the day."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend getting ready in the morning?"
@@ -138,16 +139,22 @@ function Article() {
         </p>
         <div className="space-y-3">
           <Link
-            to="/journal/how-much-of-your-life-do-you-spend-sleeping"
+            to="/journal/how-much-of-your-life-do-you-spend-in-the-shower"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much of your life do you spend sleeping? →
+            How much of your life do you spend in the shower? →
           </Link>
           <Link
-            to="/journal/how-many-hours-are-in-a-lifetime"
+            to="/journal/how-much-time-do-you-spend-on-household-chores"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How many hours are in a lifetime? →
+            How much time do you spend on household chores? →
+          </Link>
+          <Link
+            to="/journal/how-much-time-do-you-spend-looking-for-lost-things"
+            className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
+          >
+            How much time do you spend looking for lost things? →
           </Link>
         </div>
       </div>

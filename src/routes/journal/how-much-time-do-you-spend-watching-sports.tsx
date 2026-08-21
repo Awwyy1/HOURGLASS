@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much time do you spend watching sports?"
         description="Nielsen found Americans spend an average of around 3.5 hours a week watching live sports. For dedicated fans the number is much higher. Over 50 years, even the average adds up to well over a year of waking time."
+        ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend watching sports?"
@@ -145,10 +146,10 @@ function Article() {
             How much time does the average person spend watching Netflix? →
           </Link>
           <Link
-            to="/journal/how-much-time-do-you-spend-on-your-phone"
+            to="/journal/how-much-of-your-life-do-you-spend-exercising"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much time do you spend on your phone per day? →
+            How much of your life do you spend exercising? →
           </Link>
         </div>
       </div>

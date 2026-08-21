@@ -16,6 +16,7 @@ function Article() {
       <PageSEO
         title="How much of your life do you spend working?"
         description="The standard answer is 40 hours a week. Over a full career: 80,000 hours — somewhere between 17 and 20 waking years of your life given to work."
+        ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend working?"
@@ -149,16 +150,16 @@ function Article() {
         </p>
         <div className="space-y-3">
           <Link
-            to="/journal/how-much-of-your-life-do-you-spend-in-meetings"
+            to="/journal/how-much-of-your-life-do-you-spend-in-school"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much of your life do you spend in meetings? →
+            How much of your life do you spend in school? →
           </Link>
           <Link
-            to="/journal/how-many-hours-are-in-a-lifetime"
+            to="/journal/how-much-vacation-time-do-you-get-in-a-lifetime"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How many hours are in a lifetime? →
+            How much vacation time do you get in a lifetime? →
           </Link>
         </div>
       </div>
