@@ -148,6 +148,12 @@ function Article() {
           >
             How much of your life do you spend driving? →
           </Link>
+          <Link
+            to="/journal/how-much-time-do-you-spend-listening-to-podcasts"
+            className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
+          >
+            How much time do you spend listening to podcasts? →
+          </Link>
         </div>
       </div>
 

@@ -31,10 +31,13 @@ import { Route as JournalHowMuchTimeDoYouSpendReadingBooksRouteImport } from './
 import { Route as JournalHowMuchTimeDoYouSpendOnYoutubeRouteImport } from './routes/journal/how-much-time-do-you-spend-on-youtube'
 import { Route as JournalHowMuchTimeDoYouSpendOnYourPhoneInBedRouteImport } from './routes/journal/how-much-time-do-you-spend-on-your-phone-in-bed'
 import { Route as JournalHowMuchTimeDoYouSpendOnYourPhoneRouteImport } from './routes/journal/how-much-time-do-you-spend-on-your-phone'
+import { Route as JournalHowMuchTimeDoYouSpendOnVideoCallsRouteImport } from './routes/journal/how-much-time-do-you-spend-on-video-calls'
 import { Route as JournalHowMuchTimeDoYouSpendOnTwitterXRouteImport } from './routes/journal/how-much-time-do-you-spend-on-twitter-x'
 import { Route as JournalHowMuchTimeDoYouSpendOnLinkedinRouteImport } from './routes/journal/how-much-time-do-you-spend-on-linkedin'
 import { Route as JournalHowMuchTimeDoYouSpendOnHouseholdChoresRouteImport } from './routes/journal/how-much-time-do-you-spend-on-household-chores'
 import { Route as JournalHowMuchTimeDoYouSpendOnDatingAppsRouteImport } from './routes/journal/how-much-time-do-you-spend-on-dating-apps'
+import { Route as JournalHowMuchTimeDoYouSpendLookingForLostThingsRouteImport } from './routes/journal/how-much-time-do-you-spend-looking-for-lost-things'
+import { Route as JournalHowMuchTimeDoYouSpendListeningToPodcastsRouteImport } from './routes/journal/how-much-time-do-you-spend-listening-to-podcasts'
 import { Route as JournalHowMuchTimeDoYouSpendListeningToMusicRouteImport } from './routes/journal/how-much-time-do-you-spend-listening-to-music'
 import { Route as JournalHowMuchTimeDoYouSpendGroceryShoppingRouteImport } from './routes/journal/how-much-time-do-you-spend-grocery-shopping'
 import { Route as JournalHowMuchTimeDoYouSpendGettingReadyRouteImport } from './routes/journal/how-much-time-do-you-spend-getting-ready'
@@ -186,6 +189,12 @@ const JournalHowMuchTimeDoYouSpendOnYourPhoneRoute =
     path: '/how-much-time-do-you-spend-on-your-phone',
     getParentRoute: () => JournalRoute,
   } as any)
+const JournalHowMuchTimeDoYouSpendOnVideoCallsRoute =
+  JournalHowMuchTimeDoYouSpendOnVideoCallsRouteImport.update({
+    id: '/how-much-time-do-you-spend-on-video-calls',
+    path: '/how-much-time-do-you-spend-on-video-calls',
+    getParentRoute: () => JournalRoute,
+  } as any)
 const JournalHowMuchTimeDoYouSpendOnTwitterXRoute =
   JournalHowMuchTimeDoYouSpendOnTwitterXRouteImport.update({
     id: '/how-much-time-do-you-spend-on-twitter-x',
@@ -208,6 +217,18 @@ const JournalHowMuchTimeDoYouSpendOnDatingAppsRoute =
   JournalHowMuchTimeDoYouSpendOnDatingAppsRouteImport.update({
     id: '/how-much-time-do-you-spend-on-dating-apps',
     path: '/how-much-time-do-you-spend-on-dating-apps',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouSpendLookingForLostThingsRoute =
+  JournalHowMuchTimeDoYouSpendLookingForLostThingsRouteImport.update({
+    id: '/how-much-time-do-you-spend-looking-for-lost-things',
+    path: '/how-much-time-do-you-spend-looking-for-lost-things',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouSpendListeningToPodcastsRoute =
+  JournalHowMuchTimeDoYouSpendListeningToPodcastsRouteImport.update({
+    id: '/how-much-time-do-you-spend-listening-to-podcasts',
+    path: '/how-much-time-do-you-spend-listening-to-podcasts',
     getParentRoute: () => JournalRoute,
   } as any)
 const JournalHowMuchTimeDoYouSpendListeningToMusicRoute =
@@ -393,10 +414,13 @@ export interface FileRoutesByFullPath {
   '/journal/how-much-time-do-you-spend-getting-ready': typeof JournalHowMuchTimeDoYouSpendGettingReadyRoute
   '/journal/how-much-time-do-you-spend-grocery-shopping': typeof JournalHowMuchTimeDoYouSpendGroceryShoppingRoute
   '/journal/how-much-time-do-you-spend-listening-to-music': typeof JournalHowMuchTimeDoYouSpendListeningToMusicRoute
+  '/journal/how-much-time-do-you-spend-listening-to-podcasts': typeof JournalHowMuchTimeDoYouSpendListeningToPodcastsRoute
+  '/journal/how-much-time-do-you-spend-looking-for-lost-things': typeof JournalHowMuchTimeDoYouSpendLookingForLostThingsRoute
   '/journal/how-much-time-do-you-spend-on-dating-apps': typeof JournalHowMuchTimeDoYouSpendOnDatingAppsRoute
   '/journal/how-much-time-do-you-spend-on-household-chores': typeof JournalHowMuchTimeDoYouSpendOnHouseholdChoresRoute
   '/journal/how-much-time-do-you-spend-on-linkedin': typeof JournalHowMuchTimeDoYouSpendOnLinkedinRoute
   '/journal/how-much-time-do-you-spend-on-twitter-x': typeof JournalHowMuchTimeDoYouSpendOnTwitterXRoute
+  '/journal/how-much-time-do-you-spend-on-video-calls': typeof JournalHowMuchTimeDoYouSpendOnVideoCallsRoute
   '/journal/how-much-time-do-you-spend-on-your-phone': typeof JournalHowMuchTimeDoYouSpendOnYourPhoneRoute
   '/journal/how-much-time-do-you-spend-on-your-phone-in-bed': typeof JournalHowMuchTimeDoYouSpendOnYourPhoneInBedRoute
   '/journal/how-much-time-do-you-spend-on-youtube': typeof JournalHowMuchTimeDoYouSpendOnYoutubeRoute
@@ -445,10 +469,13 @@ export interface FileRoutesByTo {
   '/journal/how-much-time-do-you-spend-getting-ready': typeof JournalHowMuchTimeDoYouSpendGettingReadyRoute
   '/journal/how-much-time-do-you-spend-grocery-shopping': typeof JournalHowMuchTimeDoYouSpendGroceryShoppingRoute
   '/journal/how-much-time-do-you-spend-listening-to-music': typeof JournalHowMuchTimeDoYouSpendListeningToMusicRoute
+  '/journal/how-much-time-do-you-spend-listening-to-podcasts': typeof JournalHowMuchTimeDoYouSpendListeningToPodcastsRoute
+  '/journal/how-much-time-do-you-spend-looking-for-lost-things': typeof JournalHowMuchTimeDoYouSpendLookingForLostThingsRoute
   '/journal/how-much-time-do-you-spend-on-dating-apps': typeof JournalHowMuchTimeDoYouSpendOnDatingAppsRoute
   '/journal/how-much-time-do-you-spend-on-household-chores': typeof JournalHowMuchTimeDoYouSpendOnHouseholdChoresRoute
   '/journal/how-much-time-do-you-spend-on-linkedin': typeof JournalHowMuchTimeDoYouSpendOnLinkedinRoute
   '/journal/how-much-time-do-you-spend-on-twitter-x': typeof JournalHowMuchTimeDoYouSpendOnTwitterXRoute
+  '/journal/how-much-time-do-you-spend-on-video-calls': typeof JournalHowMuchTimeDoYouSpendOnVideoCallsRoute
   '/journal/how-much-time-do-you-spend-on-your-phone': typeof JournalHowMuchTimeDoYouSpendOnYourPhoneRoute
   '/journal/how-much-time-do-you-spend-on-your-phone-in-bed': typeof JournalHowMuchTimeDoYouSpendOnYourPhoneInBedRoute
   '/journal/how-much-time-do-you-spend-on-youtube': typeof JournalHowMuchTimeDoYouSpendOnYoutubeRoute
@@ -499,10 +526,13 @@ export interface FileRoutesById {
   '/journal/how-much-time-do-you-spend-getting-ready': typeof JournalHowMuchTimeDoYouSpendGettingReadyRoute
   '/journal/how-much-time-do-you-spend-grocery-shopping': typeof JournalHowMuchTimeDoYouSpendGroceryShoppingRoute
   '/journal/how-much-time-do-you-spend-listening-to-music': typeof JournalHowMuchTimeDoYouSpendListeningToMusicRoute
+  '/journal/how-much-time-do-you-spend-listening-to-podcasts': typeof JournalHowMuchTimeDoYouSpendListeningToPodcastsRoute
+  '/journal/how-much-time-do-you-spend-looking-for-lost-things': typeof JournalHowMuchTimeDoYouSpendLookingForLostThingsRoute
   '/journal/how-much-time-do-you-spend-on-dating-apps': typeof JournalHowMuchTimeDoYouSpendOnDatingAppsRoute
   '/journal/how-much-time-do-you-spend-on-household-chores': typeof JournalHowMuchTimeDoYouSpendOnHouseholdChoresRoute
   '/journal/how-much-time-do-you-spend-on-linkedin': typeof JournalHowMuchTimeDoYouSpendOnLinkedinRoute
   '/journal/how-much-time-do-you-spend-on-twitter-x': typeof JournalHowMuchTimeDoYouSpendOnTwitterXRoute
+  '/journal/how-much-time-do-you-spend-on-video-calls': typeof JournalHowMuchTimeDoYouSpendOnVideoCallsRoute
   '/journal/how-much-time-do-you-spend-on-your-phone': typeof JournalHowMuchTimeDoYouSpendOnYourPhoneRoute
   '/journal/how-much-time-do-you-spend-on-your-phone-in-bed': typeof JournalHowMuchTimeDoYouSpendOnYourPhoneInBedRoute
   '/journal/how-much-time-do-you-spend-on-youtube': typeof JournalHowMuchTimeDoYouSpendOnYoutubeRoute
@@ -554,10 +584,13 @@ export interface FileRouteTypes {
     | '/journal/how-much-time-do-you-spend-getting-ready'
     | '/journal/how-much-time-do-you-spend-grocery-shopping'
     | '/journal/how-much-time-do-you-spend-listening-to-music'
+    | '/journal/how-much-time-do-you-spend-listening-to-podcasts'
+    | '/journal/how-much-time-do-you-spend-looking-for-lost-things'
     | '/journal/how-much-time-do-you-spend-on-dating-apps'
     | '/journal/how-much-time-do-you-spend-on-household-chores'
     | '/journal/how-much-time-do-you-spend-on-linkedin'
     | '/journal/how-much-time-do-you-spend-on-twitter-x'
+    | '/journal/how-much-time-do-you-spend-on-video-calls'
     | '/journal/how-much-time-do-you-spend-on-your-phone'
     | '/journal/how-much-time-do-you-spend-on-your-phone-in-bed'
     | '/journal/how-much-time-do-you-spend-on-youtube'
@@ -606,10 +639,13 @@ export interface FileRouteTypes {
     | '/journal/how-much-time-do-you-spend-getting-ready'
     | '/journal/how-much-time-do-you-spend-grocery-shopping'
     | '/journal/how-much-time-do-you-spend-listening-to-music'
+    | '/journal/how-much-time-do-you-spend-listening-to-podcasts'
+    | '/journal/how-much-time-do-you-spend-looking-for-lost-things'
     | '/journal/how-much-time-do-you-spend-on-dating-apps'
     | '/journal/how-much-time-do-you-spend-on-household-chores'
     | '/journal/how-much-time-do-you-spend-on-linkedin'
     | '/journal/how-much-time-do-you-spend-on-twitter-x'
+    | '/journal/how-much-time-do-you-spend-on-video-calls'
     | '/journal/how-much-time-do-you-spend-on-your-phone'
     | '/journal/how-much-time-do-you-spend-on-your-phone-in-bed'
     | '/journal/how-much-time-do-you-spend-on-youtube'
@@ -659,10 +695,13 @@ export interface FileRouteTypes {
     | '/journal/how-much-time-do-you-spend-getting-ready'
     | '/journal/how-much-time-do-you-spend-grocery-shopping'
     | '/journal/how-much-time-do-you-spend-listening-to-music'
+    | '/journal/how-much-time-do-you-spend-listening-to-podcasts'
+    | '/journal/how-much-time-do-you-spend-looking-for-lost-things'
     | '/journal/how-much-time-do-you-spend-on-dating-apps'
     | '/journal/how-much-time-do-you-spend-on-household-chores'
     | '/journal/how-much-time-do-you-spend-on-linkedin'
     | '/journal/how-much-time-do-you-spend-on-twitter-x'
+    | '/journal/how-much-time-do-you-spend-on-video-calls'
     | '/journal/how-much-time-do-you-spend-on-your-phone'
     | '/journal/how-much-time-do-you-spend-on-your-phone-in-bed'
     | '/journal/how-much-time-do-you-spend-on-youtube'
@@ -846,6 +885,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendOnYourPhoneRouteImport
       parentRoute: typeof JournalRoute
     }
+    '/journal/how-much-time-do-you-spend-on-video-calls': {
+      id: '/journal/how-much-time-do-you-spend-on-video-calls'
+      path: '/how-much-time-do-you-spend-on-video-calls'
+      fullPath: '/journal/how-much-time-do-you-spend-on-video-calls'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendOnVideoCallsRouteImport
+      parentRoute: typeof JournalRoute
+    }
     '/journal/how-much-time-do-you-spend-on-twitter-x': {
       id: '/journal/how-much-time-do-you-spend-on-twitter-x'
       path: '/how-much-time-do-you-spend-on-twitter-x'
@@ -872,6 +918,20 @@ declare module '@tanstack/react-router' {
       path: '/how-much-time-do-you-spend-on-dating-apps'
       fullPath: '/journal/how-much-time-do-you-spend-on-dating-apps'
       preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendOnDatingAppsRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-spend-looking-for-lost-things': {
+      id: '/journal/how-much-time-do-you-spend-looking-for-lost-things'
+      path: '/how-much-time-do-you-spend-looking-for-lost-things'
+      fullPath: '/journal/how-much-time-do-you-spend-looking-for-lost-things'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendLookingForLostThingsRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-spend-listening-to-podcasts': {
+      id: '/journal/how-much-time-do-you-spend-listening-to-podcasts'
+      path: '/how-much-time-do-you-spend-listening-to-podcasts'
+      fullPath: '/journal/how-much-time-do-you-spend-listening-to-podcasts'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendListeningToPodcastsRouteImport
       parentRoute: typeof JournalRoute
     }
     '/journal/how-much-time-do-you-spend-listening-to-music': {
@@ -1078,10 +1138,13 @@ interface JournalRouteChildren {
   JournalHowMuchTimeDoYouSpendGettingReadyRoute: typeof JournalHowMuchTimeDoYouSpendGettingReadyRoute
   JournalHowMuchTimeDoYouSpendGroceryShoppingRoute: typeof JournalHowMuchTimeDoYouSpendGroceryShoppingRoute
   JournalHowMuchTimeDoYouSpendListeningToMusicRoute: typeof JournalHowMuchTimeDoYouSpendListeningToMusicRoute
+  JournalHowMuchTimeDoYouSpendListeningToPodcastsRoute: typeof JournalHowMuchTimeDoYouSpendListeningToPodcastsRoute
+  JournalHowMuchTimeDoYouSpendLookingForLostThingsRoute: typeof JournalHowMuchTimeDoYouSpendLookingForLostThingsRoute
   JournalHowMuchTimeDoYouSpendOnDatingAppsRoute: typeof JournalHowMuchTimeDoYouSpendOnDatingAppsRoute
   JournalHowMuchTimeDoYouSpendOnHouseholdChoresRoute: typeof JournalHowMuchTimeDoYouSpendOnHouseholdChoresRoute
   JournalHowMuchTimeDoYouSpendOnLinkedinRoute: typeof JournalHowMuchTimeDoYouSpendOnLinkedinRoute
   JournalHowMuchTimeDoYouSpendOnTwitterXRoute: typeof JournalHowMuchTimeDoYouSpendOnTwitterXRoute
+  JournalHowMuchTimeDoYouSpendOnVideoCallsRoute: typeof JournalHowMuchTimeDoYouSpendOnVideoCallsRoute
   JournalHowMuchTimeDoYouSpendOnYourPhoneRoute: typeof JournalHowMuchTimeDoYouSpendOnYourPhoneRoute
   JournalHowMuchTimeDoYouSpendOnYourPhoneInBedRoute: typeof JournalHowMuchTimeDoYouSpendOnYourPhoneInBedRoute
   JournalHowMuchTimeDoYouSpendOnYoutubeRoute: typeof JournalHowMuchTimeDoYouSpendOnYoutubeRoute
@@ -1150,6 +1213,10 @@ const JournalRouteChildren: JournalRouteChildren = {
     JournalHowMuchTimeDoYouSpendGroceryShoppingRoute,
   JournalHowMuchTimeDoYouSpendListeningToMusicRoute:
     JournalHowMuchTimeDoYouSpendListeningToMusicRoute,
+  JournalHowMuchTimeDoYouSpendListeningToPodcastsRoute:
+    JournalHowMuchTimeDoYouSpendListeningToPodcastsRoute,
+  JournalHowMuchTimeDoYouSpendLookingForLostThingsRoute:
+    JournalHowMuchTimeDoYouSpendLookingForLostThingsRoute,
   JournalHowMuchTimeDoYouSpendOnDatingAppsRoute:
     JournalHowMuchTimeDoYouSpendOnDatingAppsRoute,
   JournalHowMuchTimeDoYouSpendOnHouseholdChoresRoute:
@@ -1158,6 +1225,8 @@ const JournalRouteChildren: JournalRouteChildren = {
     JournalHowMuchTimeDoYouSpendOnLinkedinRoute,
   JournalHowMuchTimeDoYouSpendOnTwitterXRoute:
     JournalHowMuchTimeDoYouSpendOnTwitterXRoute,
+  JournalHowMuchTimeDoYouSpendOnVideoCallsRoute:
+    JournalHowMuchTimeDoYouSpendOnVideoCallsRoute,
   JournalHowMuchTimeDoYouSpendOnYourPhoneRoute:
     JournalHowMuchTimeDoYouSpendOnYourPhoneRoute,
   JournalHowMuchTimeDoYouSpendOnYourPhoneInBedRoute:

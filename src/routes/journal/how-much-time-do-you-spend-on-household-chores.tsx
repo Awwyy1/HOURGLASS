@@ -154,6 +154,12 @@ function Article() {
           >
             How much time do you spend getting ready in the morning? →
           </Link>
+          <Link
+            to="/journal/how-much-time-do-you-spend-looking-for-lost-things"
+            className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
+          >
+            How much time do you spend looking for lost things? →
+          </Link>
         </div>
       </div>
 

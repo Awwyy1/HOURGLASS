@@ -15,12 +15,36 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-time-do-you-spend-looking-for-lost-things",
+    title: "How much time do you spend looking for lost things?",
+    date: "2026-08-21",
+    readingTime: "3 min",
+    excerpt:
+      "Surveys put the average American at two and a half days a year hunting for misplaced keys, phones, and wallets. Over a lifetime that is about seven months, and it is the only total in this journal that returns absolutely nothing.",
+  },
+  {
     slug: "how-much-time-do-you-spend-on-your-phone-in-bed",
     title: "How much time do you spend on your phone in bed?",
     date: "2026-08-20",
     readingTime: "3 min",
     excerpt:
       "Most adults spend between thirty and sixty minutes on a phone after getting into bed, which comes to nearly three waking years. It is the only category here that charges twice, since the hour is taken directly out of the night that follows it.",
+  },
+  {
+    slug: "how-much-time-do-you-spend-on-video-calls",
+    title: "How much time do you spend on video calls?",
+    date: "2026-08-19",
+    readingTime: "3 min",
+    excerpt:
+      "Remote and hybrid workers average two to three hours a day on camera, which comes to roughly three waking years over a career. It is the newest large category here, and the only one with a fatigue mechanism named after the software.",
+  },
+  {
+    slug: "how-much-time-do-you-spend-listening-to-podcasts",
+    title: "How much time do you spend listening to podcasts?",
+    date: "2026-08-18",
+    readingTime: "3 min",
+    excerpt:
+      "Weekly listeners average around eight hours a week, or nearly three waking years across an adult life. Podcasts are unusual because most of those hours were not taken from anything else, which makes them the best-value entry in this journal.",
   },
   {
     slug: "how-much-time-do-you-spend-alone",
