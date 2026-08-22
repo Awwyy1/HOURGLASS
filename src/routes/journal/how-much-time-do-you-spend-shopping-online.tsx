@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { AnswerBlock } from "../../components/AnswerBlock";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-shopping-online",
@@ -46,6 +47,10 @@ function Article() {
           adding to cart, and closing the tab. The clock runs the whole time.
         </p>
       </header>
+
+      <AnswerBlock>
+        The average online shopper spends about five hours a week browsing and buying, and most sessions end without a purchase. Over a lifetime of peak consumer activity the total approaches a year and a half of waking time spent deciding whether to buy something.
+      </AnswerBlock>
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { AnswerBlock } from "../../components/AnswerBlock";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-working",
@@ -46,6 +47,10 @@ function Article() {
           count everything that actually counts, is considerably more than that.
         </p>
       </header>
+
+      <AnswerBlock>
+        A standard career of 40 hours a week across 43 years comes to around 80,000 hours. Counting commuting, email outside hours, and the mental load that follows you home, the realistic total crosses 100,000 hours, which is somewhere between 17 and 20 waking years of a life.
+      </AnswerBlock>
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

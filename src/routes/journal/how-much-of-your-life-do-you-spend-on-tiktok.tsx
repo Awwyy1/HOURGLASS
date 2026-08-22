@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { AnswerBlock } from "../../components/AnswerBlock";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-on-tiktok",
@@ -47,6 +48,10 @@ function Article() {
           The two facts are related.
         </p>
       </header>
+
+      <AnswerBlock>
+        The average US user spends 54 minutes a day on TikTok, which comes to roughly two waking years over a lifetime of use. TikTok was the first major platform built around an algorithm rather than around people you chose to follow, which is why sessions routinely outlast the intention behind them.
+      </AnswerBlock>
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

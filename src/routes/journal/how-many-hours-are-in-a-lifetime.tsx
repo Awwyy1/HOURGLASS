@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { AnswerBlock } from "../../components/AnswerBlock";
 
 export const Route = createFileRoute(
   "/journal/how-many-hours-are-in-a-lifetime",
@@ -47,6 +48,10 @@ function Article() {
           looking at the number more carefully than most people ever do.
         </p>
       </header>
+
+      <AnswerBlock>
+        A human life of 79 years contains about 692,040 hours in total. Subtract sleep and roughly 461,000 waking hours remain. After childhood, work, and daily maintenance, the genuinely discretionary portion falls to somewhere between 150,000 and 175,000 hours, or about five hours a day across an adult life.
+      </AnswerBlock>
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>
