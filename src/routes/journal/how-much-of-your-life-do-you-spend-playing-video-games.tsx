@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { AnswerBlock } from "../../components/AnswerBlock";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-playing-video-games",
@@ -47,6 +48,10 @@ function Article() {
           everyone except the person spending them.
         </p>
       </header>
+
+      <AnswerBlock>
+        The average gamer plays 7 to 8 hours a week, which comes to just under ten waking years across a 40-year gaming life. The top 10 percent of players, who account for most of the industry total, reach roughly 34 waking years at 25 hours a week.
+      </AnswerBlock>
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

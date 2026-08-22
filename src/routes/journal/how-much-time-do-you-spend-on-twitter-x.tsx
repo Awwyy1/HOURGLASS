@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { AnswerBlock } from "../../components/AnswerBlock";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-on-twitter-x",
@@ -46,6 +47,10 @@ function Article() {
           bursts of reading that stack into something much larger over months and years.
         </p>
       </header>
+
+      <AnswerBlock>
+        The average active user spends around 30 minutes a day on Twitter / X. Over a decade that comes to 1,820 hours, or roughly 114 waking days spent reading posts that mostly disappear within hours of being written. Twenty years brings the total closer to eight months of waking time.
+      </AnswerBlock>
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

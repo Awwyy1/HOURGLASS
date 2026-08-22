@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { AnswerBlock } from "../../components/AnswerBlock";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-on-your-phone",
@@ -47,6 +48,10 @@ function Article() {
           than that.
         </p>
       </header>
+
+      <AnswerBlock>
+        The average person spends close to four hours a day on their phone, while most people guess around two. Across a lifetime of smartphone use the total comes to roughly 15 waking years, which makes it one of the largest single categories of conscious time in a modern life.
+      </AnswerBlock>
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>
