@@ -13,34 +13,66 @@ import { Footer } from "../components/Footer";
 
 const SITE = "https://www.justhourglass.me";
 
+/** Create the meta/link tag if it is missing, then set the attribute. */
+function setHeadTag(
+  selector: string,
+  attr: string,
+  value: string,
+  make: () => Element,
+) {
+  let el = document.head.querySelector(selector);
+  if (!el) {
+    el = make();
+    document.head.appendChild(el);
+  }
+  el.setAttribute(attr, value);
+}
+
 /**
- * Keeps the canonical link and og:url pointing at the page actually being
- * viewed. This lives at the root rather than in PageSEO so that routes
- * without a PageSEO call still get a correct canonical instead of inheriting
- * the previous page's URL during client-side navigation.
+ * Keeps the canonical link, og:url, and the social share image pointing at the
+ * page actually being viewed. This lives at the root rather than in PageSEO so
+ * that routes without a PageSEO call still get correct values instead of
+ * inheriting the previous page's during client-side navigation.
+ *
+ * Every article has a pre-rendered card at /og/<slug>.png; everything else
+ * falls back to the site card.
  */
-function useCanonicalUrl() {
+function useSocialTags() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
   useEffect(() => {
     const clean = pathname === "/" ? "/" : pathname.replace(/\/+$/, "");
     const url = SITE + clean;
 
-    let link = document.head.querySelector('link[rel="canonical"]');
-    if (!link) {
-      link = document.createElement("link");
-      link.setAttribute("rel", "canonical");
-      document.head.appendChild(link);
-    }
-    link.setAttribute("href", url);
+    const articleSlug = clean.startsWith("/journal/")
+      ? clean.slice("/journal/".length)
+      : null;
+    const image =
+      SITE + (articleSlug ? `/og/${articleSlug}.png` : "/og-default.png");
 
-    let og = document.head.querySelector('meta[property="og:url"]');
-    if (!og) {
-      og = document.createElement("meta");
-      og.setAttribute("property", "og:url");
-      document.head.appendChild(og);
-    }
-    og.setAttribute("content", url);
+    setHeadTag('link[rel="canonical"]', "href", url, () => {
+      const l = document.createElement("link");
+      l.setAttribute("rel", "canonical");
+      return l;
+    });
+
+    const ogTags: [string, string][] = [
+      ["og:url", url],
+      ["og:image", image],
+    ];
+    ogTags.forEach(([property, value]) =>
+      setHeadTag(`meta[property="${property}"]`, "content", value, () => {
+        const meta = document.createElement("meta");
+        meta.setAttribute("property", property);
+        return meta;
+      }),
+    );
+
+    setHeadTag('meta[name="twitter:image"]', "content", image, () => {
+      const meta = document.createElement("meta");
+      meta.setAttribute("name", "twitter:image");
+      return meta;
+    });
   }, [pathname]);
 }
 
@@ -116,7 +148,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
-  useCanonicalUrl();
+  useSocialTags();
 
   return (
     <QueryClientProvider client={queryClient}>
