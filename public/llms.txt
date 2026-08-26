@@ -1,0 +1,69 @@
+# HOURGLASS
+
+> An editorial calculator that converts a daily habit into its lifetime total.
+> Enter an activity, the hours a day it takes, and the number of years, and it
+> returns the result in days, weeks, and waking years. The journal applies the
+> same arithmetic to one habit at a time, with named sources.
+
+A waking year is 365 x 16 = 5,840 hours, which is the convention used
+throughout the site: totals are reported in conscious time, with sleep removed.
+Figures come from published research, most often the American Time Use Survey,
+the Bureau of Labor Statistics, Nielsen, and Pew Research. Sources are named in
+the text rather than footnoted.
+
+## Core
+
+- [Calculator](https://www.justhourglass.me/): the tool itself.
+- [Journal](https://www.justhourglass.me/journal): all 47 articles.
+- [Philosophy](https://www.justhourglass.me/philosophy): on the arithmetic of attention.
+- [About](https://www.justhourglass.me/about): what the site is and why it exists.
+
+## Journal
+
+- [How much of your life do you spend on Instagram?](https://www.justhourglass.me/journal/how-much-of-your-life-do-you-spend-on-instagram): published 2026-03-06.
+- [How much time do you spend on YouTube?](https://www.justhourglass.me/journal/how-much-time-do-you-spend-on-youtube): published 2026-03-13.
+- [How much of your life do you spend sleeping?](https://www.justhourglass.me/journal/how-much-of-your-life-do-you-spend-sleeping): published 2026-03-20.
+- [How much time do you spend on your phone per day?](https://www.justhourglass.me/journal/how-much-time-do-you-spend-on-your-phone): published 2026-03-27.
+- [How much of your life do you spend on TikTok?](https://www.justhourglass.me/journal/how-much-of-your-life-do-you-spend-on-tiktok): published 2026-04-03.
+- [How much time does the average person spend watching Netflix?](https://www.justhourglass.me/journal/how-much-time-does-the-average-person-spend-watching-netflix): published 2026-04-10.
+- [How much of your life do you spend working?](https://www.justhourglass.me/journal/how-much-of-your-life-do-you-spend-working): published 2026-04-16.
+- [How much time does the average person spend on email?](https://www.justhourglass.me/journal/how-much-time-does-the-average-person-spend-on-email): published 2026-04-23.
+- [How much of your life do you spend cooking?](https://www.justhourglass.me/journal/how-much-of-your-life-do-you-spend-cooking): published 2026-04-30.
+- [How much time do you spend shopping online?](https://www.justhourglass.me/journal/how-much-time-do-you-spend-shopping-online): published 2026-05-06.
+- [How much of your life do you spend reading news?](https://www.justhourglass.me/journal/how-much-of-your-life-do-you-spend-reading-news): published 2026-05-08.
+- [How much of your life do you spend commuting?](https://www.justhourglass.me/journal/how-much-of-your-life-do-you-spend-commuting): published 2026-05-12.
+- [How much of your life do you spend in meetings?](https://www.justhourglass.me/journal/how-much-of-your-life-do-you-spend-in-meetings): published 2026-05-13.
+- [How much time do you spend using AI?](https://www.justhourglass.me/journal/how-much-time-do-you-spend-using-ai): published 2026-05-14.
+- [How much time do you spend on dating apps?](https://www.justhourglass.me/journal/how-much-time-do-you-spend-on-dating-apps): published 2026-05-20.
+- [How much time do you spend on LinkedIn?](https://www.justhourglass.me/journal/how-much-time-do-you-spend-on-linkedin): published 2026-05-27.
+- [How much of your life do you spend playing video games?](https://www.justhourglass.me/journal/how-much-of-your-life-do-you-spend-playing-video-games): published 2026-06-03.
+- [How many hours are in a lifetime?](https://www.justhourglass.me/journal/how-many-hours-are-in-a-lifetime): published 2026-06-10.
+- [How much time do you spend listening to music?](https://www.justhourglass.me/journal/how-much-time-do-you-spend-listening-to-music): published 2026-06-12.
+- [How much time do you spend on Twitter / X?](https://www.justhourglass.me/journal/how-much-time-do-you-spend-on-twitter-x): published 2026-06-15.
+- [How much time do you spend reading books in a lifetime?](https://www.justhourglass.me/journal/how-much-time-do-you-spend-reading-books): published 2026-06-17.
+- [How much of your life do you spend on Facebook?](https://www.justhourglass.me/journal/how-much-of-your-life-do-you-spend-on-facebook): published 2026-06-20.
+- [How much of your life do you spend on your laptop?](https://www.justhourglass.me/journal/how-much-of-your-life-do-you-spend-on-your-laptop): published 2026-06-23.
+- [How much time do you spend watching sports?](https://www.justhourglass.me/journal/how-much-time-do-you-spend-watching-sports): published 2026-06-25.
+- [How much time do you spend waiting in a lifetime?](https://www.justhourglass.me/journal/how-much-time-do-you-spend-waiting): published 2026-06-26.
+- [How much of your life do you spend exercising?](https://www.justhourglass.me/journal/how-much-of-your-life-do-you-spend-exercising): published 2026-06-27.
+- [How much time do you spend stuck in traffic?](https://www.justhourglass.me/journal/how-much-time-do-you-spend-stuck-in-traffic): published 2026-06-30.
+- [How much time do you spend getting ready in the morning?](https://www.justhourglass.me/journal/how-much-time-do-you-spend-getting-ready): published 2026-07-03.
+- [How much time do you spend texting?](https://www.justhourglass.me/journal/how-much-time-do-you-spend-texting): published 2026-07-08.
+- [How many days are in a lifetime?](https://www.justhourglass.me/journal/how-many-days-are-in-a-lifetime): published 2026-07-10.
+- [How much time do you spend on household chores?](https://www.justhourglass.me/journal/how-much-time-do-you-spend-on-household-chores): published 2026-07-13.
+- [How much time does the average person spend on social media?](https://www.justhourglass.me/journal/how-much-time-does-the-average-person-spend-on-social-media): published 2026-07-15.
+- [How much time do you spend grocery shopping?](https://www.justhourglass.me/journal/how-much-time-do-you-spend-grocery-shopping): published 2026-07-18.
+- [How much of your life do you spend sitting?](https://www.justhourglass.me/journal/how-much-of-your-life-do-you-spend-sitting): published 2026-07-21.
+- [How much of your life do you spend eating?](https://www.justhourglass.me/journal/how-much-of-your-life-do-you-spend-eating): published 2026-07-24.
+- [How much of your life do you spend in the shower?](https://www.justhourglass.me/journal/how-much-of-your-life-do-you-spend-in-the-shower): published 2026-07-27.
+- [How much time do you have left with your parents?](https://www.justhourglass.me/journal/how-much-time-do-you-have-left-with-your-parents): published 2026-07-30.
+- [How much of your life do you spend driving?](https://www.justhourglass.me/journal/how-much-of-your-life-do-you-spend-driving): published 2026-08-02.
+- [How much of your life do you spend in school?](https://www.justhourglass.me/journal/how-much-of-your-life-do-you-spend-in-school): published 2026-08-05.
+- [How much time do you spend with your friends?](https://www.justhourglass.me/journal/how-much-time-do-you-spend-with-your-friends): published 2026-08-08.
+- [How much time do parents spend with their children?](https://www.justhourglass.me/journal/how-much-time-do-parents-spend-with-their-children): published 2026-08-11.
+- [How much vacation time do you get in a lifetime?](https://www.justhourglass.me/journal/how-much-vacation-time-do-you-get-in-a-lifetime): published 2026-08-14.
+- [How much time do you spend alone?](https://www.justhourglass.me/journal/how-much-time-do-you-spend-alone): published 2026-08-17.
+- [How much time do you spend listening to podcasts?](https://www.justhourglass.me/journal/how-much-time-do-you-spend-listening-to-podcasts): published 2026-08-18.
+- [How much time do you spend on video calls?](https://www.justhourglass.me/journal/how-much-time-do-you-spend-on-video-calls): published 2026-08-19.
+- [How much time do you spend on your phone in bed?](https://www.justhourglass.me/journal/how-much-time-do-you-spend-on-your-phone-in-bed): published 2026-08-20.
+- [How much time do you spend looking for lost things?](https://www.justhourglass.me/journal/how-much-time-do-you-spend-looking-for-lost-things): published 2026-08-21.

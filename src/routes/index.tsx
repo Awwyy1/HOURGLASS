@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { ShareButton } from "../components/ShareCard";
 import { PageSEO } from "../components/PageSEO";
+import { SiteSchema } from "../components/SiteSchema";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -32,6 +33,7 @@ function Index() {
         description="An editorial calculator that converts daily habits into lifetime totals. Find out how many days, weeks, and waking years a single habit quietly consumes."
         exactTitle
       />
+      <SiteSchema />
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-6 pt-16 pb-24 text-center md:pt-28 md:pb-32">
         <p className="mb-10 text-[10px] uppercase tracking-[0.36em] text-muted-foreground">
