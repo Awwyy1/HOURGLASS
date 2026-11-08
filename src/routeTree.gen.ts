@@ -9,79 +9,64 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TermsRouteImport } from './routes/terms'
-import { Route as PrivacyRouteImport } from './routes/privacy'
-import { Route as PhilosophyRouteImport } from './routes/philosophy'
-import { Route as JournalRouteImport } from './routes/journal'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as JournalRouteImport } from './routes/journal'
+import { Route as PhilosophyRouteImport } from './routes/philosophy'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as JournalIndexRouteImport } from './routes/journal/index'
-import { Route as JournalHowMuchVacationTimeDoYouGetInALifetimeRouteImport } from './routes/journal/how-much-vacation-time-do-you-get-in-a-lifetime'
-import { Route as JournalHowMuchTimeDoesTheAveragePersonSpendWatchingNetflixRouteImport } from './routes/journal/how-much-time-does-the-average-person-spend-watching-netflix'
-import { Route as JournalHowMuchTimeDoesTheAveragePersonSpendOnSocialMediaRouteImport } from './routes/journal/how-much-time-does-the-average-person-spend-on-social-media'
-import { Route as JournalHowMuchTimeDoesTheAveragePersonSpendOnEmailRouteImport } from './routes/journal/how-much-time-does-the-average-person-spend-on-email'
-import { Route as JournalHowMuchTimeDoYouSpendWithYourFriendsRouteImport } from './routes/journal/how-much-time-do-you-spend-with-your-friends'
-import { Route as JournalHowMuchTimeDoYouSpendWatchingSportsRouteImport } from './routes/journal/how-much-time-do-you-spend-watching-sports'
-import { Route as JournalHowMuchTimeDoYouSpendWaitingRouteImport } from './routes/journal/how-much-time-do-you-spend-waiting'
-import { Route as JournalHowMuchTimeDoYouSpendUsingAiRouteImport } from './routes/journal/how-much-time-do-you-spend-using-ai'
-import { Route as JournalHowMuchTimeDoYouSpendTextingRouteImport } from './routes/journal/how-much-time-do-you-spend-texting'
-import { Route as JournalHowMuchTimeDoYouSpendStuckInTrafficRouteImport } from './routes/journal/how-much-time-do-you-spend-stuck-in-traffic'
-import { Route as JournalHowMuchTimeDoYouSpendShoppingOnlineRouteImport } from './routes/journal/how-much-time-do-you-spend-shopping-online'
-import { Route as JournalHowMuchTimeDoYouSpendReadingBooksRouteImport } from './routes/journal/how-much-time-do-you-spend-reading-books'
-import { Route as JournalHowMuchTimeDoYouSpendOnYoutubeRouteImport } from './routes/journal/how-much-time-do-you-spend-on-youtube'
-import { Route as JournalHowMuchTimeDoYouSpendOnYourPhoneInBedRouteImport } from './routes/journal/how-much-time-do-you-spend-on-your-phone-in-bed'
-import { Route as JournalHowMuchTimeDoYouSpendOnYourPhoneRouteImport } from './routes/journal/how-much-time-do-you-spend-on-your-phone'
-import { Route as JournalHowMuchTimeDoYouSpendOnVideoCallsRouteImport } from './routes/journal/how-much-time-do-you-spend-on-video-calls'
-import { Route as JournalHowMuchTimeDoYouSpendOnTwitterXRouteImport } from './routes/journal/how-much-time-do-you-spend-on-twitter-x'
-import { Route as JournalHowMuchTimeDoYouSpendOnLinkedinRouteImport } from './routes/journal/how-much-time-do-you-spend-on-linkedin'
-import { Route as JournalHowMuchTimeDoYouSpendOnHouseholdChoresRouteImport } from './routes/journal/how-much-time-do-you-spend-on-household-chores'
-import { Route as JournalHowMuchTimeDoYouSpendOnDatingAppsRouteImport } from './routes/journal/how-much-time-do-you-spend-on-dating-apps'
-import { Route as JournalHowMuchTimeDoYouSpendLookingForLostThingsRouteImport } from './routes/journal/how-much-time-do-you-spend-looking-for-lost-things'
-import { Route as JournalHowMuchTimeDoYouSpendListeningToPodcastsRouteImport } from './routes/journal/how-much-time-do-you-spend-listening-to-podcasts'
-import { Route as JournalHowMuchTimeDoYouSpendListeningToMusicRouteImport } from './routes/journal/how-much-time-do-you-spend-listening-to-music'
-import { Route as JournalHowMuchTimeDoYouSpendGroceryShoppingRouteImport } from './routes/journal/how-much-time-do-you-spend-grocery-shopping'
-import { Route as JournalHowMuchTimeDoYouSpendGettingReadyRouteImport } from './routes/journal/how-much-time-do-you-spend-getting-ready'
-import { Route as JournalHowMuchTimeDoYouSpendAloneRouteImport } from './routes/journal/how-much-time-do-you-spend-alone'
-import { Route as JournalHowMuchTimeDoYouHaveLeftWithYourParentsRouteImport } from './routes/journal/how-much-time-do-you-have-left-with-your-parents'
-import { Route as JournalHowMuchTimeDoParentsSpendWithTheirChildrenRouteImport } from './routes/journal/how-much-time-do-parents-spend-with-their-children'
-import { Route as JournalHowMuchOfYourLifeDoYouSpendWorkingRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-working'
-import { Route as JournalHowMuchOfYourLifeDoYouSpendSleepingRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-sleeping'
-import { Route as JournalHowMuchOfYourLifeDoYouSpendSittingRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-sitting'
-import { Route as JournalHowMuchOfYourLifeDoYouSpendReadingNewsRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-reading-news'
-import { Route as JournalHowMuchOfYourLifeDoYouSpendPlayingVideoGamesRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-playing-video-games'
-import { Route as JournalHowMuchOfYourLifeDoYouSpendOnYourLaptopRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-on-your-laptop'
-import { Route as JournalHowMuchOfYourLifeDoYouSpendOnTiktokRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-on-tiktok'
-import { Route as JournalHowMuchOfYourLifeDoYouSpendOnInstagramRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-on-instagram'
-import { Route as JournalHowMuchOfYourLifeDoYouSpendOnFacebookRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-on-facebook'
-import { Route as JournalHowMuchOfYourLifeDoYouSpendInTheShowerRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-in-the-shower'
-import { Route as JournalHowMuchOfYourLifeDoYouSpendInSchoolRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-in-school'
-import { Route as JournalHowMuchOfYourLifeDoYouSpendInMeetingsRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-in-meetings'
-import { Route as JournalHowMuchOfYourLifeDoYouSpendExercisingRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-exercising'
-import { Route as JournalHowMuchOfYourLifeDoYouSpendEatingRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-eating'
-import { Route as JournalHowMuchOfYourLifeDoYouSpendDrivingRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-driving'
-import { Route as JournalHowMuchOfYourLifeDoYouSpendCookingRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-cooking'
-import { Route as JournalHowMuchOfYourLifeDoYouSpendCommutingRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-commuting'
-import { Route as JournalHowManyHoursAreInALifetimeRouteImport } from './routes/journal/how-many-hours-are-in-a-lifetime'
 import { Route as JournalHowManyDaysAreInALifetimeRouteImport } from './routes/journal/how-many-days-are-in-a-lifetime'
+import { Route as JournalHowManyHoursAreInALifetimeRouteImport } from './routes/journal/how-many-hours-are-in-a-lifetime'
+import { Route as JournalHowMuchOfYourLifeDoYouSpendCommutingRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-commuting'
+import { Route as JournalHowMuchOfYourLifeDoYouSpendCookingRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-cooking'
+import { Route as JournalHowMuchOfYourLifeDoYouSpendDrivingRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-driving'
+import { Route as JournalHowMuchOfYourLifeDoYouSpendEatingRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-eating'
+import { Route as JournalHowMuchOfYourLifeDoYouSpendExercisingRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-exercising'
+import { Route as JournalHowMuchOfYourLifeDoYouSpendInMeetingsRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-in-meetings'
+import { Route as JournalHowMuchOfYourLifeDoYouSpendInSchoolRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-in-school'
+import { Route as JournalHowMuchOfYourLifeDoYouSpendInTheShowerRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-in-the-shower'
+import { Route as JournalHowMuchOfYourLifeDoYouSpendOnFacebookRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-on-facebook'
+import { Route as JournalHowMuchOfYourLifeDoYouSpendOnInstagramRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-on-instagram'
+import { Route as JournalHowMuchOfYourLifeDoYouSpendOnTiktokRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-on-tiktok'
+import { Route as JournalHowMuchOfYourLifeDoYouSpendOnYourLaptopRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-on-your-laptop'
+import { Route as JournalHowMuchOfYourLifeDoYouSpendPlayingVideoGamesRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-playing-video-games'
+import { Route as JournalHowMuchOfYourLifeDoYouSpendReadingNewsRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-reading-news'
+import { Route as JournalHowMuchOfYourLifeDoYouSpendSittingRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-sitting'
+import { Route as JournalHowMuchOfYourLifeDoYouSpendSleepingRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-sleeping'
+import { Route as JournalHowMuchOfYourLifeDoYouSpendWorkingRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-working'
+import { Route as JournalHowMuchTimeDoParentsSpendWithTheirChildrenRouteImport } from './routes/journal/how-much-time-do-parents-spend-with-their-children'
+import { Route as JournalHowMuchTimeDoYouHaveLeftWithYourParentsRouteImport } from './routes/journal/how-much-time-do-you-have-left-with-your-parents'
+import { Route as JournalHowMuchTimeDoYouSpendAloneRouteImport } from './routes/journal/how-much-time-do-you-spend-alone'
+import { Route as JournalHowMuchTimeDoYouSpendGettingReadyRouteImport } from './routes/journal/how-much-time-do-you-spend-getting-ready'
+import { Route as JournalHowMuchTimeDoYouSpendGroceryShoppingRouteImport } from './routes/journal/how-much-time-do-you-spend-grocery-shopping'
+import { Route as JournalHowMuchTimeDoYouSpendListeningToMusicRouteImport } from './routes/journal/how-much-time-do-you-spend-listening-to-music'
+import { Route as JournalHowMuchTimeDoYouSpendListeningToPodcastsRouteImport } from './routes/journal/how-much-time-do-you-spend-listening-to-podcasts'
+import { Route as JournalHowMuchTimeDoYouSpendLookingForLostThingsRouteImport } from './routes/journal/how-much-time-do-you-spend-looking-for-lost-things'
+import { Route as JournalHowMuchTimeDoYouSpendOnDatingAppsRouteImport } from './routes/journal/how-much-time-do-you-spend-on-dating-apps'
+import { Route as JournalHowMuchTimeDoYouSpendOnHouseholdChoresRouteImport } from './routes/journal/how-much-time-do-you-spend-on-household-chores'
+import { Route as JournalHowMuchTimeDoYouSpendOnLinkedinRouteImport } from './routes/journal/how-much-time-do-you-spend-on-linkedin'
+import { Route as JournalHowMuchTimeDoYouSpendOnTwitterXRouteImport } from './routes/journal/how-much-time-do-you-spend-on-twitter-x'
+import { Route as JournalHowMuchTimeDoYouSpendOnVideoCallsRouteImport } from './routes/journal/how-much-time-do-you-spend-on-video-calls'
+import { Route as JournalHowMuchTimeDoYouSpendOnYourPhoneRouteImport } from './routes/journal/how-much-time-do-you-spend-on-your-phone'
+import { Route as JournalHowMuchTimeDoYouSpendOnYourPhoneInBedRouteImport } from './routes/journal/how-much-time-do-you-spend-on-your-phone-in-bed'
+import { Route as JournalHowMuchTimeDoYouSpendOnYoutubeRouteImport } from './routes/journal/how-much-time-do-you-spend-on-youtube'
+import { Route as JournalHowMuchTimeDoYouSpendReadingBooksRouteImport } from './routes/journal/how-much-time-do-you-spend-reading-books'
+import { Route as JournalHowMuchTimeDoYouSpendShoppingOnlineRouteImport } from './routes/journal/how-much-time-do-you-spend-shopping-online'
+import { Route as JournalHowMuchTimeDoYouSpendStuckInTrafficRouteImport } from './routes/journal/how-much-time-do-you-spend-stuck-in-traffic'
+import { Route as JournalHowMuchTimeDoYouSpendTextingRouteImport } from './routes/journal/how-much-time-do-you-spend-texting'
+import { Route as JournalHowMuchTimeDoYouSpendUsingAiRouteImport } from './routes/journal/how-much-time-do-you-spend-using-ai'
+import { Route as JournalHowMuchTimeDoYouSpendWaitingRouteImport } from './routes/journal/how-much-time-do-you-spend-waiting'
+import { Route as JournalHowMuchTimeDoYouSpendWatchingSportsRouteImport } from './routes/journal/how-much-time-do-you-spend-watching-sports'
+import { Route as JournalHowMuchTimeDoYouSpendWithYourFriendsRouteImport } from './routes/journal/how-much-time-do-you-spend-with-your-friends'
+import { Route as JournalHowMuchTimeDoesTheAveragePersonSpendOnEmailRouteImport } from './routes/journal/how-much-time-does-the-average-person-spend-on-email'
+import { Route as JournalHowMuchTimeDoesTheAveragePersonSpendOnSocialMediaRouteImport } from './routes/journal/how-much-time-does-the-average-person-spend-on-social-media'
+import { Route as JournalHowMuchTimeDoesTheAveragePersonSpendWatchingNetflixRouteImport } from './routes/journal/how-much-time-does-the-average-person-spend-watching-netflix'
+import { Route as JournalHowMuchVacationTimeDoYouGetInALifetimeRouteImport } from './routes/journal/how-much-vacation-time-do-you-get-in-a-lifetime'
 
-const TermsRoute = TermsRouteImport.update({
-  id: '/terms',
-  path: '/terms',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PrivacyRoute = PrivacyRouteImport.update({
-  id: '/privacy',
-  path: '/privacy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PhilosophyRoute = PhilosophyRouteImport.update({
-  id: '/philosophy',
-  path: '/philosophy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const JournalRoute = JournalRouteImport.update({
-  id: '/journal',
-  path: '/journal',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -89,9 +74,24 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const JournalRoute = JournalRouteImport.update({
+  id: '/journal',
+  path: '/journal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PhilosophyRoute = PhilosophyRouteImport.update({
+  id: '/philosophy',
+  path: '/philosophy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
 const JournalIndexRoute = JournalIndexRouteImport.update({
@@ -99,274 +99,10 @@ const JournalIndexRoute = JournalIndexRouteImport.update({
   path: '/',
   getParentRoute: () => JournalRoute,
 } as any)
-const JournalHowMuchVacationTimeDoYouGetInALifetimeRoute =
-  JournalHowMuchVacationTimeDoYouGetInALifetimeRouteImport.update({
-    id: '/how-much-vacation-time-do-you-get-in-a-lifetime',
-    path: '/how-much-vacation-time-do-you-get-in-a-lifetime',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoesTheAveragePersonSpendWatchingNetflixRoute =
-  JournalHowMuchTimeDoesTheAveragePersonSpendWatchingNetflixRouteImport.update({
-    id: '/how-much-time-does-the-average-person-spend-watching-netflix',
-    path: '/how-much-time-does-the-average-person-spend-watching-netflix',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoesTheAveragePersonSpendOnSocialMediaRoute =
-  JournalHowMuchTimeDoesTheAveragePersonSpendOnSocialMediaRouteImport.update({
-    id: '/how-much-time-does-the-average-person-spend-on-social-media',
-    path: '/how-much-time-does-the-average-person-spend-on-social-media',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoesTheAveragePersonSpendOnEmailRoute =
-  JournalHowMuchTimeDoesTheAveragePersonSpendOnEmailRouteImport.update({
-    id: '/how-much-time-does-the-average-person-spend-on-email',
-    path: '/how-much-time-does-the-average-person-spend-on-email',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoYouSpendWithYourFriendsRoute =
-  JournalHowMuchTimeDoYouSpendWithYourFriendsRouteImport.update({
-    id: '/how-much-time-do-you-spend-with-your-friends',
-    path: '/how-much-time-do-you-spend-with-your-friends',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoYouSpendWatchingSportsRoute =
-  JournalHowMuchTimeDoYouSpendWatchingSportsRouteImport.update({
-    id: '/how-much-time-do-you-spend-watching-sports',
-    path: '/how-much-time-do-you-spend-watching-sports',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoYouSpendWaitingRoute =
-  JournalHowMuchTimeDoYouSpendWaitingRouteImport.update({
-    id: '/how-much-time-do-you-spend-waiting',
-    path: '/how-much-time-do-you-spend-waiting',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoYouSpendUsingAiRoute =
-  JournalHowMuchTimeDoYouSpendUsingAiRouteImport.update({
-    id: '/how-much-time-do-you-spend-using-ai',
-    path: '/how-much-time-do-you-spend-using-ai',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoYouSpendTextingRoute =
-  JournalHowMuchTimeDoYouSpendTextingRouteImport.update({
-    id: '/how-much-time-do-you-spend-texting',
-    path: '/how-much-time-do-you-spend-texting',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoYouSpendStuckInTrafficRoute =
-  JournalHowMuchTimeDoYouSpendStuckInTrafficRouteImport.update({
-    id: '/how-much-time-do-you-spend-stuck-in-traffic',
-    path: '/how-much-time-do-you-spend-stuck-in-traffic',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoYouSpendShoppingOnlineRoute =
-  JournalHowMuchTimeDoYouSpendShoppingOnlineRouteImport.update({
-    id: '/how-much-time-do-you-spend-shopping-online',
-    path: '/how-much-time-do-you-spend-shopping-online',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoYouSpendReadingBooksRoute =
-  JournalHowMuchTimeDoYouSpendReadingBooksRouteImport.update({
-    id: '/how-much-time-do-you-spend-reading-books',
-    path: '/how-much-time-do-you-spend-reading-books',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoYouSpendOnYoutubeRoute =
-  JournalHowMuchTimeDoYouSpendOnYoutubeRouteImport.update({
-    id: '/how-much-time-do-you-spend-on-youtube',
-    path: '/how-much-time-do-you-spend-on-youtube',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoYouSpendOnYourPhoneInBedRoute =
-  JournalHowMuchTimeDoYouSpendOnYourPhoneInBedRouteImport.update({
-    id: '/how-much-time-do-you-spend-on-your-phone-in-bed',
-    path: '/how-much-time-do-you-spend-on-your-phone-in-bed',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoYouSpendOnYourPhoneRoute =
-  JournalHowMuchTimeDoYouSpendOnYourPhoneRouteImport.update({
-    id: '/how-much-time-do-you-spend-on-your-phone',
-    path: '/how-much-time-do-you-spend-on-your-phone',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoYouSpendOnVideoCallsRoute =
-  JournalHowMuchTimeDoYouSpendOnVideoCallsRouteImport.update({
-    id: '/how-much-time-do-you-spend-on-video-calls',
-    path: '/how-much-time-do-you-spend-on-video-calls',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoYouSpendOnTwitterXRoute =
-  JournalHowMuchTimeDoYouSpendOnTwitterXRouteImport.update({
-    id: '/how-much-time-do-you-spend-on-twitter-x',
-    path: '/how-much-time-do-you-spend-on-twitter-x',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoYouSpendOnLinkedinRoute =
-  JournalHowMuchTimeDoYouSpendOnLinkedinRouteImport.update({
-    id: '/how-much-time-do-you-spend-on-linkedin',
-    path: '/how-much-time-do-you-spend-on-linkedin',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoYouSpendOnHouseholdChoresRoute =
-  JournalHowMuchTimeDoYouSpendOnHouseholdChoresRouteImport.update({
-    id: '/how-much-time-do-you-spend-on-household-chores',
-    path: '/how-much-time-do-you-spend-on-household-chores',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoYouSpendOnDatingAppsRoute =
-  JournalHowMuchTimeDoYouSpendOnDatingAppsRouteImport.update({
-    id: '/how-much-time-do-you-spend-on-dating-apps',
-    path: '/how-much-time-do-you-spend-on-dating-apps',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoYouSpendLookingForLostThingsRoute =
-  JournalHowMuchTimeDoYouSpendLookingForLostThingsRouteImport.update({
-    id: '/how-much-time-do-you-spend-looking-for-lost-things',
-    path: '/how-much-time-do-you-spend-looking-for-lost-things',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoYouSpendListeningToPodcastsRoute =
-  JournalHowMuchTimeDoYouSpendListeningToPodcastsRouteImport.update({
-    id: '/how-much-time-do-you-spend-listening-to-podcasts',
-    path: '/how-much-time-do-you-spend-listening-to-podcasts',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoYouSpendListeningToMusicRoute =
-  JournalHowMuchTimeDoYouSpendListeningToMusicRouteImport.update({
-    id: '/how-much-time-do-you-spend-listening-to-music',
-    path: '/how-much-time-do-you-spend-listening-to-music',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoYouSpendGroceryShoppingRoute =
-  JournalHowMuchTimeDoYouSpendGroceryShoppingRouteImport.update({
-    id: '/how-much-time-do-you-spend-grocery-shopping',
-    path: '/how-much-time-do-you-spend-grocery-shopping',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoYouSpendGettingReadyRoute =
-  JournalHowMuchTimeDoYouSpendGettingReadyRouteImport.update({
-    id: '/how-much-time-do-you-spend-getting-ready',
-    path: '/how-much-time-do-you-spend-getting-ready',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoYouSpendAloneRoute =
-  JournalHowMuchTimeDoYouSpendAloneRouteImport.update({
-    id: '/how-much-time-do-you-spend-alone',
-    path: '/how-much-time-do-you-spend-alone',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoYouHaveLeftWithYourParentsRoute =
-  JournalHowMuchTimeDoYouHaveLeftWithYourParentsRouteImport.update({
-    id: '/how-much-time-do-you-have-left-with-your-parents',
-    path: '/how-much-time-do-you-have-left-with-your-parents',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchTimeDoParentsSpendWithTheirChildrenRoute =
-  JournalHowMuchTimeDoParentsSpendWithTheirChildrenRouteImport.update({
-    id: '/how-much-time-do-parents-spend-with-their-children',
-    path: '/how-much-time-do-parents-spend-with-their-children',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchOfYourLifeDoYouSpendWorkingRoute =
-  JournalHowMuchOfYourLifeDoYouSpendWorkingRouteImport.update({
-    id: '/how-much-of-your-life-do-you-spend-working',
-    path: '/how-much-of-your-life-do-you-spend-working',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchOfYourLifeDoYouSpendSleepingRoute =
-  JournalHowMuchOfYourLifeDoYouSpendSleepingRouteImport.update({
-    id: '/how-much-of-your-life-do-you-spend-sleeping',
-    path: '/how-much-of-your-life-do-you-spend-sleeping',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchOfYourLifeDoYouSpendSittingRoute =
-  JournalHowMuchOfYourLifeDoYouSpendSittingRouteImport.update({
-    id: '/how-much-of-your-life-do-you-spend-sitting',
-    path: '/how-much-of-your-life-do-you-spend-sitting',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchOfYourLifeDoYouSpendReadingNewsRoute =
-  JournalHowMuchOfYourLifeDoYouSpendReadingNewsRouteImport.update({
-    id: '/how-much-of-your-life-do-you-spend-reading-news',
-    path: '/how-much-of-your-life-do-you-spend-reading-news',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchOfYourLifeDoYouSpendPlayingVideoGamesRoute =
-  JournalHowMuchOfYourLifeDoYouSpendPlayingVideoGamesRouteImport.update({
-    id: '/how-much-of-your-life-do-you-spend-playing-video-games',
-    path: '/how-much-of-your-life-do-you-spend-playing-video-games',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchOfYourLifeDoYouSpendOnYourLaptopRoute =
-  JournalHowMuchOfYourLifeDoYouSpendOnYourLaptopRouteImport.update({
-    id: '/how-much-of-your-life-do-you-spend-on-your-laptop',
-    path: '/how-much-of-your-life-do-you-spend-on-your-laptop',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchOfYourLifeDoYouSpendOnTiktokRoute =
-  JournalHowMuchOfYourLifeDoYouSpendOnTiktokRouteImport.update({
-    id: '/how-much-of-your-life-do-you-spend-on-tiktok',
-    path: '/how-much-of-your-life-do-you-spend-on-tiktok',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchOfYourLifeDoYouSpendOnInstagramRoute =
-  JournalHowMuchOfYourLifeDoYouSpendOnInstagramRouteImport.update({
-    id: '/how-much-of-your-life-do-you-spend-on-instagram',
-    path: '/how-much-of-your-life-do-you-spend-on-instagram',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchOfYourLifeDoYouSpendOnFacebookRoute =
-  JournalHowMuchOfYourLifeDoYouSpendOnFacebookRouteImport.update({
-    id: '/how-much-of-your-life-do-you-spend-on-facebook',
-    path: '/how-much-of-your-life-do-you-spend-on-facebook',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchOfYourLifeDoYouSpendInTheShowerRoute =
-  JournalHowMuchOfYourLifeDoYouSpendInTheShowerRouteImport.update({
-    id: '/how-much-of-your-life-do-you-spend-in-the-shower',
-    path: '/how-much-of-your-life-do-you-spend-in-the-shower',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchOfYourLifeDoYouSpendInSchoolRoute =
-  JournalHowMuchOfYourLifeDoYouSpendInSchoolRouteImport.update({
-    id: '/how-much-of-your-life-do-you-spend-in-school',
-    path: '/how-much-of-your-life-do-you-spend-in-school',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchOfYourLifeDoYouSpendInMeetingsRoute =
-  JournalHowMuchOfYourLifeDoYouSpendInMeetingsRouteImport.update({
-    id: '/how-much-of-your-life-do-you-spend-in-meetings',
-    path: '/how-much-of-your-life-do-you-spend-in-meetings',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchOfYourLifeDoYouSpendExercisingRoute =
-  JournalHowMuchOfYourLifeDoYouSpendExercisingRouteImport.update({
-    id: '/how-much-of-your-life-do-you-spend-exercising',
-    path: '/how-much-of-your-life-do-you-spend-exercising',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchOfYourLifeDoYouSpendEatingRoute =
-  JournalHowMuchOfYourLifeDoYouSpendEatingRouteImport.update({
-    id: '/how-much-of-your-life-do-you-spend-eating',
-    path: '/how-much-of-your-life-do-you-spend-eating',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchOfYourLifeDoYouSpendDrivingRoute =
-  JournalHowMuchOfYourLifeDoYouSpendDrivingRouteImport.update({
-    id: '/how-much-of-your-life-do-you-spend-driving',
-    path: '/how-much-of-your-life-do-you-spend-driving',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchOfYourLifeDoYouSpendCookingRoute =
-  JournalHowMuchOfYourLifeDoYouSpendCookingRouteImport.update({
-    id: '/how-much-of-your-life-do-you-spend-cooking',
-    path: '/how-much-of-your-life-do-you-spend-cooking',
-    getParentRoute: () => JournalRoute,
-  } as any)
-const JournalHowMuchOfYourLifeDoYouSpendCommutingRoute =
-  JournalHowMuchOfYourLifeDoYouSpendCommutingRouteImport.update({
-    id: '/how-much-of-your-life-do-you-spend-commuting',
-    path: '/how-much-of-your-life-do-you-spend-commuting',
+const JournalHowManyDaysAreInALifetimeRoute =
+  JournalHowManyDaysAreInALifetimeRouteImport.update({
+    id: '/how-many-days-are-in-a-lifetime',
+    path: '/how-many-days-are-in-a-lifetime',
     getParentRoute: () => JournalRoute,
   } as any)
 const JournalHowManyHoursAreInALifetimeRoute =
@@ -375,10 +111,274 @@ const JournalHowManyHoursAreInALifetimeRoute =
     path: '/how-many-hours-are-in-a-lifetime',
     getParentRoute: () => JournalRoute,
   } as any)
-const JournalHowManyDaysAreInALifetimeRoute =
-  JournalHowManyDaysAreInALifetimeRouteImport.update({
-    id: '/how-many-days-are-in-a-lifetime',
-    path: '/how-many-days-are-in-a-lifetime',
+const JournalHowMuchOfYourLifeDoYouSpendCommutingRoute =
+  JournalHowMuchOfYourLifeDoYouSpendCommutingRouteImport.update({
+    id: '/how-much-of-your-life-do-you-spend-commuting',
+    path: '/how-much-of-your-life-do-you-spend-commuting',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchOfYourLifeDoYouSpendCookingRoute =
+  JournalHowMuchOfYourLifeDoYouSpendCookingRouteImport.update({
+    id: '/how-much-of-your-life-do-you-spend-cooking',
+    path: '/how-much-of-your-life-do-you-spend-cooking',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchOfYourLifeDoYouSpendDrivingRoute =
+  JournalHowMuchOfYourLifeDoYouSpendDrivingRouteImport.update({
+    id: '/how-much-of-your-life-do-you-spend-driving',
+    path: '/how-much-of-your-life-do-you-spend-driving',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchOfYourLifeDoYouSpendEatingRoute =
+  JournalHowMuchOfYourLifeDoYouSpendEatingRouteImport.update({
+    id: '/how-much-of-your-life-do-you-spend-eating',
+    path: '/how-much-of-your-life-do-you-spend-eating',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchOfYourLifeDoYouSpendExercisingRoute =
+  JournalHowMuchOfYourLifeDoYouSpendExercisingRouteImport.update({
+    id: '/how-much-of-your-life-do-you-spend-exercising',
+    path: '/how-much-of-your-life-do-you-spend-exercising',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchOfYourLifeDoYouSpendInMeetingsRoute =
+  JournalHowMuchOfYourLifeDoYouSpendInMeetingsRouteImport.update({
+    id: '/how-much-of-your-life-do-you-spend-in-meetings',
+    path: '/how-much-of-your-life-do-you-spend-in-meetings',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchOfYourLifeDoYouSpendInSchoolRoute =
+  JournalHowMuchOfYourLifeDoYouSpendInSchoolRouteImport.update({
+    id: '/how-much-of-your-life-do-you-spend-in-school',
+    path: '/how-much-of-your-life-do-you-spend-in-school',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchOfYourLifeDoYouSpendInTheShowerRoute =
+  JournalHowMuchOfYourLifeDoYouSpendInTheShowerRouteImport.update({
+    id: '/how-much-of-your-life-do-you-spend-in-the-shower',
+    path: '/how-much-of-your-life-do-you-spend-in-the-shower',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchOfYourLifeDoYouSpendOnFacebookRoute =
+  JournalHowMuchOfYourLifeDoYouSpendOnFacebookRouteImport.update({
+    id: '/how-much-of-your-life-do-you-spend-on-facebook',
+    path: '/how-much-of-your-life-do-you-spend-on-facebook',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchOfYourLifeDoYouSpendOnInstagramRoute =
+  JournalHowMuchOfYourLifeDoYouSpendOnInstagramRouteImport.update({
+    id: '/how-much-of-your-life-do-you-spend-on-instagram',
+    path: '/how-much-of-your-life-do-you-spend-on-instagram',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchOfYourLifeDoYouSpendOnTiktokRoute =
+  JournalHowMuchOfYourLifeDoYouSpendOnTiktokRouteImport.update({
+    id: '/how-much-of-your-life-do-you-spend-on-tiktok',
+    path: '/how-much-of-your-life-do-you-spend-on-tiktok',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchOfYourLifeDoYouSpendOnYourLaptopRoute =
+  JournalHowMuchOfYourLifeDoYouSpendOnYourLaptopRouteImport.update({
+    id: '/how-much-of-your-life-do-you-spend-on-your-laptop',
+    path: '/how-much-of-your-life-do-you-spend-on-your-laptop',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchOfYourLifeDoYouSpendPlayingVideoGamesRoute =
+  JournalHowMuchOfYourLifeDoYouSpendPlayingVideoGamesRouteImport.update({
+    id: '/how-much-of-your-life-do-you-spend-playing-video-games',
+    path: '/how-much-of-your-life-do-you-spend-playing-video-games',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchOfYourLifeDoYouSpendReadingNewsRoute =
+  JournalHowMuchOfYourLifeDoYouSpendReadingNewsRouteImport.update({
+    id: '/how-much-of-your-life-do-you-spend-reading-news',
+    path: '/how-much-of-your-life-do-you-spend-reading-news',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchOfYourLifeDoYouSpendSittingRoute =
+  JournalHowMuchOfYourLifeDoYouSpendSittingRouteImport.update({
+    id: '/how-much-of-your-life-do-you-spend-sitting',
+    path: '/how-much-of-your-life-do-you-spend-sitting',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchOfYourLifeDoYouSpendSleepingRoute =
+  JournalHowMuchOfYourLifeDoYouSpendSleepingRouteImport.update({
+    id: '/how-much-of-your-life-do-you-spend-sleeping',
+    path: '/how-much-of-your-life-do-you-spend-sleeping',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchOfYourLifeDoYouSpendWorkingRoute =
+  JournalHowMuchOfYourLifeDoYouSpendWorkingRouteImport.update({
+    id: '/how-much-of-your-life-do-you-spend-working',
+    path: '/how-much-of-your-life-do-you-spend-working',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoParentsSpendWithTheirChildrenRoute =
+  JournalHowMuchTimeDoParentsSpendWithTheirChildrenRouteImport.update({
+    id: '/how-much-time-do-parents-spend-with-their-children',
+    path: '/how-much-time-do-parents-spend-with-their-children',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouHaveLeftWithYourParentsRoute =
+  JournalHowMuchTimeDoYouHaveLeftWithYourParentsRouteImport.update({
+    id: '/how-much-time-do-you-have-left-with-your-parents',
+    path: '/how-much-time-do-you-have-left-with-your-parents',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouSpendAloneRoute =
+  JournalHowMuchTimeDoYouSpendAloneRouteImport.update({
+    id: '/how-much-time-do-you-spend-alone',
+    path: '/how-much-time-do-you-spend-alone',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouSpendGettingReadyRoute =
+  JournalHowMuchTimeDoYouSpendGettingReadyRouteImport.update({
+    id: '/how-much-time-do-you-spend-getting-ready',
+    path: '/how-much-time-do-you-spend-getting-ready',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouSpendGroceryShoppingRoute =
+  JournalHowMuchTimeDoYouSpendGroceryShoppingRouteImport.update({
+    id: '/how-much-time-do-you-spend-grocery-shopping',
+    path: '/how-much-time-do-you-spend-grocery-shopping',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouSpendListeningToMusicRoute =
+  JournalHowMuchTimeDoYouSpendListeningToMusicRouteImport.update({
+    id: '/how-much-time-do-you-spend-listening-to-music',
+    path: '/how-much-time-do-you-spend-listening-to-music',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouSpendListeningToPodcastsRoute =
+  JournalHowMuchTimeDoYouSpendListeningToPodcastsRouteImport.update({
+    id: '/how-much-time-do-you-spend-listening-to-podcasts',
+    path: '/how-much-time-do-you-spend-listening-to-podcasts',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouSpendLookingForLostThingsRoute =
+  JournalHowMuchTimeDoYouSpendLookingForLostThingsRouteImport.update({
+    id: '/how-much-time-do-you-spend-looking-for-lost-things',
+    path: '/how-much-time-do-you-spend-looking-for-lost-things',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouSpendOnDatingAppsRoute =
+  JournalHowMuchTimeDoYouSpendOnDatingAppsRouteImport.update({
+    id: '/how-much-time-do-you-spend-on-dating-apps',
+    path: '/how-much-time-do-you-spend-on-dating-apps',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouSpendOnHouseholdChoresRoute =
+  JournalHowMuchTimeDoYouSpendOnHouseholdChoresRouteImport.update({
+    id: '/how-much-time-do-you-spend-on-household-chores',
+    path: '/how-much-time-do-you-spend-on-household-chores',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouSpendOnLinkedinRoute =
+  JournalHowMuchTimeDoYouSpendOnLinkedinRouteImport.update({
+    id: '/how-much-time-do-you-spend-on-linkedin',
+    path: '/how-much-time-do-you-spend-on-linkedin',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouSpendOnTwitterXRoute =
+  JournalHowMuchTimeDoYouSpendOnTwitterXRouteImport.update({
+    id: '/how-much-time-do-you-spend-on-twitter-x',
+    path: '/how-much-time-do-you-spend-on-twitter-x',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouSpendOnVideoCallsRoute =
+  JournalHowMuchTimeDoYouSpendOnVideoCallsRouteImport.update({
+    id: '/how-much-time-do-you-spend-on-video-calls',
+    path: '/how-much-time-do-you-spend-on-video-calls',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouSpendOnYourPhoneRoute =
+  JournalHowMuchTimeDoYouSpendOnYourPhoneRouteImport.update({
+    id: '/how-much-time-do-you-spend-on-your-phone',
+    path: '/how-much-time-do-you-spend-on-your-phone',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouSpendOnYourPhoneInBedRoute =
+  JournalHowMuchTimeDoYouSpendOnYourPhoneInBedRouteImport.update({
+    id: '/how-much-time-do-you-spend-on-your-phone-in-bed',
+    path: '/how-much-time-do-you-spend-on-your-phone-in-bed',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouSpendOnYoutubeRoute =
+  JournalHowMuchTimeDoYouSpendOnYoutubeRouteImport.update({
+    id: '/how-much-time-do-you-spend-on-youtube',
+    path: '/how-much-time-do-you-spend-on-youtube',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouSpendReadingBooksRoute =
+  JournalHowMuchTimeDoYouSpendReadingBooksRouteImport.update({
+    id: '/how-much-time-do-you-spend-reading-books',
+    path: '/how-much-time-do-you-spend-reading-books',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouSpendShoppingOnlineRoute =
+  JournalHowMuchTimeDoYouSpendShoppingOnlineRouteImport.update({
+    id: '/how-much-time-do-you-spend-shopping-online',
+    path: '/how-much-time-do-you-spend-shopping-online',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouSpendStuckInTrafficRoute =
+  JournalHowMuchTimeDoYouSpendStuckInTrafficRouteImport.update({
+    id: '/how-much-time-do-you-spend-stuck-in-traffic',
+    path: '/how-much-time-do-you-spend-stuck-in-traffic',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouSpendTextingRoute =
+  JournalHowMuchTimeDoYouSpendTextingRouteImport.update({
+    id: '/how-much-time-do-you-spend-texting',
+    path: '/how-much-time-do-you-spend-texting',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouSpendUsingAiRoute =
+  JournalHowMuchTimeDoYouSpendUsingAiRouteImport.update({
+    id: '/how-much-time-do-you-spend-using-ai',
+    path: '/how-much-time-do-you-spend-using-ai',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouSpendWaitingRoute =
+  JournalHowMuchTimeDoYouSpendWaitingRouteImport.update({
+    id: '/how-much-time-do-you-spend-waiting',
+    path: '/how-much-time-do-you-spend-waiting',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouSpendWatchingSportsRoute =
+  JournalHowMuchTimeDoYouSpendWatchingSportsRouteImport.update({
+    id: '/how-much-time-do-you-spend-watching-sports',
+    path: '/how-much-time-do-you-spend-watching-sports',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoYouSpendWithYourFriendsRoute =
+  JournalHowMuchTimeDoYouSpendWithYourFriendsRouteImport.update({
+    id: '/how-much-time-do-you-spend-with-your-friends',
+    path: '/how-much-time-do-you-spend-with-your-friends',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoesTheAveragePersonSpendOnEmailRoute =
+  JournalHowMuchTimeDoesTheAveragePersonSpendOnEmailRouteImport.update({
+    id: '/how-much-time-does-the-average-person-spend-on-email',
+    path: '/how-much-time-does-the-average-person-spend-on-email',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoesTheAveragePersonSpendOnSocialMediaRoute =
+  JournalHowMuchTimeDoesTheAveragePersonSpendOnSocialMediaRouteImport.update({
+    id: '/how-much-time-does-the-average-person-spend-on-social-media',
+    path: '/how-much-time-does-the-average-person-spend-on-social-media',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchTimeDoesTheAveragePersonSpendWatchingNetflixRoute =
+  JournalHowMuchTimeDoesTheAveragePersonSpendWatchingNetflixRouteImport.update({
+    id: '/how-much-time-does-the-average-person-spend-watching-netflix',
+    path: '/how-much-time-does-the-average-person-spend-watching-netflix',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchVacationTimeDoYouGetInALifetimeRoute =
+  JournalHowMuchVacationTimeDoYouGetInALifetimeRouteImport.update({
+    id: '/how-much-vacation-time-do-you-get-in-a-lifetime',
+    path: '/how-much-vacation-time-do-you-get-in-a-lifetime',
     getParentRoute: () => JournalRoute,
   } as any)
 
@@ -731,32 +731,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/terms': {
-      id: '/terms'
-      path: '/terms'
-      fullPath: '/terms'
-      preLoaderRoute: typeof TermsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacy': {
-      id: '/privacy'
-      path: '/privacy'
-      fullPath: '/privacy'
-      preLoaderRoute: typeof PrivacyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/philosophy': {
-      id: '/philosophy'
-      path: '/philosophy'
-      fullPath: '/philosophy'
-      preLoaderRoute: typeof PhilosophyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/journal': {
-      id: '/journal'
-      path: '/journal'
-      fullPath: '/journal'
-      preLoaderRoute: typeof JournalRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -766,11 +745,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/journal': {
+      id: '/journal'
+      path: '/journal'
+      fullPath: '/journal'
+      preLoaderRoute: typeof JournalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/philosophy': {
+      id: '/philosophy'
+      path: '/philosophy'
+      fullPath: '/philosophy'
+      preLoaderRoute: typeof PhilosophyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/journal/': {
@@ -780,319 +780,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JournalIndexRouteImport
       parentRoute: typeof JournalRoute
     }
-    '/journal/how-much-vacation-time-do-you-get-in-a-lifetime': {
-      id: '/journal/how-much-vacation-time-do-you-get-in-a-lifetime'
-      path: '/how-much-vacation-time-do-you-get-in-a-lifetime'
-      fullPath: '/journal/how-much-vacation-time-do-you-get-in-a-lifetime'
-      preLoaderRoute: typeof JournalHowMuchVacationTimeDoYouGetInALifetimeRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-does-the-average-person-spend-watching-netflix': {
-      id: '/journal/how-much-time-does-the-average-person-spend-watching-netflix'
-      path: '/how-much-time-does-the-average-person-spend-watching-netflix'
-      fullPath: '/journal/how-much-time-does-the-average-person-spend-watching-netflix'
-      preLoaderRoute: typeof JournalHowMuchTimeDoesTheAveragePersonSpendWatchingNetflixRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-does-the-average-person-spend-on-social-media': {
-      id: '/journal/how-much-time-does-the-average-person-spend-on-social-media'
-      path: '/how-much-time-does-the-average-person-spend-on-social-media'
-      fullPath: '/journal/how-much-time-does-the-average-person-spend-on-social-media'
-      preLoaderRoute: typeof JournalHowMuchTimeDoesTheAveragePersonSpendOnSocialMediaRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-does-the-average-person-spend-on-email': {
-      id: '/journal/how-much-time-does-the-average-person-spend-on-email'
-      path: '/how-much-time-does-the-average-person-spend-on-email'
-      fullPath: '/journal/how-much-time-does-the-average-person-spend-on-email'
-      preLoaderRoute: typeof JournalHowMuchTimeDoesTheAveragePersonSpendOnEmailRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-do-you-spend-with-your-friends': {
-      id: '/journal/how-much-time-do-you-spend-with-your-friends'
-      path: '/how-much-time-do-you-spend-with-your-friends'
-      fullPath: '/journal/how-much-time-do-you-spend-with-your-friends'
-      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendWithYourFriendsRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-do-you-spend-watching-sports': {
-      id: '/journal/how-much-time-do-you-spend-watching-sports'
-      path: '/how-much-time-do-you-spend-watching-sports'
-      fullPath: '/journal/how-much-time-do-you-spend-watching-sports'
-      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendWatchingSportsRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-do-you-spend-waiting': {
-      id: '/journal/how-much-time-do-you-spend-waiting'
-      path: '/how-much-time-do-you-spend-waiting'
-      fullPath: '/journal/how-much-time-do-you-spend-waiting'
-      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendWaitingRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-do-you-spend-using-ai': {
-      id: '/journal/how-much-time-do-you-spend-using-ai'
-      path: '/how-much-time-do-you-spend-using-ai'
-      fullPath: '/journal/how-much-time-do-you-spend-using-ai'
-      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendUsingAiRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-do-you-spend-texting': {
-      id: '/journal/how-much-time-do-you-spend-texting'
-      path: '/how-much-time-do-you-spend-texting'
-      fullPath: '/journal/how-much-time-do-you-spend-texting'
-      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendTextingRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-do-you-spend-stuck-in-traffic': {
-      id: '/journal/how-much-time-do-you-spend-stuck-in-traffic'
-      path: '/how-much-time-do-you-spend-stuck-in-traffic'
-      fullPath: '/journal/how-much-time-do-you-spend-stuck-in-traffic'
-      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendStuckInTrafficRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-do-you-spend-shopping-online': {
-      id: '/journal/how-much-time-do-you-spend-shopping-online'
-      path: '/how-much-time-do-you-spend-shopping-online'
-      fullPath: '/journal/how-much-time-do-you-spend-shopping-online'
-      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendShoppingOnlineRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-do-you-spend-reading-books': {
-      id: '/journal/how-much-time-do-you-spend-reading-books'
-      path: '/how-much-time-do-you-spend-reading-books'
-      fullPath: '/journal/how-much-time-do-you-spend-reading-books'
-      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendReadingBooksRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-do-you-spend-on-youtube': {
-      id: '/journal/how-much-time-do-you-spend-on-youtube'
-      path: '/how-much-time-do-you-spend-on-youtube'
-      fullPath: '/journal/how-much-time-do-you-spend-on-youtube'
-      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendOnYoutubeRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-do-you-spend-on-your-phone-in-bed': {
-      id: '/journal/how-much-time-do-you-spend-on-your-phone-in-bed'
-      path: '/how-much-time-do-you-spend-on-your-phone-in-bed'
-      fullPath: '/journal/how-much-time-do-you-spend-on-your-phone-in-bed'
-      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendOnYourPhoneInBedRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-do-you-spend-on-your-phone': {
-      id: '/journal/how-much-time-do-you-spend-on-your-phone'
-      path: '/how-much-time-do-you-spend-on-your-phone'
-      fullPath: '/journal/how-much-time-do-you-spend-on-your-phone'
-      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendOnYourPhoneRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-do-you-spend-on-video-calls': {
-      id: '/journal/how-much-time-do-you-spend-on-video-calls'
-      path: '/how-much-time-do-you-spend-on-video-calls'
-      fullPath: '/journal/how-much-time-do-you-spend-on-video-calls'
-      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendOnVideoCallsRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-do-you-spend-on-twitter-x': {
-      id: '/journal/how-much-time-do-you-spend-on-twitter-x'
-      path: '/how-much-time-do-you-spend-on-twitter-x'
-      fullPath: '/journal/how-much-time-do-you-spend-on-twitter-x'
-      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendOnTwitterXRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-do-you-spend-on-linkedin': {
-      id: '/journal/how-much-time-do-you-spend-on-linkedin'
-      path: '/how-much-time-do-you-spend-on-linkedin'
-      fullPath: '/journal/how-much-time-do-you-spend-on-linkedin'
-      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendOnLinkedinRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-do-you-spend-on-household-chores': {
-      id: '/journal/how-much-time-do-you-spend-on-household-chores'
-      path: '/how-much-time-do-you-spend-on-household-chores'
-      fullPath: '/journal/how-much-time-do-you-spend-on-household-chores'
-      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendOnHouseholdChoresRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-do-you-spend-on-dating-apps': {
-      id: '/journal/how-much-time-do-you-spend-on-dating-apps'
-      path: '/how-much-time-do-you-spend-on-dating-apps'
-      fullPath: '/journal/how-much-time-do-you-spend-on-dating-apps'
-      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendOnDatingAppsRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-do-you-spend-looking-for-lost-things': {
-      id: '/journal/how-much-time-do-you-spend-looking-for-lost-things'
-      path: '/how-much-time-do-you-spend-looking-for-lost-things'
-      fullPath: '/journal/how-much-time-do-you-spend-looking-for-lost-things'
-      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendLookingForLostThingsRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-do-you-spend-listening-to-podcasts': {
-      id: '/journal/how-much-time-do-you-spend-listening-to-podcasts'
-      path: '/how-much-time-do-you-spend-listening-to-podcasts'
-      fullPath: '/journal/how-much-time-do-you-spend-listening-to-podcasts'
-      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendListeningToPodcastsRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-do-you-spend-listening-to-music': {
-      id: '/journal/how-much-time-do-you-spend-listening-to-music'
-      path: '/how-much-time-do-you-spend-listening-to-music'
-      fullPath: '/journal/how-much-time-do-you-spend-listening-to-music'
-      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendListeningToMusicRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-do-you-spend-grocery-shopping': {
-      id: '/journal/how-much-time-do-you-spend-grocery-shopping'
-      path: '/how-much-time-do-you-spend-grocery-shopping'
-      fullPath: '/journal/how-much-time-do-you-spend-grocery-shopping'
-      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendGroceryShoppingRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-do-you-spend-getting-ready': {
-      id: '/journal/how-much-time-do-you-spend-getting-ready'
-      path: '/how-much-time-do-you-spend-getting-ready'
-      fullPath: '/journal/how-much-time-do-you-spend-getting-ready'
-      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendGettingReadyRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-do-you-spend-alone': {
-      id: '/journal/how-much-time-do-you-spend-alone'
-      path: '/how-much-time-do-you-spend-alone'
-      fullPath: '/journal/how-much-time-do-you-spend-alone'
-      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendAloneRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-do-you-have-left-with-your-parents': {
-      id: '/journal/how-much-time-do-you-have-left-with-your-parents'
-      path: '/how-much-time-do-you-have-left-with-your-parents'
-      fullPath: '/journal/how-much-time-do-you-have-left-with-your-parents'
-      preLoaderRoute: typeof JournalHowMuchTimeDoYouHaveLeftWithYourParentsRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-time-do-parents-spend-with-their-children': {
-      id: '/journal/how-much-time-do-parents-spend-with-their-children'
-      path: '/how-much-time-do-parents-spend-with-their-children'
-      fullPath: '/journal/how-much-time-do-parents-spend-with-their-children'
-      preLoaderRoute: typeof JournalHowMuchTimeDoParentsSpendWithTheirChildrenRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-of-your-life-do-you-spend-working': {
-      id: '/journal/how-much-of-your-life-do-you-spend-working'
-      path: '/how-much-of-your-life-do-you-spend-working'
-      fullPath: '/journal/how-much-of-your-life-do-you-spend-working'
-      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendWorkingRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-of-your-life-do-you-spend-sleeping': {
-      id: '/journal/how-much-of-your-life-do-you-spend-sleeping'
-      path: '/how-much-of-your-life-do-you-spend-sleeping'
-      fullPath: '/journal/how-much-of-your-life-do-you-spend-sleeping'
-      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendSleepingRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-of-your-life-do-you-spend-sitting': {
-      id: '/journal/how-much-of-your-life-do-you-spend-sitting'
-      path: '/how-much-of-your-life-do-you-spend-sitting'
-      fullPath: '/journal/how-much-of-your-life-do-you-spend-sitting'
-      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendSittingRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-of-your-life-do-you-spend-reading-news': {
-      id: '/journal/how-much-of-your-life-do-you-spend-reading-news'
-      path: '/how-much-of-your-life-do-you-spend-reading-news'
-      fullPath: '/journal/how-much-of-your-life-do-you-spend-reading-news'
-      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendReadingNewsRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-of-your-life-do-you-spend-playing-video-games': {
-      id: '/journal/how-much-of-your-life-do-you-spend-playing-video-games'
-      path: '/how-much-of-your-life-do-you-spend-playing-video-games'
-      fullPath: '/journal/how-much-of-your-life-do-you-spend-playing-video-games'
-      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendPlayingVideoGamesRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-of-your-life-do-you-spend-on-your-laptop': {
-      id: '/journal/how-much-of-your-life-do-you-spend-on-your-laptop'
-      path: '/how-much-of-your-life-do-you-spend-on-your-laptop'
-      fullPath: '/journal/how-much-of-your-life-do-you-spend-on-your-laptop'
-      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendOnYourLaptopRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-of-your-life-do-you-spend-on-tiktok': {
-      id: '/journal/how-much-of-your-life-do-you-spend-on-tiktok'
-      path: '/how-much-of-your-life-do-you-spend-on-tiktok'
-      fullPath: '/journal/how-much-of-your-life-do-you-spend-on-tiktok'
-      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendOnTiktokRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-of-your-life-do-you-spend-on-instagram': {
-      id: '/journal/how-much-of-your-life-do-you-spend-on-instagram'
-      path: '/how-much-of-your-life-do-you-spend-on-instagram'
-      fullPath: '/journal/how-much-of-your-life-do-you-spend-on-instagram'
-      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendOnInstagramRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-of-your-life-do-you-spend-on-facebook': {
-      id: '/journal/how-much-of-your-life-do-you-spend-on-facebook'
-      path: '/how-much-of-your-life-do-you-spend-on-facebook'
-      fullPath: '/journal/how-much-of-your-life-do-you-spend-on-facebook'
-      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendOnFacebookRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-of-your-life-do-you-spend-in-the-shower': {
-      id: '/journal/how-much-of-your-life-do-you-spend-in-the-shower'
-      path: '/how-much-of-your-life-do-you-spend-in-the-shower'
-      fullPath: '/journal/how-much-of-your-life-do-you-spend-in-the-shower'
-      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendInTheShowerRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-of-your-life-do-you-spend-in-school': {
-      id: '/journal/how-much-of-your-life-do-you-spend-in-school'
-      path: '/how-much-of-your-life-do-you-spend-in-school'
-      fullPath: '/journal/how-much-of-your-life-do-you-spend-in-school'
-      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendInSchoolRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-of-your-life-do-you-spend-in-meetings': {
-      id: '/journal/how-much-of-your-life-do-you-spend-in-meetings'
-      path: '/how-much-of-your-life-do-you-spend-in-meetings'
-      fullPath: '/journal/how-much-of-your-life-do-you-spend-in-meetings'
-      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendInMeetingsRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-of-your-life-do-you-spend-exercising': {
-      id: '/journal/how-much-of-your-life-do-you-spend-exercising'
-      path: '/how-much-of-your-life-do-you-spend-exercising'
-      fullPath: '/journal/how-much-of-your-life-do-you-spend-exercising'
-      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendExercisingRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-of-your-life-do-you-spend-eating': {
-      id: '/journal/how-much-of-your-life-do-you-spend-eating'
-      path: '/how-much-of-your-life-do-you-spend-eating'
-      fullPath: '/journal/how-much-of-your-life-do-you-spend-eating'
-      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendEatingRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-of-your-life-do-you-spend-driving': {
-      id: '/journal/how-much-of-your-life-do-you-spend-driving'
-      path: '/how-much-of-your-life-do-you-spend-driving'
-      fullPath: '/journal/how-much-of-your-life-do-you-spend-driving'
-      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendDrivingRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-of-your-life-do-you-spend-cooking': {
-      id: '/journal/how-much-of-your-life-do-you-spend-cooking'
-      path: '/how-much-of-your-life-do-you-spend-cooking'
-      fullPath: '/journal/how-much-of-your-life-do-you-spend-cooking'
-      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendCookingRouteImport
-      parentRoute: typeof JournalRoute
-    }
-    '/journal/how-much-of-your-life-do-you-spend-commuting': {
-      id: '/journal/how-much-of-your-life-do-you-spend-commuting'
-      path: '/how-much-of-your-life-do-you-spend-commuting'
-      fullPath: '/journal/how-much-of-your-life-do-you-spend-commuting'
-      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendCommutingRouteImport
+    '/journal/how-many-days-are-in-a-lifetime': {
+      id: '/journal/how-many-days-are-in-a-lifetime'
+      path: '/how-many-days-are-in-a-lifetime'
+      fullPath: '/journal/how-many-days-are-in-a-lifetime'
+      preLoaderRoute: typeof JournalHowManyDaysAreInALifetimeRouteImport
       parentRoute: typeof JournalRoute
     }
     '/journal/how-many-hours-are-in-a-lifetime': {
@@ -1102,11 +794,319 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JournalHowManyHoursAreInALifetimeRouteImport
       parentRoute: typeof JournalRoute
     }
-    '/journal/how-many-days-are-in-a-lifetime': {
-      id: '/journal/how-many-days-are-in-a-lifetime'
-      path: '/how-many-days-are-in-a-lifetime'
-      fullPath: '/journal/how-many-days-are-in-a-lifetime'
-      preLoaderRoute: typeof JournalHowManyDaysAreInALifetimeRouteImport
+    '/journal/how-much-of-your-life-do-you-spend-commuting': {
+      id: '/journal/how-much-of-your-life-do-you-spend-commuting'
+      path: '/how-much-of-your-life-do-you-spend-commuting'
+      fullPath: '/journal/how-much-of-your-life-do-you-spend-commuting'
+      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendCommutingRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-of-your-life-do-you-spend-cooking': {
+      id: '/journal/how-much-of-your-life-do-you-spend-cooking'
+      path: '/how-much-of-your-life-do-you-spend-cooking'
+      fullPath: '/journal/how-much-of-your-life-do-you-spend-cooking'
+      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendCookingRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-of-your-life-do-you-spend-driving': {
+      id: '/journal/how-much-of-your-life-do-you-spend-driving'
+      path: '/how-much-of-your-life-do-you-spend-driving'
+      fullPath: '/journal/how-much-of-your-life-do-you-spend-driving'
+      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendDrivingRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-of-your-life-do-you-spend-eating': {
+      id: '/journal/how-much-of-your-life-do-you-spend-eating'
+      path: '/how-much-of-your-life-do-you-spend-eating'
+      fullPath: '/journal/how-much-of-your-life-do-you-spend-eating'
+      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendEatingRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-of-your-life-do-you-spend-exercising': {
+      id: '/journal/how-much-of-your-life-do-you-spend-exercising'
+      path: '/how-much-of-your-life-do-you-spend-exercising'
+      fullPath: '/journal/how-much-of-your-life-do-you-spend-exercising'
+      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendExercisingRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-of-your-life-do-you-spend-in-meetings': {
+      id: '/journal/how-much-of-your-life-do-you-spend-in-meetings'
+      path: '/how-much-of-your-life-do-you-spend-in-meetings'
+      fullPath: '/journal/how-much-of-your-life-do-you-spend-in-meetings'
+      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendInMeetingsRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-of-your-life-do-you-spend-in-school': {
+      id: '/journal/how-much-of-your-life-do-you-spend-in-school'
+      path: '/how-much-of-your-life-do-you-spend-in-school'
+      fullPath: '/journal/how-much-of-your-life-do-you-spend-in-school'
+      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendInSchoolRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-of-your-life-do-you-spend-in-the-shower': {
+      id: '/journal/how-much-of-your-life-do-you-spend-in-the-shower'
+      path: '/how-much-of-your-life-do-you-spend-in-the-shower'
+      fullPath: '/journal/how-much-of-your-life-do-you-spend-in-the-shower'
+      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendInTheShowerRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-of-your-life-do-you-spend-on-facebook': {
+      id: '/journal/how-much-of-your-life-do-you-spend-on-facebook'
+      path: '/how-much-of-your-life-do-you-spend-on-facebook'
+      fullPath: '/journal/how-much-of-your-life-do-you-spend-on-facebook'
+      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendOnFacebookRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-of-your-life-do-you-spend-on-instagram': {
+      id: '/journal/how-much-of-your-life-do-you-spend-on-instagram'
+      path: '/how-much-of-your-life-do-you-spend-on-instagram'
+      fullPath: '/journal/how-much-of-your-life-do-you-spend-on-instagram'
+      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendOnInstagramRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-of-your-life-do-you-spend-on-tiktok': {
+      id: '/journal/how-much-of-your-life-do-you-spend-on-tiktok'
+      path: '/how-much-of-your-life-do-you-spend-on-tiktok'
+      fullPath: '/journal/how-much-of-your-life-do-you-spend-on-tiktok'
+      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendOnTiktokRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-of-your-life-do-you-spend-on-your-laptop': {
+      id: '/journal/how-much-of-your-life-do-you-spend-on-your-laptop'
+      path: '/how-much-of-your-life-do-you-spend-on-your-laptop'
+      fullPath: '/journal/how-much-of-your-life-do-you-spend-on-your-laptop'
+      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendOnYourLaptopRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-of-your-life-do-you-spend-playing-video-games': {
+      id: '/journal/how-much-of-your-life-do-you-spend-playing-video-games'
+      path: '/how-much-of-your-life-do-you-spend-playing-video-games'
+      fullPath: '/journal/how-much-of-your-life-do-you-spend-playing-video-games'
+      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendPlayingVideoGamesRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-of-your-life-do-you-spend-reading-news': {
+      id: '/journal/how-much-of-your-life-do-you-spend-reading-news'
+      path: '/how-much-of-your-life-do-you-spend-reading-news'
+      fullPath: '/journal/how-much-of-your-life-do-you-spend-reading-news'
+      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendReadingNewsRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-of-your-life-do-you-spend-sitting': {
+      id: '/journal/how-much-of-your-life-do-you-spend-sitting'
+      path: '/how-much-of-your-life-do-you-spend-sitting'
+      fullPath: '/journal/how-much-of-your-life-do-you-spend-sitting'
+      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendSittingRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-of-your-life-do-you-spend-sleeping': {
+      id: '/journal/how-much-of-your-life-do-you-spend-sleeping'
+      path: '/how-much-of-your-life-do-you-spend-sleeping'
+      fullPath: '/journal/how-much-of-your-life-do-you-spend-sleeping'
+      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendSleepingRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-of-your-life-do-you-spend-working': {
+      id: '/journal/how-much-of-your-life-do-you-spend-working'
+      path: '/how-much-of-your-life-do-you-spend-working'
+      fullPath: '/journal/how-much-of-your-life-do-you-spend-working'
+      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendWorkingRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-parents-spend-with-their-children': {
+      id: '/journal/how-much-time-do-parents-spend-with-their-children'
+      path: '/how-much-time-do-parents-spend-with-their-children'
+      fullPath: '/journal/how-much-time-do-parents-spend-with-their-children'
+      preLoaderRoute: typeof JournalHowMuchTimeDoParentsSpendWithTheirChildrenRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-have-left-with-your-parents': {
+      id: '/journal/how-much-time-do-you-have-left-with-your-parents'
+      path: '/how-much-time-do-you-have-left-with-your-parents'
+      fullPath: '/journal/how-much-time-do-you-have-left-with-your-parents'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouHaveLeftWithYourParentsRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-spend-alone': {
+      id: '/journal/how-much-time-do-you-spend-alone'
+      path: '/how-much-time-do-you-spend-alone'
+      fullPath: '/journal/how-much-time-do-you-spend-alone'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendAloneRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-spend-getting-ready': {
+      id: '/journal/how-much-time-do-you-spend-getting-ready'
+      path: '/how-much-time-do-you-spend-getting-ready'
+      fullPath: '/journal/how-much-time-do-you-spend-getting-ready'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendGettingReadyRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-spend-grocery-shopping': {
+      id: '/journal/how-much-time-do-you-spend-grocery-shopping'
+      path: '/how-much-time-do-you-spend-grocery-shopping'
+      fullPath: '/journal/how-much-time-do-you-spend-grocery-shopping'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendGroceryShoppingRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-spend-listening-to-music': {
+      id: '/journal/how-much-time-do-you-spend-listening-to-music'
+      path: '/how-much-time-do-you-spend-listening-to-music'
+      fullPath: '/journal/how-much-time-do-you-spend-listening-to-music'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendListeningToMusicRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-spend-listening-to-podcasts': {
+      id: '/journal/how-much-time-do-you-spend-listening-to-podcasts'
+      path: '/how-much-time-do-you-spend-listening-to-podcasts'
+      fullPath: '/journal/how-much-time-do-you-spend-listening-to-podcasts'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendListeningToPodcastsRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-spend-looking-for-lost-things': {
+      id: '/journal/how-much-time-do-you-spend-looking-for-lost-things'
+      path: '/how-much-time-do-you-spend-looking-for-lost-things'
+      fullPath: '/journal/how-much-time-do-you-spend-looking-for-lost-things'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendLookingForLostThingsRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-spend-on-dating-apps': {
+      id: '/journal/how-much-time-do-you-spend-on-dating-apps'
+      path: '/how-much-time-do-you-spend-on-dating-apps'
+      fullPath: '/journal/how-much-time-do-you-spend-on-dating-apps'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendOnDatingAppsRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-spend-on-household-chores': {
+      id: '/journal/how-much-time-do-you-spend-on-household-chores'
+      path: '/how-much-time-do-you-spend-on-household-chores'
+      fullPath: '/journal/how-much-time-do-you-spend-on-household-chores'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendOnHouseholdChoresRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-spend-on-linkedin': {
+      id: '/journal/how-much-time-do-you-spend-on-linkedin'
+      path: '/how-much-time-do-you-spend-on-linkedin'
+      fullPath: '/journal/how-much-time-do-you-spend-on-linkedin'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendOnLinkedinRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-spend-on-twitter-x': {
+      id: '/journal/how-much-time-do-you-spend-on-twitter-x'
+      path: '/how-much-time-do-you-spend-on-twitter-x'
+      fullPath: '/journal/how-much-time-do-you-spend-on-twitter-x'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendOnTwitterXRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-spend-on-video-calls': {
+      id: '/journal/how-much-time-do-you-spend-on-video-calls'
+      path: '/how-much-time-do-you-spend-on-video-calls'
+      fullPath: '/journal/how-much-time-do-you-spend-on-video-calls'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendOnVideoCallsRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-spend-on-your-phone': {
+      id: '/journal/how-much-time-do-you-spend-on-your-phone'
+      path: '/how-much-time-do-you-spend-on-your-phone'
+      fullPath: '/journal/how-much-time-do-you-spend-on-your-phone'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendOnYourPhoneRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-spend-on-your-phone-in-bed': {
+      id: '/journal/how-much-time-do-you-spend-on-your-phone-in-bed'
+      path: '/how-much-time-do-you-spend-on-your-phone-in-bed'
+      fullPath: '/journal/how-much-time-do-you-spend-on-your-phone-in-bed'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendOnYourPhoneInBedRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-spend-on-youtube': {
+      id: '/journal/how-much-time-do-you-spend-on-youtube'
+      path: '/how-much-time-do-you-spend-on-youtube'
+      fullPath: '/journal/how-much-time-do-you-spend-on-youtube'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendOnYoutubeRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-spend-reading-books': {
+      id: '/journal/how-much-time-do-you-spend-reading-books'
+      path: '/how-much-time-do-you-spend-reading-books'
+      fullPath: '/journal/how-much-time-do-you-spend-reading-books'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendReadingBooksRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-spend-shopping-online': {
+      id: '/journal/how-much-time-do-you-spend-shopping-online'
+      path: '/how-much-time-do-you-spend-shopping-online'
+      fullPath: '/journal/how-much-time-do-you-spend-shopping-online'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendShoppingOnlineRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-spend-stuck-in-traffic': {
+      id: '/journal/how-much-time-do-you-spend-stuck-in-traffic'
+      path: '/how-much-time-do-you-spend-stuck-in-traffic'
+      fullPath: '/journal/how-much-time-do-you-spend-stuck-in-traffic'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendStuckInTrafficRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-spend-texting': {
+      id: '/journal/how-much-time-do-you-spend-texting'
+      path: '/how-much-time-do-you-spend-texting'
+      fullPath: '/journal/how-much-time-do-you-spend-texting'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendTextingRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-spend-using-ai': {
+      id: '/journal/how-much-time-do-you-spend-using-ai'
+      path: '/how-much-time-do-you-spend-using-ai'
+      fullPath: '/journal/how-much-time-do-you-spend-using-ai'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendUsingAiRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-spend-waiting': {
+      id: '/journal/how-much-time-do-you-spend-waiting'
+      path: '/how-much-time-do-you-spend-waiting'
+      fullPath: '/journal/how-much-time-do-you-spend-waiting'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendWaitingRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-spend-watching-sports': {
+      id: '/journal/how-much-time-do-you-spend-watching-sports'
+      path: '/how-much-time-do-you-spend-watching-sports'
+      fullPath: '/journal/how-much-time-do-you-spend-watching-sports'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendWatchingSportsRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-do-you-spend-with-your-friends': {
+      id: '/journal/how-much-time-do-you-spend-with-your-friends'
+      path: '/how-much-time-do-you-spend-with-your-friends'
+      fullPath: '/journal/how-much-time-do-you-spend-with-your-friends'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendWithYourFriendsRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-does-the-average-person-spend-on-email': {
+      id: '/journal/how-much-time-does-the-average-person-spend-on-email'
+      path: '/how-much-time-does-the-average-person-spend-on-email'
+      fullPath: '/journal/how-much-time-does-the-average-person-spend-on-email'
+      preLoaderRoute: typeof JournalHowMuchTimeDoesTheAveragePersonSpendOnEmailRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-does-the-average-person-spend-on-social-media': {
+      id: '/journal/how-much-time-does-the-average-person-spend-on-social-media'
+      path: '/how-much-time-does-the-average-person-spend-on-social-media'
+      fullPath: '/journal/how-much-time-does-the-average-person-spend-on-social-media'
+      preLoaderRoute: typeof JournalHowMuchTimeDoesTheAveragePersonSpendOnSocialMediaRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-time-does-the-average-person-spend-watching-netflix': {
+      id: '/journal/how-much-time-does-the-average-person-spend-watching-netflix'
+      path: '/how-much-time-does-the-average-person-spend-watching-netflix'
+      fullPath: '/journal/how-much-time-does-the-average-person-spend-watching-netflix'
+      preLoaderRoute: typeof JournalHowMuchTimeDoesTheAveragePersonSpendWatchingNetflixRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-vacation-time-do-you-get-in-a-lifetime': {
+      id: '/journal/how-much-vacation-time-do-you-get-in-a-lifetime'
+      path: '/how-much-vacation-time-do-you-get-in-a-lifetime'
+      fullPath: '/journal/how-much-vacation-time-do-you-get-in-a-lifetime'
+      preLoaderRoute: typeof JournalHowMuchVacationTimeDoYouGetInALifetimeRouteImport
       parentRoute: typeof JournalRoute
     }
   }
