@@ -15,6 +15,7 @@ import { Route as JournalRouteImport } from './routes/journal'
 import { Route as PhilosophyRouteImport } from './routes/philosophy'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as WeeksRouteImport } from './routes/weeks'
 import { Route as JournalIndexRouteImport } from './routes/journal/index'
 import { Route as JournalHowManyDaysAreInALifetimeRouteImport } from './routes/journal/how-many-days-are-in-a-lifetime'
 import { Route as JournalHowManyHoursAreInALifetimeRouteImport } from './routes/journal/how-many-hours-are-in-a-lifetime'
@@ -92,6 +93,11 @@ const PrivacyRoute = PrivacyRouteImport.update({
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WeeksRoute = WeeksRouteImport.update({
+  id: '/weeks',
+  path: '/weeks',
   getParentRoute: () => rootRouteImport,
 } as any)
 const JournalIndexRoute = JournalIndexRouteImport.update({
@@ -389,6 +395,7 @@ export interface FileRoutesByFullPath {
   '/philosophy': typeof PhilosophyRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
+  '/weeks': typeof WeeksRoute
   '/journal/how-many-days-are-in-a-lifetime': typeof JournalHowManyDaysAreInALifetimeRoute
   '/journal/how-many-hours-are-in-a-lifetime': typeof JournalHowManyHoursAreInALifetimeRoute
   '/journal/how-much-of-your-life-do-you-spend-commuting': typeof JournalHowMuchOfYourLifeDoYouSpendCommutingRoute
@@ -444,6 +451,7 @@ export interface FileRoutesByTo {
   '/philosophy': typeof PhilosophyRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
+  '/weeks': typeof WeeksRoute
   '/journal/how-many-days-are-in-a-lifetime': typeof JournalHowManyDaysAreInALifetimeRoute
   '/journal/how-many-hours-are-in-a-lifetime': typeof JournalHowManyHoursAreInALifetimeRoute
   '/journal/how-much-of-your-life-do-you-spend-commuting': typeof JournalHowMuchOfYourLifeDoYouSpendCommutingRoute
@@ -501,6 +509,7 @@ export interface FileRoutesById {
   '/philosophy': typeof PhilosophyRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
+  '/weeks': typeof WeeksRoute
   '/journal/how-many-days-are-in-a-lifetime': typeof JournalHowManyDaysAreInALifetimeRoute
   '/journal/how-many-hours-are-in-a-lifetime': typeof JournalHowManyHoursAreInALifetimeRoute
   '/journal/how-much-of-your-life-do-you-spend-commuting': typeof JournalHowMuchOfYourLifeDoYouSpendCommutingRoute
@@ -559,6 +568,7 @@ export interface FileRouteTypes {
     | '/philosophy'
     | '/privacy'
     | '/terms'
+    | '/weeks'
     | '/journal/how-many-days-are-in-a-lifetime'
     | '/journal/how-many-hours-are-in-a-lifetime'
     | '/journal/how-much-of-your-life-do-you-spend-commuting'
@@ -614,6 +624,7 @@ export interface FileRouteTypes {
     | '/philosophy'
     | '/privacy'
     | '/terms'
+    | '/weeks'
     | '/journal/how-many-days-are-in-a-lifetime'
     | '/journal/how-many-hours-are-in-a-lifetime'
     | '/journal/how-much-of-your-life-do-you-spend-commuting'
@@ -670,6 +681,7 @@ export interface FileRouteTypes {
     | '/philosophy'
     | '/privacy'
     | '/terms'
+    | '/weeks'
     | '/journal/how-many-days-are-in-a-lifetime'
     | '/journal/how-many-hours-are-in-a-lifetime'
     | '/journal/how-much-of-your-life-do-you-spend-commuting'
@@ -727,6 +739,7 @@ export interface RootRouteChildren {
   PhilosophyRoute: typeof PhilosophyRoute
   PrivacyRoute: typeof PrivacyRoute
   TermsRoute: typeof TermsRoute
+  WeeksRoute: typeof WeeksRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -771,6 +784,13 @@ declare module '@tanstack/react-router' {
       path: '/terms'
       fullPath: '/terms'
       preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/weeks': {
+      id: '/weeks'
+      path: '/weeks'
+      fullPath: '/weeks'
+      preLoaderRoute: typeof WeeksRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/journal/': {
@@ -1270,6 +1290,7 @@ const rootRouteChildren: RootRouteChildren = {
   PhilosophyRoute: PhilosophyRoute,
   PrivacyRoute: PrivacyRoute,
   TermsRoute: TermsRoute,
+  WeeksRoute: WeeksRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
