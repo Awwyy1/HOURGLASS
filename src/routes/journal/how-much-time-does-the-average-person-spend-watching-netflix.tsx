@@ -42,34 +42,32 @@ function Article() {
           How much time does the average person spend watching Netflix?
         </h1>
         <p className="mt-6 font-serif text-[17px] leading-relaxed text-muted-foreground">
-          One more episode is how it starts. The math of where that ends up
-          is something most people have never bothered to run.
+          One more episode is how it starts. The math of where that ends up is something most people
+          have never bothered to run.
         </p>
       </header>
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>
           Netflix has disclosed on multiple occasions that its subscribers watch an average of
-          around two hours per day on the platform. That figure comes from Netflix itself and
-          covers all devices, so it includes the television in the living room, the laptop in
-          bed, and the phone on the commute. Two hours is also roughly what independent surveys
-          find when they ask people directly, which means it is one of the more reliable
-          self-reported usage numbers in media consumption research. People seem to know,
-          approximately, how much Netflix they watch.
+          around two hours per day on the platform. That figure comes from Netflix itself and covers
+          all devices, so it includes the television in the living room, the laptop in bed, and the
+          phone on the commute. Two hours is also roughly what independent surveys find when they
+          ask people directly, which means it is one of the more reliable self-reported usage
+          numbers in media consumption research. People seem to know, approximately, how much
+          Netflix they watch.
         </p>
 
         <p>
-          Two hours a day is 730 hours a year. That is just over 30 full days, or 45 waking days
-          if you think in terms of conscious time. Every single year, a month and a half of your
-          waking life given to a streaming service. It does not feel like that because it arrives
-          in two-hour increments at the end of the day, each one reasonable, each one unremarkable.
-          The monthly total is invisible. The annual total is something almost nobody thinks to
+          Two hours a day is 730 hours a year. That is just over 30 full days, or 45 waking days if
+          you think in terms of conscious time. Every single year, a month and a half of your waking
+          life given to a streaming service. It does not feel like that because it arrives in
+          two-hour increments at the end of the day, each one reasonable, each one unremarkable. The
+          monthly total is invisible. The annual total is something almost nobody thinks to
           calculate.
         </p>
 
-        <h2 className="pt-8 font-serif text-2xl italic text-foreground">
-          The lifetime number.
-        </h2>
+        <h2 className="pt-8 font-serif text-2xl italic text-foreground">The lifetime number.</h2>
 
         <p>
           Netflix launched its streaming service in 2007. Someone who was 20 that year and watches
@@ -83,8 +81,8 @@ function Article() {
         <p>
           For context, 43,800 hours is longer than it takes to complete a medical degree and
           residency. It is enough time to become fluent in five languages, or to walk around the
-          circumference of the Earth about seventeen times. None of this is meant as a judgment.
-          It is just a way of making the scale of the number legible against something concrete,
+          circumference of the Earth about seventeen times. None of this is meant as a judgment. It
+          is just a way of making the scale of the number legible against something concrete,
           because 43,800 by itself does not mean very much to most people.
         </p>
 
@@ -95,32 +93,38 @@ function Article() {
         <p>
           There is a meaningful difference between watching television in the era before streaming
           and watching it now. Television used to have a natural stopping point. The episode ended,
-          the credits rolled, the next one did not start automatically. Netflix introduced
-          autoplay in 2012 and watched average viewing time per session increase. The friction of
-          choosing to continue was replaced with the friction of choosing to stop, which turns out
-          to be a much higher bar. A lot of the two hours is, in practice, the time between
-          intending to stop and actually stopping.
+          the credits rolled, the next one did not start automatically. Netflix introduced autoplay
+          in 2012 and watched average viewing time per session increase. The friction of choosing to
+          continue was replaced with the friction of choosing to stop, which turns out to be a much
+          higher bar. A lot of the two hours is, in practice, the time between intending to stop and
+          actually stopping.
         </p>
 
         <p>
           That is not an argument that watching Netflix is bad or that two hours is too many. Some
-          of the most interesting storytelling being made right now lives on that platform. There
-          is genuine value in it for a lot of people. The question worth asking is simply whether
-          the two hours, repeated every day for decades, reflects a deliberate choice or a default
-          that nobody formally made. Most people, if pressed, would say the latter. The autoplay
-          made the decision before they did.
+          of the most interesting storytelling being made right now lives on that platform. There is
+          genuine value in it for a lot of people. The question worth asking is simply whether the
+          two hours, repeated every day for decades, reflects a deliberate choice or a default that
+          nobody formally made. Most people, if pressed, would say the latter. The autoplay made the
+          decision before they did.
         </p>
 
         <p className="text-muted-foreground">
-          Seven and a half years is a long time. It is worth deciding what you want
-          those evenings to contain.
+          Seven and a half years is a long time. It is worth deciding what you want those evenings
+          to contain.
         </p>
       </div>
 
       <FAQSection
         faqs={[
-          { q: "How many hours does the average Netflix subscriber watch per day?", a: "About two hours, based on Netflix's own reported engagement data. That is higher than most subscribers estimate for themselves. The autoplay feature, which starts the next episode after a short countdown, reduces the decision friction that would otherwise end a session. Stopping requires action; continuing is the default." },
-          { q: "How does Netflix compare to YouTube on time spent?", a: "They are close, with Netflix slightly ahead for active subscribers on daily minutes. The difference is that Netflix is subscription-based and primarily evening viewing, while YouTube reaches more people and is more distributed through the day. Over a full year, a two-hour-per-day Netflix subscriber watches about 730 hours — roughly 30 full days of continuous viewing." }
+          {
+            q: "How many hours does the average Netflix subscriber watch per day?",
+            a: "About two hours, based on Netflix's own reported engagement data. That is higher than most subscribers estimate for themselves. The autoplay feature, which starts the next episode after a short countdown, reduces the decision friction that would otherwise end a session. Stopping requires action; continuing is the default.",
+          },
+          {
+            q: "How does Netflix compare to YouTube on time spent?",
+            a: "They are close, with Netflix slightly ahead for active subscribers on daily minutes. The difference is that Netflix is subscription-based and primarily evening viewing, while YouTube reaches more people and is more distributed through the day. Over a full year, a two-hour-per-day Netflix subscriber watches about 730 hours — roughly 30 full days of continuous viewing.",
+          },
         ]}
       />
 
@@ -147,7 +151,10 @@ function Article() {
       <div className="mt-10 border-t border-border pt-8">
         <p className="font-serif text-[17px] italic text-foreground/75">
           Put your own numbers into the{" "}
-          <a href="/#calculator" className="underline underline-offset-2 hover:text-foreground transition">
+          <a
+            href="/#calculator"
+            className="underline underline-offset-2 hover:text-foreground transition"
+          >
             Hourglass calculator
           </a>{" "}
           and see where your years actually go.

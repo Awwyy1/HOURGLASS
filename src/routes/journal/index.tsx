@@ -418,13 +418,12 @@ function Journal() {
           Articles about time and habit. What the numbers mean in practice.
         </p>
         <p className="mt-4 max-w-lg font-serif text-[17px] leading-relaxed text-muted-foreground">
-          Each piece takes a single habit — a platform, a chore, a daily routine — and
-          runs it through the same math the Hourglass calculator uses: hours a day,
-          multiplied across a lifetime, converted into waking days and years. The
-          sources are named. The numbers are shown in full, not rounded to make a
-          better headline. The goal is not to tell you an activity is good or bad. It
-          is to show you what the hours actually add up to, so you can decide that
-          for yourself.
+          Each piece takes a single habit — a platform, a chore, a daily routine — and runs it
+          through the same math the Hourglass calculator uses: hours a day, multiplied across a
+          lifetime, converted into waking days and years. The sources are named. The numbers are
+          shown in full, not rounded to make a better headline. The goal is not to tell you an
+          activity is good or bad. It is to show you what the hours actually add up to, so you can
+          decide that for yourself.
         </p>
       </header>
 
@@ -434,8 +433,8 @@ function Journal() {
             Issue I &nbsp;·&nbsp; In preparation
           </p>
           <p className="font-serif text-[17px] leading-[1.85] text-foreground/75 max-w-md">
-            The first articles are being written. Each one looks at a single
-            habit and runs the numbers.
+            The first articles are being written. Each one looks at a single habit and runs the
+            numbers.
           </p>
           <p className="mt-4 font-serif text-[17px] leading-[1.85] text-muted-foreground max-w-md">
             Check back soon.

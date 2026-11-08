@@ -24,8 +24,7 @@ export function SiteSchema() {
         "@type": "ImageObject",
         url: `${SITE}/favicon.svg`,
       },
-      description:
-        "An editorial calculator that converts daily habits into lifetime totals.",
+      description: "An editorial calculator that converts daily habits into lifetime totals.",
     };
 
     const script = document.createElement("script");

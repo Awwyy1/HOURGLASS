@@ -5,9 +5,7 @@ import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
 import { AnswerBlock } from "../../components/AnswerBlock";
 
-export const Route = createFileRoute(
-  "/journal/how-much-of-your-life-do-you-spend-on-tiktok",
-)({
+export const Route = createFileRoute("/journal/how-much-of-your-life-do-you-spend-on-tiktok")({
   component: Article,
 });
 
@@ -43,32 +41,34 @@ function Article() {
           How much of your life do you spend on TikTok?
         </h1>
         <p className="mt-6 font-serif text-[17px] leading-relaxed text-muted-foreground">
-          TikTok is the fastest app in history to reach one billion users. It is
-          also, by most measures, the one that takes the most time per session.
-          The two facts are related.
+          TikTok is the fastest app in history to reach one billion users. It is also, by most
+          measures, the one that takes the most time per session. The two facts are related.
         </p>
       </header>
 
       <AnswerBlock>
-        The average US user spends 54 minutes a day on TikTok, which comes to roughly two waking years over a lifetime of use. TikTok was the first major platform built around an algorithm rather than around people you chose to follow, which is why sessions routinely outlast the intention behind them.
+        The average US user spends 54 minutes a day on TikTok, which comes to roughly two waking
+        years over a lifetime of use. TikTok was the first major platform built around an algorithm
+        rather than around people you chose to follow, which is why sessions routinely outlast the
+        intention behind them.
       </AnswerBlock>
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>
           Data.ai, which tracks global app usage across hundreds of millions of devices, found that
           in 2023 the average TikTok user in the United States spent around 54 minutes on the app
-          per day. Among users aged 18 to 34 the figure was closer to 80 minutes. These numbers
-          are higher than any other single social platform, including Instagram and YouTube, and
-          they have been climbing every year since the app reached mass adoption in 2020.
+          per day. Among users aged 18 to 34 the figure was closer to 80 minutes. These numbers are
+          higher than any other single social platform, including Instagram and YouTube, and they
+          have been climbing every year since the app reached mass adoption in 2020.
         </p>
 
         <p>
-          Take the broader average. Fifty-four minutes a day is 329 hours a year. That is almost
-          14 full days, or just under 21 waking days per year spent doing nothing but watching
-          short videos. Over ten years it becomes 140 waking days. If someone starts using TikTok
-          at 16 and continues through their mid-fifties, roughly 40 years of use, the lifetime
-          total approaches 13,000 hours. In waking years that is a little over two years of
-          conscious life given entirely to a feed of 30-second videos.
+          Take the broader average. Fifty-four minutes a day is 329 hours a year. That is almost 14
+          full days, or just under 21 waking days per year spent doing nothing but watching short
+          videos. Over ten years it becomes 140 waking days. If someone starts using TikTok at 16
+          and continues through their mid-fifties, roughly 40 years of use, the lifetime total
+          approaches 13,000 hours. In waking years that is a little over two years of conscious life
+          given entirely to a feed of 30-second videos.
         </p>
 
         <h2 className="pt-8 font-serif text-2xl italic text-foreground">
@@ -85,13 +85,13 @@ function Article() {
         </p>
 
         <p>
-          The short video format compounds this. Each clip ends in under a minute, which creates
-          a natural prompt to watch just one more. There is no natural stopping point in the way
-          there might be at the end of a long video or a full episode. The session ends when the
-          user decides to stop, and the app is specifically designed to delay that decision as long
-          as possible. Average session length on TikTok is around 11 minutes, meaning the typical
-          user opens the app and stays for five or six videos before the session ends. They open
-          it roughly five times a day.
+          The short video format compounds this. Each clip ends in under a minute, which creates a
+          natural prompt to watch just one more. There is no natural stopping point in the way there
+          might be at the end of a long video or a full episode. The session ends when the user
+          decides to stop, and the app is specifically designed to delay that decision as long as
+          possible. Average session length on TikTok is around 11 minutes, meaning the typical user
+          opens the app and stays for five or six videos before the session ends. They open it
+          roughly five times a day.
         </p>
 
         <h2 className="pt-8 font-serif text-2xl italic text-foreground">
@@ -99,20 +99,20 @@ function Article() {
         </h2>
 
         <p>
-          Two years of waking life sounds abstract until you connect it to something concrete.
-          Two years is long enough to learn a musical instrument to a competent level, run 5,000
-          miles, read around 200 books, or build a meaningful professional skill from scratch.
-          None of that is to say that TikTok cannot also provide something worth having. Some
-          people learn genuinely useful things from it. Many find a kind of low-demand rest in
-          it that they would otherwise struggle to access.
+          Two years of waking life sounds abstract until you connect it to something concrete. Two
+          years is long enough to learn a musical instrument to a competent level, run 5,000 miles,
+          read around 200 books, or build a meaningful professional skill from scratch. None of that
+          is to say that TikTok cannot also provide something worth having. Some people learn
+          genuinely useful things from it. Many find a kind of low-demand rest in it that they would
+          otherwise struggle to access.
         </p>
 
         <p>
-          The question is not whether the time has any value. The question is whether the amount
-          of time involved is something you arrived at deliberately or something that happened
-          to you while you were looking at your phone. Most TikTok users, if asked to estimate
-          their daily usage, underestimate it significantly. The number the app would show them
-          is not a number they have ever sat down and chosen to spend.
+          The question is not whether the time has any value. The question is whether the amount of
+          time involved is something you arrived at deliberately or something that happened to you
+          while you were looking at your phone. Most TikTok users, if asked to estimate their daily
+          usage, underestimate it significantly. The number the app would show them is not a number
+          they have ever sat down and chosen to spend.
         </p>
 
         <p className="text-muted-foreground">
@@ -122,8 +122,14 @@ function Article() {
 
       <FAQSection
         faqs={[
-          { q: "How many minutes a day does the average person spend on TikTok?", a: "Around 54 minutes for US users, based on app analytics data from 2023. That puts it above Instagram and approaching YouTube for daily time spent. The gap has been growing since the recommendation algorithm was tuned specifically for retention rather than social connection — a different design goal from any platform that came before it." },
-          { q: "Why does TikTok keep people on it longer than other apps?", a: "The algorithm does not rely on following people you know. It builds a model of what you engage with and serves content based purely on that, regardless of who made it. Within a few sessions it predicts your preferences more accurately than most people can predict their own. Combined with the short format — where stopping feels low-cost at every single point — the result is sessions that extend much further than intended." }
+          {
+            q: "How many minutes a day does the average person spend on TikTok?",
+            a: "Around 54 minutes for US users, based on app analytics data from 2023. That puts it above Instagram and approaching YouTube for daily time spent. The gap has been growing since the recommendation algorithm was tuned specifically for retention rather than social connection — a different design goal from any platform that came before it.",
+          },
+          {
+            q: "Why does TikTok keep people on it longer than other apps?",
+            a: "The algorithm does not rely on following people you know. It builds a model of what you engage with and serves content based purely on that, regardless of who made it. Within a few sessions it predicts your preferences more accurately than most people can predict their own. Combined with the short format — where stopping feels low-cost at every single point — the result is sessions that extend much further than intended.",
+          },
         ]}
       />
 
@@ -150,7 +156,10 @@ function Article() {
       <div className="mt-10 border-t border-border pt-8">
         <p className="font-serif text-[17px] italic text-foreground/75">
           Put your own numbers into the{" "}
-          <a href="/#calculator" className="underline underline-offset-2 hover:text-foreground transition">
+          <a
+            href="/#calculator"
+            className="underline underline-offset-2 hover:text-foreground transition"
+          >
             Hourglass calculator
           </a>{" "}
           and see where your years actually go.

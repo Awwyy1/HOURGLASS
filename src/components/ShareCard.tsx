@@ -238,7 +238,13 @@ export function ShareButton({ activity, totalDays, totalHours, totalWeeks, wakin
     setStatus("loading");
     setImageUrl(null);
     try {
-      const b = await generateCardBlob({ activity, totalDays, totalHours, totalWeeks, wakingYears });
+      const b = await generateCardBlob({
+        activity,
+        totalDays,
+        totalHours,
+        totalWeeks,
+        wakingYears,
+      });
       const url = URL.createObjectURL(b);
       prevUrl.current = url;
       setImageUrl(url);

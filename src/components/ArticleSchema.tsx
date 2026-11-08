@@ -11,13 +11,7 @@ interface Props {
   dateModified?: string;
 }
 
-export function ArticleSchema({
-  title,
-  description,
-  datePublished,
-  slug,
-  dateModified,
-}: Props) {
+export function ArticleSchema({ title, description, datePublished, slug, dateModified }: Props) {
   useEffect(() => {
     const id = "article-schema-ld";
     document.getElementById(id)?.remove();

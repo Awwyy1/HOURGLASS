@@ -114,12 +114,12 @@ function Index() {
               <Stat label="Waking years" value={formatNumber(wakingYears, 2)} />
             </dl>
             <ShareButton
-                activity={activity}
-                totalDays={totalDays}
-                totalHours={totalHours}
-                totalWeeks={totalWeeks}
-                wakingYears={wakingYears}
-              />
+              activity={activity}
+              totalDays={totalDays}
+              totalHours={totalHours}
+              totalWeeks={totalWeeks}
+              wakingYears={wakingYears}
+            />
           </div>
         </div>
       </section>
@@ -133,8 +133,8 @@ function Index() {
           On the arithmetic of attention.
         </h2>
         <p className="mx-auto max-w-lg font-serif text-[17px] leading-[1.85] text-foreground/75">
-          Nobody tracks their hours the way they track their money.
-          The math is simple once you do it. The number is usually surprising.
+          Nobody tracks their hours the way they track their money. The math is simple once you do
+          it. The number is usually surprising.
         </p>
         <Link
           to="/philosophy"
@@ -164,20 +164,35 @@ function Index() {
         </div>
         <div className="divide-y divide-border">
           <div className="pb-8">
-            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">May 20, 2026</p>
-            <Link to="/journal/how-much-time-do-you-spend-on-dating-apps" className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground">
+            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
+              May 20, 2026
+            </p>
+            <Link
+              to="/journal/how-much-time-do-you-spend-on-dating-apps"
+              className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
+            >
               How much time do you spend on dating apps? →
             </Link>
           </div>
           <div className="py-8">
-            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">May 14, 2026</p>
-            <Link to="/journal/how-much-time-do-you-spend-using-ai" className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground">
+            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
+              May 14, 2026
+            </p>
+            <Link
+              to="/journal/how-much-time-do-you-spend-using-ai"
+              className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
+            >
               How much time do you spend using AI? →
             </Link>
           </div>
           <div className="pt-8">
-            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">May 13, 2026</p>
-            <Link to="/journal/how-much-of-your-life-do-you-spend-in-meetings" className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground">
+            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
+              May 13, 2026
+            </p>
+            <Link
+              to="/journal/how-much-of-your-life-do-you-spend-in-meetings"
+              className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
+            >
               How much of your life do you spend in meetings? →
             </Link>
           </div>
@@ -211,12 +226,24 @@ function Index() {
   );
 }
 
-function Field({ label, suffix, children }: { label: string; suffix?: string; children: React.ReactNode }) {
+function Field({
+  label,
+  suffix,
+  children,
+}: {
+  label: string;
+  suffix?: string;
+  children: React.ReactNode;
+}) {
   return (
     <label className="block">
       <div className="mb-3 flex items-baseline justify-between">
-        <span className="text-[10px] uppercase tracking-[0.32em] text-muted-foreground">{label}</span>
-        {suffix && <span className="font-mono text-xs tracking-tight text-foreground">{suffix}</span>}
+        <span className="text-[10px] uppercase tracking-[0.32em] text-muted-foreground">
+          {label}
+        </span>
+        {suffix && (
+          <span className="font-mono text-xs tracking-tight text-foreground">{suffix}</span>
+        )}
       </div>
       {children}
     </label>
@@ -227,8 +254,9 @@ function Stat({ label, value }: { label: string; value: string }) {
   return (
     <div className="bg-background p-5">
       <dt className="text-[9px] uppercase tracking-[0.32em] text-muted-foreground">{label}</dt>
-      <dd className="mt-2 font-mono text-xl font-extralight tracking-tight text-foreground">{value}</dd>
+      <dd className="mt-2 font-mono text-xl font-extralight tracking-tight text-foreground">
+        {value}
+      </dd>
     </div>
   );
 }
-

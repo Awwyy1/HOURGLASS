@@ -25,10 +25,7 @@ export function Header() {
           >
             Philosophy
           </Link>
-          <Link
-            to="/about"
-            className="transition hover:text-foreground [&.active]:text-foreground"
-          >
+          <Link to="/about" className="transition hover:text-foreground [&.active]:text-foreground">
             About
           </Link>
           <Link

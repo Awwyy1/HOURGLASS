@@ -31,9 +31,7 @@ export function Breadcrumbs({ crumbs }: { crumbs: Crumb[] }) {
         position: i + 1,
         name: crumb.label,
         // The final crumb is the current page and carries no item, per spec.
-        ...(crumb.to
-          ? { item: SITE + (crumb.to === "/" ? "" : crumb.to) }
-          : {}),
+        ...(crumb.to ? { item: SITE + (crumb.to === "/" ? "" : crumb.to) } : {}),
       })),
     });
     document.head.appendChild(script);

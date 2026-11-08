@@ -5,9 +5,7 @@ import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
 import { AnswerBlock } from "../../components/AnswerBlock";
 
-export const Route = createFileRoute(
-  "/journal/how-much-time-do-you-spend-shopping-online",
-)({
+export const Route = createFileRoute("/journal/how-much-time-do-you-spend-shopping-online")({
   component: Article,
 });
 
@@ -43,13 +41,15 @@ function Article() {
           How much time do you spend shopping online?
         </h1>
         <p className="mt-6 font-serif text-[17px] leading-relaxed text-muted-foreground">
-          Most of it is not really shopping. It is browsing, comparing,
-          adding to cart, and closing the tab. The clock runs the whole time.
+          Most of it is not really shopping. It is browsing, comparing, adding to cart, and closing
+          the tab. The clock runs the whole time.
         </p>
       </header>
 
       <AnswerBlock>
-        The average online shopper spends about five hours a week browsing and buying, and most sessions end without a purchase. Over a lifetime of peak consumer activity the total approaches a year and a half of waking time spent deciding whether to buy something.
+        The average online shopper spends about five hours a week browsing and buying, and most
+        sessions end without a purchase. Over a lifetime of peak consumer activity the total
+        approaches a year and a half of waking time spent deciding whether to buy something.
       </AnswerBlock>
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
@@ -58,9 +58,9 @@ function Article() {
           around five hours per week browsing and buying online across all platforms. Amazon alone
           accounts for the largest share of that time: the same survey found that regular Amazon
           users spend an average of 74 minutes per week on the platform, which breaks down to just
-          under 11 minutes per day. That is pure browsing time, not including the time spent
-          reading reviews on other sites, comparing prices, or watching unboxing videos that
-          influenced the decision.
+          under 11 minutes per day. That is pure browsing time, not including the time spent reading
+          reviews on other sites, comparing prices, or watching unboxing videos that influenced the
+          decision.
         </p>
 
         <p>
@@ -76,23 +76,23 @@ function Article() {
         </h2>
 
         <p>
-          What makes online shopping different from its offline predecessor is the near-zero cost
-          of entry. Walking into a physical shop required intent. You went somewhere specifically
-          to buy something. Online shopping has no equivalent of getting dressed and going out.
-          It is available on the same device you use for everything else, reachable in two seconds
-          from any other activity. The result is that a significant portion of what gets counted
-          as shopping time is something closer to idle browsing: the same compulsive scrolling
-          behaviour that governs social media use, just pointed at a product catalogue instead
-          of a social feed.
+          What makes online shopping different from its offline predecessor is the near-zero cost of
+          entry. Walking into a physical shop required intent. You went somewhere specifically to
+          buy something. Online shopping has no equivalent of getting dressed and going out. It is
+          available on the same device you use for everything else, reachable in two seconds from
+          any other activity. The result is that a significant portion of what gets counted as
+          shopping time is something closer to idle browsing: the same compulsive scrolling
+          behaviour that governs social media use, just pointed at a product catalogue instead of a
+          social feed.
         </p>
 
         <p>
           Amazon's design reinforces this. The recommendations engine, the deals countdown timers,
           the frequently bought together suggestions, and the lightning deals are all built around
-          the same principle as TikTok's algorithm: keep the user engaged and moving through
-          content long enough that a purchase becomes likely. The average Amazon session that
-          results in a purchase lasts about 8 minutes. Sessions that do not result in a purchase
-          average around 4 minutes. There are a lot more of the latter.
+          the same principle as TikTok's algorithm: keep the user engaged and moving through content
+          long enough that a purchase becomes likely. The average Amazon session that results in a
+          purchase lasts about 8 minutes. Sessions that do not result in a purchase average around 4
+          minutes. There are a lot more of the latter.
         </p>
 
         <h2 className="pt-8 font-serif text-2xl italic text-foreground">
@@ -100,8 +100,8 @@ function Article() {
         </h2>
 
         <p>
-          The interesting comparison is between time spent and value received. A year and a half
-          of waking life is a significant investment. For some people the purchases it produces
+          The interesting comparison is between time spent and value received. A year and a half of
+          waking life is a significant investment. For some people the purchases it produces
           represent genuine improvements to their life, things that save time, enable hobbies, or
           solve real problems. For a large portion of online shopping, that case is harder to make.
           Research on post-purchase satisfaction with impulse buys consistently finds that regret
@@ -111,11 +111,11 @@ function Article() {
         <p>
           None of this is an argument against buying things or against using Amazon. It is an
           observation that the time involved is larger than almost anyone estimates, that a
-          significant fraction of it produces nothing at all, and that the platforms involved
-          are specifically engineered to make the time as long as possible. A year and a half
-          is enough time to learn something, build something, or read more books than most
-          people manage in a decade. Whether that trade makes sense is a question only the
-          individual can answer. Most people have never looked at what the trade actually is.
+          significant fraction of it produces nothing at all, and that the platforms involved are
+          specifically engineered to make the time as long as possible. A year and a half is enough
+          time to learn something, build something, or read more books than most people manage in a
+          decade. Whether that trade makes sense is a question only the individual can answer. Most
+          people have never looked at what the trade actually is.
         </p>
 
         <p className="text-muted-foreground">
@@ -125,8 +125,14 @@ function Article() {
 
       <FAQSection
         faqs={[
-          { q: "How much time per week does the average person spend shopping online?", a: "Around five hours per week for active online shoppers, including browsing sessions that do not end in a purchase. That figure has roughly doubled since 2015, driven by mobile shopping, which made it possible to browse during commutes, meetings, and other time that previously could not be used for it." },
-          { q: "Why do people spend so long shopping online without buying anything?", a: "Most online shopping sessions are not goal-directed in the way a trip to a specific shop is. E-commerce sites are designed to extend browsing time and surface things you were not looking for. Algorithmic recommendations, customers-also-viewed sections, and limited-time notifications all keep you in the session. Buying is one possible outcome but not the only one the platform is built around." }
+          {
+            q: "How much time per week does the average person spend shopping online?",
+            a: "Around five hours per week for active online shoppers, including browsing sessions that do not end in a purchase. That figure has roughly doubled since 2015, driven by mobile shopping, which made it possible to browse during commutes, meetings, and other time that previously could not be used for it.",
+          },
+          {
+            q: "Why do people spend so long shopping online without buying anything?",
+            a: "Most online shopping sessions are not goal-directed in the way a trip to a specific shop is. E-commerce sites are designed to extend browsing time and surface things you were not looking for. Algorithmic recommendations, customers-also-viewed sections, and limited-time notifications all keep you in the session. Buying is one possible outcome but not the only one the platform is built around.",
+          },
         ]}
       />
 
@@ -153,7 +159,10 @@ function Article() {
       <div className="mt-10 border-t border-border pt-8">
         <p className="font-serif text-[17px] italic text-foreground/75">
           Put your own numbers into the{" "}
-          <a href="/#calculator" className="underline underline-offset-2 hover:text-foreground transition">
+          <a
+            href="/#calculator"
+            className="underline underline-offset-2 hover:text-foreground transition"
+          >
             Hourglass calculator
           </a>{" "}
           and see where your years actually go.

@@ -42,8 +42,8 @@ function Article() {
           How much time does the average person spend on email?
         </h1>
         <p className="mt-6 font-serif text-[17px] leading-relaxed text-muted-foreground">
-          It starts before breakfast and ends after dinner. At some point email
-          stopped being a tool you use and became a place you live.
+          It starts before breakfast and ends after dinner. At some point email stopped being a tool
+          you use and became a place you live.
         </p>
       </header>
 
@@ -60,9 +60,9 @@ function Article() {
         <p>
           Take the conservative figure. Three hours a day on work email, five days a week, 48 weeks
           a year accounting for vacation and public holidays. That comes to 720 hours annually. In
-          days, that is 30 full 24-hour days. In waking hours, assuming you sleep eight of them,
-          it is 45 days of your conscious year spent doing nothing but email. Not working. Not
-          thinking through a hard problem. Reading and writing email.
+          days, that is 30 full 24-hour days. In waking hours, assuming you sleep eight of them, it
+          is 45 days of your conscious year spent doing nothing but email. Not working. Not thinking
+          through a hard problem. Reading and writing email.
         </p>
 
         <h2 className="pt-8 font-serif text-2xl italic text-foreground">
@@ -74,8 +74,8 @@ function Article() {
           where one year represents all your conscious hours across 365 days, that is just under
           five years of your working life spent on email. Five years is a long time to spend on
           anything. It is long enough to complete two university degrees, learn a language to
-          fluency twice over, or write several books. Most people have not thought about their
-          inbox in those terms.
+          fluency twice over, or write several books. Most people have not thought about their inbox
+          in those terms.
         </p>
 
         <p>
@@ -92,53 +92,57 @@ function Article() {
         </h2>
 
         <p>
-          What makes email different from most other time-consuming habits is that it does not
-          stay at work. A 2020 survey by Statista found that 59 percent of workers check their
-          work email after business hours, and 40 percent check it on holidays. The inbox follows
-          people into evenings, into weekends, into the moments that are supposed to be something
-          else entirely. It rarely demands much from those moments individually. A quick check
-          here, a short reply there. The individual interruptions are small. The accumulated drain
-          on attention and rest is not.
+          What makes email different from most other time-consuming habits is that it does not stay
+          at work. A 2020 survey by Statista found that 59 percent of workers check their work email
+          after business hours, and 40 percent check it on holidays. The inbox follows people into
+          evenings, into weekends, into the moments that are supposed to be something else entirely.
+          It rarely demands much from those moments individually. A quick check here, a short reply
+          there. The individual interruptions are small. The accumulated drain on attention and rest
+          is not.
         </p>
 
         <p>
           There is also the question of what email does to the time around it. Research on
           interrupted work consistently finds that after stopping to check email, it takes an
-          average of 23 minutes to return to the same level of focus. If someone checks their
-          inbox ten times during a working day, which is conservative by most measures, the
-          recovery time alone accounts for nearly four hours of reduced concentration. The
-          email itself is only part of the cost.
+          average of 23 minutes to return to the same level of focus. If someone checks their inbox
+          ten times during a working day, which is conservative by most measures, the recovery time
+          alone accounts for nearly four hours of reduced concentration. The email itself is only
+          part of the cost.
         </p>
 
-        <h2 className="pt-8 font-serif text-2xl italic text-foreground">
-          Nobody chose this.
-        </h2>
+        <h2 className="pt-8 font-serif text-2xl italic text-foreground">Nobody chose this.</h2>
 
         <p>
-          The strange thing about email is that almost nobody decided to spend this much time on
-          it. It accumulated. One account became two. Work crept into personal. Notifications got
-          turned on and never turned off. The inbox grew and the habit of checking it grew with it,
-          and at no point did anyone sit down and decide that this was a reasonable way to allocate
-          five years of a working life.
+          The strange thing about email is that almost nobody decided to spend this much time on it.
+          It accumulated. One account became two. Work crept into personal. Notifications got turned
+          on and never turned off. The inbox grew and the habit of checking it grew with it, and at
+          no point did anyone sit down and decide that this was a reasonable way to allocate five
+          years of a working life.
         </p>
 
         <p>
-          That is not an argument for leaving emails unanswered or for pretending the inbox does
-          not exist. It is just an observation that the amount of time involved is large enough
-          to deserve a deliberate decision rather than a default one. Most people have never
-          looked at the total. The total is worth looking at.
+          That is not an argument for leaving emails unanswered or for pretending the inbox does not
+          exist. It is just an observation that the amount of time involved is large enough to
+          deserve a deliberate decision rather than a default one. Most people have never looked at
+          the total. The total is worth looking at.
         </p>
 
         <p className="text-muted-foreground">
-          The inbox will still be there tomorrow. The question is how much of tomorrow you want
-          it to have.
+          The inbox will still be there tomorrow. The question is how much of tomorrow you want it
+          to have.
         </p>
       </div>
 
       <FAQSection
         faqs={[
-          { q: "How many emails does the average worker get per day?", a: "Around 120 emails per day in and out, according to Radicati Group data. That figure has been roughly stable since 2015, which is surprising given how much communication has moved to Slack and other messaging tools. The inbox has not shrunk — it has been supplemented by additional channels rather than replaced by them." },
-          { q: "Is email really the biggest time drain at work?", a: "By some measures, yes. The McKinsey figure of 28 percent of the workweek is specifically for reading, writing, and managing email. Meetings are tracked separately and consume more time for senior employees. The two together often account for the majority of a working week, leaving a narrow window for the actual work that neither emails nor meetings are substitutes for." }
+          {
+            q: "How many emails does the average worker get per day?",
+            a: "Around 120 emails per day in and out, according to Radicati Group data. That figure has been roughly stable since 2015, which is surprising given how much communication has moved to Slack and other messaging tools. The inbox has not shrunk — it has been supplemented by additional channels rather than replaced by them.",
+          },
+          {
+            q: "Is email really the biggest time drain at work?",
+            a: "By some measures, yes. The McKinsey figure of 28 percent of the workweek is specifically for reading, writing, and managing email. Meetings are tracked separately and consume more time for senior employees. The two together often account for the majority of a working week, leaving a narrow window for the actual work that neither emails nor meetings are substitutes for.",
+          },
         ]}
       />
 
@@ -165,7 +169,10 @@ function Article() {
       <div className="mt-10 border-t border-border pt-8">
         <p className="font-serif text-[17px] italic text-foreground/75">
           Put your own numbers into the{" "}
-          <a href="/#calculator" className="underline underline-offset-2 hover:text-foreground transition">
+          <a
+            href="/#calculator"
+            className="underline underline-offset-2 hover:text-foreground transition"
+          >
             Hourglass calculator
           </a>{" "}
           and see where your years actually go.

@@ -5,9 +5,7 @@ import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
 import { AnswerBlock } from "../../components/AnswerBlock";
 
-export const Route = createFileRoute(
-  "/journal/how-much-time-do-you-spend-grocery-shopping",
-)({
+export const Route = createFileRoute("/journal/how-much-time-do-you-spend-grocery-shopping")({
   component: Article,
 });
 
@@ -43,36 +41,37 @@ function Article() {
           How much time do you spend grocery shopping?
         </h1>
         <p className="mt-6 font-serif text-[17px] leading-relaxed text-muted-foreground">
-          Grocery shopping is one of the few recurring errands most people do not
-          resent, largely because the alternative — running out of food — is worse.
-          That does not mean the hours are small.
+          Grocery shopping is one of the few recurring errands most people do not resent, largely
+          because the alternative — running out of food — is worse. That does not mean the hours are
+          small.
         </p>
       </header>
 
       <AnswerBlock>
-        The average American grocery trip takes about 43 minutes, and most households make roughly 1.5 primary trips a week plus smaller top-up runs, or around 80 minutes weekly. Over a lifetime that is about 260 waking days, rising past a full waking year once driving time is counted.
+        The average American grocery trip takes about 43 minutes, and most households make roughly
+        1.5 primary trips a week plus smaller top-up runs, or around 80 minutes weekly. Over a
+        lifetime that is about 260 waking days, rising past a full waking year once driving time is
+        counted.
       </AnswerBlock>
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>
-          Time and Date USA and several retail industry surveys have consistently
-          found that the average American grocery trip takes around 41 to 43 minutes
-          from arrival to checkout, including the drive into the parking lot but not
-          the return trip home. Food Marketing Institute research has found that the
-          average household makes a primary grocery run around 1.5 times per week,
-          supplemented by smaller top-up trips for specific items. Combining a 43-minute
-          primary trip with a shorter 15-minute supplementary trip, weekly grocery time
+          Time and Date USA and several retail industry surveys have consistently found that the
+          average American grocery trip takes around 41 to 43 minutes from arrival to checkout,
+          including the drive into the parking lot but not the return trip home. Food Marketing
+          Institute research has found that the average household makes a primary grocery run around
+          1.5 times per week, supplemented by smaller top-up trips for specific items. Combining a
+          43-minute primary trip with a shorter 15-minute supplementary trip, weekly grocery time
           for an average household comes to approximately 79 minutes.
         </p>
 
         <p>
-          At roughly 80 minutes per week across 60 years of adult life, the lifetime
-          total is around 4,160 hours, or approximately 260 waking days. That is
-          just over two-thirds of a waking year spent specifically inside grocery
-          stores, not counting the driving time to and from them, which for many
-          people adds another 15 to 20 minutes round trip per visit. Including
-          transit time, the lifetime total climbs closer to 6,000 hours, or about
-          375 waking days — just over a full waking year across an adult life.
+          At roughly 80 minutes per week across 60 years of adult life, the lifetime total is around
+          4,160 hours, or approximately 260 waking days. That is just over two-thirds of a waking
+          year spent specifically inside grocery stores, not counting the driving time to and from
+          them, which for many people adds another 15 to 20 minutes round trip per visit. Including
+          transit time, the lifetime total climbs closer to 6,000 hours, or about 375 waking days —
+          just over a full waking year across an adult life.
         </p>
 
         <h2 className="pt-8 font-serif text-2xl italic text-foreground">
@@ -80,29 +79,27 @@ function Article() {
         </h2>
 
         <p>
-          Grocery delivery and pickup services have existed at meaningful scale since
-          the mid-2010s, and adoption accelerated sharply during the pandemic. Yet
-          the shift away from in-person grocery shopping has been slower and shallower
-          than the equivalent shift in general retail. FMI's ongoing US Grocery Shopper
-          Trends research has found that online grocery spending, while growing, still
-          represents a modest minority of total grocery spend for most households, and
-          a large share of consumers who use delivery for routine staples still prefer
-          shopping in person for fresh produce, meat, and items where visual selection
-          matters. The trip persists because a meaningful portion of what people are
-          actually doing at the grocery store is not efficiently replaceable by an
-          algorithm picking substitutes on their behalf.
+          Grocery delivery and pickup services have existed at meaningful scale since the mid-2010s,
+          and adoption accelerated sharply during the pandemic. Yet the shift away from in-person
+          grocery shopping has been slower and shallower than the equivalent shift in general
+          retail. FMI's ongoing US Grocery Shopper Trends research has found that online grocery
+          spending, while growing, still represents a modest minority of total grocery spend for
+          most households, and a large share of consumers who use delivery for routine staples still
+          prefer shopping in person for fresh produce, meat, and items where visual selection
+          matters. The trip persists because a meaningful portion of what people are actually doing
+          at the grocery store is not efficiently replaceable by an algorithm picking substitutes on
+          their behalf.
         </p>
 
         <p>
-          There is also a browsing component that resembles other forms of leisure
-          shopping more than it resembles pure errand-running. Consumer research on
-          in-store behavior has found that a portion of grocery trips include
-          unplanned exploration — walking aisles not on the list, discovering new
-          products, and the low-stakes decision-making that some shoppers report
-          finding genuinely relaxing rather than burdensome. This is part of why
-          grocery shopping shows up less frequently than other chores on lists of
-          tasks people want to eliminate from their week, even though the hours are
-          comparable to activities people actively try to reduce.
+          There is also a browsing component that resembles other forms of leisure shopping more
+          than it resembles pure errand-running. Consumer research on in-store behavior has found
+          that a portion of grocery trips include unplanned exploration — walking aisles not on the
+          list, discovering new products, and the low-stakes decision-making that some shoppers
+          report finding genuinely relaxing rather than burdensome. This is part of why grocery
+          shopping shows up less frequently than other chores on lists of tasks people want to
+          eliminate from their week, even though the hours are comparable to activities people
+          actively try to reduce.
         </p>
 
         <h2 className="pt-8 font-serif text-2xl italic text-foreground">
@@ -110,22 +107,22 @@ function Article() {
         </h2>
 
         <p>
-          The honest comparison for grocery shopping time is not zero. The alternative
-          to shopping in person is either delivery, which carries its own time cost in
-          selecting items on a screen and often a delivery fee, or eating out, which
-          for most households costs considerably more per meal and typically more time
-          per meal as well once ordering, waiting, and eating are included. Measured
-          against those alternatives, two-thirds of a waking year in a grocery store is
-          a comparatively efficient way to keep a household fed, which may explain why
-          it generates less friction than other recurring time obligations of similar size.
+          The honest comparison for grocery shopping time is not zero. The alternative to shopping
+          in person is either delivery, which carries its own time cost in selecting items on a
+          screen and often a delivery fee, or eating out, which for most households costs
+          considerably more per meal and typically more time per meal as well once ordering,
+          waiting, and eating are included. Measured against those alternatives, two-thirds of a
+          waking year in a grocery store is a comparatively efficient way to keep a household fed,
+          which may explain why it generates less friction than other recurring time obligations of
+          similar size.
         </p>
 
         <p className="text-muted-foreground">
-          A year of waking time, give or take, is what grocery shopping costs across
-          an adult life once the driving is included. It sits quietly among the larger
-          totals in this project, neither resented nor celebrated, simply absorbed
-          into the rhythm of keeping a kitchen stocked. Whether that absorption is
-          appropriate is worth a moment's thought, even for a task this ordinary.
+          A year of waking time, give or take, is what grocery shopping costs across an adult life
+          once the driving is included. It sits quietly among the larger totals in this project,
+          neither resented nor celebrated, simply absorbed into the rhythm of keeping a kitchen
+          stocked. Whether that absorption is appropriate is worth a moment's thought, even for a
+          task this ordinary.
         </p>
       </div>
 
@@ -133,11 +130,11 @@ function Article() {
         faqs={[
           {
             q: "How long does the average grocery trip take?",
-            a: "Around 41 to 43 minutes from arrival to checkout, based on retail industry time studies, not including the drive to and from the store. Combined with a typical pattern of 1.5 primary trips per week plus smaller top-up runs, weekly grocery shopping time for an average household comes to roughly 80 minutes, or just under an hour and a half."
+            a: "Around 41 to 43 minutes from arrival to checkout, based on retail industry time studies, not including the drive to and from the store. Combined with a typical pattern of 1.5 primary trips per week plus smaller top-up runs, weekly grocery shopping time for an average household comes to roughly 80 minutes, or just under an hour and a half.",
           },
           {
             q: "Has online grocery delivery reduced how much time people spend shopping?",
-            a: "Less than expected. Online grocery adoption grew substantially during the pandemic, but Food Marketing Institute research has consistently found that online grocery spend still represents a modest minority of total household grocery spending. Many consumers who use delivery for routine staples continue to prefer in-person shopping for fresh produce, meat, and items where visual selection matters, which has kept in-store grocery trips a persistent part of most households' weekly routine."
+            a: "Less than expected. Online grocery adoption grew substantially during the pandemic, but Food Marketing Institute research has consistently found that online grocery spend still represents a modest minority of total household grocery spending. Many consumers who use delivery for routine staples continue to prefer in-person shopping for fresh produce, meat, and items where visual selection matters, which has kept in-store grocery trips a persistent part of most households' weekly routine.",
           },
         ]}
       />
@@ -165,7 +162,10 @@ function Article() {
       <div className="mt-10 border-t border-border pt-8">
         <p className="font-serif text-[17px] italic text-foreground/75">
           Put your own numbers into the{" "}
-          <a href="/#calculator" className="underline underline-offset-2 hover:text-foreground transition">
+          <a
+            href="/#calculator"
+            className="underline underline-offset-2 hover:text-foreground transition"
+          >
             Hourglass calculator
           </a>{" "}
           and see where your years actually go.

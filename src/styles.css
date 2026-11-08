@@ -67,21 +67,21 @@
 :root {
   /* Light — Sophisticated */
   --radius: 0.25rem;
-  --background: oklch(1 0 0);                         /* #FFFFFF */
-  --foreground: oklch(0.18 0 0);                      /* #1A1A1A */
+  --background: oklch(1 0 0); /* #FFFFFF */
+  --foreground: oklch(0.18 0 0); /* #1A1A1A */
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.18 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.18 0 0);
   --primary: oklch(0.18 0 0);
   --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.965 0 0);                      /* #F5F5F7 */
+  --secondary: oklch(0.965 0 0); /* #F5F5F7 */
   --secondary-foreground: oklch(0.18 0 0);
   --muted: oklch(0.965 0 0);
   --muted-foreground: oklch(0.45 0 0);
-  --accent: oklch(0.965 0 0);                         /* light grey */
+  --accent: oklch(0.965 0 0); /* light grey */
   --accent-foreground: oklch(0.18 0 0);
-  --highlight: oklch(0.62 0.05 155);                  /* muted sage */
+  --highlight: oklch(0.62 0.05 155); /* muted sage */
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0 0);
   --border: oklch(0.9 0 0);
@@ -104,8 +104,8 @@
 
 .dark {
   /* Dark — Refined */
-  --background: oklch(0.135 0 0);                     /* #0A0A0A */
-  --foreground: oklch(0.93 0 0);                      /* #EAEAEA */
+  --background: oklch(0.135 0 0); /* #0A0A0A */
+  --foreground: oklch(0.93 0 0); /* #EAEAEA */
   --card: oklch(0.135 0 0);
   --card-foreground: oklch(0.93 0 0);
   --popover: oklch(0.18 0 0);
@@ -116,9 +116,9 @@
   --secondary-foreground: oklch(0.93 0 0);
   --muted: oklch(0.22 0 0);
   --muted-foreground: oklch(0.6 0 0);
-  --accent: oklch(0.32 0 0);                          /* #3D3D3D */
+  --accent: oklch(0.32 0 0); /* #3D3D3D */
   --accent-foreground: oklch(0.93 0 0);
-  --highlight: oklch(0.7 0.045 155);                  /* sage on dark */
+  --highlight: oklch(0.7 0.045 155); /* sage on dark */
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.984 0 0);
   --border: oklch(1 0 0 / 8%);
@@ -153,8 +153,12 @@
     text-rendering: optimizeLegibility;
   }
 
-  .font-serif { font-family: var(--font-serif); }
-  .font-mono  { font-family: var(--font-mono); }
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
 
   /* Hairline inputs */
   .hairline {
@@ -167,5 +171,8 @@
     color: var(--color-foreground);
     transition: border-color 200ms ease;
   }
-  .hairline:focus { outline: none; border-bottom-color: var(--color-foreground); }
+  .hairline:focus {
+    outline: none;
+    border-bottom-color: var(--color-foreground);
+  }
 }

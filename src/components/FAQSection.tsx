@@ -24,7 +24,9 @@ export function FAQSection({ faqs }: { faqs: FAQ[] }) {
     });
     document.head.appendChild(script);
 
-    return () => { document.getElementById("faq-schema-ld")?.remove(); };
+    return () => {
+      document.getElementById("faq-schema-ld")?.remove();
+    };
   }, [faqs]);
 
   return (

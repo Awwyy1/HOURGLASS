@@ -45,6 +45,7 @@ Articles are backdated naturally. Space them 5 to 10 days apart. Do not publish 
 ## Article metadata
 
 Every article needs:
+
 - `<PageSEO title="..." description="..." />` — unique per article, under 160 chars for description
 - `<ArticleSchema ... datePublished="YYYY-MM-DD" slug="..." />`
 - `<FAQSection faqs={[...]} />` — two FAQs minimum

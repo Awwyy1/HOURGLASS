@@ -15,12 +15,7 @@ import { Footer } from "../components/Footer";
 const SITE = "https://www.justhourglass.me";
 
 /** Create the meta/link tag if it is missing, then set the attribute. */
-function setHeadTag(
-  selector: string,
-  attr: string,
-  value: string,
-  make: () => Element,
-) {
+function setHeadTag(selector: string, attr: string, value: string, make: () => Element) {
   let el = document.head.querySelector(selector);
   if (!el) {
     el = make();
@@ -45,11 +40,8 @@ function useSocialTags() {
     const clean = pathname === "/" ? "/" : pathname.replace(/\/+$/, "");
     const url = SITE + clean;
 
-    const articleSlug = clean.startsWith("/journal/")
-      ? clean.slice("/journal/".length)
-      : null;
-    const image =
-      SITE + (articleSlug ? `/og/${articleSlug}.png` : "/og-default.png");
+    const articleSlug = clean.startsWith("/journal/") ? clean.slice("/journal/".length) : null;
+    const image = SITE + (articleSlug ? `/og/${articleSlug}.png` : "/og-default.png");
 
     setHeadTag('link[rel="canonical"]', "href", url, () => {
       const l = document.createElement("link");
@@ -87,9 +79,9 @@ function NotFoundComponent() {
         This page does not exist.
       </h1>
       <p className="mt-6 max-w-lg font-serif text-[17px] leading-relaxed text-muted-foreground">
-        The link may be old, or the address mistyped. Either way, the seconds
-        you just spent here were real ones, drawn from the same budget as all
-        the rest. We would suggest spending the next few somewhere that exists.
+        The link may be old, or the address mistyped. Either way, the seconds you just spent here
+        were real ones, drawn from the same budget as all the rest. We would suggest spending the
+        next few somewhere that exists.
       </p>
       <div className="mt-16 border-t border-border pt-10 flex items-center justify-between">
         <Link
@@ -124,7 +116,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
-            onClick={() => { router.invalidate(); reset(); }}
+            onClick={() => {
+              router.invalidate();
+              reset();
+            }}
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Try again

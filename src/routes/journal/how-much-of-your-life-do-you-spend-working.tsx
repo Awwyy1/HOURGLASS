@@ -5,9 +5,7 @@ import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
 import { AnswerBlock } from "../../components/AnswerBlock";
 
-export const Route = createFileRoute(
-  "/journal/how-much-of-your-life-do-you-spend-working",
-)({
+export const Route = createFileRoute("/journal/how-much-of-your-life-do-you-spend-working")({
   component: Article,
 });
 
@@ -43,13 +41,15 @@ function Article() {
           How much of your life do you spend working?
         </h1>
         <p className="mt-6 font-serif text-[17px] leading-relaxed text-muted-foreground">
-          The standard answer is 40 hours a week. The real answer, once you
-          count everything that actually counts, is considerably more than that.
+          The standard answer is 40 hours a week. The real answer, once you count everything that
+          actually counts, is considerably more than that.
         </p>
       </header>
 
       <AnswerBlock>
-        A standard career of 40 hours a week across 43 years comes to around 80,000 hours. Counting commuting, email outside hours, and the mental load that follows you home, the realistic total crosses 100,000 hours, which is somewhere between 17 and 20 waking years of a life.
+        A standard career of 40 hours a week across 43 years comes to around 80,000 hours. Counting
+        commuting, email outside hours, and the mental load that follows you home, the realistic
+        total crosses 100,000 hours, which is somewhere between 17 and 20 waking years of a life.
       </AnswerBlock>
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
@@ -66,9 +66,9 @@ function Article() {
         <p>
           Start with the official number anyway. Forty hours a week, 50 working weeks a year after
           accounting for vacation, comes to 2,000 hours annually. Converted into days, that is 83
-          full 24-hour days. In terms of waking time, assuming 16 hours of consciousness per day,
-          it comes to roughly 125 days per year spent doing nothing but working. A third of your
-          entire waking year, every year, for four decades.
+          full 24-hour days. In terms of waking time, assuming 16 hours of consciousness per day, it
+          comes to roughly 125 days per year spent doing nothing but working. A third of your entire
+          waking year, every year, for four decades.
         </p>
 
         <h2 className="pt-8 font-serif text-2xl italic text-foreground">
@@ -76,12 +76,12 @@ function Article() {
         </h2>
 
         <p>
-          Over a full career, 43 years at 2,000 hours each adds up to 86,000 hours. This is not
-          an obscure figure. There is a career research organisation literally called 80,000 Hours,
+          Over a full career, 43 years at 2,000 hours each adds up to 86,000 hours. This is not an
+          obscure figure. There is a career research organisation literally called 80,000 Hours,
           named after exactly this calculation, built on the observation that this is approximately
           how much professional time a typical person has available across their working life.
-          Eighty thousand hours. That is a large number, and it is also a fixed one. You do not
-          get more of it regardless of what you do with the rest of your time.
+          Eighty thousand hours. That is a large number, and it is also a fixed one. You do not get
+          more of it regardless of what you do with the rest of your time.
         </p>
 
         <p>
@@ -144,8 +144,14 @@ function Article() {
 
       <FAQSection
         faqs={[
-          { q: "How many hours does the average person work in a lifetime?", a: "The standard figure is 80,000 hours over a 40-year career at 40 hours per week. In practice the number is higher. Overtime, work-adjacent tasks like commuting and email outside hours, and the unpaid time many knowledge workers spend thinking about work all add to the total. A more honest career figure for most professionals is somewhere between 90,000 and 100,000 hours." },
-          { q: "What percentage of your life do you spend working?", a: "Around 20 to 25 percent of waking hours over a full career, depending on actual hours per week and how long you work. That makes it the second largest category of time use after sleep, and the largest category of conscious directed activity. Most people have never added it up. The number is usually larger than expected when they do." }
+          {
+            q: "How many hours does the average person work in a lifetime?",
+            a: "The standard figure is 80,000 hours over a 40-year career at 40 hours per week. In practice the number is higher. Overtime, work-adjacent tasks like commuting and email outside hours, and the unpaid time many knowledge workers spend thinking about work all add to the total. A more honest career figure for most professionals is somewhere between 90,000 and 100,000 hours.",
+          },
+          {
+            q: "What percentage of your life do you spend working?",
+            a: "Around 20 to 25 percent of waking hours over a full career, depending on actual hours per week and how long you work. That makes it the second largest category of time use after sleep, and the largest category of conscious directed activity. Most people have never added it up. The number is usually larger than expected when they do.",
+          },
         ]}
       />
 
@@ -172,7 +178,10 @@ function Article() {
       <div className="mt-10 border-t border-border pt-8">
         <p className="font-serif text-[17px] italic text-foreground/75">
           Put your own numbers into the{" "}
-          <a href="/#calculator" className="underline underline-offset-2 hover:text-foreground transition">
+          <a
+            href="/#calculator"
+            className="underline underline-offset-2 hover:text-foreground transition"
+          >
             Hourglass calculator
           </a>{" "}
           and see where your years actually go.

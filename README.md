@@ -11,16 +11,16 @@ An editorial time calculator. Enter an activity, set how many hours a day you sp
 
 ## Stack
 
-| Layer | Technology |
-|---|---|
-| Framework | [TanStack Start](https://tanstack.com/start) (React 19, SSR) |
-| Router | TanStack Router (file-based) |
-| Styling | Tailwind CSS v4 |
-| UI primitives | shadcn/ui + Radix UI |
-| Data / forms | TanStack Query · React Hook Form · Zod |
-| Fonts | Playfair Display, Inter, JetBrains Mono |
-| Build | Vite 7 + Bun |
-| Deploy | Cloudflare Workers |
+| Layer         | Technology                                                   |
+| ------------- | ------------------------------------------------------------ |
+| Framework     | [TanStack Start](https://tanstack.com/start) (React 19, SSR) |
+| Router        | TanStack Router (file-based)                                 |
+| Styling       | Tailwind CSS v4                                              |
+| UI primitives | shadcn/ui + Radix UI                                         |
+| Data / forms  | TanStack Query · React Hook Form · Zod                       |
+| Fonts         | Playfair Display, Inter, JetBrains Mono                      |
+| Build         | Vite 7 + Bun                                                 |
+| Deploy        | Cloudflare Workers                                           |
 
 ## Getting started
 
@@ -40,10 +40,10 @@ bunx wrangler deploy
 
 ## Scripts
 
-| Command | Description |
-|---|---|
-| `bun run dev` | Start dev server |
-| `bun run build` | Production build |
+| Command           | Description                      |
+| ----------------- | -------------------------------- |
+| `bun run dev`     | Start dev server                 |
+| `bun run build`   | Production build                 |
 | `bun run preview` | Preview production build locally |
-| `bun run lint` | Run ESLint |
-| `bun run format` | Run Prettier |
+| `bun run lint`    | Run ESLint                       |
+| `bun run format`  | Run Prettier                     |
