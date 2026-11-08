@@ -31,7 +31,11 @@ export function PageSEO({
   ogType = "website",
 }: Props) {
   useEffect(() => {
-    const full = exactTitle ? title : `${title} | HOURGLASS`;
+    // Articles drop the " | HOURGLASS" suffix. Google already shows the site
+    // name above each result, and the suffix pushed 14 of 47 article titles
+    // past the ~60 characters a result can display before truncating.
+    const full =
+      exactTitle || ogType === "article" ? title : `${title} | HOURGLASS`;
     document.title = full;
 
     setTag('meta[name="description"]', "content", description, () => {
