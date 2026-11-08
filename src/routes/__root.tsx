@@ -7,6 +7,7 @@ import {
   useRouter,
   useRouterState,
 } from "@tanstack/react-router";
+import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "../lib/theme";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
@@ -158,6 +159,9 @@ function RootComponent() {
           <Outlet />
           <Footer />
         </div>
+        {/* Cookieless page analytics. Collects nothing until Web Analytics is
+            enabled for the project in the Vercel dashboard. */}
+        <Analytics />
       </ThemeProvider>
     </QueryClientProvider>
   );

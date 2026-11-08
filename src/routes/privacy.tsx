@@ -20,7 +20,7 @@ function Privacy() {
           Privacy Policy
         </h1>
         <p className="mt-4 font-mono text-[10px] text-muted-foreground">
-          Last updated: May 8, 2026
+          Last updated: November 8, 2026
         </p>
       </header>
 
@@ -42,52 +42,28 @@ function Privacy() {
         </section>
 
         <section className="space-y-4">
-          <h2 className="font-serif text-xl italic text-foreground">Advertising</h2>
+          <h2 className="font-serif text-xl italic text-foreground">Analytics</h2>
           <p>
-            This site uses Google AdSense to display advertisements. Google AdSense
-            is a service provided by Google LLC. To serve relevant ads, Google and
-            its partners use cookies, web beacons, and similar technologies to
-            collect information about your visits to this and other websites.
+            We use Vercel Web Analytics to understand aggregate traffic: which
+            pages are read, which sites send visitors here, and roughly where in
+            the world and on what kind of device people read them. It does not
+            use cookies and does not track you across other websites. Visits are
+            counted using a short-lived anonymous identifier that is discarded
+            within a day, so we cannot recognise you on a later visit or identify
+            you as a person.
           </p>
           <p>
-            This information is used to show you advertisements that may be relevant
-            to your interests. It may include your approximate location, the pages
-            you visit, and other browsing activity. Google's use of the DoubleClick
-            cookie enables it and its partners to serve ads based on your prior
-            visits to this site or other sites on the internet.
-          </p>
-          <p>
-            You can opt out of personalised advertising by visiting{" "}
+            The data collected is limited to the page address, the referring
+            site, approximate country, and device, browser, and operating system
+            type. Nothing you enter into the calculator is included. More detail
+            is available in{" "}
             <a
-              href="https://www.google.com/settings/ads"
+              href="https://vercel.com/docs/analytics/privacy-policy"
               target="_blank"
               rel="noopener noreferrer"
               className="underline underline-offset-2 hover:text-foreground transition"
             >
-              Google Ads Settings
-            </a>
-            . You can also opt out of third-party vendor use of cookies for
-            personalised advertising by visiting{" "}
-            <a
-              href="https://www.aboutads.info/choices/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline underline-offset-2 hover:text-foreground transition"
-            >
-              aboutads.info
-            </a>
-            .
-          </p>
-          <p>
-            For more information on how Google uses data when you use sites that
-            use Google services, visit{" "}
-            <a
-              href="https://policies.google.com/technologies/partner-sites"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline underline-offset-2 hover:text-foreground transition"
-            >
-              Google's Privacy & Terms
+              Vercel's analytics privacy documentation
             </a>
             .
           </p>
@@ -97,20 +73,20 @@ function Privacy() {
           <h2 className="font-serif text-xl italic text-foreground">Cookies</h2>
           <p>
             Cookies are small text files placed on your device by websites you visit.
-            We do not set any cookies ourselves. However, third-party services
-            embedded in this site, including Google AdSense, may set their own
-            cookies independently of us. You can control or delete cookies through
-            your browser settings at any time.
+            This site does not set any cookies, and neither does the analytics
+            service described above. Your theme preference, if you choose light
+            or dark mode, is kept in your browser's local storage and never leaves
+            your device.
           </p>
         </section>
 
         <section className="space-y-4">
-          <h2 className="font-serif text-xl italic text-foreground">Analytics</h2>
+          <h2 className="font-serif text-xl italic text-foreground">Advertising</h2>
           <p>
-            We may use web analytics tools to understand aggregate traffic patterns
-            on this site, such as which pages are visited most frequently. These
-            tools collect anonymised data only and do not identify individual users.
-            No personally identifiable information is collected through analytics.
+            This site does not currently display advertising. If that changes,
+            this section will be updated before any advertisements appear, to
+            name the provider, describe the information it collects, and explain
+            the choices available to you.
           </p>
         </section>
 
