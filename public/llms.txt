@@ -1,9 +1,11 @@
 # HOURGLASS
 
-> An editorial calculator that converts a daily habit into its lifetime total.
-> Enter an activity, the hours a day it takes, and the number of years, and it
-> returns the result in days, weeks, and waking years. The journal applies the
-> same arithmetic to one habit at a time, with named sources.
+> An editorial calculator of time. The homepage draws a whole life as a grid of
+> weeks from a single birth year, and a second calculator converts a daily
+> habit into its lifetime total: enter an activity, the hours a day it takes,
+> and the number of years, and it returns the result in days, weeks, and waking
+> years. The journal applies the same arithmetic to one habit at a time, with
+> named sources.
 
 A waking year is 365 x 16 = 5,840 hours, which is the convention used
 throughout the site: totals are reported in conscious time, with sleep removed.
@@ -13,7 +15,7 @@ the text rather than footnoted.
 
 ## Core
 
-- [Calculator](https://www.justhourglass.me/): the tool itself.
+- [Home](https://www.justhourglass.me/): a life in weeks from a birth year, followed by the single-habit calculator.
 - [Life in weeks](https://www.justhourglass.me/weeks): a whole life as a grid of 52-week rows, shaded by the habits that will take the weeks ahead.
 - [Journal](https://www.justhourglass.me/journal): all 47 articles.
 - [Philosophy](https://www.justhourglass.me/philosophy): on the arithmetic of attention.

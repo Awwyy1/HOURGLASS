@@ -3,6 +3,7 @@ import { useMemo, useState } from "react";
 import { ShareButton } from "../components/ShareCard";
 import { PageSEO } from "../components/PageSEO";
 import { SiteSchema } from "../components/SiteSchema";
+import { LifeHero } from "../components/LifeHero";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -29,31 +30,33 @@ function Index() {
   return (
     <>
       <PageSEO
-        title="HOURGLASS — How many hours of your life have you spent?"
-        description="An editorial calculator that converts daily habits into lifetime totals. Find out how many days, weeks, and waking years a single habit quietly consumes."
+        title="HOURGLASS — Your life in weeks, and where the hours go"
+        description="See your whole life on one page, one square for every week, then find out how many days, weeks and waking years a single daily habit takes from it."
         exactTitle
       />
       <SiteSchema />
-      {/* Hero */}
-      <section className="mx-auto max-w-5xl px-6 pt-16 pb-24 text-center md:pt-28 md:pb-32">
-        <p className="mb-10 text-[10px] uppercase tracking-[0.36em] text-muted-foreground">
-          Volume I &nbsp;·&nbsp; A Calculator of Hours
-        </p>
-        <h1 className="font-serif text-[12vw] leading-[0.95] tracking-[-0.02em] md:text-[112px]">
-          How many hours
-          <br />
-          <span className="italic text-muted-foreground">of your life,</span>
-          <br />
-          have you spent?
-        </h1>
-        <p className="mx-auto mt-10 max-w-xl text-sm leading-relaxed text-muted-foreground">
-          Pick something you do every day. Put in the hours. See where your years actually go.
-        </p>
-      </section>
+      {/* Hero: a whole life in weeks */}
+      <LifeHero />
 
-      {/* Calculator */}
-      <section id="calculator" className="mx-auto max-w-5xl px-6 pb-24">
-        <div className="grid grid-cols-1 gap-16 border-t border-border pt-16 md:grid-cols-12">
+      {/* Calculator: one habit at a time */}
+      <section id="calculator" className="mx-auto max-w-5xl scroll-mt-6 border-t border-border px-6 pt-20 pb-24 md:pt-28">
+        <div className="text-center">
+          <p className="mb-8 text-[10px] uppercase tracking-[0.36em] text-muted-foreground">
+            Volume II &nbsp;·&nbsp; One Habit at a Time
+          </p>
+          <h2 className="font-serif text-[11vw] leading-[0.98] tracking-[-0.02em] md:text-[80px]">
+            How many hours
+            <br />
+            <span className="italic text-muted-foreground">of your life,</span>
+            <br />
+            have you spent?
+          </h2>
+          <p className="mx-auto mt-8 max-w-xl text-sm leading-relaxed text-muted-foreground">
+            Pick something you do every day, put in the hours, and see how much of your life
+            it adds up to.
+          </p>
+        </div>
+        <div className="mt-16 grid grid-cols-1 gap-16 border-t border-border pt-16 md:grid-cols-12">
           {/* Inputs */}
           <div className="md:col-span-5 md:border-r md:border-border md:pr-12">
             <p className="mb-10 text-[10px] uppercase tracking-[0.32em] text-muted-foreground">
@@ -99,7 +102,7 @@ function Index() {
               II.&nbsp; The reckoning
             </p>
             <div className="flex items-baseline gap-4">
-              <span className="font-mono text-[18vw] font-extralight leading-none tracking-[-0.04em] text-foreground md:text-[180px]">
+              <span className="font-mono text-[18vw] font-extralight leading-none tracking-[-0.04em] text-foreground md:text-[clamp(96px,13vw,180px)]">
                 {formatNumber(totalDays, 1)}
               </span>
               <span className="font-serif text-2xl italic text-muted-foreground">days</span>
@@ -122,27 +125,6 @@ function Index() {
               />
           </div>
         </div>
-      </section>
-
-      {/* Life in weeks */}
-      <section className="mx-auto max-w-3xl border-t border-border px-6 py-24 text-center">
-        <p className="mb-6 font-sans text-[10px] uppercase tracking-[0.36em] text-muted-foreground">
-          Volume II
-        </p>
-        <h2 className="mb-8 font-serif text-3xl italic tracking-tight text-foreground md:text-4xl">
-          Your whole life, in weeks.
-        </h2>
-        <p className="mx-auto max-w-lg font-serif text-[17px] leading-[1.85] text-foreground/75">
-          One habit at a time is the start. Put them together on a single page and you
-          can see how many weeks are already behind you, and how many your habits will
-          take from the ones ahead.
-        </p>
-        <Link
-          to="/weeks"
-          className="mt-10 inline-block text-[10px] uppercase tracking-[0.32em] text-foreground transition hover:text-muted-foreground"
-        >
-          See your weeks →
-        </Link>
       </section>
 
       {/* Philosophy teaser */}
