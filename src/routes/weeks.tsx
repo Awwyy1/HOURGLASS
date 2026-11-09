@@ -1,27 +1,31 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { PageSEO } from "../components/PageSEO";
+import {
+  COLS,
+  STORAGE_KEY,
+  TONES,
+  birthFromYear,
+  buildModel,
+  fmt,
+  isBirthYear,
+  isoDate,
+  years,
+  type Habit,
+  type LifeModel,
+} from "../lib/life";
 
 export const Route = createFileRoute("/weeks")({
+  // The homepage hero links here with ?born=<year> so the visitor does not have
+  // to type it twice.
+  validateSearch: (search: Record<string, unknown>): { born?: number } => {
+    const born = Number(search.born);
+    return isBirthYear(born) ? { born } : {};
+  },
   component: Weeks,
 });
 
-// ── Model ──────────────────────────────────────────────────────────────────
-
-/** One row of the grid is one year of life, drawn as 52 weeks. */
-const COLS = 52;
 const MAX_HABITS = 6;
-const STORAGE_KEY = "hourglass-weeks-v1";
-
-/** Opacity of each habit's shade, in order. Lived weeks are solid ink. */
-const TONES = [0.6, 0.42, 0.29, 0.2, 0.13, 0.08];
-
-interface Habit {
-  label: string;
-  hours: number;
-  /** Age at which the habit stops. Null means it runs for the rest of life. */
-  until: number | null;
-}
 
 const DEFAULT_HABITS: Habit[] = [
   { label: "Sleep", hours: 8, until: null },
@@ -30,104 +34,7 @@ const DEFAULT_HABITS: Habit[] = [
   { label: "Chores", hours: 2.5, until: null },
 ];
 
-interface Row {
-  lived: number;
-  habits: number[];
-  free: number;
-}
-
-interface LifeModel {
-  rows: Row[];
-  lived: number;
-  ahead: number;
-  habitTotals: number[];
-  free: number;
-  /** True when the habits add up to more than 24 hours and were scaled down. */
-  scaled: boolean;
-}
-
-/**
- * Lays a life out as rows of 52 weeks. Rows before the current year are fully
- * lived. Every row after that is divided between the habits that are still
- * running in that year, in proportion to their hours, and whatever the habits
- * do not claim is left over. Rounding uses the largest remainder so each row
- * still adds up to exactly 52.
- */
-function buildModel(birth: Date, now: Date, lifespan: number, habits: Habit[]): LifeModel | null {
-  const ageMs = now.getTime() - birth.getTime();
-  if (!Number.isFinite(ageMs) || ageMs <= 0) return null;
-  const age = ageMs / (365.2425 * 86_400_000);
-  if (age >= lifespan) return null;
-
-  const currentRow = Math.floor(age);
-  const livedInCurrentRow = Math.min(COLS - 1, Math.floor((age - currentRow) * COLS));
-
-  const totalHours = habits.reduce((sum, h) => sum + Math.max(0, h.hours || 0), 0);
-  const scale = totalHours > 24 ? 24 / totalHours : 1;
-
-  const rows: Row[] = [];
-  const habitTotals = habits.map(() => 0);
-  let lived = 0;
-  let free = 0;
-
-  for (let r = 0; r < lifespan; r++) {
-    if (r < currentRow) {
-      rows.push({ lived: COLS, habits: habits.map(() => 0), free: 0 });
-      lived += COLS;
-      continue;
-    }
-
-    const livedHere = r === currentRow ? livedInCurrentRow : 0;
-    lived += livedHere;
-    const available = COLS - livedHere;
-
-    const shares = habits.map((h) =>
-      h.until === null || r < h.until ? (Math.max(0, h.hours || 0) / 24) * scale : 0,
-    );
-    const shareSum = shares.reduce((a, b) => a + b, 0);
-    const target = Math.min(available, Math.round(available * shareSum));
-    const raw = shares.map((s) => available * s);
-    const counts = raw.map(Math.floor);
-    let extra = target - counts.reduce((a, b) => a + b, 0);
-    const byRemainder = raw
-      .map((v, i) => ({ i, rem: v - Math.floor(v) }))
-      .sort((a, b) => b.rem - a.rem);
-    for (const { i } of byRemainder) {
-      if (extra <= 0) break;
-      if (shares[i] > 0) {
-        counts[i]++;
-        extra--;
-      }
-    }
-
-    const freeHere = available - counts.reduce((a, b) => a + b, 0);
-    counts.forEach((c, i) => (habitTotals[i] += c));
-    free += freeHere;
-    rows.push({ lived: livedHere, habits: counts, free: freeHere });
-  }
-
-  return {
-    rows,
-    lived,
-    ahead: lifespan * COLS - lived,
-    habitTotals,
-    free,
-    scaled: scale < 1,
-  };
-}
-
 // ── Helpers ────────────────────────────────────────────────────────────────
-
-const fmt = (n: number) => Math.round(n).toLocaleString("en-US");
-const years = (weeks: number) =>
-  (weeks / COLS).toLocaleString("en-US", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
-
-function isoDate(d: Date) {
-  const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, "0");
-  const day = String(d.getDate()).padStart(2, "0");
-  return `${y}-${m}-${day}`;
-}
 
 function defaultBirth() {
   const d = new Date();
@@ -330,6 +237,7 @@ async function drawPoster(model: LifeModel, habits: Habit[], name: string): Prom
 // ── Page ───────────────────────────────────────────────────────────────────
 
 function Weeks() {
+  const { born } = Route.useSearch();
   const [name, setName] = useState("");
   const [birth, setBirth] = useState(defaultBirth);
   // Kept as typed text so the field can be cleared and retyped; the model uses
@@ -351,8 +259,13 @@ function Weeks() {
       setLifespanInput(String(s.lifespan));
       setHabits(s.habits.slice(0, MAX_HABITS));
     }
+    // A year passed from the homepage wins over the default, but not over an
+    // exact date already saved for that same year.
+    if (born !== undefined && !s?.birth?.startsWith(`${born}-`)) {
+      setBirth(birthFromYear(born));
+    }
     setLoaded(true);
-  }, []);
+  }, [born]);
 
   useEffect(() => {
     if (!loaded) return;
@@ -402,7 +315,7 @@ function Weeks() {
 
       <section className="mx-auto max-w-5xl px-6 pt-16 pb-20 text-center md:pt-24">
         <p className="mb-10 text-[10px] uppercase tracking-[0.36em] text-muted-foreground">
-          Volume II &nbsp;·&nbsp; A Life in Weeks
+          Volume I &nbsp;·&nbsp; A Life in Weeks
         </p>
         <h1 className="font-serif text-[12vw] leading-[0.95] tracking-[-0.02em] md:text-[104px]">
           Your life,

@@ -41,7 +41,7 @@ export function SiteSchema() {
           name: "HOURGLASS",
           url: SITE,
           description:
-            "An editorial calculator that converts daily habits into lifetime totals. Find out how many days, weeks, and waking years a single habit quietly consumes.",
+            "See a whole life as a grid of weeks, then convert any daily habit into its lifetime total in days, weeks, and waking years.",
           inLanguage: "en",
           publisher: { "@id": `${SITE}/#organization` },
         },
