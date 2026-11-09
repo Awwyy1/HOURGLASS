@@ -14,6 +14,7 @@ the text rather than footnoted.
 ## Core
 
 - [Calculator](https://www.justhourglass.me/): the tool itself.
+- [Life in weeks](https://www.justhourglass.me/weeks): a whole life as a grid of 52-week rows, shaded by the habits that will take the weeks ahead.
 - [Journal](https://www.justhourglass.me/journal): all 47 articles.
 - [Philosophy](https://www.justhourglass.me/philosophy): on the arithmetic of attention.
 - [About](https://www.justhourglass.me/about): what the site is and why it exists.

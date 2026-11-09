@@ -124,6 +124,27 @@ function Index() {
         </div>
       </section>
 
+      {/* Life in weeks */}
+      <section className="mx-auto max-w-3xl border-t border-border px-6 py-24 text-center">
+        <p className="mb-6 font-sans text-[10px] uppercase tracking-[0.36em] text-muted-foreground">
+          Volume II
+        </p>
+        <h2 className="mb-8 font-serif text-3xl italic tracking-tight text-foreground md:text-4xl">
+          Your whole life, in weeks.
+        </h2>
+        <p className="mx-auto max-w-lg font-serif text-[17px] leading-[1.85] text-foreground/75">
+          One habit at a time is the start. Put them together on a single page and you
+          can see how many weeks are already behind you, and how many your habits will
+          take from the ones ahead.
+        </p>
+        <Link
+          to="/weeks"
+          className="mt-10 inline-block text-[10px] uppercase tracking-[0.32em] text-foreground transition hover:text-muted-foreground"
+        >
+          See your weeks →
+        </Link>
+      </section>
+
       {/* Philosophy teaser */}
       <section className="mx-auto max-w-3xl border-t border-border px-6 py-24 text-center">
         <p className="mb-6 font-sans text-[10px] uppercase tracking-[0.36em] text-muted-foreground">

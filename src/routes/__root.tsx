@@ -8,11 +8,17 @@ import {
   useRouterState,
 } from "@tanstack/react-router";
 import { Analytics } from "@vercel/analytics/react";
+import type { ErrorComponentProps } from "@tanstack/react-router";
 import { ThemeProvider } from "../lib/theme";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 
 const SITE = "https://www.justhourglass.me";
+
+/** Non-article pages that have a share card of their own. */
+const PAGE_IMAGES: Record<string, string> = {
+  "/weeks": "/og-weeks.png",
+};
 
 /** Create the meta/link tag if it is missing, then set the attribute. */
 function setHeadTag(
@@ -49,7 +55,10 @@ function useSocialTags() {
       ? clean.slice("/journal/".length)
       : null;
     const image =
-      SITE + (articleSlug ? `/og/${articleSlug}.png` : "/og-default.png");
+      SITE +
+      (articleSlug
+        ? `/og/${articleSlug}.png`
+        : (PAGE_IMAGES[clean] ?? "/og-default.png"));
 
     setHeadTag('link[rel="canonical"]', "href", url, () => {
       const l = document.createElement("link");
@@ -109,7 +118,7 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
 

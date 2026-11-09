@@ -20,6 +20,12 @@ export function Header() {
         {/* Desktop nav */}
         <nav className="hidden items-center gap-10 md:flex">
           <Link
+            to="/weeks"
+            className="transition hover:text-foreground [&.active]:text-foreground"
+          >
+            Weeks
+          </Link>
+          <Link
             to="/philosophy"
             className="transition hover:text-foreground [&.active]:text-foreground"
           >
@@ -95,6 +101,13 @@ export function Header() {
       {open && (
         <nav className="border-t border-border md:hidden">
           <div className="mx-auto max-w-6xl px-6 py-8 flex flex-col gap-7">
+            <Link
+              to="/weeks"
+              onClick={() => setOpen(false)}
+              className="text-[11px] uppercase tracking-[0.28em] text-muted-foreground transition hover:text-foreground [&.active]:text-foreground"
+            >
+              Weeks
+            </Link>
             <Link
               to="/philosophy"
               onClick={() => setOpen(false)}
