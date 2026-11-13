@@ -1,7 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { Link } from "@tanstack/react-router";
 
-const SITE = "https://www.justhourglass.me";
+import { SITE, injectJsonLd, reportJsonLd } from "../lib/head";
+
+const ID = "breadcrumb-schema-ld";
 
 interface Crumb {
   label: string;
@@ -15,15 +17,9 @@ export function Breadcrumbs({ crumbs }: { crumbs: Crumb[] }) {
 
   // Emit BreadcrumbList alongside the visible trail, so results can show
   // Hourglass › Journal › Article instead of a bare URL.
-  useEffect(() => {
-    const id = "breadcrumb-schema-ld";
-    document.getElementById(id)?.remove();
-
+  const data = useMemo(() => {
     const items: Crumb[] = JSON.parse(key);
-    const script = document.createElement("script");
-    script.id = id;
-    script.type = "application/ld+json";
-    script.textContent = JSON.stringify({
+    return {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: items.map((crumb, i) => ({
@@ -31,17 +27,13 @@ export function Breadcrumbs({ crumbs }: { crumbs: Crumb[] }) {
         position: i + 1,
         name: crumb.label,
         // The final crumb is the current page and carries no item, per spec.
-        ...(crumb.to
-          ? { item: SITE + (crumb.to === "/" ? "" : crumb.to) }
-          : {}),
+        ...(crumb.to ? { item: SITE + (crumb.to === "/" ? "" : crumb.to) } : {}),
       })),
-    });
-    document.head.appendChild(script);
-
-    return () => {
-      document.getElementById(id)?.remove();
     };
   }, [key]);
+
+  reportJsonLd(ID, data);
+  useEffect(() => injectJsonLd(ID, data), [data]);
 
   return (
     <nav className="mb-12 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">

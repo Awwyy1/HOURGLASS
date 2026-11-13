@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { reportHead } from "../lib/head";
 
 interface Props {
   title: string;
@@ -10,12 +11,7 @@ interface Props {
 }
 
 /** Create the tag if it is missing, then set the attribute. */
-function setTag(
-  selector: string,
-  attr: string,
-  value: string,
-  make: () => Element,
-) {
+function setTag(selector: string, attr: string, value: string, make: () => Element) {
   let el = document.head.querySelector(selector);
   if (!el) {
     el = make();
@@ -24,18 +20,14 @@ function setTag(
   el.setAttribute(attr, value);
 }
 
-export function PageSEO({
-  title,
-  description,
-  exactTitle = false,
-  ogType = "website",
-}: Props) {
+export function PageSEO({ title, description, exactTitle = false, ogType = "website" }: Props) {
+  // Articles drop the " | HOURGLASS" suffix. Google already shows the site
+  // name above each result, and the suffix pushed 14 of 47 article titles
+  // past the ~60 characters a result can display before truncating.
+  const full = exactTitle || ogType === "article" ? title : `${title} | HOURGLASS`;
+  reportHead({ title: full, description, ogType });
+
   useEffect(() => {
-    // Articles drop the " | HOURGLASS" suffix. Google already shows the site
-    // name above each result, and the suffix pushed 14 of 47 article titles
-    // past the ~60 characters a result can display before truncating.
-    const full =
-      exactTitle || ogType === "article" ? title : `${title} | HOURGLASS`;
     document.title = full;
 
     setTag('meta[name="description"]', "content", description, () => {
@@ -68,7 +60,7 @@ export function PageSEO({
         return m;
       }),
     );
-  }, [title, description, exactTitle, ogType]);
+  }, [full, description, ogType]);
 
   return null;
 }
