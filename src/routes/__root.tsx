@@ -12,13 +12,8 @@ import type { ErrorComponentProps } from "@tanstack/react-router";
 import { ThemeProvider } from "../lib/theme";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
-
-const SITE = "https://www.justhourglass.me";
-
-/** Non-article pages that have a share card of their own. */
-const PAGE_IMAGES: Record<string, string> = {
-  "/weeks": "/og-weeks.png",
-};
+import { reportHead, socialFor } from "../lib/head";
+import { isOwnVisit } from "../lib/owner";
 
 /** Create the meta/link tag if it is missing, then set the attribute. */
 function setHeadTag(
@@ -48,17 +43,7 @@ function useSocialTags() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
   useEffect(() => {
-    const clean = pathname === "/" ? "/" : pathname.replace(/\/+$/, "");
-    const url = SITE + clean;
-
-    const articleSlug = clean.startsWith("/journal/")
-      ? clean.slice("/journal/".length)
-      : null;
-    const image =
-      SITE +
-      (articleSlug
-        ? `/og/${articleSlug}.png`
-        : (PAGE_IMAGES[clean] ?? "/og-default.png"));
+    const { url, image } = socialFor(pathname);
 
     setHeadTag('link[rel="canonical"]', "href", url, () => {
       const l = document.createElement("link");
@@ -87,6 +72,21 @@ function useSocialTags() {
 }
 
 function NotFoundComponent() {
+  reportHead({ title: "Page not found | HOURGLASS", notFound: true });
+
+  // A missing page must not be indexed. Prerendered 404s carry noindex in
+  // their HTML; this covers the ones reached by navigating inside the app.
+  useEffect(() => {
+    // Every real page is indexable, so leaving this one always restores
+    // "index, follow", even when the visit started on the prerendered 404.
+    const robots = document.head.querySelector('meta[name="robots"]');
+    robots?.setAttribute("content", "noindex");
+    document.title = "Page not found | HOURGLASS";
+    return () => {
+      robots?.setAttribute("content", "index, follow");
+    };
+  }, []);
+
   return (
     <div className="mx-auto max-w-2xl px-6 py-32">
       <p className="mb-6 font-mono text-[10px] uppercase tracking-[0.36em] text-muted-foreground">
@@ -168,9 +168,9 @@ function RootComponent() {
           <Outlet />
           <Footer />
         </div>
-        {/* Cookieless page analytics. Collects nothing until Web Analytics is
-            enabled for the project in the Vercel dashboard. */}
-        <Analytics />
+        {/* Cookieless page analytics. The owner's own visits are dropped; see
+            src/lib/owner.ts. */}
+        <Analytics beforeSend={(event) => (isOwnVisit() ? null : event)} />
       </ThemeProvider>
     </QueryClientProvider>
   );

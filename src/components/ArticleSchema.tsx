@@ -1,6 +1,5 @@
-import { useEffect } from "react";
-
-const SITE = "https://www.justhourglass.me";
+import { useEffect, useMemo } from "react";
+import { SITE, injectJsonLd, reportJsonLd } from "../lib/head";
 
 interface Props {
   title: string;
@@ -11,17 +10,10 @@ interface Props {
   dateModified?: string;
 }
 
-export function ArticleSchema({
-  title,
-  description,
-  datePublished,
-  slug,
-  dateModified,
-}: Props) {
-  useEffect(() => {
-    const id = "article-schema-ld";
-    document.getElementById(id)?.remove();
+const ID = "article-schema-ld";
 
+export function ArticleSchema({ title, description, datePublished, slug, dateModified }: Props) {
+  const data = useMemo(() => {
     const url = `${SITE}/journal/${slug}`;
     const publisher = {
       "@type": "Organization",
@@ -32,11 +24,7 @@ export function ArticleSchema({
         url: `${SITE}/favicon.svg`,
       },
     };
-
-    const script = document.createElement("script");
-    script.id = id;
-    script.type = "application/ld+json";
-    script.textContent = JSON.stringify({
+    return {
       "@context": "https://schema.org",
       "@type": "Article",
       headline: title,
@@ -56,13 +44,11 @@ export function ArticleSchema({
       publisher,
       url,
       mainEntityOfPage: { "@type": "WebPage", "@id": url },
-    });
-    document.head.appendChild(script);
-
-    return () => {
-      document.getElementById(id)?.remove();
     };
   }, [title, description, datePublished, dateModified, slug]);
+
+  reportJsonLd(ID, data);
+  useEffect(() => injectJsonLd(ID, data), [data]);
 
   return null;
 }

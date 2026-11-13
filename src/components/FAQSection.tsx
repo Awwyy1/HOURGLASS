@@ -1,4 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
+import { injectJsonLd, reportJsonLd } from "../lib/head";
+
+const ID = "faq-schema-ld";
 
 interface FAQ {
   q: string;
@@ -6,14 +9,8 @@ interface FAQ {
 }
 
 export function FAQSection({ faqs }: { faqs: FAQ[] }) {
-  useEffect(() => {
-    const existing = document.getElementById("faq-schema-ld");
-    if (existing) existing.remove();
-
-    const script = document.createElement("script");
-    script.id = "faq-schema-ld";
-    script.type = "application/ld+json";
-    script.textContent = JSON.stringify({
+  const data = useMemo(
+    () => ({
       "@context": "https://schema.org",
       "@type": "FAQPage",
       mainEntity: faqs.map((faq) => ({
@@ -21,11 +18,12 @@ export function FAQSection({ faqs }: { faqs: FAQ[] }) {
         name: faq.q,
         acceptedAnswer: { "@type": "Answer", text: faq.a },
       })),
-    });
-    document.head.appendChild(script);
+    }),
+    [faqs],
+  );
 
-    return () => { document.getElementById("faq-schema-ld")?.remove(); };
-  }, [faqs]);
+  reportJsonLd(ID, data);
+  useEffect(() => injectJsonLd(ID, data), [data]);
 
   return (
     <div className="mt-14 border-t border-border pt-10">

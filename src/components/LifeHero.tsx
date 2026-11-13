@@ -232,7 +232,7 @@ export function LifeHero() {
               Weeks behind you
             </dt>
             <dd className="mt-2 font-mono text-[28px] font-extralight tabular-nums tracking-tight text-foreground">
-              {fmt(shown)}
+              {seen ? fmt(shown) : "—"}
             </dd>
           </div>
           <div className="bg-background px-5 py-4">
@@ -240,7 +240,7 @@ export function LifeHero() {
               Weeks still ahead
             </dt>
             <dd className="mt-2 font-mono text-[28px] font-extralight tabular-nums tracking-tight text-foreground">
-              {fmt(TOTAL - shown)}
+              {seen ? fmt(TOTAL - shown) : "—"}
             </dd>
           </div>
         </dl>
