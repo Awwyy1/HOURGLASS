@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-on-your-phone-in-bed",
@@ -10,9 +11,50 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈2.8",
+    unit: "waking years",
+    text: "of a 60-year adult life, at 45 minutes on the phone in bed.",
+  },
+  day: {
+    hours: 0.75,
+    value: "3.1%",
+    text: "of every day: 45 minutes in bed with a phone, taken from sleep.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every night of the year",
+  },
+  year: {
+    days: 11,
+    value: "11 days",
+    text: "274 hours a year",
+  },
+  toLife: {
+    op: "× 60",
+    text: "60 adult years",
+  },
+  life: {
+    years: 2.8,
+    total: 40,
+    value: "2.8 yrs",
+    text: "of your 40 waking years: about 16,400 hours, plus the sleep lost after.",
+  },
+  why: {
+    title: "Why 45 minutes",
+    max: 90,
+    band: [30, 60],
+    marker: 45,
+    ticks: [0, 30, 60, 90],
+    unit: "min",
+    text: "Surveys cluster between 30 and 60 min in bed before sleep, with younger adults at the upper end.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend on your phone in bed?"
         description="Most adults spend between thirty and sixty minutes on a phone after getting into bed. Over a lifetime that is nearly three waking years, and it is the only category in this journal that charges you twice for the same hour."
@@ -47,6 +89,8 @@ function Article() {
           the night that follows it.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

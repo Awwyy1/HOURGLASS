@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-on-video-calls",
@@ -10,9 +11,50 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈3",
+    unit: "waking years",
+    text: "of a 30-year career, at two and a half hours a working day.",
+  },
+  day: {
+    hours: 2.5,
+    value: "10%",
+    text: "of a working day: two and a half hours on camera, for remote and hybrid workers.",
+  },
+  toYear: {
+    op: "× 230",
+    text: "every working day: 230 a year",
+  },
+  year: {
+    days: 24,
+    value: "24 days",
+    text: "575 hours a year",
+  },
+  toLife: {
+    op: "× 30",
+    text: "30 years of a career",
+  },
+  life: {
+    years: 3.0,
+    total: 20,
+    value: "3.0 yrs",
+    text: "of the 20 waking years in that span: 17,250 hours. The rest is everything else.",
+  },
+  why: {
+    title: "Why 2.5 hours",
+    max: 4,
+    band: [2, 3],
+    marker: 2.5,
+    ticks: [0, 2, 3, 4],
+    unit: "h",
+    text: "Estimates for remote and hybrid knowledge workers cluster at 2–3 h a day. Managers run well above that.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend on video calls?"
         description="Remote and hybrid workers average two to three hours a day on video calls, which comes to several waking years over a career. It is the newest large category here, and the only one with a fatigue mechanism named after the software."
@@ -47,6 +89,8 @@ function Article() {
           to sit among them.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-listening-to-podcasts",
@@ -10,9 +11,41 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈2.8",
+    unit: "waking years",
+    text: "over forty adult years, at eight hours of listening a week.",
+  },
+  day: {
+    hours: 1.14,
+    value: "4.8%",
+    text: "of every day: eight hours a week, or about 69 minutes a day.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 17,
+    value: "17 days",
+    text: "416 hours a year",
+  },
+  toLife: {
+    op: "× 40",
+    text: "adult years of listening",
+  },
+  life: {
+    years: 2.8,
+    total: 27,
+    value: "2.8 yrs",
+    text: "of your 27 waking years: about 16,600 hours. The rest is everything else.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend listening to podcasts?"
         description="Weekly podcast listeners average around eight hours a week, which comes to nearly three waking years over an adult life. The medium is unusual because most of those hours were not taken from anything else."
@@ -47,6 +80,8 @@ function Article() {
           interesting thing about them.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

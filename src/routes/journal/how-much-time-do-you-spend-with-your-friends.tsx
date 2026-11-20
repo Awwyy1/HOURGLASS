@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-with-your-friends",
@@ -10,9 +11,50 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈2.5",
+    unit: "waking years",
+    text: "of 60 adult years, at about 40 minutes a day with friends.",
+  },
+  day: {
+    hours: 0.667,
+    value: "2.8%",
+    text: "of every day: about 40 minutes with friends, averaged across adult life.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 10,
+    value: "10 days",
+    text: "243 hours a year",
+  },
+  toLife: {
+    op: "× 60",
+    text: "60 adult years",
+  },
+  life: {
+    years: 2.5,
+    total: 40,
+    value: "2.5 yrs",
+    text: "of your 40 waking years: about 14,600 hours, most of it before 30.",
+  },
+  why: {
+    title: "Why 40 minutes",
+    max: 150,
+    band: [20, 30],
+    marker: 40,
+    ticks: [0, 30, 120, 150],
+    unit: "min",
+    text: "Over 2 h a day in the late teens, 20–30 min from the late thirties (American Time Use Survey).",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend with your friends?"
         description="Time with friends peaks in the late teens and falls steeply through the thirties. Research puts the cost of a new close friendship at around 200 hours, which is why adult friendship is less about willingness than arithmetic."
@@ -47,6 +89,8 @@ function Article() {
           simpler and less flattering to nobody in particular.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

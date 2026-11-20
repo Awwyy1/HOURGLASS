@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-stuck-in-traffic",
@@ -10,9 +11,49 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "108",
+    unit: "waking days",
+    text: "of a 40-year driving career, at 43 hours of delay a year.",
+  },
+  day: {
+    hours: 0.118,
+    value: "0.5%",
+    text: "of every day: 43 hours of delay a year, about seven minutes a day.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 2,
+    value: "2 days",
+    text: "43 hours a year",
+  },
+  toLife: {
+    op: "× 40",
+    text: "years of driving",
+  },
+  life: {
+    years: 0.29,
+    total: 27,
+    value: "108 days",
+    text: "of your 27 waking years: 1,720 hours of delay, on top of the drive itself.",
+  },
+  why: {
+    title: "Why 43 hours",
+    max: 120,
+    marker: 43,
+    ticks: [0, 43, 101, 120],
+    unit: "h",
+    text: "US average 43 h a year lost to congestion (INRIX, 2023). New York 101 h, Chicago 96 h.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend stuck in traffic?"
         description="INRIX found the average US driver lost 43 hours to congestion in 2023. In the worst cities, the figure exceeds 60 hours a year. Over a driving lifetime, that is more than two waking years spent not moving."
@@ -47,6 +88,8 @@ function Article() {
           everyone else on the road at the same moment you are.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

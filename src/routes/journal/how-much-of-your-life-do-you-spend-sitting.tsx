@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-sitting",
@@ -10,9 +11,50 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈33",
+    unit: "waking years",
+    text: "of an adult life, at nine hours a day in a chair.",
+  },
+  day: {
+    hours: 9,
+    value: "38%",
+    text: "of every day: nine hours seated, at a desk, in the car and in front of a screen.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 137,
+    value: "137 days",
+    text: "3,285 hours a year",
+  },
+  toLife: {
+    op: "× 60",
+    text: "adult years",
+  },
+  life: {
+    years: 33.8,
+    total: 40,
+    value: "33.8 yrs",
+    text: "of your 40 waking years: about 197,000 hours. The rest is spent on your feet.",
+  },
+  why: {
+    title: "Why 9 hours",
+    max: 12,
+    band: [8, 10],
+    marker: 9,
+    ticks: [0, 8, 10, 12],
+    unit: "h",
+    text: "Measured adults sit 8–10 h a day; NHANES data puts the average near 8.2 h. Desk workers sit more.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much of your life do you spend sitting?"
         description="The average adult sits for around nine hours of every waking day. Over an adult lifetime that comes to more than 30 waking years spent in a chair, and the health research on that posture has grown hard to ignore."
@@ -47,6 +89,8 @@ function Article() {
           is exactly why the total is so large and so easy to miss.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

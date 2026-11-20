@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-in-the-shower",
@@ -10,9 +11,41 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈7",
+    unit: "waking months",
+    text: "of a 70-year showering life, at one eight-minute shower a day.",
+  },
+  day: {
+    hours: 0.133,
+    value: "0.6%",
+    text: "of every day: one shower of about eight minutes.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 2,
+    value: "2 days",
+    text: "49 hours a year",
+  },
+  toLife: {
+    op: "× 70",
+    text: "years of a showering life",
+  },
+  life: {
+    years: 0.6,
+    total: 47,
+    value: "210 days",
+    text: "of your 47 waking years: about 3,400 hours. The rest is everything else.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much of your life do you spend in the shower?"
         description="The average shower runs about eight minutes, once a day. Over a lifetime that comes to roughly seven months of waking time and hundreds of thousands of gallons of water — spent in what may be the last unstimulated space most people have left."
@@ -47,6 +80,8 @@ function Article() {
           what it has become the last of.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 import { AnswerBlock } from "../../components/AnswerBlock";
 
 export const Route = createFileRoute(
@@ -11,9 +12,49 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈4",
+    unit: "waking years",
+    text: "of a 60-year adult listening life, at 32 hours a month.",
+  },
+  day: {
+    hours: 1.05,
+    value: "4.4%",
+    text: "of every day: just over an hour of music, often in the background.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 16,
+    value: "16 days",
+    text: "384 hours a year",
+  },
+  toLife: {
+    op: "× 60",
+    text: "60 adult listening years",
+  },
+  life: {
+    years: 3.9,
+    total: 40,
+    value: "3.9 yrs",
+    text: "of your 40 waking years: 23,040 hours. Much of it stacks with other tasks.",
+  },
+  why: {
+    title: "Why 1 hour",
+    max: 90,
+    marker: 63,
+    ticks: [0, 30, 63, 90],
+    unit: "min",
+    text: "All sources: 32 h a month (Nielsen Music 360). Spotify subscribers about 30 min a day in the app.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend listening to music?"
         description="Nielsen found Americans spend around 32 hours a month listening to music across all platforms. Over a lifetime that comes to roughly four waking years — more than most people spend on any single social media platform."
@@ -47,6 +88,8 @@ function Article() {
           feels guilty about the hours. That makes it worth looking at carefully.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <AnswerBlock>
         Americans spend about 32 hours a month listening to music across all platforms, which is a little over an hour a day. Across a 60-year listening life that comes to 23,040 hours, or just under four waking years, more than most people accumulate on any single social platform.

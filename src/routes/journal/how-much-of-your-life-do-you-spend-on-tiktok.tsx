@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 import { AnswerBlock } from "../../components/AnswerBlock";
 
 export const Route = createFileRoute(
@@ -11,9 +12,49 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈2",
+    unit: "waking years",
+    text: "over 40 years of use, at 54 minutes a day.",
+  },
+  day: {
+    hours: 0.9,
+    value: "3.8%",
+    text: "of every day: 54 minutes on the app, in about five sessions.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 14,
+    value: "14 days",
+    text: "329 hours a year",
+  },
+  toLife: {
+    op: "× 40",
+    text: "years of use, from 16 to the mid fifties",
+  },
+  life: {
+    years: 2.3,
+    total: 27,
+    value: "2.3 yrs",
+    text: "of your 27 waking years: about 13,100 hours. The rest is everything else.",
+  },
+  why: {
+    title: "Why 54 minutes",
+    max: 120,
+    marker: 54,
+    ticks: [0, 54, 80, 120],
+    unit: "min",
+    text: "US average 54 min a day (Data.ai, 2023). Users aged 18 to 34 average closer to 80 min.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much of your life do you spend on TikTok?"
         description="The average US user spends 54 minutes a day on TikTok. Over a lifetime of use that comes to roughly two waking years given to an algorithm you never chose to follow."
@@ -48,6 +89,8 @@ function Article() {
           The two facts are related.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <AnswerBlock>
         The average US user spends 54 minutes a day on TikTok, which comes to roughly two waking years over a lifetime of use. TikTok was the first major platform built around an algorithm rather than around people you chose to follow, which is why sessions routinely outlast the intention behind them.

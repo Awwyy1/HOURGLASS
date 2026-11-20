@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-getting-ready",
@@ -10,9 +11,50 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈3.7",
+    unit: "waking years",
+    text: "of a 79-year life, at 45 minutes of grooming a day.",
+  },
+  day: {
+    hours: 0.75,
+    value: "3.1%",
+    text: "of every day: 45 minutes showering, dressing, hair and personal care.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 11,
+    value: "11 days",
+    text: "274 hours a year",
+  },
+  toLife: {
+    op: "× 79",
+    text: "a US life expectancy",
+  },
+  life: {
+    years: 3.7,
+    total: 53,
+    value: "3.7 yrs",
+    text: "of your 53 waking years: about 21,600 hours. The rest is everything else.",
+  },
+  why: {
+    title: "Why 45 minutes",
+    max: 90,
+    band: [35, 55],
+    marker: 45,
+    ticks: [0, 35, 55, 90],
+    unit: "min",
+    text: "Men about 35 min, women about 55 (BLS American Time Use Survey). Involved routines run 60–90 min.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend getting ready in the morning?"
         description="The Bureau of Labor Statistics found Americans spend about 45 minutes a day on grooming — showering, dressing, hair, and personal care. Over a lifetime that adds up to nearly three waking years spent getting ready to start the day."
@@ -46,6 +88,8 @@ function Article() {
           time spent doing anything. It feels like the thing that happens before the day starts.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-reading-books",
@@ -10,9 +11,49 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "388",
+    unit: "waking days",
+    text: "of a 60-year adult life, at 17 minutes a day.",
+  },
+  day: {
+    hours: 0.283,
+    value: "1.2%",
+    text: "of every day: 17 minutes reading for personal interest, the US average.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 4,
+    value: "4 days",
+    text: "about 103 hours a year",
+  },
+  toLife: {
+    op: "× 60",
+    text: "60 adult years",
+  },
+  life: {
+    years: 1.1,
+    total: 40,
+    value: "1.1 yrs",
+    text: "of your 40 waking years: 6,205 hours. The rest is everything else.",
+  },
+  why: {
+    title: "Why 17 minutes",
+    max: 60,
+    marker: 17,
+    ticks: [0, 15, 30, 45, 60],
+    unit: "min",
+    text: "US average 17 min a day (BLS). A dedicated reader at an hour a day reaches about 3.7 waking years.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend reading books in a lifetime?"
         description="The average American reads about 12 books a year and spends around 17 minutes a day reading for pleasure. Over a lifetime that adds up to just over a year of waking time — less than most people assume."
@@ -47,6 +88,8 @@ function Article() {
           or what the lifetime total looks like.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

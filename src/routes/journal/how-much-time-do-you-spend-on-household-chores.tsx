@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-on-household-chores",
@@ -10,9 +11,49 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈7.5",
+    unit: "waking years",
+    text: "of a 60-year adult life, at two hours of chores a day.",
+  },
+  day: {
+    hours: 2,
+    value: "8.3%",
+    text: "of every day: two hours of cleaning, laundry and upkeep.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 30,
+    value: "30 days",
+    text: "730 hours a year",
+  },
+  toLife: {
+    op: "× 60",
+    text: "60 adult years",
+  },
+  life: {
+    years: 7.5,
+    total: 40,
+    value: "7.5 yrs",
+    text: "of your 40 waking years: 43,800 hours. Cooking and childcare are extra.",
+  },
+  why: {
+    title: "Why 2 hours",
+    max: 3,
+    marker: 2,
+    ticks: [0, 1.6, 2.3, 3],
+    unit: "h",
+    text: "Women about 2.3 h a day, men about 1.6 h (Bureau of Labor Statistics, American Time Use Survey).",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend on household chores?"
         description="The Bureau of Labor Statistics puts household activities — cleaning, laundry, organizing — at around two hours a day for the average American. Over a lifetime that is more than six waking years, and the split between men and women remains wide."
@@ -46,6 +87,8 @@ function Article() {
           costs, they are easy to underestimate until someone runs the total.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

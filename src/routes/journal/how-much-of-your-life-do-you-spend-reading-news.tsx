@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-reading-news",
@@ -10,9 +11,50 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈2.5",
+    unit: "waking years",
+    text: "of 40 adult years, at one hour a day with the news.",
+  },
+  day: {
+    hours: 1,
+    value: "4.2%",
+    text: "of every day: one hour of articles, video, podcasts and feeds.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 15,
+    value: "15 days",
+    text: "365 hours a year",
+  },
+  toLife: {
+    op: "× 40",
+    text: "40 years of adult life",
+  },
+  life: {
+    years: 2.5,
+    total: 27,
+    value: "2.5 yrs",
+    text: "of your 27 waking years: 14,600 hours. Readers recall about 20% of a day's news.",
+  },
+  why: {
+    title: "Why 1 hour",
+    max: 90,
+    band: [45, 60],
+    marker: 60,
+    ticks: [0, 45, 60, 90],
+    unit: "min",
+    text: "Typical 45–60 min a day across formats (Reuters Institute). Engaged news readers closer to 90 min.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much of your life do you spend reading news?"
         description="The average person spends an hour a day with the news. Over 40 years that is two and a half waking years. Studies find people remember about 20 percent of what they read."
@@ -47,6 +89,8 @@ function Article() {
           in the loop of things you cannot change.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

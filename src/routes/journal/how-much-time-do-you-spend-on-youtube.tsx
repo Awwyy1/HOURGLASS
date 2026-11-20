@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-on-youtube",
@@ -10,9 +11,50 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈2",
+    unit: "waking years",
+    text: "over 40 years of regular use, at 45 minutes a day.",
+  },
+  day: {
+    hours: 0.75,
+    value: "3.1%",
+    text: "of every day: about 45 minutes for a regular user.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 11,
+    value: "11 days",
+    text: "273 hours a year",
+  },
+  toLife: {
+    op: "× 40",
+    text: "40 years of regular use",
+  },
+  life: {
+    years: 1.9,
+    total: 27,
+    value: "1.9 yrs",
+    text: "of your 27 waking years: about 10,920 hours. The rest is everything else.",
+  },
+  why: {
+    title: "Why 45 minutes",
+    max: 120,
+    band: [45, 48],
+    marker: 45,
+    ticks: [0, 22, 45, 120],
+    unit: "min",
+    text: "Across all accounts about 22 min (Google). Active users 45–48 min (Statista, app analytics).",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend on YouTube?"
         description="Regular users spend around 45 minutes a day on YouTube. Over 40 years that becomes two waking years. The recommendation algorithm drives 70 percent of total watch time."
@@ -47,6 +89,8 @@ function Article() {
           stayed tends to be the largest.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>
