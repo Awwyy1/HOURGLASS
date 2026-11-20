@@ -169,3 +169,27 @@
   }
   .hairline:focus { outline: none; border-bottom-color: var(--color-foreground); }
 }
+
+/* Article with an infographic beside it (src/components/LifeFigure.tsx).
+   Narrow screens keep the single column, with the figure after the header.
+   From 1100px the text takes the left column and the figure the right one,
+   spanning the article's full height so it can stay in view. */
+.life-figure { --fa: var(--fa-light); }
+.dark .life-figure { --fa: var(--fa-dark); }
+.article-with-figure .article-figure { margin-bottom: 3.5rem; }
+@media (min-width: 1100px) {
+  .article-with-figure {
+    display: grid;
+    grid-template-columns: minmax(0, 640px) minmax(0, 460px);
+    column-gap: 88px;
+    justify-content: center;
+    max-width: 1240px;
+  }
+  .article-with-figure > * { grid-column: 1; }
+  .article-with-figure > .article-figure {
+    grid-column: 2;
+    grid-row: 1 / span 40;
+    margin-bottom: 0;
+  }
+  .article-figure-inner { position: sticky; top: 32px; }
+}

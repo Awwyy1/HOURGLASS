@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-sleeping",
@@ -10,9 +11,42 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈25",
+    unit: "years asleep",
+    text: "out of a 79-year life. One night becomes a quarter of it.",
+  },
+  day: {
+    hours: 7.5,
+    start: 23,
+    value: "31%",
+    text: "of every day: 7.5 hours, 23:00 to 06:30. The other 16.5 are yours to spend.",
+  },
+  toYear: { op: "× 365", text: "every night of the year" },
+  year: { days: 114, value: "114 days", text: "2,737 hours a year" },
+  toLife: { op: "× 79", text: "a US life expectancy" },
+  life: {
+    years: 24.7,
+    total: 79,
+    value: "24.7 yrs",
+    text: "asleep: 216,000 hours. The other 54.3 years are the waking budget.",
+  },
+  why: {
+    title: "Why 7.5 hours",
+    max: 12,
+    band: [7, 9],
+    hatchBelow: 7,
+    marker: 7.5,
+    ticks: [0, 7, 9, 12],
+    unit: "h",
+    text: "Recommended 7–9 h (National Sleep Foundation). US average ≈ 7 h (CDC). Below 7 h, measurable deficits.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much of your life do you spend sleeping?"
         description="About a third of your life — 25 years out of 79 spent unconscious. The number is fixed. What you do with the other two-thirds is not."
@@ -47,6 +81,8 @@ function Article() {
           something interesting.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>
