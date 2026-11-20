@@ -38,9 +38,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 3.9,
-    total: 40,
+    total: 60,
     value: "3.9 yrs",
-    text: "of your 40 waking years: 23,040 hours. Much of it stacks with other tasks.",
+    text: "of your 60 waking years: 23,040 hours. Much of it stacks with other tasks.",
   },
   why: {
     title: "Why 1 hour",

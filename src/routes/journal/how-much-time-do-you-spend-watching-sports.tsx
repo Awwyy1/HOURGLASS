@@ -37,9 +37,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 1.6,
-    total: 33,
+    total: 50,
     value: "1.6 yrs",
-    text: "of your 33 waking years: about 9,100 hours. The rest is everything else.",
+    text: "of your 50 waking years: about 9,100 hours. The rest is everything else.",
   },
   why: {
     title: "Why 3.5 hours a week",

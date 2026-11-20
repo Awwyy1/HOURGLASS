@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-on-dating-apps",
@@ -10,9 +11,50 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "820",
+    unit: "hours",
+    text: "over three years of active use, at 45 minutes a day.",
+  },
+  day: {
+    hours: 0.75,
+    value: "3.1%",
+    text: "of every day: 45 minutes, inside the 30–90 minute range for active users.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 11,
+    value: "11 days",
+    text: "about 274 hours a year",
+  },
+  toLife: {
+    op: "× 3",
+    text: "three years of active use",
+  },
+  life: {
+    years: 0.14,
+    total: 3,
+    value: "51 days",
+    text: "of the 3 waking years in that span: 820 hours, or 34 full 24-hour days.",
+  },
+  why: {
+    title: "Why 45 minutes",
+    max: 120,
+    band: [30, 90],
+    marker: 45,
+    ticks: [0, 30, 60, 90, 120],
+    unit: "min",
+    text: "Active users spend 30–90 min a day (app-usage research). Hinge reports about 30, Tinder surveys nearer 60.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend on dating apps?"
         description="The average active user spends 30 to 90 minutes a day on dating apps. Over two to three years of use, the total reaches hundreds of hours spent swiping and messaging."
@@ -22,6 +64,7 @@ function Article() {
         title="How much time do you spend on dating apps?"
         description="The average active user spends 30 to 90 minutes a day on dating apps. Over two to three years of use, the total reaches hundreds of hours spent swiping and messaging."
         datePublished="2026-05-20"
+        dateModified="2026-11-20"
         slug="how-much-time-do-you-spend-on-dating-apps"
       />
       <Breadcrumbs
@@ -48,6 +91,8 @@ function Article() {
         </p>
       </header>
 
+      <LifeFigure data={FIGURE} />
+
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>
           Tinder reported 75 million monthly active users in 2023. Match Group, which owns
@@ -62,8 +107,8 @@ function Article() {
 
         <p>
           At 45 minutes per day across two to three years of active use, the cumulative total
-          lands somewhere between 550 and 820 hours. In waking days, that is between 23 and
-          34 full days given to swiping, messaging, and exchanges that mostly do not leave the
+          lands somewhere between 550 and 820 hours. In waking days, that is between 34 and
+          51 days, or 23 to 34 full 24-hour days, given to swiping, messaging, and exchanges that mostly do not leave the
           app. Three years is a reasonable figure: Pew Research found that 30 percent of US
           adults have used a dating app, but only 12 percent say they found a committed
           relationship through one. The median user stays active considerably longer than
@@ -110,7 +155,7 @@ function Article() {
         </p>
 
         <p className="text-muted-foreground">
-          820 hours over three years is 34 waking days. For an activity most people describe
+          820 hours over three years is about 51 waking days. For an activity most people describe
           as something they do casually in spare moments, the total is larger than most would
           guess before they run it. Whether the time produces something worth that investment
           is a question each person answers differently. But knowing the number before you

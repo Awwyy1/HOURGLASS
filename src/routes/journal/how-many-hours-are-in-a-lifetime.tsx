@@ -3,6 +3,8 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { FigureCard, FigurePanel } from "../../components/LifeFigure";
+import { Funnel, Compare } from "../../components/BreakdownFigures";
 import { AnswerBlock } from "../../components/AnswerBlock";
 
 export const Route = createFileRoute(
@@ -11,9 +13,67 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+function ArticleFigure() {
+  return (
+    <FigurePanel
+      answer={{
+        value: "692,040",
+        unit: "hours",
+        text: "in a 79-year life. Between 150,000 and 175,000 of them are genuinely yours.",
+      }}
+    >
+      <FigureCard>
+        <Funnel
+          num="01"
+          title="From the total to the free hours"
+          steps={[
+            { value: 692040, display: "692,040", label: "hours in 79 years" },
+            {
+              value: 461000,
+              display: "461,000",
+              label: "waking hours",
+              minus: "minus about 230,680 hours of sleep",
+            },
+            {
+              value: 356000,
+              display: "356,000",
+              label: "adult waking hours, 18 to 79",
+              minus: "minus about 105,000 waking hours of childhood",
+            },
+            {
+              value: 162500,
+              display: "150,000–175,000",
+              label: "discretionary, about five hours a day",
+              minus: "minus work, upkeep and the friction of daily life",
+              accent: true,
+            },
+          ]}
+        />
+      </FigureCard>
+      <FigureCard>
+        <Compare
+          num="02"
+          title="Adult waking hours, by use"
+          rows={[
+            { label: "Work, ages 22 to 65", value: 80000, display: "80,000" },
+            { label: "Upkeep, hygiene and errands", value: 45000, display: "≈45,000" },
+            {
+              label: "Genuinely discretionary",
+              value: 162500,
+              display: "150,000–175,000",
+              accent: true,
+            },
+          ]}
+          text="Screen time averages six to seven hours a day (Nielsen), more than the whole free budget."
+        />
+      </FigureCard>
+    </FigurePanel>
+  );
+}
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How many hours are in a lifetime?"
         description="A human life contains around 692,000 hours in total. Subtract sleep and you have roughly 461,000 waking hours. The number sounds large until you see where it actually goes."
@@ -48,6 +108,8 @@ function Article() {
           looking at the number more carefully than most people ever do.
         </p>
       </header>
+
+      <ArticleFigure />
 
       <AnswerBlock>
         A human life of 79 years contains about 692,040 hours in total. Subtract sleep and roughly 461,000 waking hours remain. After childhood, work, and daily maintenance, the genuinely discretionary portion falls to somewhere between 150,000 and 175,000 hours, or about five hours a day across an adult life.

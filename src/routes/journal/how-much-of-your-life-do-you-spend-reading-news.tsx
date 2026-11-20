@@ -37,9 +37,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 2.5,
-    total: 27,
+    total: 40,
     value: "2.5 yrs",
-    text: "of your 27 waking years: 14,600 hours. Readers recall about 20% of a day's news.",
+    text: "of your 40 waking years: 14,600 hours. Readers recall about 20% of a day's news.",
   },
   why: {
     title: "Why 1 hour",

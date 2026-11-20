@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 import { AnswerBlock } from "../../components/AnswerBlock";
 
 export const Route = createFileRoute(
@@ -11,18 +12,59 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈17",
+    unit: "waking years",
+    text: "of a 43-year career, once commuting and after-hours work are counted.",
+  },
+  day: {
+    hours: 6.37,
+    value: "27%",
+    text: "of every day on average: 100,000 career hours spread over 43 years.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 97,
+    value: "97 days",
+    text: "2,326 hours a year",
+  },
+  toLife: {
+    op: "× 43",
+    text: "a career from 22 to 65",
+  },
+  life: {
+    years: 17.1,
+    total: 43,
+    value: "17.1 yrs",
+    text: "of your 43 waking years: 100,000 hours. The rest is everything else.",
+  },
+  why: {
+    title: "Why 6.4 hours",
+    max: 10,
+    marker: 6.37,
+    ticks: [0, 5.5, 10],
+    unit: "h",
+    text: "Contract: 40 h a week for 50 weeks, 5.5 h a day. Commuting and work-related load push it higher.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much of your life do you spend working?"
-        description="The standard answer is 40 hours a week. Over a full career: 80,000 hours — somewhere between 17 and 20 waking years of your life given to work."
+        description="The standard answer is 40 hours a week. Counting commuting, a full career comes to about 100,000 hours, a little over 17 waking years of your life."
         ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend working?"
-        description="The standard answer is 40 hours a week. Over a full career: 80,000 hours — somewhere between 17 and 20 waking years of your life given to work."
+        description="The standard answer is 40 hours a week. Counting commuting, a full career comes to about 100,000 hours, a little over 17 waking years of your life."
         datePublished="2026-04-16"
+        dateModified="2026-11-20"
         slug="how-much-of-your-life-do-you-spend-working"
       />
       <Breadcrumbs
@@ -48,8 +90,10 @@ function Article() {
         </p>
       </header>
 
+      <LifeFigure data={FIGURE} />
+
       <AnswerBlock>
-        A standard career of 40 hours a week across 43 years comes to around 80,000 hours. Counting commuting, email outside hours, and the mental load that follows you home, the realistic total crosses 100,000 hours, which is somewhere between 17 and 20 waking years of a life.
+        A standard career of 40 hours a week across 43 years comes to around 86,000 contracted hours, or about 14.7 waking years. Counting commuting, email outside hours, and the mental load that follows you home, the realistic total is at least 100,000 hours, which is a little over 17 waking years of a life.
       </AnswerBlock>
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
@@ -78,7 +122,7 @@ function Article() {
         <p>
           Over a full career, 43 years at 2,000 hours each adds up to 86,000 hours. This is not
           an obscure figure. There is a career research organisation literally called 80,000 Hours,
-          named after exactly this calculation, built on the observation that this is approximately
+          named after a rounder version of the same calculation over 40 years instead of 43, built on the observation that this is approximately
           how much professional time a typical person has available across their working life.
           Eighty thousand hours. That is a large number, and it is also a fixed one. You do not
           get more of it regardless of what you do with the rest of your time.
@@ -107,10 +151,12 @@ function Article() {
         </p>
 
         <p>
-          Run that version of the calculation and the career total crosses 100,000 hours without
-          much effort. In waking years, where one year represents all your conscious hours for 365
-          days, that is somewhere between 17 and 20 years of your life spent on work and everything
-          that surrounds it.
+          Run that version of the calculation and the career total reaches about 100,000 hours. A
+          typical commute of around 300 hours a year lifts the annual figure from 2,000 to roughly
+          2,300, which over 43 years comes to about 99,000 hours before any of the after-hours load
+          is counted. In waking years, where one year represents all your conscious hours for 365
+          days, 100,000 hours is a little over 17 years of your life spent on work and everything
+          that surrounds it, against about 14.7 years for the contracted hours alone.
         </p>
 
         <h2 className="pt-8 font-serif text-2xl italic text-foreground">
@@ -121,7 +167,7 @@ function Article() {
           Work is where a lot of people find meaning, structure, and identity. Some people would
           choose to work this much even if they did not need the income. A number being large is not
           the same as a number being wrong. The point of running this calculation is not to produce
-          regret or to suggest that 80,000 hours is too many.
+          regret or to suggest that 100,000 hours is too many.
         </p>
 
         <p>
@@ -144,8 +190,8 @@ function Article() {
 
       <FAQSection
         faqs={[
-          { q: "How many hours does the average person work in a lifetime?", a: "The standard figure is 80,000 hours over a 40-year career at 40 hours per week. In practice the number is higher. Overtime, work-adjacent tasks like commuting and email outside hours, and the unpaid time many knowledge workers spend thinking about work all add to the total. A more honest career figure for most professionals is somewhere between 90,000 and 100,000 hours." },
-          { q: "What percentage of your life do you spend working?", a: "Around 20 to 25 percent of waking hours over a full career, depending on actual hours per week and how long you work. That makes it the second largest category of time use after sleep, and the largest category of conscious directed activity. Most people have never added it up. The number is usually larger than expected when they do." }
+          { q: "How many hours does the average person work in a lifetime?", a: "The standard figure is 80,000 hours, which assumes 40 years at 40 hours per week. A career from 22 to 65 is closer to 86,000 contracted hours, and in practice the number is higher still. Overtime, work-adjacent tasks like commuting and email outside hours, and the unpaid time many knowledge workers spend thinking about work all add to the total. A more honest career figure for most professionals is around 100,000 hours, or a little over 17 waking years." },
+          { q: "What percentage of your life do you spend working?", a: "About 40 percent of your waking hours during the working years themselves, and around 20 percent of all the waking hours in an 80-year life, depending on actual hours per week and how long you work. That makes it the second largest category of time use after sleep, and the largest category of conscious directed activity. Most people have never added it up. The number is usually larger than expected when they do." }
         ]}
       />
 

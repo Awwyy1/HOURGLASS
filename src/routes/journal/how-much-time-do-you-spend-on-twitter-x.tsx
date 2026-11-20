@@ -38,9 +38,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 0.3,
-    total: 7,
+    total: 10,
     value: "114 days",
-    text: "of the 7 waking years in a decade: 1,820 hours. The rest is everything else.",
+    text: "of the 10 waking years in a decade: 1,820 hours. The rest is everything else.",
   },
 };
 
@@ -49,13 +49,14 @@ function Article() {
     <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend on Twitter / X?"
-        description="The average active user spends around 30 minutes a day on Twitter / X. Over a decade of use that adds up to more than 75 waking days spent reading posts that mostly disappear within hours."
+        description="Active users spend around 30 minutes a day on Twitter / X. Over a decade that adds up to about 114 waking days spent reading posts that mostly disappear within hours."
         ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend on Twitter / X?"
-        description="The average active user spends around 30 minutes a day on Twitter / X. Over a decade of use that adds up to more than 75 waking days spent reading posts that mostly disappear within hours."
+        description="Active users spend around 30 minutes a day on Twitter / X. Over a decade that adds up to about 114 waking days spent reading posts that mostly disappear within hours."
         datePublished="2026-06-15"
+        dateModified="2026-11-20"
         slug="how-much-time-do-you-spend-on-twitter-x"
       />
       <Breadcrumbs

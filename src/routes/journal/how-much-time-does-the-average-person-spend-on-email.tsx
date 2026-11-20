@@ -37,9 +37,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 4.9,
-    total: 27,
+    total: 40,
     value: "4.9 yrs",
-    text: "of the 27 waking years in a career: 28,800 hours. The rest is everything else.",
+    text: "of the 40 waking years in a career: 28,800 hours. The rest is everything else.",
   },
   why: {
     title: "Why 3 hours",

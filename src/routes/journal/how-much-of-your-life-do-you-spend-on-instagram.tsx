@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-on-instagram",
@@ -10,18 +11,60 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "342",
+    unit: "waking days",
+    text: "from the mid-teens to the mid-forties, at half an hour a day.",
+  },
+  day: {
+    hours: 0.5,
+    value: "2.1%",
+    text: "of every day: 30 minutes, spread over 20 to 30 short checks.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 8,
+    value: "7.6 days",
+    text: "182 hours a year",
+  },
+  toLife: {
+    op: "× 30",
+    text: "30 years of use, mid-teens to mid-forties",
+  },
+  life: {
+    years: 0.9,
+    total: 30,
+    value: "342 days",
+    text: "of your 30 waking years on the app: 5,475 hours. Heavy users double it.",
+  },
+  why: {
+    title: "Why 30 minutes",
+    max: 60,
+    band: [30, 35],
+    marker: 30,
+    ticks: [0, 30, 45, 60],
+    unit: "min",
+    text: "Average about 30 min (2023 research), 35 with passive scrolling (Statista). Heavy users 45–60 min.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much of your life do you spend on Instagram?"
-        description="The average person checks Instagram 20 to 30 times a day. Over a lifetime of use, the total approaches six months of waking time spent on a single platform."
+        description="The average person checks Instagram 20 to 30 times a day. Over 30 years of use, that adds up to about eleven months of waking time on a single platform."
         ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend on Instagram?"
-        description="The average person checks Instagram 20 to 30 times a day. Over a lifetime of use, the total approaches six months of waking time spent on a single platform."
+        description="The average person checks Instagram 20 to 30 times a day. Over 30 years of use, that adds up to about eleven months of waking time on a single platform."
         datePublished="2026-03-06"
+        dateModified="2026-11-20"
         slug="how-much-of-your-life-do-you-spend-on-instagram"
       />
       <Breadcrumbs
@@ -45,6 +88,8 @@ function Article() {
           The number is bigger than you think. And once you run it, you cannot really unrun it.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>
@@ -77,10 +122,11 @@ function Article() {
 
         <p>
           Thirty minutes a day is 182 hours a year. That is seven and a half full days, every single
-          year, spent looking at a feed. Over ten years it becomes 75 days. Over the span of time
-          most people actually use Instagram, from their mid-teens through their forties, the total
-          approaches six months of continuous waking time. Not six months of mild background
-          activity. Six months where that was the thing you were doing.
+          year, spent looking at a feed. Over ten years it becomes 76 days. Over the span of time
+          most people actually use Instagram, about 30 years from their mid-teens to their
+          mid-forties, the total comes to 5,475 hours, or roughly 342 waking days. That is about
+          eleven months of waking life in which the feed was the thing you were doing, rather than
+          something running quietly in the background.
         </p>
 
         <p>

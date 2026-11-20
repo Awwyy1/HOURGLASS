@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 import { AnswerBlock } from "../../components/AnswerBlock";
 
 export const Route = createFileRoute(
@@ -11,18 +12,60 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "2.5",
+    unit: "waking years",
+    text: "of a 40-year gaming life, at seven hours a week.",
+  },
+  day: {
+    hours: 1.0,
+    value: "4.2%",
+    text: "of every day: seven hours a week, about an hour a day across all platforms.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 15,
+    value: "15 days",
+    text: "364 hours a year",
+  },
+  toLife: {
+    op: "× 40",
+    text: "40 years of regular gaming",
+  },
+  life: {
+    years: 2.5,
+    total: 40,
+    value: "2.5 yrs",
+    text: "of the 40 waking years in that span: 14,560 hours. The rest is everything else.",
+  },
+  why: {
+    title: "Why 7 hours a week",
+    max: 30,
+    band: [20, 30],
+    marker: 7,
+    ticks: [0, 7, 20, 30],
+    unit: "h",
+    text: "Average 7–8 h a week (Newzoo). The top 10% of players log 20–30 h a week (Nielsen).",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much of your life do you spend playing video games?"
-        description="The average gamer spends 7 to 8 hours a week playing — just under 10 waking years over a lifetime. For the top 10 percent of players, the total exceeds 30 years."
+        description="The average gamer plays 7 to 8 hours a week, about 2.5 waking years over a lifetime. For the top 10 percent of players, the total comes to nearly nine."
         ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend playing video games?"
-        description="The average gamer spends 7 to 8 hours a week playing — just under 10 waking years over a lifetime. For the top 10 percent of players, the total exceeds 30 years."
+        description="The average gamer plays 7 to 8 hours a week, about 2.5 waking years over a lifetime. For the top 10 percent of players, the total comes to nearly nine."
         datePublished="2026-06-03"
+        dateModified="2026-11-20"
         slug="how-much-of-your-life-do-you-spend-playing-video-games"
       />
       <Breadcrumbs
@@ -49,8 +92,10 @@ function Article() {
         </p>
       </header>
 
+      <LifeFigure data={FIGURE} />
+
       <AnswerBlock>
-        The average gamer plays 7 to 8 hours a week, which comes to just under ten waking years across a 40-year gaming life. The top 10 percent of players, who account for most of the industry total, reach roughly 34 waking years at 25 hours a week.
+        The average gamer plays 7 to 8 hours a week, which comes to about two and a half waking years across a 40-year gaming life. The top 10 percent of players, who account for most of the industry total, reach roughly nine waking years at 25 hours a week.
       </AnswerBlock>
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
@@ -66,8 +111,8 @@ function Article() {
         <p>
           At seven hours a week across 52 weeks, the annual total is around 364 hours.
           Over 40 years of regular gaming from adolescence through middle age, that comes
-          to roughly 14,560 hours, or about 3,500 waking days. In waking years: just under
-          ten. That figure will surprise most people who describe themselves as casual
+          to roughly 14,560 hours, or about 910 waking days. In waking years, that is about
+          two and a half. That figure will surprise most people who describe themselves as casual
           gamers. It surprises them because seven hours a week feels like nothing — an
           hour here, a session there. The math only looks large when you run it all the
           way to the end.
@@ -82,15 +127,15 @@ function Article() {
           that roughly 10 percent of players account for the majority of total hours played.
           This top tier, often called core or hardcore gamers, typically logs 20 to 30 hours
           per week. At 25 hours per week over 40 years, the total is 52,000 hours, or about
-          34 waking years. That is more time than most people spend working across their
-          entire career. It is not a rare outcome. It describes tens of millions of people.
+          8.9 waking years. That is as many hours as 26 years of full-time work at 2,000
+          hours a year. It is not a rare outcome. It describes tens of millions of people.
         </p>
 
         <p>
           On the other side of the distribution, around 45 percent of people who identify
           as gamers play primarily on mobile, spending under three hours a week. For them
-          the lifetime total at the same rate comes to somewhere between 6,000 and 7,000
-          hours, or about four waking years. The range between a mobile-only casual player
+          the lifetime total over the same 40 years comes to at most around 6,000 hours, or
+          about one waking year. The range between a mobile-only casual player
           and a core PC or console gamer is enormous, which is why averages in gaming are
           even less informative than averages in most other screen-time categories.
         </p>
@@ -122,7 +167,7 @@ function Article() {
         </p>
 
         <p className="text-muted-foreground">
-          Ten waking years is a large number. For most regular gamers it will land somewhere
+          Two and a half waking years is a large number. For most regular gamers it will land somewhere
           between uncomfortable and hard to believe. The honest response is not to dismiss it
           or to feel guilty about it, but to decide whether the hours are going somewhere you
           actually want them to go — and to make that decision before you have already spent them.

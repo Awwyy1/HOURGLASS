@@ -37,9 +37,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 3.0,
-    total: 20,
+    total: 30,
     value: "3.0 yrs",
-    text: "of the 20 waking years in that span: 17,250 hours. The rest is everything else.",
+    text: "of the 30 waking years in that span: 17,250 hours. The rest is everything else.",
   },
   why: {
     title: "Why 2.5 hours",

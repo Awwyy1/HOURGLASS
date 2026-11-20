@@ -37,9 +37,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 2.6,
-    total: 9,
+    total: 13,
     value: "2.6 yrs",
-    text: "of the 9 waking years those 13 school years hold: about 15,200 hours.",
+    text: "of the 13 waking years those 13 school years hold: about 15,200 hours.",
   },
 };
 

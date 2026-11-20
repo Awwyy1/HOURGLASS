@@ -37,9 +37,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 2.5,
-    total: 40,
+    total: 60,
     value: "2.5 yrs",
-    text: "of your 40 waking years: 14,580 hours. Cleanup adds another 30–40%.",
+    text: "of your 60 waking years: 14,580 hours. Cleanup adds another 30–40%.",
   },
   why: {
     title: "Why 40 minutes",

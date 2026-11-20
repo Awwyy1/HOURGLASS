@@ -3,6 +3,8 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { FigureCard, FigurePanel } from "../../components/LifeFigure";
+import { Compare, UnitGrid } from "../../components/BreakdownFigures";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-parents-spend-with-their-children",
@@ -10,9 +12,51 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+function ArticleFigure() {
+  return (
+    <FigurePanel
+      answer={{
+        value: "940",
+        unit: "Saturdays",
+        text: "between a child's birth and their eighteenth birthday.",
+      }}
+    >
+      <FigureCard>
+        <UnitGrid
+          num="01"
+          title="One row per year of childhood"
+          rows={18}
+          cols={52}
+          mode="sequence"
+          rowLabel={{ every: 3, first: 0 }}
+          parts={[
+            { count: 260, tone: "accent", display: "260", label: "Saturdays gone by age five" },
+            { count: 370, tone: "mid", display: "630", label: "gone by age twelve" },
+            { count: 310, tone: "outline", display: "310", label: "left from twelve to eighteen" },
+          ]}
+          text="Shared time peaks in early childhood and thins out from about age ten."
+        />
+      </FigureCard>
+      <FigureCard>
+        <Compare
+          num="02"
+          title="Direct childcare, hours a week"
+          rows={[
+            { label: "Mothers, 1965", value: 10, display: "10 h" },
+            { label: "Mothers, today", value: 14, display: "14 h", accent: true },
+            { label: "Fathers, 1965", value: 2.5, display: "2.5 h" },
+            { label: "Fathers, today", value: 8, display: "8 h", accent: true },
+          ]}
+          text="Bianchi's time-use diaries. Today that is 1.5 to 2 hours a day, past 10,000 hours by eighteen."
+        />
+      </FigureCard>
+    </FigurePanel>
+  );
+}
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do parents spend with their children?"
         description="Parents today spend more hours with their children than parents did in the 1960s, despite working far more. There are 940 Saturdays between a child's birth and their eighteenth birthday, and most of the total is spent before either side notices."
@@ -47,6 +91,8 @@ function Article() {
           reason it does is more interesting than the figure itself.
         </p>
       </header>
+
+      <ArticleFigure />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

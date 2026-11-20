@@ -12,7 +12,7 @@ import { useEffect, useRef } from "react";
  */
 
 export interface LifeFigureData {
-  answer: { value: string; unit: string; text: string };
+  answer: FigureAnswer;
   day: {
     /** Hours a day the habit takes. */
     hours: number;
@@ -53,11 +53,29 @@ interface Props {
 
 const COLS = 10;
 
-export function LifeFigure({ data, accent = ["#3d4fa3", "#93a4ee"] }: Props) {
+export interface FigureAnswer {
+  value: string;
+  unit: string;
+  text: string;
+}
+
+/**
+ * The frame every article figure shares: the short answer on top, then the
+ * figure's own cards. It sits beside the text on wide screens and stays in
+ * view; when it is taller than the window it scrolls with the article until
+ * its bottom edge is in view and sticks there, so nothing is cut off.
+ */
+export function FigurePanel({
+  answer,
+  accent = ["#3d4fa3", "#93a4ee"],
+  children,
+}: {
+  answer: FigureAnswer;
+  accent?: [string, string];
+  children: React.ReactNode;
+}) {
   const inner = useRef<HTMLDivElement>(null);
 
-  // The panel can be taller than the window. Then it scrolls with the article
-  // until its bottom edge is in view, and sticks there, so nothing is cut off.
   useEffect(() => {
     const el = inner.current;
     if (!el) return;
@@ -73,8 +91,6 @@ export function LifeFigure({ data, accent = ["#3d4fa3", "#93a4ee"] }: Props) {
       ro?.disconnect();
     };
   }, []);
-
-  const { answer, day, toYear, year, toLife, life, why } = data;
 
   return (
     <aside
@@ -97,37 +113,51 @@ export function LifeFigure({ data, accent = ["#3d4fa3", "#93a4ee"] }: Props) {
             {answer.text}
           </p>
         </div>
-
-        <div className="border border-border bg-background px-5 py-5 sm:px-6">
-          <Side num="01" title="One day" value={day.value} text={day.text}>
-            <Dial hours={day.hours} start={day.start} />
-          </Side>
-
-          <Connector op={toYear.op} text={toYear.text} />
-
-          <StageTitle num="02" title="One year" />
-          <Calendar days={year.days} />
-          <p className="mt-3 flex items-baseline gap-3 border-t border-border pt-3">
-            <span className="font-mono text-xl font-light tracking-tight text-foreground">
-              {year.value}
-            </span>
-            <span className="text-[13px] leading-snug text-muted-foreground">{year.text}</span>
-          </p>
-
-          <Connector op={toLife.op} text={toLife.text} />
-
-          <Side num="03" title="One life" value={life.value} text={life.text} accent>
-            <Years filled={life.years} total={life.total} />
-          </Side>
-
-          {why && <Why {...why} />}
-        </div>
+        {children}
       </div>
     </aside>
   );
 }
 
-function StageTitle({ num, title }: { num: string; title: string }) {
+/** A plain card inside a FigurePanel. */
+export function FigureCard({ children }: { children: React.ReactNode }) {
+  return <div className="border border-border bg-background px-5 py-5 sm:px-6">{children}</div>;
+}
+
+export function LifeFigure({ data, accent }: Props) {
+  const { answer, day, toYear, year, toLife, life, why } = data;
+
+  return (
+    <FigurePanel answer={answer} accent={accent}>
+      <div className="border border-border bg-background px-5 py-5 sm:px-6">
+        <Side num="01" title="One day" value={day.value} text={day.text}>
+          <Dial hours={day.hours} start={day.start} />
+        </Side>
+
+        <Connector op={toYear.op} text={toYear.text} />
+
+        <StageTitle num="02" title="One year" />
+        <Calendar days={year.days} />
+        <p className="mt-3 flex items-baseline gap-3 border-t border-border pt-3">
+          <span className="font-mono text-xl font-light tracking-tight text-foreground">
+            {year.value}
+          </span>
+          <span className="text-[13px] leading-snug text-muted-foreground">{year.text}</span>
+        </p>
+
+        <Connector op={toLife.op} text={toLife.text} />
+
+        <Side num="03" title="One life" value={life.value} text={life.text} accent>
+          <Years filled={life.years} total={life.total} />
+        </Side>
+
+        {why && <Why {...why} />}
+      </div>
+    </FigurePanel>
+  );
+}
+
+export function StageTitle({ num, title }: { num: string; title: string }) {
   return (
     <p className="mb-2 flex items-center gap-2.5 font-mono text-[10px] uppercase tracking-[0.24em] text-muted-foreground">
       <span className="inline-grid h-5 min-w-[26px] place-items-center border border-border px-1.5 tracking-[0.05em] text-foreground">

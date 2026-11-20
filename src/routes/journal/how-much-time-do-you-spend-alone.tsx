@@ -37,9 +37,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 20.6,
-    total: 40,
+    total: 60,
     value: "20.6 yrs",
-    text: "of your 40 waking years: about 120,000 hours. The rest is spent in company.",
+    text: "of your 60 waking years: about 120,000 hours. The rest is spent in company.",
   },
 };
 

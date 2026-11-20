@@ -37,9 +37,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 7.4,
-    total: 33,
+    total: 50,
     value: "7.4 yrs",
-    text: "of your 33 waking years: about 43,500 hours. At the teen rate, fifteen.",
+    text: "of your 50 waking years: about 43,500 hours. At the teen rate, fifteen.",
   },
   why: {
     title: "Why 2 h 23 min",

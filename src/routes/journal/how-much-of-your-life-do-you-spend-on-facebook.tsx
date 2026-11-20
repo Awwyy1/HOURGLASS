@@ -37,9 +37,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 0.5,
-    total: 10,
+    total: 15,
     value: "188 days",
-    text: "of the 10 waking years in that span: 3,015 hours. The rest is everything else.",
+    text: "of the 15 waking years in that span: 3,015 hours. The rest is everything else.",
   },
 };
 

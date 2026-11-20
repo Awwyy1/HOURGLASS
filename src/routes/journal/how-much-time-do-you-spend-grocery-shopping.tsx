@@ -38,9 +38,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 0.7,
-    total: 40,
+    total: 60,
     value: "260 days",
-    text: "of your 40 waking years: 4,160 hours in the store, before the drive there and back.",
+    text: "of your 60 waking years: 4,160 hours in the store, before the drive there and back.",
   },
 };
 
@@ -49,13 +49,14 @@ function Article() {
     <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend grocery shopping?"
-        description="The average American spends about 43 minutes on a single grocery trip and shops roughly 1.5 times a week. Over a lifetime that adds up to more than two waking years spent walking store aisles."
+        description="The average American grocery trip takes about 43 minutes, roughly 1.5 times a week. Over an adult life that adds up to about 260 waking days in store aisles."
         ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend grocery shopping?"
-        description="The average American spends about 43 minutes on a single grocery trip and shops roughly 1.5 times a week. Over a lifetime that adds up to more than two waking years spent walking store aisles."
+        description="The average American grocery trip takes about 43 minutes, roughly 1.5 times a week. Over an adult life that adds up to about 260 waking days in store aisles."
         datePublished="2026-07-18"
+        dateModified="2026-11-20"
         slug="how-much-time-do-you-spend-grocery-shopping"
       />
       <Breadcrumbs

@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-on-linkedin",
@@ -10,9 +11,50 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈900",
+    unit: "hours",
+    text: "over a 40-year career, at 20–30 minutes a week while employed.",
+  },
+  day: {
+    hours: 0.06,
+    value: "0.25%",
+    text: "of every day: about 25 minutes a week, under five minutes a day.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 1,
+    value: "1 day",
+    text: "about 22 hours a year",
+  },
+  toLife: {
+    op: "× 40",
+    text: "years of a working career",
+  },
+  life: {
+    years: 0.15,
+    total: 40,
+    value: "56 days",
+    text: "of your 40 waking years: about 900 hours. A job search adds more.",
+  },
+  why: {
+    title: "Why 4 minutes",
+    max: 90,
+    band: [30, 90],
+    marker: 4,
+    ticks: [0, 30, 60, 90],
+    unit: "min",
+    text: "Employed users spend 20–30 min a week. Active job seekers spend 30–90 min a day while searching.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend on LinkedIn?"
         description="LinkedIn has over a billion members but most use it in short bursts — a few minutes a week when employed, hours a day when job hunting. The split between those two groups explains why the averages are so misleading."
@@ -22,6 +64,7 @@ function Article() {
         title="How much time do you spend on LinkedIn?"
         description="LinkedIn has over a billion members but most use it in short bursts — a few minutes a week when employed, hours a day when job hunting. The split between those two groups explains why the averages are so misleading."
         datePublished="2026-05-27"
+        dateModified="2026-11-20"
         slug="how-much-time-do-you-spend-on-linkedin"
       />
       <Breadcrumbs
@@ -48,6 +91,8 @@ function Article() {
         </p>
       </header>
 
+      <LifeFigure data={FIGURE} />
+
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>
           LinkedIn crossed one billion members in 2023. Microsoft, which acquired the platform
@@ -55,8 +100,8 @@ function Article() {
           average session length is around seven to ten minutes, with most casual users opening
           the app a few times per week. Do the math and you get somewhere between 20 and 30
           minutes per week for the average professional who is employed and not actively looking
-          for a new job. Over a 40-year career, at that rate, the total is around 900 hours
-          — a little over 37 waking days.
+          for a new job. Over a 40-year career, at that rate, the total is around 900 hours,
+          or about 56 waking days.
         </p>
 
         <p>

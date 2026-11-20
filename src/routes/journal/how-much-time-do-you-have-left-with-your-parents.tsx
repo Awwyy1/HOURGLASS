@@ -37,9 +37,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 0.2,
-    total: 11,
+    total: 17,
     value: "68 days",
-    text: "of the 11 waking years left: about 1,100 hours in the same room.",
+    text: "of the 17 waking years left: about 1,100 hours in the same room.",
   },
   why: {
     title: "Why 10 minutes",

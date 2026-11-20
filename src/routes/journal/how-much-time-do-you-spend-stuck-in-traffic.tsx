@@ -37,9 +37,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 0.29,
-    total: 27,
+    total: 40,
     value: "108 days",
-    text: "of your 27 waking years: 1,720 hours of delay, on top of the drive itself.",
+    text: "of your 40 waking years: 1,720 hours of delay, on top of the drive itself.",
   },
   why: {
     title: "Why 43 hours",
@@ -56,13 +56,14 @@ function Article() {
     <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend stuck in traffic?"
-        description="INRIX found the average US driver lost 43 hours to congestion in 2023. In the worst cities, the figure exceeds 60 hours a year. Over a driving lifetime, that is more than two waking years spent not moving."
+        description="INRIX found the average US driver lost 43 hours to congestion in 2023. Over a 40-year driving career, that comes to about 108 waking days spent not moving."
         ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend stuck in traffic?"
-        description="INRIX found the average US driver lost 43 hours to congestion in 2023. In the worst cities, the figure exceeds 60 hours a year. Over a driving lifetime, that is more than two waking years spent not moving."
+        description="INRIX found the average US driver lost 43 hours to congestion in 2023. Over a 40-year driving career, that comes to about 108 waking days spent not moving."
         datePublished="2026-06-30"
+        dateModified="2026-11-20"
         slug="how-much-time-do-you-spend-stuck-in-traffic"
       />
       <Breadcrumbs

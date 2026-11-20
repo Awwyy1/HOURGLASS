@@ -37,9 +37,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 33.8,
-    total: 40,
+    total: 60,
     value: "33.8 yrs",
-    text: "of your 40 waking years: about 197,000 hours. The rest is spent on your feet.",
+    text: "of your 60 waking years: about 197,000 hours. The rest is spent on your feet.",
   },
   why: {
     title: "Why 9 hours",

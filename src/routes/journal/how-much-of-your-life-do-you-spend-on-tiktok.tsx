@@ -38,9 +38,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 2.3,
-    total: 27,
+    total: 40,
     value: "2.3 yrs",
-    text: "of your 27 waking years: about 13,100 hours. The rest is everything else.",
+    text: "of your 40 waking years: about 13,100 hours. The rest is everything else.",
   },
   why: {
     title: "Why 54 minutes",

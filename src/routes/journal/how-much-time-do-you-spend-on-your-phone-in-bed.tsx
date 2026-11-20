@@ -37,9 +37,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 2.8,
-    total: 40,
+    total: 60,
     value: "2.8 yrs",
-    text: "of your 40 waking years: about 16,400 hours, plus the sleep lost after.",
+    text: "of your 60 waking years: about 16,400 hours, plus the sleep lost after.",
   },
   why: {
     title: "Why 45 minutes",
