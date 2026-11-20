@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 import { AnswerBlock } from "../../components/AnswerBlock";
 
 export const Route = createFileRoute(
@@ -11,9 +12,41 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "114",
+    unit: "waking days",
+    text: "over a decade of use, at 30 minutes a day.",
+  },
+  day: {
+    hours: 0.5,
+    value: "2.1%",
+    text: "of every day: about 30 minutes for an active user.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 8,
+    value: "8 days",
+    text: "182 hours a year",
+  },
+  toLife: {
+    op: "× 10",
+    text: "a decade of regular use",
+  },
+  life: {
+    years: 0.3,
+    total: 7,
+    value: "114 days",
+    text: "of the 7 waking years in a decade: 1,820 hours. The rest is everything else.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend on Twitter / X?"
         description="The average active user spends around 30 minutes a day on Twitter / X. Over a decade of use that adds up to more than 75 waking days spent reading posts that mostly disappear within hours."
@@ -47,6 +80,8 @@ function Article() {
           bursts of reading that stack into something much larger over months and years.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <AnswerBlock>
         The average active user spends around 30 minutes a day on Twitter / X. Over a decade that comes to 1,820 hours, or roughly 114 waking days spent reading posts that mostly disappear within hours of being written. Twenty years brings the total closer to eight months of waking time.

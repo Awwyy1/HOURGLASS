@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-texting",
@@ -10,9 +11,50 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈2.5",
+    unit: "waking years",
+    text: "of 60 adult years, at about 40 minutes of texting a day.",
+  },
+  day: {
+    hours: 0.667,
+    value: "2.8%",
+    text: "of every day: about 94 texts at 20 to 30 seconds each.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 10,
+    value: "10 days",
+    text: "243 hours a year",
+  },
+  toLife: {
+    op: "× 60",
+    text: "60 adult years",
+  },
+  life: {
+    years: 2.5,
+    total: 40,
+    value: "2.5 yrs",
+    text: "of your 40 waking years: about 14,600 hours. The rest is everything else.",
+  },
+  why: {
+    title: "Why 40 minutes",
+    max: 60,
+    band: [30, 47],
+    marker: 40,
+    ticks: [0, 30, 47, 60],
+    unit: "min",
+    text: "94 texts a day (Text Request) at 20–30 seconds each gives 30–47 min. The midpoint is about 40.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend texting?"
         description="Americans send and receive an average of around 94 texts a day. At roughly 30 seconds of attention per message, that adds up to nearly an hour daily and more than four waking years across a lifetime."
@@ -47,6 +89,8 @@ function Article() {
           is both.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

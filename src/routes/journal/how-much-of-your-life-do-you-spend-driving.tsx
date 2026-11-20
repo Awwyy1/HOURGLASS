@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-driving",
@@ -10,9 +11,41 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈3",
+    unit: "waking years",
+    text: "of a driving life, at 51 minutes a day behind the wheel.",
+  },
+  day: {
+    hours: 0.85,
+    value: "3.5%",
+    text: "of every day: 51 minutes behind the wheel, covering about 31 miles.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 13,
+    value: "13 days",
+    text: "310 hours a year",
+  },
+  toLife: {
+    op: "× 60",
+    text: "driving years, from 16 into the mid seventies",
+  },
+  life: {
+    years: 3.2,
+    total: 40,
+    value: "3.2 yrs",
+    text: "of your 40 waking years: about 18,600 hours. The rest is everything else.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much of your life do you spend driving?"
         description="The AAA Foundation found the average American driver spends about 51 minutes a day behind the wheel. Over a driving life that comes to more than three waking years, and it is the one large category a technology shift could plausibly erase."
@@ -47,6 +80,8 @@ function Article() {
           walk, and it adds up to more than most drivers would guess.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

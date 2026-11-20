@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-watching-sports",
@@ -10,9 +11,50 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈1.5",
+    unit: "waking years",
+    text: "over 50 adult years, at three and a half hours a week.",
+  },
+  day: {
+    hours: 0.5,
+    value: "2.1%",
+    text: "of every day: three and a half hours a week of live sports.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 8,
+    value: "8 days",
+    text: "183 hours a year",
+  },
+  toLife: {
+    op: "× 50",
+    text: "adult years of watching",
+  },
+  life: {
+    years: 1.6,
+    total: 33,
+    value: "1.6 yrs",
+    text: "of your 33 waking years: about 9,100 hours. The rest is everything else.",
+  },
+  why: {
+    title: "Why 3.5 hours a week",
+    max: 12,
+    band: [8, 10],
+    marker: 3.5,
+    ticks: [0, 3.5, 8, 10, 12],
+    unit: "h",
+    text: "Nielsen average 3.5 h a week; men ≈5 h, women ≈2 h. Dedicated fans report 8–10 h in season.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend watching sports?"
         description="Nielsen found Americans spend an average of around 3.5 hours a week watching live sports. For dedicated fans the number is much higher. Over 50 years, even the average adds up to well over a year of waking time."
@@ -47,6 +89,8 @@ function Article() {
           because the hours spent watching are also hours spent in company.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

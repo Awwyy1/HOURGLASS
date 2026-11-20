@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-in-school",
@@ -10,9 +11,41 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈2.5",
+    unit: "waking years",
+    text: "in the building, from kindergarten to the end of high school.",
+  },
+  day: {
+    hours: 6.5,
+    value: "27%",
+    text: "of every school day: six and a half hours in the building.",
+  },
+  toYear: {
+    op: "× 180",
+    text: "school days a year",
+  },
+  year: {
+    days: 49,
+    value: "49 days",
+    text: "1,170 hours a year",
+  },
+  toLife: {
+    op: "× 13",
+    text: "school years, kindergarten through high school",
+  },
+  life: {
+    years: 2.6,
+    total: 9,
+    value: "2.6 yrs",
+    text: "of the 9 waking years those 13 school years hold: about 15,200 hours.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much of your life do you spend in school?"
         description="Thirteen years of American schooling comes to roughly 15,000 hours in the building, or about two and a half waking years. It is the only large block of a life that someone else chose in full."
@@ -47,6 +80,8 @@ function Article() {
           you, before anyone asked, and it is smaller than most people expect.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

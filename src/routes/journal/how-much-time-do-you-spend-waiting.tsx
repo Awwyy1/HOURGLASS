@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 import { AnswerBlock } from "../../components/AnswerBlock";
 
 export const Route = createFileRoute(
@@ -11,9 +12,50 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈2.3",
+    unit: "waking years",
+    text: "of a 60-year adult life, at 37 minutes of waiting a day.",
+  },
+  day: {
+    hours: 0.617,
+    value: "2.6%",
+    text: "of every day: 37 minutes in lines, on hold and in waiting rooms.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 9,
+    value: "9 days",
+    text: "225 hours a year",
+  },
+  toLife: {
+    op: "× 60",
+    text: "60 adult years",
+  },
+  life: {
+    years: 2.3,
+    total: 40,
+    value: "2.3 yrs",
+    text: "of your 40 waking years: 13,505 hours, none of it chosen.",
+  },
+  why: {
+    title: "Why 37 minutes",
+    max: 60,
+    band: [30, 40],
+    marker: 37,
+    ticks: [0, 30, 40, 60],
+    unit: "min",
+    text: "Time-use research puts passive waiting at 30–40 min a day. Commuting is counted separately.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend waiting in a lifetime?"
         description="Americans spend an estimated 37 minutes a day waiting — in lines, on hold, at traffic lights, in waiting rooms. Over a lifetime that adds up to more than two waking years spent doing nothing by requirement."
@@ -48,6 +90,8 @@ function Article() {
           enough that most people would rather not know.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <AnswerBlock>
         Americans spend an estimated 37 minutes a day in passive waiting, counting checkout lines, hold music, waiting rooms, and traffic lights. Across 60 years of adult life that comes to about 13,500 hours, or just over two waking years spent doing nothing by requirement rather than by choice.

@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-on-facebook",
@@ -10,9 +11,41 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈6",
+    unit: "waking months",
+    text: "over 15 years of regular use, at 33 minutes a day.",
+  },
+  day: {
+    hours: 0.55,
+    value: "2.3%",
+    text: "of every day: 33 minutes, the average for active users.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 8,
+    value: "8 days",
+    text: "about 201 hours a year",
+  },
+  toLife: {
+    op: "× 15",
+    text: "15 years of regular use",
+  },
+  life: {
+    years: 0.5,
+    total: 10,
+    value: "188 days",
+    text: "of the 10 waking years in that span: 3,015 hours. The rest is everything else.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much of your life do you spend on Facebook?"
         description="Facebook has 3 billion monthly active users and the average session runs around 33 minutes a day. Over 15 years of use, the total approaches six months of waking time."
@@ -46,6 +79,8 @@ function Article() {
           stopped talking about while continuing to use. The hours are still accumulating.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

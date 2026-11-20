@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-does-the-average-person-spend-watching-netflix",
@@ -10,9 +11,41 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈7.5",
+    unit: "waking years",
+    text: "from age 20 to 80, at two hours a day on one platform.",
+  },
+  day: {
+    hours: 2,
+    value: "8.3%",
+    text: "of every day: two hours of Netflix, usually at the end of it.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 30,
+    value: "30 days",
+    text: "730 hours a year",
+  },
+  toLife: {
+    op: "× 60",
+    text: "years of viewing, from 20 to 80",
+  },
+  life: {
+    years: 7.5,
+    total: 40,
+    value: "7.5 yrs",
+    text: "of your 40 waking years: 43,800 hours. The rest is everything else.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time does the average person spend watching Netflix?"
         description="Netflix subscribers watch an average of two hours a day — 45 waking days per year. Over a lifetime it becomes more than seven years spent on a single streaming platform."
@@ -46,6 +79,8 @@ function Article() {
           is something most people have never bothered to run.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

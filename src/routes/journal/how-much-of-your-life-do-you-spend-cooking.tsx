@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-cooking",
@@ -10,9 +11,50 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈2.5",
+    unit: "waking years",
+    text: "of a 60-year adult life, at 40 minutes a day in the kitchen.",
+  },
+  day: {
+    hours: 0.667,
+    value: "2.8%",
+    text: "of every day: 40 minutes preparing food, before any cleanup.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 10,
+    value: "10 days",
+    text: "243 hours a year",
+  },
+  toLife: {
+    op: "× 60",
+    text: "60 adult years, from about 18",
+  },
+  life: {
+    years: 2.5,
+    total: 40,
+    value: "2.5 yrs",
+    text: "of your 40 waking years: 14,580 hours. Cleanup adds another 30–40%.",
+  },
+  why: {
+    title: "Why 40 minutes",
+    max: 60,
+    band: [37, 41],
+    marker: 40,
+    ticks: [0, 37, 53, 60],
+    unit: "min",
+    text: "US average 37 min, 53 on days people cook (American Time Use Survey). UK 41 min (ONS).",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much of your life do you spend cooking?"
         description="The average person spends about 40 minutes a day cooking. Over a lifetime that is two and a half waking years in the kitchen — one of the few large time categories that produces something."
@@ -46,6 +88,8 @@ function Article() {
           feel entirely neutral about. The numbers are worth looking at anyway.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

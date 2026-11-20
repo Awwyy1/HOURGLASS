@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-does-the-average-person-spend-on-social-media",
@@ -10,9 +11,49 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈7.5",
+    unit: "waking years",
+    text: "of 50 adult years, at 2 hours 23 minutes a day across platforms.",
+  },
+  day: {
+    hours: 2.38,
+    value: "9.9%",
+    text: "of every day: 143 minutes across six or more platforms.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 36,
+    value: "36 days",
+    text: "870 hours a year",
+  },
+  toLife: {
+    op: "× 50",
+    text: "50 years of adult use",
+  },
+  life: {
+    years: 7.4,
+    total: 33,
+    value: "7.4 yrs",
+    text: "of your 33 waking years: about 43,500 hours. At the teen rate, fifteen.",
+  },
+  why: {
+    title: "Why 2 h 23 min",
+    max: 6,
+    marker: 2.38,
+    ticks: [0, 1.5, 4.8, 6],
+    unit: "h",
+    text: "Average user 2 h 23 min a day (DataReportal). US teens 4.8 h (Gallup). About 90 min in 2013.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time does the average person spend on social media?"
         description="The average user now spends about 2 hours and 23 minutes a day on social media across all platforms. Over 50 years of adult use that adds up to roughly seven and a half waking years."
@@ -47,6 +88,8 @@ function Article() {
           largest number in the series so far.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

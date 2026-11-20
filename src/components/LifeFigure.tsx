@@ -16,7 +16,11 @@ export interface LifeFigureData {
   day: {
     /** Hours a day the habit takes. */
     hours: number;
-    /** Clock hour the arc starts at, for habits that happen at a set time. */
+    /**
+     * Clock hour the arc starts at, for habits that happen at a set time, such
+     * as sleep. Leave it out for habits spread across the day: the dial then
+     * shows only the share of 24 hours, with no clock labels.
+     */
     start?: number;
     value: string;
     text: string;
@@ -96,7 +100,7 @@ export function LifeFigure({ data, accent = ["#3d4fa3", "#93a4ee"] }: Props) {
 
         <div className="border border-border bg-background px-5 py-5 sm:px-6">
           <Side num="01" title="One day" value={day.value} text={day.text}>
-            <Dial hours={day.hours} start={day.start ?? 0} />
+            <Dial hours={day.hours} start={day.start} />
           </Side>
 
           <Connector op={toYear.op} text={toYear.text} />
@@ -176,8 +180,8 @@ function Connector({ op, text }: { op: string; text: string }) {
   );
 }
 
-/** A 24-hour dial, midnight at the top, with the habit's share as an arc. */
-function Dial({ hours, start }: { hours: number; start: number }) {
+/** A 24-hour dial with the habit's share as an arc; a clock face only when the habit has a set time. */
+function Dial({ hours, start }: { hours: number; start?: number }) {
   const c = 100;
   const r = 74;
   const w = 20;
@@ -185,8 +189,9 @@ function Dial({ hours, start }: { hours: number; start: number }) {
     const a = ((h / 24) * 360 - 90) * (Math.PI / 180);
     return [c + rad * Math.cos(a), c + rad * Math.sin(a)];
   };
-  const end = start + Math.min(hours, 23.99);
-  const [x0, y0] = point(start, r);
+  const from = start ?? 0;
+  const end = from + Math.min(hours, 23.99);
+  const [x0, y0] = point(from, r);
   const [x1, y1] = point(end, r);
   const large = hours > 12 ? 1 : 0;
   return (
@@ -206,12 +211,15 @@ function Dial({ hours, start }: { hours: number; start: number }) {
         stroke="var(--fa)"
         strokeWidth={w}
       />
-      {[
-        [0, "00"],
-        [6, "06"],
-        [12, "12"],
-        [18, "18"],
-      ].map(([h, label]) => {
+      {(start === undefined
+        ? []
+        : [
+            [0, "00"],
+            [6, "06"],
+            [12, "12"],
+            [18, "18"],
+          ]
+      ).map(([h, label]) => {
         const [x, y] = point(h as number, r - w / 2 - 12);
         return (
           <text
@@ -233,7 +241,9 @@ function Dial({ hours, start }: { hours: number; start: number }) {
         fontSize={30}
         className="fill-foreground font-mono font-extralight"
       >
-        {Number.isInteger(hours) ? hours : hours.toFixed(1)}h
+        {hours < 1
+          ? `${Math.round(hours * 60)}m`
+          : `${Number.isInteger(hours) ? hours : hours.toFixed(1)}h`}
       </text>
     </svg>
   );

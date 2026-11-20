@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-does-the-average-person-spend-on-email",
@@ -10,9 +11,49 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈5",
+    unit: "waking years",
+    text: "of a 40-year career, at three hours a working day.",
+  },
+  day: {
+    hours: 3,
+    value: "12.5%",
+    text: "of a working day: three hours on work email, the conservative figure.",
+  },
+  toYear: {
+    op: "× 240",
+    text: "every working day: five a week, 48 weeks a year",
+  },
+  year: {
+    days: 30,
+    value: "30 days",
+    text: "720 hours a year",
+  },
+  toLife: {
+    op: "× 40",
+    text: "a 40-year career",
+  },
+  life: {
+    years: 4.9,
+    total: 27,
+    value: "4.9 yrs",
+    text: "of the 27 waking years in a career: 28,800 hours. The rest is everything else.",
+  },
+  why: {
+    title: "Why 3 hours",
+    max: 6,
+    marker: 3,
+    ticks: [0, 2, 4, 6],
+    unit: "h",
+    text: "Adobe found about 3 h a day on work email; McKinsey, 28% of the workweek. Executives often reach 4–5 h.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time does the average person spend on email?"
         description="McKinsey put it at 28 percent of the workweek. Across a full career the total approaches five waking years spent reading, writing, and managing an inbox."
@@ -46,6 +87,8 @@ function Article() {
           stopped being a tool you use and became a place you live.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

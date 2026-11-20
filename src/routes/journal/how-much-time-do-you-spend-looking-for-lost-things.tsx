@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-looking-for-lost-things",
@@ -10,9 +11,41 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈7",
+    unit: "waking months",
+    text: "of 60 adult years, at about nine minutes of searching a day.",
+  },
+  day: {
+    hours: 0.164,
+    value: "0.7%",
+    text: "of every day: a little over nine minutes, in bursts, hunting for keys and phones.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 3,
+    value: "2.5 days",
+    text: "60 hours a year",
+  },
+  toLife: {
+    op: "× 60",
+    text: "60 adult years",
+  },
+  life: {
+    years: 0.6,
+    total: 40,
+    value: "225 days",
+    text: "of your 40 waking years: 3,600 hours. The rest is everything else.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend looking for lost things?"
         description="Surveys put the average American at around two and a half days a year hunting for misplaced keys, phones, and wallets. Over a lifetime that is roughly seven months, and it is the only total here that returns nothing at all."
@@ -46,6 +79,8 @@ function Article() {
           produces nothing whatsoever in exchange for the hours it takes.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

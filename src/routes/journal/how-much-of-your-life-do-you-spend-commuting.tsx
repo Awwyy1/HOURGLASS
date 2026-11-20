@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-commuting",
@@ -10,9 +11,49 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "1.5",
+    unit: "waking years",
+    text: "of a 40-year career, at 55 minutes a working day.",
+  },
+  day: {
+    hours: 0.917,
+    value: "3.8%",
+    text: "of a working day: 27.6 minutes each way, 55 minutes round trip (US Census).",
+  },
+  toYear: {
+    op: "× 240",
+    text: "every working day: five a week, 48 weeks a year",
+  },
+  year: {
+    days: 9,
+    value: "9 days",
+    text: "220 hours a year",
+  },
+  toLife: {
+    op: "× 40",
+    text: "a 40-year career",
+  },
+  life: {
+    years: 1.5,
+    total: 27,
+    value: "1.5 yrs",
+    text: "of the 27 waking years in a career: 8,800 hours. The rest is everything else.",
+  },
+  why: {
+    title: "Why 55 minutes",
+    max: 90,
+    marker: 55,
+    ticks: [0, 30, 60, 90],
+    unit: "min",
+    text: "US average 55 min round trip (US Census). London commuters average 74 min, New York close to 80.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much of your life do you spend commuting?"
         description="The US Census puts the average one-way commute at 27.6 minutes. Over a 40-year career the total reaches 8,800 hours — one and a half waking years spent in transit."
@@ -46,6 +87,8 @@ function Article() {
           working day. The clock does not agree.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

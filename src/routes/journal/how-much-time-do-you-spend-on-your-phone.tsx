@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 import { AnswerBlock } from "../../components/AnswerBlock";
 
 export const Route = createFileRoute(
@@ -11,9 +12,50 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈15",
+    unit: "waking years",
+    text: "over 62 years of smartphone use, at four hours a day.",
+  },
+  day: {
+    hours: 4,
+    value: "17%",
+    text: "of every day: four hours on the phone, across about 96 unlocks.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 61,
+    value: "61 days",
+    text: "1,460 hours a year",
+  },
+  toLife: {
+    op: "× 62",
+    text: "years of smartphone use, from 18 to 80",
+  },
+  life: {
+    years: 15.5,
+    total: 41,
+    value: "15.5 yrs",
+    text: "of your 41 waking years: 90,520 hours. The rest is everything else.",
+  },
+  why: {
+    title: "Why 4 hours",
+    max: 8,
+    band: [3.5, 5],
+    marker: 4,
+    ticks: [0, 3.5, 5, 8],
+    unit: "h",
+    text: "RescueTime measures ≈3.5 h a day, App Annie ≈5 h. Most people guess about 2 h.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend on your phone per day?"
         description="The average is close to four hours a day — most people guess two. Over a lifetime of smartphone use, the total comes to roughly 15 waking years spent looking at a screen."
@@ -48,6 +90,8 @@ function Article() {
           than that.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <AnswerBlock>
         The average person spends close to four hours a day on their phone, while most people guess around two. Across a lifetime of smartphone use the total comes to roughly 15 waking years, which makes it one of the largest single categories of conscious time in a modern life.

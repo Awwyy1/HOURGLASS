@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-have-left-with-your-parents",
@@ -10,9 +11,49 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈70",
+    unit: "waking days",
+    text: "left with a parent of 65, visiting twice a year for four days.",
+  },
+  day: {
+    hours: 0.175,
+    value: "0.7%",
+    text: "of every day on average: two four-day visits, eight hours a day together.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "averaged across the whole year",
+  },
+  year: {
+    days: 3,
+    value: "2.7 days",
+    text: "64 hours a year",
+  },
+  toLife: {
+    op: "× 17",
+    text: "years left for a parent of 65",
+  },
+  life: {
+    years: 0.2,
+    total: 11,
+    value: "68 days",
+    text: "of the 11 waking years left: about 1,100 hours in the same room.",
+  },
+  why: {
+    title: "Why 10 minutes",
+    max: 240,
+    marker: 10.5,
+    ticks: [0, 60, 120, 240],
+    unit: "min",
+    text: "As a child at home: about 4 waking hours a day, around 26,000 hours before 18.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you have left with your parents?"
         description="Time-use data shows that most of the hours you will ever spend with your parents were already spent before you turned eighteen. For an adult who visits twice a year, what remains is measured in weeks, not years."
@@ -48,6 +89,8 @@ function Article() {
           here to look at directly.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-alone",
@@ -10,9 +11,41 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈20",
+    unit: "waking years",
+    text: "of an adult life, at five and a half hours a day alone.",
+  },
+  day: {
+    hours: 5.5,
+    value: "23%",
+    text: "of every day: five and a half waking hours with no one else present.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 84,
+    value: "84 days",
+    text: "2,008 hours a year",
+  },
+  toLife: {
+    op: "× 60",
+    text: "adult years",
+  },
+  life: {
+    years: 20.6,
+    total: 40,
+    value: "20.6 yrs",
+    text: "of your 40 waking years: about 120,000 hours. The rest is spent in company.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend alone?"
         description="Americans spend around five and a half waking hours a day alone, and the figure has been climbing for two decades. Over an adult life that comes to roughly twenty waking years, though the data cannot tell you which of them were lonely."
@@ -47,6 +80,8 @@ function Article() {
           whether it is good news.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

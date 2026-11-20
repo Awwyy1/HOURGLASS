@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
 import { AnswerBlock } from "../../components/AnswerBlock";
 
 export const Route = createFileRoute(
@@ -11,9 +12,41 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "260",
+    unit: "waking days",
+    text: "of a 60-year adult life, at about 80 minutes a week in the store.",
+  },
+  day: {
+    hours: 0.19,
+    value: "0.8%",
+    text: "of every day: about 80 minutes a week, a 43-minute trip plus a short top-up run.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 3,
+    value: "3 days",
+    text: "about 69 hours a year",
+  },
+  toLife: {
+    op: "× 60",
+    text: "60 adult years",
+  },
+  life: {
+    years: 0.7,
+    total: 40,
+    value: "260 days",
+    text: "of your 40 waking years: 4,160 hours in the store, before the drive there and back.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend grocery shopping?"
         description="The average American spends about 43 minutes on a single grocery trip and shops roughly 1.5 times a week. Over a lifetime that adds up to more than two waking years spent walking store aisles."
@@ -48,6 +81,8 @@ function Article() {
           That does not mean the hours are small.
         </p>
       </header>
+
+      <LifeFigure data={FIGURE} />
 
       <AnswerBlock>
         The average American grocery trip takes about 43 minutes, and most households make roughly 1.5 primary trips a week plus smaller top-up runs, or around 80 minutes weekly. Over a lifetime that is about 260 waking days, rising past a full waking year once driving time is counted.
