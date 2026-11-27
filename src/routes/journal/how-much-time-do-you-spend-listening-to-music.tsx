@@ -194,10 +194,10 @@ function Article() {
             How much time do you spend reading books in a lifetime? →
           </Link>
           <Link
-            to="/journal/how-much-of-your-life-do-you-spend-driving"
+            to="/journal/how-many-spotify-wrapped-minutes-is-normal"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much of your life do you spend driving? →
+            How many Spotify Wrapped minutes is normal? →
           </Link>
           <Link
             to="/journal/how-much-time-do-you-spend-listening-to-podcasts"

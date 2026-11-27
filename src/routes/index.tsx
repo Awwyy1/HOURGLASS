@@ -167,21 +167,21 @@ function Index() {
         </div>
         <div className="divide-y divide-border">
           <div className="pb-8">
-            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">May 20, 2026</p>
-            <Link to="/journal/how-much-time-do-you-spend-on-dating-apps" className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground">
-              How much time do you spend on dating apps? →
+            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">November 27, 2026</p>
+            <Link to="/journal/how-many-spotify-wrapped-minutes-is-normal" className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground">
+              How many Spotify Wrapped minutes is normal? →
             </Link>
           </div>
           <div className="py-8">
-            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">May 14, 2026</p>
-            <Link to="/journal/how-much-time-do-you-spend-using-ai" className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground">
-              How much time do you spend using AI? →
+            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">November 24, 2026</p>
+            <Link to="/journal/what-percentage-of-your-life-do-you-spend-on-everything" className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground">
+              What percentage of your life do you spend on everything? →
             </Link>
           </div>
           <div className="pt-8">
-            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">May 13, 2026</p>
-            <Link to="/journal/how-much-of-your-life-do-you-spend-in-meetings" className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground">
-              How much of your life do you spend in meetings? →
+            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">June 26, 2026</p>
+            <Link to="/journal/how-much-time-do-you-spend-waiting" className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground">
+              How much time do you spend waiting in a lifetime? →
             </Link>
           </div>
         </div>

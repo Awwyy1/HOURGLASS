@@ -17,12 +17,14 @@ the text rather than footnoted.
 
 - [Home](https://www.justhourglass.me/): a life in weeks from a birth year, followed by the single-habit calculator.
 - [Life in weeks](https://www.justhourglass.me/weeks): a whole life as a grid of 52-week rows, shaded by the habits that will take the weeks ahead.
-- [Journal](https://www.justhourglass.me/journal): all 47 articles.
+- [Journal](https://www.justhourglass.me/journal): all 49 articles.
 - [Philosophy](https://www.justhourglass.me/philosophy): on the arithmetic of attention.
 - [About](https://www.justhourglass.me/about): what the site is and why it exists.
 
 ## Journal
 
+- [What percentage of your life do you spend on everything?](https://www.justhourglass.me/journal/what-percentage-of-your-life-do-you-spend-on-everything): every habit in the journal ranked by its share of a 79-year life; published 2026-11-24.
+- [How many Spotify Wrapped minutes is normal?](https://www.justhourglass.me/journal/how-many-spotify-wrapped-minutes-is-normal): the average Spotify listener's Wrapped total against Nielsen and IFPI benchmarks, with a calculator; published 2026-11-27.
 - [How much of your life do you spend on Instagram?](https://www.justhourglass.me/journal/how-much-of-your-life-do-you-spend-on-instagram): published 2026-03-06.
 - [How much time do you spend on YouTube?](https://www.justhourglass.me/journal/how-much-time-do-you-spend-on-youtube): published 2026-03-13.
 - [How much of your life do you spend sleeping?](https://www.justhourglass.me/journal/how-much-of-your-life-do-you-spend-sleeping): published 2026-03-20.
