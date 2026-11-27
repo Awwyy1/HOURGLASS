@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 /**
  * The infographic beside an article: the short answer first, then how one
@@ -124,11 +124,120 @@ export function FigureCard({ children }: { children: React.ReactNode }) {
   return <div className="border border-border bg-background px-5 py-5 sm:px-6">{children}</div>;
 }
 
+// ── Arithmetic shared by the figure, the slider and the period table ───────
+
+const fmtInt = (n: number) => Math.round(n).toLocaleString("en-US");
+
+/** Days a year and years in the span, read from the figure's own steps ("× 365", "× 60"). */
+export function spanOf(data: LifeFigureData) {
+  const num = (s: string) => Number(s.replace(/[^\d.]/g, ""));
+  return { perYear: num(data.toYear.op) || 365, years: num(data.toLife.op) || 0 };
+}
+
+/** "45 min", "2 h", "2 h 30 min". */
+export function duration(hours: number) {
+  const mins = Math.round(hours * 60);
+  if (mins < 60) return `${mins} min`;
+  const h = Math.floor(mins / 60);
+  const m = mins % 60;
+  return m ? `${h} h ${m} min` : `${h} h`;
+}
+
+function share(hours: number) {
+  const p = (hours / 24) * 100;
+  return `${p < 10 ? p.toFixed(1).replace(/\.0$/, "") : Math.round(p)}%`;
+}
+
+/**
+ * The figure redrawn for someone else's daily time. Every total scales in
+ * proportion to the hours a day, using the article's own ratios, so at the
+ * article's figure it reproduces the article's numbers exactly.
+ */
+function personalise(data: LifeFigureData, hours: number): LifeFigureData {
+  const base = data.day.hours;
+  const { perYear, years } = spanOf(data);
+  const days = (data.year.days / base) * hours;
+  const lifeYears = (data.life.years / base) * hours;
+  const yearHours = hours * perYear;
+  return {
+    ...data,
+    day: {
+      ...data.day,
+      hours,
+      value: share(hours),
+      text: `of every day, at ${duration(hours)} a day.`,
+    },
+    year: {
+      days: Math.min(365, Math.round(days)),
+      value: `${days < 10 ? days.toFixed(1) : fmtInt(days)} days`,
+      text: `${fmtInt(yearHours)} hours a year`,
+    },
+    life: {
+      ...data.life,
+      years: Math.min(lifeYears, data.life.total),
+      value: lifeYears < 1 ? `${fmtInt(lifeYears * 365)} days` : `${lifeYears.toFixed(1)} yrs`,
+      text: `${fmtInt(yearHours * years)} hours over ${years} years.`,
+    },
+  };
+}
+
 export function LifeFigure({ data, accent }: Props) {
-  const { answer, day, toYear, year, toLife, life, why } = data;
+  const base = data.day.hours;
+  const [hours, setHours] = useState(base);
+  const mine = hours !== base;
+  const { answer, day, toYear, year, toLife, life, why } = mine ? personalise(data, hours) : data;
+
+  // Habits with a set time (sleep) only make sense within a band around the
+  // average; the rest can go from nothing to well past it.
+  const timed = data.day.start !== undefined;
+  const step = base < 1 ? 1 / 12 : 0.25;
+  const min = timed ? Math.floor(base / 2) : 0;
+  const max = Math.min(
+    16,
+    Math.ceil((timed ? base * 1.6 : Math.max(base * 2.5, base + 1)) / step) * step,
+  );
 
   return (
     <FigurePanel answer={answer} accent={accent}>
+      <div className="border border-border bg-background px-5 py-4 sm:px-6">
+        <label className="block">
+          <span className="flex items-baseline justify-between gap-3">
+            <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-muted-foreground">
+              Make it yours
+            </span>
+            <span className="font-mono text-lg font-light tracking-tight text-foreground">
+              {duration(hours)} a day
+            </span>
+          </span>
+          <input
+            type="range"
+            min={min}
+            max={max}
+            step={step}
+            value={hours}
+            onChange={(e) => setHours(Number(e.target.value))}
+            aria-valuetext={`${duration(hours)} a day`}
+            className="figure-range mt-3 w-full"
+          />
+        </label>
+        <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+          {mine ? (
+            <>
+              Average: {duration(base)} a day.{" "}
+              <button
+                type="button"
+                onClick={() => setHours(base)}
+                className="underline underline-offset-2 transition hover:text-foreground"
+              >
+                Back to average
+              </button>
+            </>
+          ) : (
+            "Move it to your own daily time and the year and lifetime below follow."
+          )}
+        </p>
+      </div>
+
       <div className="border border-border bg-background px-5 py-5 sm:px-6">
         <Side num="01" title="One day" value={day.value} text={day.text}>
           <Dial hours={day.hours} start={day.start} />
@@ -147,7 +256,13 @@ export function LifeFigure({ data, accent }: Props) {
 
         <Connector op={toLife.op} text={toLife.text} />
 
-        <Side num="03" title="One life" value={life.value} text={life.text} accent>
+        <Side
+          num="03"
+          title={mine ? "Your life" : "One life"}
+          value={life.value}
+          text={life.text}
+          accent
+        >
           <Years filled={life.years} total={life.total} />
         </Side>
 
@@ -403,6 +518,76 @@ function Why({
         ))}
       </div>
       <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{text}</p>
+    </div>
+  );
+}
+
+/**
+ * The same daily time in every unit people search for: a day, a week, a
+ * month, a year and the whole span, in hours and minutes. It sits in the
+ * text column, right before the article body.
+ */
+export function PeriodTable({ data }: { data: LifeFigureData }) {
+  const { perYear, years } = spanOf(data);
+  const h = data.day.hours;
+  const dayLabel = perYear === 365 ? "a day" : perYear === 180 ? "a school day" : "a working day";
+  const hoursOf = (x: number) => (x < 10 ? x.toFixed(1).replace(/\.0$/, "") : fmtInt(x));
+  const rows: [string, number][] = [
+    [`Per ${dayLabel.replace(/^a /, "")}`, h],
+    ["Per week", (h * perYear) / 52],
+    ["Per month", (h * perYear) / 12],
+    ["Per year", h * perYear],
+  ];
+  const total = h * perYear * years;
+  return (
+    <div className="mb-14">
+      <table className="w-full border-collapse text-left">
+        <caption className="mb-4 text-left font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
+          The same time, in every unit
+        </caption>
+        <thead>
+          <tr className="border-b border-border font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+            <th scope="col" className="py-2 pr-4 font-normal">
+              Period
+            </th>
+            <th scope="col" className="py-2 pr-4 text-right font-normal">
+              Hours
+            </th>
+            <th scope="col" className="py-2 text-right font-normal">
+              Minutes
+            </th>
+          </tr>
+        </thead>
+        <tbody className="text-[15px]">
+          {rows.map(([label, value]) => (
+            <tr key={label} className="border-b border-border">
+              <th scope="row" className="py-2.5 pr-4 font-normal text-foreground/85">
+                {label}
+              </th>
+              <td className="py-2.5 pr-4 text-right font-mono text-sm tabular-nums text-foreground">
+                {hoursOf(value)}
+              </td>
+              <td className="py-2.5 text-right font-mono text-sm tabular-nums text-foreground">
+                {fmtInt(value * 60)}
+              </td>
+            </tr>
+          ))}
+          {years > 0 && (
+            <tr className="border-b border-border">
+              <th scope="row" className="py-2.5 pr-4 font-normal text-foreground/85">
+                Over {years} years
+              </th>
+              <td
+                colSpan={2}
+                className="py-2.5 text-right font-mono text-sm tabular-nums text-foreground"
+              >
+                {total >= 10000 ? `≈${fmtInt(Math.round(total / 100) * 100)}` : fmtInt(total)} h ·{" "}
+                {data.life.value}
+              </td>
+            </tr>
+          )}
+        </tbody>
+      </table>
     </div>
   );
 }
