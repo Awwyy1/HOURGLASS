@@ -47,13 +47,13 @@ function Article() {
   return (
     <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
-        title="How much of your life do you spend in school?"
-        description="Thirteen years of American schooling comes to roughly 15,000 hours in the building, or about two and a half waking years. It is the only large block of a life that someone else chose in full."
+        title="How many hours do you spend in school in a lifetime?"
+        description="About 15,000 hours from kindergarten to the end of high school: 6.5 hours a day, 180 days a year, for 13 years. That is 2.6 waking years. Work out your own."
         ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend in school?"
-        description="Thirteen years of American schooling comes to roughly 15,000 hours in the building, or about two and a half waking years. It is the only large block of a life that someone else chose in full."
+        description="About 15,000 hours from kindergarten to the end of high school: 6.5 hours a day, 180 days a year, for 13 years. That is 2.6 waking years. Work out your own."
         datePublished="2026-08-05"
         slug="how-much-of-your-life-do-you-spend-in-school"
       />

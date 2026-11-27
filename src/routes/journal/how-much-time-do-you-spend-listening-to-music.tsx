@@ -56,13 +56,13 @@ function Article() {
   return (
     <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
-        title="How much time do you spend listening to music?"
-        description="Nielsen found Americans spend around 32 hours a month listening to music across all platforms. Over a lifetime that comes to roughly four waking years — more than most people spend on any single social media platform."
+        title="Average music listening time per day, month and year"
+        description="About 32 hours a month: just over an hour a day, roughly 1,900 minutes a month and 23,000 a year. Set your own daily time and see your lifetime total."
         ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend listening to music?"
-        description="Nielsen found Americans spend around 32 hours a month listening to music across all platforms. Over a lifetime that comes to roughly four waking years — more than most people spend on any single social media platform."
+        description="About 32 hours a month: just over an hour a day, roughly 1,900 minutes a month and 23,000 a year. Set your own daily time and see your lifetime total."
         datePublished="2026-06-12"
         slug="how-much-time-do-you-spend-listening-to-music"
       />

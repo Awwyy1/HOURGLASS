@@ -55,13 +55,13 @@ function Article() {
   return (
     <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
-        title="How much of your life do you spend eating?"
-        description="The average American spends a little over an hour a day eating and drinking. Over a 79-year life that comes to about five and a half waking years at the table."
+        title="How much time do you spend eating in a lifetime?"
+        description="A little over an hour a day: about 408 hours a year and 5.5 waking years, or 2,000 waking days, over a 79-year life. Set your own time and see yours."
         ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend eating?"
-        description="The average American spends a little over an hour a day eating and drinking. Over a 79-year life that comes to about five and a half waking years at the table."
+        description="A little over an hour a day: about 408 hours a year and 5.5 waking years, or 2,000 waking days, over a 79-year life. Set your own time and see yours."
         datePublished="2026-07-24"
         dateModified="2026-11-20"
         slug="how-much-of-your-life-do-you-spend-eating"

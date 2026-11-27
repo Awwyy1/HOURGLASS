@@ -48,13 +48,13 @@ function Article() {
   return (
     <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
-        title="How much time do you spend grocery shopping?"
-        description="The average American grocery trip takes about 43 minutes, roughly 1.5 times a week. Over an adult life that adds up to about 260 waking days in store aisles."
+        title="How long does grocery shopping take? Per trip and lifetime"
+        description="The average grocery trip takes about 43 minutes, 1.5 times a week. That is about 69 hours a year and 260 waking days over an adult life. Work out yours."
         ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend grocery shopping?"
-        description="The average American grocery trip takes about 43 minutes, roughly 1.5 times a week. Over an adult life that adds up to about 260 waking days in store aisles."
+        description="The average grocery trip takes about 43 minutes, 1.5 times a week. That is about 69 hours a year and 260 waking days over an adult life. Work out yours."
         datePublished="2026-07-18"
         dateModified="2026-11-20"
         slug="how-much-time-do-you-spend-grocery-shopping"

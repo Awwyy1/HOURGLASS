@@ -49,12 +49,12 @@ function Article() {
     <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much of your life do you spend sleeping?"
-        description="About a third of your life — 25 years out of 79 spent unconscious. The number is fixed. What you do with the other two-thirds is not."
+        description="About a third: 7.5 hours a night is 31% of every day, 114 days a year and 24.7 years of a 79-year life. Set your own hours and see your total."
         ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend sleeping?"
-        description="About a third of your life — 25 years out of 79 spent unconscious. The number is fixed. What you do with the other two-thirds is not."
+        description="About a third: 7.5 hours a night is 31% of every day, 114 days a year and 24.7 years of a 79-year life. Set your own hours and see your total."
         datePublished="2026-03-20"
         slug="how-much-of-your-life-do-you-spend-sleeping"
       />
