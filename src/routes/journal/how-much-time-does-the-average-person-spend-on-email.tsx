@@ -3,7 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
-import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
+import { LifeFigure, PeriodTable, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-does-the-average-person-spend-on-email",
@@ -37,9 +37,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 4.9,
-    total: 27,
+    total: 40,
     value: "4.9 yrs",
-    text: "of the 27 waking years in a career: 28,800 hours. The rest is everything else.",
+    text: "of the 40 waking years in a career: 28,800 hours. The rest is everything else.",
   },
   why: {
     title: "Why 3 hours",
@@ -89,6 +89,9 @@ function Article() {
       </header>
 
       <LifeFigure data={FIGURE} />
+
+      <PeriodTable data={FIGURE} />
+
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

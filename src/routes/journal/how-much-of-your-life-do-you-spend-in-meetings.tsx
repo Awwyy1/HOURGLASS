@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, PeriodTable, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-in-meetings",
@@ -10,18 +11,59 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈5",
+    unit: "waking years",
+    text: "of a 40-year career, at three hours every working day.",
+  },
+  day: {
+    hours: 3,
+    value: "12.5%",
+    text: "of every working day: three hours in meetings and calls.",
+  },
+  toYear: {
+    op: "× 240",
+    text: "working days a year, 48 weeks of five",
+  },
+  year: {
+    days: 30,
+    value: "30 days",
+    text: "720 hours a year",
+  },
+  toLife: {
+    op: "× 40",
+    text: "a 40-year career",
+  },
+  life: {
+    years: 4.9,
+    total: 40,
+    value: "4.9 yrs",
+    text: "of the 40 waking years in a career: 28,800 hours. The rest is everything else.",
+  },
+  why: {
+    title: "Why 3 hours",
+    max: 6,
+    marker: 3,
+    ticks: [0, 2, 4.6, 6],
+    unit: "h",
+    text: "Senior managers: 23 h a week, about 4.6 h a working day (Harvard Business Review). Under 2 h in the 1960s.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much of your life do you spend in meetings?"
-        description="Microsoft found 57 percent of the working week goes to meetings and communication. At three hours per day over a career, that is two waking years spent in conference rooms."
+        description="Microsoft found 57 percent of the working week goes to meetings and communication. Three hours a working day over a 40-year career is about five waking years."
         ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend in meetings?"
-        description="Microsoft found 57 percent of the working week goes to meetings and communication. At three hours per day over a career, that is two waking years spent in conference rooms."
+        description="Microsoft found 57 percent of the working week goes to meetings and communication. Three hours a working day over a 40-year career is about five waking years."
         datePublished="2026-05-13"
+        dateModified="2026-11-20"
         slug="how-much-of-your-life-do-you-spend-in-meetings"
       />
       <Breadcrumbs
@@ -47,6 +89,11 @@ function Article() {
         </p>
       </header>
 
+      <LifeFigure data={FIGURE} />
+
+      <PeriodTable data={FIGURE} />
+
+
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>
           Microsoft's Work Trend Index put it at 57 percent of the working week spent
@@ -60,11 +107,12 @@ function Article() {
 
         <p>
           At three hours per working day across 48 working weeks, the annual total is
-          720 hours. Over a 40-year career that is 28,800 hours, or roughly 6,900
-          waking days. In waking years: just under two years of your life spent in
-          meetings. For executives on the high end of the distribution the career total
-          doubles. Three waking years in conference rooms, video calls, and status updates
-          is not an unusual number for someone who spent their career in a large organisation.
+          720 hours. Over a 40-year career that is 28,800 hours, or roughly 1,800
+          waking days. In waking years, that comes to just under five years of your life
+          spent in meetings. For senior managers on the high end of the distribution, at
+          23 hours a week, the career total rises to about 44,000 hours. Seven and a half
+          waking years in conference rooms, video calls, and status updates is not an
+          unusual number for someone who spent their career in a large organisation.
         </p>
 
         <h2 className="pt-8 font-serif text-2xl italic text-foreground">

@@ -3,7 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
-import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
+import { LifeFigure, PeriodTable, type LifeFigureData } from "../../components/LifeFigure";
 import { AnswerBlock } from "../../components/AnswerBlock";
 
 export const Route = createFileRoute(
@@ -38,9 +38,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 2.3,
-    total: 27,
+    total: 40,
     value: "2.3 yrs",
-    text: "of your 27 waking years: about 13,100 hours. The rest is everything else.",
+    text: "of your 40 waking years: about 13,100 hours. The rest is everything else.",
   },
   why: {
     title: "Why 54 minutes",
@@ -95,6 +95,9 @@ function Article() {
       <AnswerBlock>
         The average US user spends 54 minutes a day on TikTok, which comes to roughly two waking years over a lifetime of use. TikTok was the first major platform built around an algorithm rather than around people you chose to follow, which is why sessions routinely outlast the intention behind them.
       </AnswerBlock>
+
+      <PeriodTable data={FIGURE} />
+
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

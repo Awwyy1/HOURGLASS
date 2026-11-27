@@ -3,6 +3,8 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { FigureCard, FigurePanel } from "../../components/LifeFigure";
+import { UnitGrid } from "../../components/BreakdownFigures";
 
 export const Route = createFileRoute(
   "/journal/how-much-vacation-time-do-you-get-in-a-lifetime",
@@ -10,9 +12,37 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+function ArticleFigure() {
+  return (
+    <FigurePanel
+      answer={{
+        value: "645",
+        unit: "days",
+        text: "of paid vacation across a 43-year American career, about 1.8 waking years.",
+      }}
+    >
+      <FigureCard>
+        <UnitGrid
+          num="01"
+          title="One column per working year, 22 to 65"
+          rows={30}
+          cols={43}
+          mode="rows"
+          parts={[
+            { count: 15, tone: "accent", display: "645", label: "days in the US, at about 15 a year" },
+            { count: 5, tone: "mid", display: "860", label: "at the EU minimum of 20 a year" },
+            { count: 10, tone: "faint", display: "1,290", label: "in Germany, at 30 a year" },
+          ]}
+          text="Roughly half of American workers end the year with paid days left unused (US Travel Association)."
+        />
+      </FigureCard>
+    </FigurePanel>
+  );
+}
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much vacation time do you get in a lifetime?"
         description="An American career yields roughly 645 days of paid vacation, against 80,000 hours of work. It is the one large category in this journal that most people consume less of than they are owed."
@@ -47,6 +77,8 @@ function Article() {
           untouched, which turns out to be the harder thing to explain.
         </p>
       </header>
+
+      <ArticleFigure />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

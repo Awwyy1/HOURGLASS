@@ -3,7 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
-import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
+import { LifeFigure, PeriodTable, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-texting",
@@ -37,9 +37,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 2.5,
-    total: 40,
+    total: 60,
     value: "2.5 yrs",
-    text: "of your 40 waking years: about 14,600 hours. The rest is everything else.",
+    text: "of your 60 waking years: about 14,600 hours. The rest is everything else.",
   },
   why: {
     title: "Why 40 minutes",
@@ -57,13 +57,14 @@ function Article() {
     <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend texting?"
-        description="Americans send and receive an average of around 94 texts a day. At roughly 30 seconds of attention per message, that adds up to nearly an hour daily and more than four waking years across a lifetime."
+        description="Americans send and receive around 94 texts a day. At 20 to 30 seconds each, that is about 40 minutes daily and two and a half waking years across adult life."
         ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend texting?"
-        description="Americans send and receive an average of around 94 texts a day. At roughly 30 seconds of attention per message, that adds up to nearly an hour daily and more than four waking years across a lifetime."
+        description="Americans send and receive around 94 texts a day. At 20 to 30 seconds each, that is about 40 minutes daily and two and a half waking years across adult life."
         datePublished="2026-07-08"
+        dateModified="2026-11-20"
         slug="how-much-time-do-you-spend-texting"
       />
       <Breadcrumbs
@@ -91,6 +92,9 @@ function Article() {
       </header>
 
       <LifeFigure data={FIGURE} />
+
+      <PeriodTable data={FIGURE} />
+
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

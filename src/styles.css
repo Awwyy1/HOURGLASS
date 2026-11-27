@@ -193,3 +193,10 @@
   }
   .article-figure-inner { position: sticky; top: 32px; }
 }
+
+/* Slider in the article figure ("Make it yours"). */
+.figure-range { -webkit-appearance: none; appearance: none; height: 2px; background: color-mix(in srgb, currentColor 18%, transparent); outline: none; cursor: pointer; }
+.figure-range::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 9999px; background: var(--fa); border: 2px solid var(--color-background); box-shadow: 0 0 0 1px var(--fa); transition: transform 150ms ease; }
+.figure-range::-webkit-slider-thumb:hover { transform: scale(1.15); }
+.figure-range::-moz-range-thumb { width: 14px; height: 14px; border-radius: 9999px; background: var(--fa); border: 2px solid var(--color-background); box-shadow: 0 0 0 1px var(--fa); }
+.figure-range:focus-visible { outline: 2px solid var(--fa); outline-offset: 6px; }

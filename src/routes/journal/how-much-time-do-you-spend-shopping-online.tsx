@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, PeriodTable, type LifeFigureData } from "../../components/LifeFigure";
 import { AnswerBlock } from "../../components/AnswerBlock";
 
 export const Route = createFileRoute(
@@ -11,18 +12,51 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈1.3",
+    unit: "waking years",
+    text: "of 30 peak shopping years, at five hours a week online.",
+  },
+  day: {
+    hours: 0.714,
+    value: "3%",
+    text: "of every day on average: five hours a week of browsing and buying.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 11,
+    value: "11 days",
+    text: "260 hours a year",
+  },
+  toLife: {
+    op: "× 30",
+    text: "30 years, roughly age 25 to 55",
+  },
+  life: {
+    years: 1.3,
+    total: 30,
+    value: "1.3 yrs",
+    text: "of your 30 waking years: 7,800 hours. Most sessions end without a purchase.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend shopping online?"
-        description="The average online shopper spends five hours a week browsing and buying. Over a lifetime that adds up to a year and a half of waking time — most sessions ending without a purchase."
+        description="The average online shopper spends five hours a week browsing and buying. Over 30 years that comes to about 1.3 waking years, most of it without a purchase."
         ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend shopping online?"
-        description="The average online shopper spends five hours a week browsing and buying. Over a lifetime that adds up to a year and a half of waking time — most sessions ending without a purchase."
+        description="The average online shopper spends five hours a week browsing and buying. Over 30 years that comes to about 1.3 waking years, most of it without a purchase."
         datePublished="2026-05-06"
+        dateModified="2026-11-20"
         slug="how-much-time-do-you-spend-shopping-online"
       />
       <Breadcrumbs
@@ -48,9 +82,14 @@ function Article() {
         </p>
       </header>
 
+      <LifeFigure data={FIGURE} />
+
       <AnswerBlock>
-        The average online shopper spends about five hours a week browsing and buying, and most sessions end without a purchase. Over a lifetime of peak consumer activity the total approaches a year and a half of waking time spent deciding whether to buy something.
+        The average online shopper spends about five hours a week browsing and buying, and most sessions end without a purchase. Over a lifetime of peak consumer activity the total comes to about 1.3 waking years spent deciding whether to buy something.
       </AnswerBlock>
+
+      <PeriodTable data={FIGURE} />
+
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>
@@ -67,7 +106,7 @@ function Article() {
           Five hours a week across all online shopping adds up to 260 hours a year. That is almost
           11 full days, or about 16 waking days per year spent in digital stores. Over 30 years of
           peak consumer activity, roughly age 25 to 55, the total comes to 7,800 hours. In waking
-          years, that is just over a year and a half of conscious life spent browsing things to buy.
+          years, that is about a year and four months of conscious life spent browsing things to buy.
           A meaningful fraction of that time results in a purchase. Most of it does not.
         </p>
 
@@ -100,8 +139,8 @@ function Article() {
         </h2>
 
         <p>
-          The interesting comparison is between time spent and value received. A year and a half
-          of waking life is a significant investment. For some people the purchases it produces
+          The interesting comparison is between time spent and value received. A year and four
+          months of waking life is a significant investment. For some people the purchases it produces
           represent genuine improvements to their life, things that save time, enable hobbies, or
           solve real problems. For a large portion of online shopping, that case is harder to make.
           Research on post-purchase satisfaction with impulse buys consistently finds that regret
@@ -112,7 +151,7 @@ function Article() {
           None of this is an argument against buying things or against using Amazon. It is an
           observation that the time involved is larger than almost anyone estimates, that a
           significant fraction of it produces nothing at all, and that the platforms involved
-          are specifically engineered to make the time as long as possible. A year and a half
+          are specifically engineered to make the time as long as possible. A year and four months
           is enough time to learn something, build something, or read more books than most
           people manage in a decade. Whether that trade makes sense is a question only the
           individual can answer. Most people have never looked at what the trade actually is.

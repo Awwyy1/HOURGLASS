@@ -3,7 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
-import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
+import { LifeFigure, PeriodTable, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-on-facebook",
@@ -37,9 +37,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 0.5,
-    total: 10,
+    total: 15,
     value: "188 days",
-    text: "of the 10 waking years in that span: 3,015 hours. The rest is everything else.",
+    text: "of the 15 waking years in that span: 3,015 hours. The rest is everything else.",
   },
 };
 
@@ -81,6 +81,9 @@ function Article() {
       </header>
 
       <LifeFigure data={FIGURE} />
+
+      <PeriodTable data={FIGURE} />
+
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

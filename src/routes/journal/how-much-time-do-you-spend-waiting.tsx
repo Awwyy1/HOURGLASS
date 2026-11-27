@@ -3,7 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
-import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
+import { LifeFigure, PeriodTable, type LifeFigureData } from "../../components/LifeFigure";
 import { AnswerBlock } from "../../components/AnswerBlock";
 
 export const Route = createFileRoute(
@@ -38,9 +38,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 2.3,
-    total: 40,
+    total: 60,
     value: "2.3 yrs",
-    text: "of your 40 waking years: 13,505 hours, none of it chosen.",
+    text: "of your 60 waking years: 13,505 hours, none of it chosen.",
   },
   why: {
     title: "Why 37 minutes",
@@ -96,6 +96,9 @@ function Article() {
       <AnswerBlock>
         Americans spend an estimated 37 minutes a day in passive waiting, counting checkout lines, hold music, waiting rooms, and traffic lights. Across 60 years of adult life that comes to about 13,500 hours, or just over two waking years spent doing nothing by requirement rather than by choice.
       </AnswerBlock>
+
+      <PeriodTable data={FIGURE} />
+
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

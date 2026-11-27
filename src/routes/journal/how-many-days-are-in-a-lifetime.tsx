@@ -3,6 +3,8 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { FigureCard, FigurePanel } from "../../components/LifeFigure";
+import { Funnel, Milestones } from "../../components/BreakdownFigures";
 
 export const Route = createFileRoute(
   "/journal/how-many-days-are-in-a-lifetime",
@@ -10,9 +12,59 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+function ArticleFigure() {
+  return (
+    <FigurePanel
+      answer={{
+        value: "28,900",
+        unit: "days",
+        text: "in a 79-year life, and only about 10,000 of them are yours to direct.",
+      }}
+    >
+      <FigureCard>
+        <Funnel
+          num="01"
+          title="Where the days go"
+          steps={[
+            { value: 28900, display: "28,900", label: "days in a 79-year life" },
+            {
+              value: 19300,
+              display: "19,300",
+              label: "days awake",
+              minus: "minus about 9,600 days of sleep",
+            },
+            {
+              value: 9500,
+              display: "9,000–10,000",
+              label: "days genuinely yours",
+              minus: "minus childhood, school, work, chores and the rest",
+              accent: true,
+            },
+          ]}
+        />
+      </FigureCard>
+      <FigureCard>
+        <Milestones
+          num="02"
+          title="Where you stand"
+          max={79}
+          marks={[
+            { at: 18, top: "6,600", bottom: "age 18" },
+            { at: 27, top: "10,000", bottom: "age 27" },
+            { at: 39.5, top: "14,450", bottom: "halfway, 39.5" },
+            { at: 55, top: "20,000", bottom: "age 55" },
+            { at: 79, top: "28,900", bottom: "age 79" },
+          ]}
+          text="Days used by each age. A 79-year life also holds about 4,100 Saturdays."
+        />
+      </FigureCard>
+    </FigurePanel>
+  );
+}
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How many days are in a lifetime?"
         description="An average human life contains about 28,900 days. Around 6,600 of them belong to childhood, a third of the rest goes to sleep, and the discretionary remainder is smaller than almost anyone expects."
@@ -47,6 +99,8 @@ function Article() {
           it reads.
         </p>
       </header>
+
+      <ArticleFigure />
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

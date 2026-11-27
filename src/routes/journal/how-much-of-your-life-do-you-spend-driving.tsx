@@ -3,7 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
-import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
+import { LifeFigure, PeriodTable, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-driving",
@@ -37,9 +37,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 3.2,
-    total: 40,
+    total: 60,
     value: "3.2 yrs",
-    text: "of your 40 waking years: about 18,600 hours. The rest is everything else.",
+    text: "of your 60 waking years: about 18,600 hours. The rest is everything else.",
   },
 };
 
@@ -82,6 +82,9 @@ function Article() {
       </header>
 
       <LifeFigure data={FIGURE} />
+
+      <PeriodTable data={FIGURE} />
+
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

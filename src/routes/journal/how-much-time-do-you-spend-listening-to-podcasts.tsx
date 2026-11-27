@@ -3,7 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
-import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
+import { LifeFigure, PeriodTable, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-listening-to-podcasts",
@@ -37,9 +37,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 2.8,
-    total: 27,
+    total: 40,
     value: "2.8 yrs",
-    text: "of your 27 waking years: about 16,600 hours. The rest is everything else.",
+    text: "of your 40 waking years: about 16,600 hours. The rest is everything else.",
   },
 };
 
@@ -82,6 +82,9 @@ function Article() {
       </header>
 
       <LifeFigure data={FIGURE} />
+
+      <PeriodTable data={FIGURE} />
+
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

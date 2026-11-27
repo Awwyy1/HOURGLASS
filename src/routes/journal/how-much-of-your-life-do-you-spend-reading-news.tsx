@@ -3,7 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
-import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
+import { LifeFigure, PeriodTable, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-reading-news",
@@ -37,9 +37,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 2.5,
-    total: 27,
+    total: 40,
     value: "2.5 yrs",
-    text: "of your 27 waking years: 14,600 hours. Readers recall about 20% of a day's news.",
+    text: "of your 40 waking years: 14,600 hours. Readers recall about 20% of a day's news.",
   },
   why: {
     title: "Why 1 hour",
@@ -91,6 +91,9 @@ function Article() {
       </header>
 
       <LifeFigure data={FIGURE} />
+
+      <PeriodTable data={FIGURE} />
+
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

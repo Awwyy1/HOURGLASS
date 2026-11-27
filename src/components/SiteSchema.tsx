@@ -38,6 +38,9 @@ const DATA = {
       "@type": "WebSite",
       "@id": `${SITE}/#website`,
       name: "HOURGLASS",
+      // Search results label the site by this name. Without alternates Google
+      // fell back to the bare domain and appended a lower-case "hourglass".
+      alternateName: ["Hourglass", "Just Hourglass", "justhourglass.me"],
       url: SITE,
       description:
         "See a whole life as a grid of weeks, then convert any daily habit into its lifetime total in days, weeks, and waking years.",

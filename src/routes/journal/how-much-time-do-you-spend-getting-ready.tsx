@@ -3,7 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
-import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
+import { LifeFigure, PeriodTable, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-getting-ready",
@@ -37,9 +37,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 3.7,
-    total: 53,
+    total: 79,
     value: "3.7 yrs",
-    text: "of your 53 waking years: about 21,600 hours. The rest is everything else.",
+    text: "of your 79 waking years: about 21,600 hours. The rest is everything else.",
   },
   why: {
     title: "Why 45 minutes",
@@ -57,13 +57,14 @@ function Article() {
     <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend getting ready in the morning?"
-        description="The Bureau of Labor Statistics found Americans spend about 45 minutes a day on grooming — showering, dressing, hair, and personal care. Over a lifetime that adds up to nearly three waking years spent getting ready to start the day."
+        description="The Bureau of Labor Statistics found Americans spend about 45 minutes a day getting ready. Over a lifetime that adds up to nearly four waking years."
         ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend getting ready in the morning?"
-        description="The Bureau of Labor Statistics found Americans spend about 45 minutes a day on grooming — showering, dressing, hair, and personal care. Over a lifetime that adds up to nearly three waking years spent getting ready to start the day."
+        description="The Bureau of Labor Statistics found Americans spend about 45 minutes a day getting ready. Over a lifetime that adds up to nearly four waking years."
         datePublished="2026-07-03"
+        dateModified="2026-11-20"
         slug="how-much-time-do-you-spend-getting-ready"
       />
       <Breadcrumbs
@@ -90,6 +91,9 @@ function Article() {
       </header>
 
       <LifeFigure data={FIGURE} />
+
+      <PeriodTable data={FIGURE} />
+
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

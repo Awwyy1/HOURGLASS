@@ -3,7 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
-import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
+import { LifeFigure, PeriodTable, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-cooking",
@@ -37,9 +37,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 2.5,
-    total: 40,
+    total: 60,
     value: "2.5 yrs",
-    text: "of your 40 waking years: 14,580 hours. Cleanup adds another 30–40%.",
+    text: "of your 60 waking years: 14,580 hours. Cleanup adds another 30–40%.",
   },
   why: {
     title: "Why 40 minutes",
@@ -90,6 +90,9 @@ function Article() {
       </header>
 
       <LifeFigure data={FIGURE} />
+
+      <PeriodTable data={FIGURE} />
+
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

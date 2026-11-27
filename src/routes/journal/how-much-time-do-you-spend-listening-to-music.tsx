@@ -3,7 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
-import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
+import { LifeFigure, PeriodTable, type LifeFigureData } from "../../components/LifeFigure";
 import { AnswerBlock } from "../../components/AnswerBlock";
 
 export const Route = createFileRoute(
@@ -38,9 +38,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 3.9,
-    total: 40,
+    total: 60,
     value: "3.9 yrs",
-    text: "of your 40 waking years: 23,040 hours. Much of it stacks with other tasks.",
+    text: "of your 60 waking years: 23,040 hours. Much of it stacks with other tasks.",
   },
   why: {
     title: "Why 1 hour",
@@ -94,6 +94,9 @@ function Article() {
       <AnswerBlock>
         Americans spend about 32 hours a month listening to music across all platforms, which is a little over an hour a day. Across a 60-year listening life that comes to 23,040 hours, or just under four waking years, more than most people accumulate on any single social platform.
       </AnswerBlock>
+
+      <PeriodTable data={FIGURE} />
+
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

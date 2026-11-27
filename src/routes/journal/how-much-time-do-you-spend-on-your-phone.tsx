@@ -3,7 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
-import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
+import { LifeFigure, PeriodTable, type LifeFigureData } from "../../components/LifeFigure";
 import { AnswerBlock } from "../../components/AnswerBlock";
 
 export const Route = createFileRoute(
@@ -38,9 +38,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 15.5,
-    total: 41,
+    total: 62,
     value: "15.5 yrs",
-    text: "of your 41 waking years: 90,520 hours. The rest is everything else.",
+    text: "of your 62 waking years: 90,520 hours. The rest is everything else.",
   },
   why: {
     title: "Why 4 hours",
@@ -96,6 +96,9 @@ function Article() {
       <AnswerBlock>
         The average person spends close to four hours a day on their phone, while most people guess around two. Across a lifetime of smartphone use the total comes to roughly 15 waking years, which makes it one of the largest single categories of conscious time in a modern life.
       </AnswerBlock>
+
+      <PeriodTable data={FIGURE} />
+
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, PeriodTable, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-do-you-spend-using-ai",
@@ -10,9 +11,50 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "1,800",
+    unit: "hours",
+    text: "over a decade of regular use, at 45 minutes a working day.",
+  },
+  day: {
+    hours: 0.75,
+    value: "3.1%",
+    text: "of a working day: 45 minutes across AI tools, for a regular user.",
+  },
+  toYear: {
+    op: "× 240",
+    text: "every working day: five a week, 48 weeks a year",
+  },
+  year: {
+    days: 8,
+    value: "8 days",
+    text: "180 hours a year",
+  },
+  toLife: {
+    op: "× 10",
+    text: "a decade of regular use",
+  },
+  life: {
+    years: 0.3,
+    total: 10,
+    value: "113 days",
+    text: "of the 10 waking years in a decade: 1,800 hours, or 75 full 24-hour days.",
+  },
+  why: {
+    title: "Why 45 minutes",
+    max: 120,
+    band: [30, 90],
+    marker: 45,
+    ticks: [0, 30, 60, 90, 120],
+    unit: "min",
+    text: "Regular users report 30–90 min a day (2024 surveys). Microsoft found 11 min for early Copilot users.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend using AI?"
         description="OpenAI reported 200 million weekly users in 2024, a figure that doubled in under a year. Regular users spend 30 to 90 minutes a day across AI tools — and the number keeps growing."
@@ -22,6 +64,7 @@ function Article() {
         title="How much time do you spend using AI?"
         description="OpenAI reported 200 million weekly users in 2024, a figure that doubled in under a year. Regular users spend 30 to 90 minutes a day across AI tools — and the number keeps growing."
         datePublished="2026-05-14"
+        dateModified="2026-11-20"
         slug="how-much-time-do-you-spend-using-ai"
       />
       <Breadcrumbs
@@ -48,6 +91,11 @@ function Article() {
         </p>
       </header>
 
+      <LifeFigure data={FIGURE} />
+
+      <PeriodTable data={FIGURE} />
+
+
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>
           OpenAI reported 200 million weekly active users in August 2024, a figure
@@ -64,7 +112,7 @@ function Article() {
           At 45 minutes per day for a regular user across 48 working weeks, the annual
           total is 180 hours. Over a 10-year period, a reasonable estimate for how long
           AI assistants have been meaningfully available, that is 1,800 hours, or around
-          75 waking days. The technology is new enough that lifetime totals are still
+          113 waking days. The technology is new enough that lifetime totals are still
           small. The trajectory is not. If usage patterns follow those of every screen
           technology before them, the next decade will add substantially more.
         </p>

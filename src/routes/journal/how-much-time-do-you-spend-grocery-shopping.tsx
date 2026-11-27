@@ -3,7 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
-import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
+import { LifeFigure, PeriodTable, type LifeFigureData } from "../../components/LifeFigure";
 import { AnswerBlock } from "../../components/AnswerBlock";
 
 export const Route = createFileRoute(
@@ -38,9 +38,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 0.7,
-    total: 40,
+    total: 60,
     value: "260 days",
-    text: "of your 40 waking years: 4,160 hours in the store, before the drive there and back.",
+    text: "of your 60 waking years: 4,160 hours in the store, before the drive there and back.",
   },
 };
 
@@ -49,13 +49,14 @@ function Article() {
     <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much time do you spend grocery shopping?"
-        description="The average American spends about 43 minutes on a single grocery trip and shops roughly 1.5 times a week. Over a lifetime that adds up to more than two waking years spent walking store aisles."
+        description="The average American grocery trip takes about 43 minutes, roughly 1.5 times a week. Over an adult life that adds up to about 260 waking days in store aisles."
         ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend grocery shopping?"
-        description="The average American spends about 43 minutes on a single grocery trip and shops roughly 1.5 times a week. Over a lifetime that adds up to more than two waking years spent walking store aisles."
+        description="The average American grocery trip takes about 43 minutes, roughly 1.5 times a week. Over an adult life that adds up to about 260 waking days in store aisles."
         datePublished="2026-07-18"
+        dateModified="2026-11-20"
         slug="how-much-time-do-you-spend-grocery-shopping"
       />
       <Breadcrumbs
@@ -87,6 +88,9 @@ function Article() {
       <AnswerBlock>
         The average American grocery trip takes about 43 minutes, and most households make roughly 1.5 primary trips a week plus smaller top-up runs, or around 80 minutes weekly. Over a lifetime that is about 260 waking days, rising past a full waking year once driving time is counted.
       </AnswerBlock>
+
+      <PeriodTable data={FIGURE} />
+
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>

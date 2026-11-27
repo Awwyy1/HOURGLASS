@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, PeriodTable, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-eating",
@@ -10,18 +11,59 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈2,000",
+    unit: "waking days",
+    text: "of a 79-year life, at 67 minutes a day of eating as its own act.",
+  },
+  day: {
+    hours: 1.117,
+    value: "4.7%",
+    text: "of every day: 67 minutes of eating and drinking as the main activity.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 17,
+    value: "17 days",
+    text: "408 hours a year",
+  },
+  toLife: {
+    op: "× 79",
+    text: "a US life expectancy",
+  },
+  life: {
+    years: 5.5,
+    total: 79,
+    value: "5.5 yrs",
+    text: "of your 79 waking years: about 32,200 hours. The rest is everything else.",
+  },
+  why: {
+    title: "Why 67 minutes",
+    max: 150,
+    marker: 67,
+    ticks: [0, 60, 120, 150],
+    unit: "min",
+    text: "US average 67 min a day as a primary activity (BLS American Time Use Survey). France: well over 2 h.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much of your life do you spend eating?"
-        description="The average person spends a little over an hour a day eating and drinking. Over a lifetime that comes to around four and a half waking years at the table, and the trend has been moving toward doing it faster and alone."
+        description="The average American spends a little over an hour a day eating and drinking. Over a 79-year life that comes to about five and a half waking years at the table."
         ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend eating?"
-        description="The average person spends a little over an hour a day eating and drinking. Over a lifetime that comes to around four and a half waking years at the table, and the trend has been moving toward doing it faster and alone."
+        description="The average American spends a little over an hour a day eating and drinking. Over a 79-year life that comes to about five and a half waking years at the table."
         datePublished="2026-07-24"
+        dateModified="2026-11-20"
         slug="how-much-of-your-life-do-you-spend-eating"
       />
       <Breadcrumbs
@@ -48,6 +90,11 @@ function Article() {
         </p>
       </header>
 
+      <LifeFigure data={FIGURE} />
+
+      <PeriodTable data={FIGURE} />
+
+
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>
           The Bureau of Labor Statistics American Time Use Survey tracks eating
@@ -64,7 +111,7 @@ function Article() {
         <p>
           At 67 minutes a day across 79 years of life, the total comes to roughly
           32,200 hours, or about 2,000 waking days. In waking years, that is
-          around four and a half years spent eating and drinking. The figure is
+          around five and a half years spent eating and drinking. The figure is
           comparable to the lifetime total for social media at current averages,
           and larger than the total most people spend on deliberate exercise,
           which is a comparison worth sitting with given that one of the three is
@@ -111,13 +158,13 @@ function Article() {
           not less, because the body's fullness signals take time to register.
           The social research points the same direction: shared meals correlate
           with a range of outcomes, from family stability to individual wellbeing,
-          that the solo desk lunch does not. The four and a half years are not
+          that the solo desk lunch does not. The five and a half years are not
           obviously worth trimming, and may be among the more defensible large
           totals a life contains.
         </p>
 
         <p className="text-muted-foreground">
-          Four and a half waking years at the table, give or take, and falling
+          Five and a half waking years at the table, give or take, and falling
           for reasons that are not clearly to anyone's benefit. It is one of the
           few numbers in this series where the honest advice runs the other way
           from usual. This is probably not the hour of your day to optimise.
@@ -132,7 +179,7 @@ function Article() {
           },
           {
             q: "How many years of your life do you spend eating?",
-            a: "Around four and a half waking years, based on the roughly one hour a day of eating as a focused activity across a 79-year life. The number varies significantly by country and culture: in France, where time-use surveys find people spending well over two hours a day eating and drinking, the lifetime total is roughly double the American figure. Whether that counts as time lost or time well spent depends on how much of it is a shared, unhurried meal rather than food consumed in the gaps of other activity."
+            a: "Around five and a half waking years, based on the roughly one hour a day of eating as a focused activity across a 79-year life. The number varies significantly by country and culture: in France, where time-use surveys find people spending well over two hours a day eating and drinking, the lifetime total is roughly double the American figure. Whether that counts as time lost or time well spent depends on how much of it is a shared, unhurried meal rather than food consumed in the gaps of other activity."
           },
         ]}
       />

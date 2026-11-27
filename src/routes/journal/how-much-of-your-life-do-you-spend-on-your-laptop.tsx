@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
+import { LifeFigure, PeriodTable, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-of-your-life-do-you-spend-on-your-laptop",
@@ -10,18 +11,60 @@ export const Route = createFileRoute(
   component: Article,
 });
 
+const FIGURE: LifeFigureData = {
+  answer: {
+    value: "≈20",
+    unit: "waking years",
+    text: "of a 40-year career, at six hours of work and two of personal use a day.",
+  },
+  day: {
+    hours: 8,
+    value: "33%",
+    text: "of every day: six hours of screen work plus two hours of personal use.",
+  },
+  toYear: {
+    op: "× 365",
+    text: "every day of the year",
+  },
+  year: {
+    days: 122,
+    value: "122 days",
+    text: "2,920 hours a year",
+  },
+  toLife: {
+    op: "× 40",
+    text: "a 40-year career",
+  },
+  life: {
+    years: 20.0,
+    total: 40,
+    value: "20 yrs",
+    text: "of your 40 waking years: about 117,000 hours. The rest is everything else.",
+  },
+  why: {
+    title: "Why 8 hours",
+    max: 12,
+    band: [5, 7],
+    marker: 8,
+    ticks: [0, 5, 7, 12],
+    unit: "h",
+    text: "Most adults: 5–7 h (Nielsen). Knowledge workers: 6 h 27 min (RescueTime), plus personal use.",
+  },
+};
+
 function Article() {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-24">
+    <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much of your life do you spend on your laptop?"
-        description="Between work and personal use, most adults spend five to seven hours a day in front of a laptop or desktop screen. Over a career and adult life, that total reaches decades — making it the single largest category of waking time for many people."
+        description="Knowledge workers spend over six hours a day at a computer, plus personal use on top. At eight hours a day over a 40-year career, that is about 20 waking years."
         ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend on your laptop?"
-        description="Between work and personal use, most adults spend five to seven hours a day in front of a laptop or desktop screen. Over a career and adult life, that total reaches decades — making it the single largest category of waking time for many people."
+        description="Knowledge workers spend over six hours a day at a computer, plus personal use on top. At eight hours a day over a 40-year career, that is about 20 waking years."
         datePublished="2026-06-23"
+        dateModified="2026-11-20"
         slug="how-much-of-your-life-do-you-spend-on-your-laptop"
       />
       <Breadcrumbs
@@ -48,6 +91,11 @@ function Article() {
         </p>
       </header>
 
+      <LifeFigure data={FIGURE} />
+
+      <PeriodTable data={FIGURE} />
+
+
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>
           Nielsen's Total Audience Report found that American adults spend an average
@@ -64,9 +112,9 @@ function Article() {
 
         <p>
           At six hours per day across a 40-year career, the work-hours total alone is
-          87,600 hours — roughly 30 waking years in front of a screen. Add personal
+          87,600 hours, or 15 waking years in front of a screen. Add personal
           laptop use outside of working hours at two hours per day across the same period
-          and the combined total approaches 117,000 hours, or about 40 waking years.
+          and the combined total approaches 117,000 hours, or about 20 waking years.
           For someone who starts a desk job at 22 and retires at 65, the laptop is not
           a tool they use during their life. It is, in terms of raw hours, the primary
           location where their adult life happens.
@@ -115,9 +163,9 @@ function Article() {
         </p>
 
         <p className="text-muted-foreground">
-          Forty waking years is a number that becomes easier to understand when you
+          Twenty waking years is a number that becomes easier to understand when you
           think of it the other way: if you are 30 now and you follow average patterns,
-          you have roughly 28 of those years still ahead of you. What happens inside
+          you have roughly 16 of those years still ahead of you. What happens inside
           them — how much of it is work you find meaningful, how much is friction, how
           much is distraction you would not choose if you could see it clearly — is
           a question the laptop itself will never raise on your behalf.

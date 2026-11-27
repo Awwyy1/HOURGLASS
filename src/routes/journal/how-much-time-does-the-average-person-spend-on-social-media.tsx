@@ -3,7 +3,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PageSEO } from "../../components/PageSEO";
 import { ArticleSchema } from "../../components/ArticleSchema";
 import { FAQSection } from "../../components/FAQSection";
-import { LifeFigure, type LifeFigureData } from "../../components/LifeFigure";
+import { LifeFigure, PeriodTable, type LifeFigureData } from "../../components/LifeFigure";
 
 export const Route = createFileRoute(
   "/journal/how-much-time-does-the-average-person-spend-on-social-media",
@@ -37,9 +37,9 @@ const FIGURE: LifeFigureData = {
   },
   life: {
     years: 7.4,
-    total: 33,
+    total: 50,
     value: "7.4 yrs",
-    text: "of your 33 waking years: about 43,500 hours. At the teen rate, fifteen.",
+    text: "of your 50 waking years: about 43,500 hours. At the teen rate, fifteen.",
   },
   why: {
     title: "Why 2 h 23 min",
@@ -90,6 +90,9 @@ function Article() {
       </header>
 
       <LifeFigure data={FIGURE} />
+
+      <PeriodTable data={FIGURE} />
+
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>
