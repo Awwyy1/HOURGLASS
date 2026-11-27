@@ -43,7 +43,7 @@ export const LIFETIMES: Lifetime[] = [
   },
   {
     "slug": "how-much-of-your-life-do-you-spend-on-your-laptop",
-    "title": "How much of your life do you spend on your laptop?",
+    "title": "How many hours a day do you spend on a computer?",
     "hoursPerDay": 8,
     "years": 20,
     "span": 40,
@@ -97,7 +97,7 @@ export const LIFETIMES: Lifetime[] = [
   },
   {
     "slug": "how-much-of-your-life-do-you-spend-eating",
-    "title": "How much of your life do you spend eating?",
+    "title": "How much time do you spend eating in a lifetime?",
     "hoursPerDay": 1.12,
     "years": 5.5,
     "span": 79,
@@ -124,7 +124,7 @@ export const LIFETIMES: Lifetime[] = [
   },
   {
     "slug": "how-much-time-do-you-spend-listening-to-music",
-    "title": "How much time do you spend listening to music?",
+    "title": "Average music listening time per day, month and year",
     "hoursPerDay": 1.05,
     "years": 3.9,
     "span": 60,
@@ -133,7 +133,7 @@ export const LIFETIMES: Lifetime[] = [
   },
   {
     "slug": "how-much-time-do-you-spend-getting-ready",
-    "title": "How much time do you spend getting ready in the morning?",
+    "title": "How long does it take to get ready in the morning?",
     "hoursPerDay": 0.75,
     "years": 3.7,
     "span": 79,
@@ -187,7 +187,7 @@ export const LIFETIMES: Lifetime[] = [
   },
   {
     "slug": "how-much-of-your-life-do-you-spend-in-school",
-    "title": "How much of your life do you spend in school?",
+    "title": "How many hours do you spend in school in a lifetime?",
     "hoursPerDay": 3.21,
     "years": 2.6,
     "span": 13,
@@ -322,7 +322,7 @@ export const LIFETIMES: Lifetime[] = [
   },
   {
     "slug": "how-much-time-do-you-spend-grocery-shopping",
-    "title": "How much time do you spend grocery shopping?",
+    "title": "How long does grocery shopping take? Per trip and lifetime",
     "hoursPerDay": 0.19,
     "years": 0.7,
     "span": 60,
@@ -331,7 +331,7 @@ export const LIFETIMES: Lifetime[] = [
   },
   {
     "slug": "how-much-of-your-life-do-you-spend-in-the-shower",
-    "title": "How much of your life do you spend in the shower?",
+    "title": "How much time do you spend in the shower in a lifetime?",
     "hoursPerDay": 0.13,
     "years": 0.6,
     "span": 70,
@@ -367,7 +367,7 @@ export const LIFETIMES: Lifetime[] = [
   },
   {
     "slug": "how-much-time-do-you-spend-using-ai",
-    "title": "How much time do you spend using AI?",
+    "title": "How much time do people spend using AI each day?",
     "hoursPerDay": 0.49,
     "years": 0.3,
     "span": 10,

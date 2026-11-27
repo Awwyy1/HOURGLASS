@@ -56,13 +56,13 @@ function Article() {
   return (
     <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
-        title="How much of your life do you spend on your laptop?"
-        description="Knowledge workers spend over six hours a day at a computer, plus personal use on top. At eight hours a day over a 40-year career, that is about 20 waking years."
+        title="How many hours a day do you spend on a computer?"
+        description="Knowledge workers spend over six hours a day at a computer, plus personal use. At eight hours a day over a 40-year career that is 20 waking years. See yours."
         ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend on your laptop?"
-        description="Knowledge workers spend over six hours a day at a computer, plus personal use on top. At eight hours a day over a 40-year career, that is about 20 waking years."
+        description="Knowledge workers spend over six hours a day at a computer, plus personal use. At eight hours a day over a 40-year career that is 20 waking years. See yours."
         datePublished="2026-06-23"
         dateModified="2026-11-20"
         slug="how-much-of-your-life-do-you-spend-on-your-laptop"

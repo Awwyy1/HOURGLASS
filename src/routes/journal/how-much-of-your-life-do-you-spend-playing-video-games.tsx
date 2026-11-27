@@ -58,12 +58,12 @@ function Article() {
     <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How much of your life do you spend playing video games?"
-        description="The average gamer plays 7 to 8 hours a week, about 2.5 waking years over a lifetime. For the top 10 percent of players, the total comes to nearly nine."
+        description="The average gamer plays 7 to 8 hours a week: about 15 days a year and 2.5 waking years over 40 years. Heavy players reach nearly nine. Work out your own."
         ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend playing video games?"
-        description="The average gamer plays 7 to 8 hours a week, about 2.5 waking years over a lifetime. For the top 10 percent of players, the total comes to nearly nine."
+        description="The average gamer plays 7 to 8 hours a week: about 15 days a year and 2.5 waking years over 40 years. Heavy players reach nearly nine. Work out your own."
         datePublished="2026-06-03"
         dateModified="2026-11-20"
         slug="how-much-of-your-life-do-you-spend-playing-video-games"

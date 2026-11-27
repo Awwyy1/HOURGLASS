@@ -56,13 +56,13 @@ function Article() {
   return (
     <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
-        title="How much time do you spend getting ready in the morning?"
-        description="The Bureau of Labor Statistics found Americans spend about 45 minutes a day getting ready. Over a lifetime that adds up to nearly four waking years."
+        title="How long does it take to get ready in the morning?"
+        description="About 45 minutes a day, says the Bureau of Labor Statistics: 274 hours a year and nearly four waking years over a lifetime. Work out your own total."
         ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend getting ready in the morning?"
-        description="The Bureau of Labor Statistics found Americans spend about 45 minutes a day getting ready. Over a lifetime that adds up to nearly four waking years."
+        description="About 45 minutes a day, says the Bureau of Labor Statistics: 274 hours a year and nearly four waking years over a lifetime. Work out your own total."
         datePublished="2026-07-03"
         dateModified="2026-11-20"
         slug="how-much-time-do-you-spend-getting-ready"

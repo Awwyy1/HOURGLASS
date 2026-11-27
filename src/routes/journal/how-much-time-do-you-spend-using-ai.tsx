@@ -56,13 +56,13 @@ function Article() {
   return (
     <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
-        title="How much time do you spend using AI?"
-        description="OpenAI reported 200 million weekly users in 2024, a figure that doubled in under a year. Regular users spend 30 to 90 minutes a day across AI tools — and the number keeps growing."
+        title="How much time do people spend using AI each day?"
+        description="Regular users spend 30 to 90 minutes a day across AI tools. At 45 minutes a working day that is 180 hours a year and 1,800 over a decade. Work out yours."
         ogType="article"
       />
       <ArticleSchema
         title="How much time do you spend using AI?"
-        description="OpenAI reported 200 million weekly users in 2024, a figure that doubled in under a year. Regular users spend 30 to 90 minutes a day across AI tools — and the number keeps growing."
+        description="Regular users spend 30 to 90 minutes a day across AI tools. At 45 minutes a working day that is 180 hours a year and 1,800 over a decade. Work out yours."
         datePublished="2026-05-14"
         dateModified="2026-11-20"
         slug="how-much-time-do-you-spend-using-ai"

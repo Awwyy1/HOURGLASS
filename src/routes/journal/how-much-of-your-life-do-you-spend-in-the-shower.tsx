@@ -47,13 +47,13 @@ function Article() {
   return (
     <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
-        title="How much of your life do you spend in the shower?"
-        description="The average shower runs about eight minutes, once a day. Over a lifetime that comes to roughly seven months of waking time and hundreds of thousands of gallons of water — spent in what may be the last unstimulated space most people have left."
+        title="How much time do you spend in the shower in a lifetime?"
+        description="The average shower lasts about eight minutes: 49 hours a year and roughly seven waking months over a lifetime. Set your own shower length and see yours."
         ogType="article"
       />
       <ArticleSchema
         title="How much of your life do you spend in the shower?"
-        description="The average shower runs about eight minutes, once a day. Over a lifetime that comes to roughly seven months of waking time and hundreds of thousands of gallons of water — spent in what may be the last unstimulated space most people have left."
+        description="The average shower lasts about eight minutes: 49 hours a year and roughly seven waking months over a lifetime. Set your own shower length and see yours."
         datePublished="2026-07-27"
         slug="how-much-of-your-life-do-you-spend-in-the-shower"
       />
