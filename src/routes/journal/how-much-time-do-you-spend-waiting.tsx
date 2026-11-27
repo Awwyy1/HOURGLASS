@@ -65,6 +65,7 @@ function Article() {
         title="How much time do you spend waiting in a lifetime?"
         description="Americans spend an estimated 37 minutes a day waiting — in lines, on hold, at traffic lights, in waiting rooms. Over a lifetime that adds up to more than two waking years spent doing nothing by requirement."
         datePublished="2026-06-26"
+        dateModified="2026-11-27"
         slug="how-much-time-do-you-spend-waiting"
       />
       <Breadcrumbs
@@ -141,11 +142,11 @@ function Article() {
           Customer service hold time is a second major category that has grown
           significantly. Americans collectively spend around 900 million hours per
           year on hold with customer service lines, according to estimates based on
-          call center industry data. Per person, that works out to roughly three
-          hours per year for an average adult — an hour and a half of waking days
-          per year, or about 90 waking hours over a 60-year adult life, spent
-          listening to hold music while waiting for a problem that should not have
-          existed to be resolved by someone who did not create it.
+          call center industry data. Per person, that works out to roughly 3.6
+          hours a year for an average adult, or about 216 hours over a 60-year adult
+          life, around 14 waking days spent listening to hold music while waiting for
+          a problem that should not have existed to be resolved by someone who did
+          not create it.
         </p>
 
         <p>
@@ -193,7 +194,7 @@ function Article() {
           },
           {
             q: "How much time do Americans spend on hold with customer service?",
-            a: "Estimates based on call center industry data put the collective US total at around 900 million hours per year. Per adult that works out to roughly three hours per year, or about 180 hours over a 60-year adult life. That figure has been relatively stable despite the expansion of self-service options and chat support, partly because the remaining calls tend to involve more complex problems that take longer to resolve, and partly because phone hold systems have proven difficult to eliminate despite decades of customer frustration with them."
+            a: "Estimates based on call center industry data put the collective US total at around 900 million hours per year. Per adult that works out to roughly 3.6 hours per year, or about 216 hours over a 60-year adult life. That figure has been relatively stable despite the expansion of self-service options and chat support, partly because the remaining calls tend to involve more complex problems that take longer to resolve, and partly because phone hold systems have proven difficult to eliminate despite decades of customer frustration with them."
           },
         ]}
       />
@@ -210,16 +211,16 @@ function Article() {
             How much time do you spend stuck in traffic? →
           </Link>
           <Link
-            to="/journal/how-much-time-do-you-spend-grocery-shopping"
+            to="/journal/how-much-of-your-life-do-you-spend-at-red-lights"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much time do you spend grocery shopping? →
+            How much of your life do you spend at red lights? →
           </Link>
           <Link
-            to="/journal/how-much-time-do-you-spend-shopping-online"
+            to="/journal/how-much-time-do-you-spend-on-hold"
             className="block font-serif text-lg italic text-foreground transition hover:text-muted-foreground"
           >
-            How much time do you spend shopping online? →
+            How much time do you spend on hold in a lifetime? →
           </Link>
         </div>
       </div>

@@ -15,6 +15,22 @@ type Article = {
 
 const articles: Article[] = [
   {
+    slug: "how-much-time-do-you-spend-on-hold",
+    title: "How much time do you spend on hold in a lifetime?",
+    date: "2026-09-18",
+    readingTime: "3 min",
+    excerpt:
+      "Call data put the average American adult at about 3.6 hours a year on hold, roughly 14 waking days over an adult life. The popular figure of 43 days comes from a poll of remembered waits, counted from birth.",
+  },
+  {
+    slug: "how-much-of-your-life-do-you-spend-at-red-lights",
+    title: "How much of your life do you spend at red lights?",
+    date: "2026-09-11",
+    readingTime: "3 min",
+    excerpt:
+      "About six minutes of an hour-long driving day is spent stopped at signals. Over 60 years that is roughly 137 waking days, and the famous six months describes the heaviest city driver rather than the average one.",
+  },
+  {
     slug: "what-percentage-of-your-life-do-you-spend-on-everything",
     title: "What percentage of your life do you spend on everything?",
     date: "2026-09-04",
