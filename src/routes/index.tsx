@@ -167,15 +167,15 @@ function Index() {
         </div>
         <div className="divide-y divide-border">
           <div className="pb-8">
-            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">November 27, 2026</p>
-            <Link to="/journal/how-many-spotify-wrapped-minutes-is-normal" className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground">
-              How many Spotify Wrapped minutes is normal? →
+            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">September 4, 2026</p>
+            <Link to="/journal/what-percentage-of-your-life-do-you-spend-on-everything" className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground">
+              What percentage of your life do you spend on everything? →
             </Link>
           </div>
           <div className="py-8">
-            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">November 24, 2026</p>
-            <Link to="/journal/what-percentage-of-your-life-do-you-spend-on-everything" className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground">
-              What percentage of your life do you spend on everything? →
+            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">August 28, 2026</p>
+            <Link to="/journal/how-many-spotify-wrapped-minutes-is-normal" className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground">
+              How many Spotify Wrapped minutes is normal? →
             </Link>
           </div>
           <div className="pt-8">
