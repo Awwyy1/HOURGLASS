@@ -166,7 +166,7 @@ function Article() {
       <ArticleSchema
         title={TITLE}
         description={DESCRIPTION}
-        datePublished="2026-11-27"
+        datePublished="2026-08-28"
         slug="how-many-spotify-wrapped-minutes-is-normal"
       />
       <Breadcrumbs
@@ -179,7 +179,7 @@ function Article() {
 
       <header className="mb-16">
         <div className="mb-6 flex items-center gap-4 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
-          <time dateTime="2026-11-27">November 27, 2026</time>
+          <time dateTime="2026-08-28">August 28, 2026</time>
           <span>·</span>
           <span>3 min read</span>
         </div>

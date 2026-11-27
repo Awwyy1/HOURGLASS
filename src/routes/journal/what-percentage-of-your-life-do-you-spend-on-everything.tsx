@@ -188,7 +188,7 @@ function Article() {
       <ArticleSchema
         title={TITLE}
         description={DESCRIPTION}
-        datePublished="2026-11-24"
+        datePublished="2026-09-04"
         slug="what-percentage-of-your-life-do-you-spend-on-everything"
       />
       <Breadcrumbs
@@ -201,7 +201,7 @@ function Article() {
 
       <header className="mb-16">
         <div className="mb-6 flex items-center gap-4 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
-          <time dateTime="2026-11-24">November 24, 2026</time>
+          <time dateTime="2026-09-04">September 4, 2026</time>
           <span>·</span>
           <span>4 min read</span>
         </div>

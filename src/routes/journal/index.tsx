@@ -15,20 +15,20 @@ type Article = {
 
 const articles: Article[] = [
   {
-    slug: "how-many-spotify-wrapped-minutes-is-normal",
-    title: "How many Spotify Wrapped minutes is normal?",
-    date: "2026-11-27",
-    readingTime: "3 min",
-    excerpt:
-      "Spotify's own figures put the average listener near 15,800 minutes in a Wrapped year. The average person's music from every source comes to about 57,000, which gives any total a scale to sit on.",
-  },
-  {
     slug: "what-percentage-of-your-life-do-you-spend-on-everything",
     title: "What percentage of your life do you spend on everything?",
-    date: "2026-11-24",
+    date: "2026-09-04",
     readingTime: "4 min",
     excerpt:
       "Sleep takes 31 percent of a life. A laptop, work and a phone each take a fifth or more of the waking rest, and they overlap. Every habit in this journal, ranked by its share.",
+  },
+  {
+    slug: "how-many-spotify-wrapped-minutes-is-normal",
+    title: "How many Spotify Wrapped minutes is normal?",
+    date: "2026-08-28",
+    readingTime: "3 min",
+    excerpt:
+      "Spotify's own figures put the average listener near 15,800 minutes in a Wrapped year. The average person's music from every source comes to about 57,000, which gives any total a scale to sit on.",
   },
   {
     slug: "how-much-time-do-you-spend-looking-for-lost-things",

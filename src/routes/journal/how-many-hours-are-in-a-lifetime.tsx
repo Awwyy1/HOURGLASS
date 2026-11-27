@@ -6,6 +6,7 @@ import { FAQSection } from "../../components/FAQSection";
 import { FigureCard, FigurePanel } from "../../components/LifeFigure";
 import { Funnel, Compare } from "../../components/BreakdownFigures";
 import { AnswerBlock } from "../../components/AnswerBlock";
+import { HoursLeftCalculator } from "../../components/HoursLeftCalculator";
 
 export const Route = createFileRoute(
   "/journal/how-many-hours-are-in-a-lifetime",
@@ -23,8 +24,11 @@ function ArticleFigure() {
       }}
     >
       <FigureCard>
+        <HoursLeftCalculator />
+      </FigureCard>
+      <FigureCard>
         <Funnel
-          num="01"
+          num="02"
           title="From the total to the free hours"
           steps={[
             { value: 692040, display: "692,040", label: "hours in 79 years" },
@@ -43,7 +47,7 @@ function ArticleFigure() {
             {
               value: 162500,
               display: "150,000–175,000",
-              label: "discretionary, about five hours a day",
+              label: "discretionary, about seven hours a day",
               minus: "minus work, upkeep and the friction of daily life",
               accent: true,
             },
@@ -52,7 +56,7 @@ function ArticleFigure() {
       </FigureCard>
       <FigureCard>
         <Compare
-          num="02"
+          num="03"
           title="Adult waking hours, by use"
           rows={[
             { label: "Work, ages 22 to 65", value: 80000, display: "80,000" },
@@ -64,7 +68,7 @@ function ArticleFigure() {
               accent: true,
             },
           ]}
-          text="Screen time averages six to seven hours a day (Nielsen), more than the whole free budget."
+          text="Screen time averages six to seven hours a day (Nielsen), nearly the whole free budget."
         />
       </FigureCard>
     </FigurePanel>
@@ -76,13 +80,14 @@ function Article() {
     <article className="article-with-figure mx-auto max-w-2xl px-6 py-24">
       <PageSEO
         title="How many hours are in a lifetime?"
-        description="A human life contains around 692,000 hours in total. Subtract sleep and you have roughly 461,000 waking hours. The number sounds large until you see where it actually goes."
+        description="A 79-year life holds 692,040 hours, about 461,000 of them awake and 150,000 to 175,000 genuinely free. Enter your birth year to see how many of yours are left."
         ogType="article"
       />
       <ArticleSchema
         title="How many hours are in a lifetime?"
-        description="A human life contains around 692,000 hours in total. Subtract sleep and you have roughly 461,000 waking hours. The number sounds large until you see where it actually goes."
+        description="A 79-year life holds 692,040 hours, about 461,000 of them awake and 150,000 to 175,000 genuinely free. Enter your birth year to see how many of yours are left."
         datePublished="2026-06-10"
+        dateModified="2026-11-27"
         slug="how-many-hours-are-in-a-lifetime"
       />
       <Breadcrumbs
@@ -112,7 +117,7 @@ function Article() {
       <ArticleFigure />
 
       <AnswerBlock>
-        A human life of 79 years contains about 692,040 hours in total. Subtract sleep and roughly 461,000 waking hours remain. After childhood, work, and daily maintenance, the genuinely discretionary portion falls to somewhere between 150,000 and 175,000 hours, or about five hours a day across an adult life.
+        A human life of 79 years contains about 692,040 hours in total. Subtract sleep and roughly 461,000 waking hours remain. After childhood, work, and daily maintenance, the genuinely discretionary portion falls to somewhere between 150,000 and 175,000 hours, or about seven hours a day across an adult life.
       </AnswerBlock>
 
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
@@ -178,18 +183,17 @@ function Article() {
           150,000 to 175,000 hours. That is the portion that goes to everything else:
           relationships, leisure, learning, travel, creative work, screen time, and
           whatever you consider personally meaningful. It sounds like a lot. It is
-          roughly 20 years of waking time across an entire adult life, or about
-          five hours per day from 18 to 79.
+          roughly 26 to 30 waking years across an entire adult life, or about
+          seven hours a day from 18 to 79.
         </p>
 
         <p>
           The reason this number matters is that most people spend it without tracking
           it. Screen time alone — phones, televisions, computers used for entertainment
           — now averages somewhere between six and seven hours per day across American
-          adults, according to Nielsen. That figure, if accurate, would exceed the
-          available discretionary budget by one to two hours per day, which implies that
-          screen time has been colonising time that was previously spent on sleep, meals,
-          or in-person interaction rather than appearing from nowhere.
+          adults, according to Nielsen. That figure, if accurate, takes up nearly the
+          whole discretionary budget of about seven hours a day, which leaves very little
+          of a free day for anything that does not happen on a screen.
         </p>
 
         <p className="text-muted-foreground">
@@ -209,7 +213,7 @@ function Article() {
           },
           {
             q: "How many hours of free time does the average person have in a lifetime?",
-            a: "After accounting for sleep, work, childhood, and daily maintenance tasks like cooking and errands, the remaining discretionary time in an average adult life sits somewhere between 150,000 and 175,000 hours. That works out to roughly five hours per day across a 61-year adult lifespan. Screen time across phones, televisions, and computers already averages six to seven hours per day for many adults, which means that for a large share of people, genuinely free time — time not committed to obligation or passive consumption — is considerably smaller than that figure suggests."
+            a: "After accounting for sleep, work, childhood, and daily maintenance tasks like cooking and errands, the remaining discretionary time in an average adult life sits somewhere between 150,000 and 175,000 hours. That works out to roughly seven hours per day across a 61-year adult lifespan. Screen time across phones, televisions, and computers already averages six to seven hours per day for many adults, which means that for a large share of people, genuinely free time — time not committed to obligation or passive consumption — is considerably smaller than that figure suggests."
           },
         ]}
       />
