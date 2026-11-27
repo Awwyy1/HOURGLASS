@@ -20,6 +20,7 @@ import { Route as JournalIndexRouteImport } from './routes/journal/index'
 import { Route as JournalHowManyDaysAreInALifetimeRouteImport } from './routes/journal/how-many-days-are-in-a-lifetime'
 import { Route as JournalHowManyHoursAreInALifetimeRouteImport } from './routes/journal/how-many-hours-are-in-a-lifetime'
 import { Route as JournalHowManySpotifyWrappedMinutesIsNormalRouteImport } from './routes/journal/how-many-spotify-wrapped-minutes-is-normal'
+import { Route as JournalHowMuchOfYourLifeDoYouSpendAtRedLightsRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-at-red-lights'
 import { Route as JournalHowMuchOfYourLifeDoYouSpendCommutingRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-commuting'
 import { Route as JournalHowMuchOfYourLifeDoYouSpendCookingRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-cooking'
 import { Route as JournalHowMuchOfYourLifeDoYouSpendDrivingRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-driving'
@@ -46,6 +47,7 @@ import { Route as JournalHowMuchTimeDoYouSpendListeningToMusicRouteImport } from
 import { Route as JournalHowMuchTimeDoYouSpendListeningToPodcastsRouteImport } from './routes/journal/how-much-time-do-you-spend-listening-to-podcasts'
 import { Route as JournalHowMuchTimeDoYouSpendLookingForLostThingsRouteImport } from './routes/journal/how-much-time-do-you-spend-looking-for-lost-things'
 import { Route as JournalHowMuchTimeDoYouSpendOnDatingAppsRouteImport } from './routes/journal/how-much-time-do-you-spend-on-dating-apps'
+import { Route as JournalHowMuchTimeDoYouSpendOnHoldRouteImport } from './routes/journal/how-much-time-do-you-spend-on-hold'
 import { Route as JournalHowMuchTimeDoYouSpendOnHouseholdChoresRouteImport } from './routes/journal/how-much-time-do-you-spend-on-household-chores'
 import { Route as JournalHowMuchTimeDoYouSpendOnLinkedinRouteImport } from './routes/journal/how-much-time-do-you-spend-on-linkedin'
 import { Route as JournalHowMuchTimeDoYouSpendOnTwitterXRouteImport } from './routes/journal/how-much-time-do-you-spend-on-twitter-x'
@@ -123,6 +125,12 @@ const JournalHowManySpotifyWrappedMinutesIsNormalRoute =
   JournalHowManySpotifyWrappedMinutesIsNormalRouteImport.update({
     id: '/how-many-spotify-wrapped-minutes-is-normal',
     path: '/how-many-spotify-wrapped-minutes-is-normal',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowMuchOfYourLifeDoYouSpendAtRedLightsRoute =
+  JournalHowMuchOfYourLifeDoYouSpendAtRedLightsRouteImport.update({
+    id: '/how-much-of-your-life-do-you-spend-at-red-lights',
+    path: '/how-much-of-your-life-do-you-spend-at-red-lights',
     getParentRoute: () => JournalRoute,
   } as any)
 const JournalHowMuchOfYourLifeDoYouSpendCommutingRoute =
@@ -281,6 +289,12 @@ const JournalHowMuchTimeDoYouSpendOnDatingAppsRoute =
     path: '/how-much-time-do-you-spend-on-dating-apps',
     getParentRoute: () => JournalRoute,
   } as any)
+const JournalHowMuchTimeDoYouSpendOnHoldRoute =
+  JournalHowMuchTimeDoYouSpendOnHoldRouteImport.update({
+    id: '/how-much-time-do-you-spend-on-hold',
+    path: '/how-much-time-do-you-spend-on-hold',
+    getParentRoute: () => JournalRoute,
+  } as any)
 const JournalHowMuchTimeDoYouSpendOnHouseholdChoresRoute =
   JournalHowMuchTimeDoYouSpendOnHouseholdChoresRouteImport.update({
     id: '/how-much-time-do-you-spend-on-household-chores',
@@ -413,6 +427,7 @@ export interface FileRoutesByFullPath {
   '/journal/how-many-days-are-in-a-lifetime': typeof JournalHowManyDaysAreInALifetimeRoute
   '/journal/how-many-hours-are-in-a-lifetime': typeof JournalHowManyHoursAreInALifetimeRoute
   '/journal/how-many-spotify-wrapped-minutes-is-normal': typeof JournalHowManySpotifyWrappedMinutesIsNormalRoute
+  '/journal/how-much-of-your-life-do-you-spend-at-red-lights': typeof JournalHowMuchOfYourLifeDoYouSpendAtRedLightsRoute
   '/journal/how-much-of-your-life-do-you-spend-commuting': typeof JournalHowMuchOfYourLifeDoYouSpendCommutingRoute
   '/journal/how-much-of-your-life-do-you-spend-cooking': typeof JournalHowMuchOfYourLifeDoYouSpendCookingRoute
   '/journal/how-much-of-your-life-do-you-spend-driving': typeof JournalHowMuchOfYourLifeDoYouSpendDrivingRoute
@@ -439,6 +454,7 @@ export interface FileRoutesByFullPath {
   '/journal/how-much-time-do-you-spend-listening-to-podcasts': typeof JournalHowMuchTimeDoYouSpendListeningToPodcastsRoute
   '/journal/how-much-time-do-you-spend-looking-for-lost-things': typeof JournalHowMuchTimeDoYouSpendLookingForLostThingsRoute
   '/journal/how-much-time-do-you-spend-on-dating-apps': typeof JournalHowMuchTimeDoYouSpendOnDatingAppsRoute
+  '/journal/how-much-time-do-you-spend-on-hold': typeof JournalHowMuchTimeDoYouSpendOnHoldRoute
   '/journal/how-much-time-do-you-spend-on-household-chores': typeof JournalHowMuchTimeDoYouSpendOnHouseholdChoresRoute
   '/journal/how-much-time-do-you-spend-on-linkedin': typeof JournalHowMuchTimeDoYouSpendOnLinkedinRoute
   '/journal/how-much-time-do-you-spend-on-twitter-x': typeof JournalHowMuchTimeDoYouSpendOnTwitterXRoute
@@ -471,6 +487,7 @@ export interface FileRoutesByTo {
   '/journal/how-many-days-are-in-a-lifetime': typeof JournalHowManyDaysAreInALifetimeRoute
   '/journal/how-many-hours-are-in-a-lifetime': typeof JournalHowManyHoursAreInALifetimeRoute
   '/journal/how-many-spotify-wrapped-minutes-is-normal': typeof JournalHowManySpotifyWrappedMinutesIsNormalRoute
+  '/journal/how-much-of-your-life-do-you-spend-at-red-lights': typeof JournalHowMuchOfYourLifeDoYouSpendAtRedLightsRoute
   '/journal/how-much-of-your-life-do-you-spend-commuting': typeof JournalHowMuchOfYourLifeDoYouSpendCommutingRoute
   '/journal/how-much-of-your-life-do-you-spend-cooking': typeof JournalHowMuchOfYourLifeDoYouSpendCookingRoute
   '/journal/how-much-of-your-life-do-you-spend-driving': typeof JournalHowMuchOfYourLifeDoYouSpendDrivingRoute
@@ -497,6 +514,7 @@ export interface FileRoutesByTo {
   '/journal/how-much-time-do-you-spend-listening-to-podcasts': typeof JournalHowMuchTimeDoYouSpendListeningToPodcastsRoute
   '/journal/how-much-time-do-you-spend-looking-for-lost-things': typeof JournalHowMuchTimeDoYouSpendLookingForLostThingsRoute
   '/journal/how-much-time-do-you-spend-on-dating-apps': typeof JournalHowMuchTimeDoYouSpendOnDatingAppsRoute
+  '/journal/how-much-time-do-you-spend-on-hold': typeof JournalHowMuchTimeDoYouSpendOnHoldRoute
   '/journal/how-much-time-do-you-spend-on-household-chores': typeof JournalHowMuchTimeDoYouSpendOnHouseholdChoresRoute
   '/journal/how-much-time-do-you-spend-on-linkedin': typeof JournalHowMuchTimeDoYouSpendOnLinkedinRoute
   '/journal/how-much-time-do-you-spend-on-twitter-x': typeof JournalHowMuchTimeDoYouSpendOnTwitterXRoute
@@ -531,6 +549,7 @@ export interface FileRoutesById {
   '/journal/how-many-days-are-in-a-lifetime': typeof JournalHowManyDaysAreInALifetimeRoute
   '/journal/how-many-hours-are-in-a-lifetime': typeof JournalHowManyHoursAreInALifetimeRoute
   '/journal/how-many-spotify-wrapped-minutes-is-normal': typeof JournalHowManySpotifyWrappedMinutesIsNormalRoute
+  '/journal/how-much-of-your-life-do-you-spend-at-red-lights': typeof JournalHowMuchOfYourLifeDoYouSpendAtRedLightsRoute
   '/journal/how-much-of-your-life-do-you-spend-commuting': typeof JournalHowMuchOfYourLifeDoYouSpendCommutingRoute
   '/journal/how-much-of-your-life-do-you-spend-cooking': typeof JournalHowMuchOfYourLifeDoYouSpendCookingRoute
   '/journal/how-much-of-your-life-do-you-spend-driving': typeof JournalHowMuchOfYourLifeDoYouSpendDrivingRoute
@@ -557,6 +576,7 @@ export interface FileRoutesById {
   '/journal/how-much-time-do-you-spend-listening-to-podcasts': typeof JournalHowMuchTimeDoYouSpendListeningToPodcastsRoute
   '/journal/how-much-time-do-you-spend-looking-for-lost-things': typeof JournalHowMuchTimeDoYouSpendLookingForLostThingsRoute
   '/journal/how-much-time-do-you-spend-on-dating-apps': typeof JournalHowMuchTimeDoYouSpendOnDatingAppsRoute
+  '/journal/how-much-time-do-you-spend-on-hold': typeof JournalHowMuchTimeDoYouSpendOnHoldRoute
   '/journal/how-much-time-do-you-spend-on-household-chores': typeof JournalHowMuchTimeDoYouSpendOnHouseholdChoresRoute
   '/journal/how-much-time-do-you-spend-on-linkedin': typeof JournalHowMuchTimeDoYouSpendOnLinkedinRoute
   '/journal/how-much-time-do-you-spend-on-twitter-x': typeof JournalHowMuchTimeDoYouSpendOnTwitterXRoute
@@ -592,6 +612,7 @@ export interface FileRouteTypes {
     | '/journal/how-many-days-are-in-a-lifetime'
     | '/journal/how-many-hours-are-in-a-lifetime'
     | '/journal/how-many-spotify-wrapped-minutes-is-normal'
+    | '/journal/how-much-of-your-life-do-you-spend-at-red-lights'
     | '/journal/how-much-of-your-life-do-you-spend-commuting'
     | '/journal/how-much-of-your-life-do-you-spend-cooking'
     | '/journal/how-much-of-your-life-do-you-spend-driving'
@@ -618,6 +639,7 @@ export interface FileRouteTypes {
     | '/journal/how-much-time-do-you-spend-listening-to-podcasts'
     | '/journal/how-much-time-do-you-spend-looking-for-lost-things'
     | '/journal/how-much-time-do-you-spend-on-dating-apps'
+    | '/journal/how-much-time-do-you-spend-on-hold'
     | '/journal/how-much-time-do-you-spend-on-household-chores'
     | '/journal/how-much-time-do-you-spend-on-linkedin'
     | '/journal/how-much-time-do-you-spend-on-twitter-x'
@@ -650,6 +672,7 @@ export interface FileRouteTypes {
     | '/journal/how-many-days-are-in-a-lifetime'
     | '/journal/how-many-hours-are-in-a-lifetime'
     | '/journal/how-many-spotify-wrapped-minutes-is-normal'
+    | '/journal/how-much-of-your-life-do-you-spend-at-red-lights'
     | '/journal/how-much-of-your-life-do-you-spend-commuting'
     | '/journal/how-much-of-your-life-do-you-spend-cooking'
     | '/journal/how-much-of-your-life-do-you-spend-driving'
@@ -676,6 +699,7 @@ export interface FileRouteTypes {
     | '/journal/how-much-time-do-you-spend-listening-to-podcasts'
     | '/journal/how-much-time-do-you-spend-looking-for-lost-things'
     | '/journal/how-much-time-do-you-spend-on-dating-apps'
+    | '/journal/how-much-time-do-you-spend-on-hold'
     | '/journal/how-much-time-do-you-spend-on-household-chores'
     | '/journal/how-much-time-do-you-spend-on-linkedin'
     | '/journal/how-much-time-do-you-spend-on-twitter-x'
@@ -709,6 +733,7 @@ export interface FileRouteTypes {
     | '/journal/how-many-days-are-in-a-lifetime'
     | '/journal/how-many-hours-are-in-a-lifetime'
     | '/journal/how-many-spotify-wrapped-minutes-is-normal'
+    | '/journal/how-much-of-your-life-do-you-spend-at-red-lights'
     | '/journal/how-much-of-your-life-do-you-spend-commuting'
     | '/journal/how-much-of-your-life-do-you-spend-cooking'
     | '/journal/how-much-of-your-life-do-you-spend-driving'
@@ -735,6 +760,7 @@ export interface FileRouteTypes {
     | '/journal/how-much-time-do-you-spend-listening-to-podcasts'
     | '/journal/how-much-time-do-you-spend-looking-for-lost-things'
     | '/journal/how-much-time-do-you-spend-on-dating-apps'
+    | '/journal/how-much-time-do-you-spend-on-hold'
     | '/journal/how-much-time-do-you-spend-on-household-chores'
     | '/journal/how-much-time-do-you-spend-on-linkedin'
     | '/journal/how-much-time-do-you-spend-on-twitter-x'
@@ -845,6 +871,13 @@ declare module '@tanstack/react-router' {
       path: '/how-many-spotify-wrapped-minutes-is-normal'
       fullPath: '/journal/how-many-spotify-wrapped-minutes-is-normal'
       preLoaderRoute: typeof JournalHowManySpotifyWrappedMinutesIsNormalRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-much-of-your-life-do-you-spend-at-red-lights': {
+      id: '/journal/how-much-of-your-life-do-you-spend-at-red-lights'
+      path: '/how-much-of-your-life-do-you-spend-at-red-lights'
+      fullPath: '/journal/how-much-of-your-life-do-you-spend-at-red-lights'
+      preLoaderRoute: typeof JournalHowMuchOfYourLifeDoYouSpendAtRedLightsRouteImport
       parentRoute: typeof JournalRoute
     }
     '/journal/how-much-of-your-life-do-you-spend-commuting': {
@@ -1029,6 +1062,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendOnDatingAppsRouteImport
       parentRoute: typeof JournalRoute
     }
+    '/journal/how-much-time-do-you-spend-on-hold': {
+      id: '/journal/how-much-time-do-you-spend-on-hold'
+      path: '/how-much-time-do-you-spend-on-hold'
+      fullPath: '/journal/how-much-time-do-you-spend-on-hold'
+      preLoaderRoute: typeof JournalHowMuchTimeDoYouSpendOnHoldRouteImport
+      parentRoute: typeof JournalRoute
+    }
     '/journal/how-much-time-do-you-spend-on-household-chores': {
       id: '/journal/how-much-time-do-you-spend-on-household-chores'
       path: '/how-much-time-do-you-spend-on-household-chores'
@@ -1176,6 +1216,7 @@ interface JournalRouteChildren {
   JournalHowManyDaysAreInALifetimeRoute: typeof JournalHowManyDaysAreInALifetimeRoute
   JournalHowManyHoursAreInALifetimeRoute: typeof JournalHowManyHoursAreInALifetimeRoute
   JournalHowManySpotifyWrappedMinutesIsNormalRoute: typeof JournalHowManySpotifyWrappedMinutesIsNormalRoute
+  JournalHowMuchOfYourLifeDoYouSpendAtRedLightsRoute: typeof JournalHowMuchOfYourLifeDoYouSpendAtRedLightsRoute
   JournalHowMuchOfYourLifeDoYouSpendCommutingRoute: typeof JournalHowMuchOfYourLifeDoYouSpendCommutingRoute
   JournalHowMuchOfYourLifeDoYouSpendCookingRoute: typeof JournalHowMuchOfYourLifeDoYouSpendCookingRoute
   JournalHowMuchOfYourLifeDoYouSpendDrivingRoute: typeof JournalHowMuchOfYourLifeDoYouSpendDrivingRoute
@@ -1202,6 +1243,7 @@ interface JournalRouteChildren {
   JournalHowMuchTimeDoYouSpendListeningToPodcastsRoute: typeof JournalHowMuchTimeDoYouSpendListeningToPodcastsRoute
   JournalHowMuchTimeDoYouSpendLookingForLostThingsRoute: typeof JournalHowMuchTimeDoYouSpendLookingForLostThingsRoute
   JournalHowMuchTimeDoYouSpendOnDatingAppsRoute: typeof JournalHowMuchTimeDoYouSpendOnDatingAppsRoute
+  JournalHowMuchTimeDoYouSpendOnHoldRoute: typeof JournalHowMuchTimeDoYouSpendOnHoldRoute
   JournalHowMuchTimeDoYouSpendOnHouseholdChoresRoute: typeof JournalHowMuchTimeDoYouSpendOnHouseholdChoresRoute
   JournalHowMuchTimeDoYouSpendOnLinkedinRoute: typeof JournalHowMuchTimeDoYouSpendOnLinkedinRoute
   JournalHowMuchTimeDoYouSpendOnTwitterXRoute: typeof JournalHowMuchTimeDoYouSpendOnTwitterXRoute
@@ -1231,6 +1273,8 @@ const JournalRouteChildren: JournalRouteChildren = {
     JournalHowManyHoursAreInALifetimeRoute,
   JournalHowManySpotifyWrappedMinutesIsNormalRoute:
     JournalHowManySpotifyWrappedMinutesIsNormalRoute,
+  JournalHowMuchOfYourLifeDoYouSpendAtRedLightsRoute:
+    JournalHowMuchOfYourLifeDoYouSpendAtRedLightsRoute,
   JournalHowMuchOfYourLifeDoYouSpendCommutingRoute:
     JournalHowMuchOfYourLifeDoYouSpendCommutingRoute,
   JournalHowMuchOfYourLifeDoYouSpendCookingRoute:
@@ -1283,6 +1327,8 @@ const JournalRouteChildren: JournalRouteChildren = {
     JournalHowMuchTimeDoYouSpendLookingForLostThingsRoute,
   JournalHowMuchTimeDoYouSpendOnDatingAppsRoute:
     JournalHowMuchTimeDoYouSpendOnDatingAppsRoute,
+  JournalHowMuchTimeDoYouSpendOnHoldRoute:
+    JournalHowMuchTimeDoYouSpendOnHoldRoute,
   JournalHowMuchTimeDoYouSpendOnHouseholdChoresRoute:
     JournalHowMuchTimeDoYouSpendOnHouseholdChoresRoute,
   JournalHowMuchTimeDoYouSpendOnLinkedinRoute:

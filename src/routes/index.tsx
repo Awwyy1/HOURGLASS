@@ -167,21 +167,21 @@ function Index() {
         </div>
         <div className="divide-y divide-border">
           <div className="pb-8">
-            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">September 4, 2026</p>
-            <Link to="/journal/what-percentage-of-your-life-do-you-spend-on-everything" className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground">
-              What percentage of your life do you spend on everything? →
+            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">September 18, 2026</p>
+            <Link to="/journal/how-much-time-do-you-spend-on-hold" className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground">
+              How much time do you spend on hold in a lifetime? →
             </Link>
           </div>
           <div className="py-8">
-            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">August 28, 2026</p>
-            <Link to="/journal/how-many-spotify-wrapped-minutes-is-normal" className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground">
-              How many Spotify Wrapped minutes is normal? →
+            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">September 11, 2026</p>
+            <Link to="/journal/how-much-of-your-life-do-you-spend-at-red-lights" className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground">
+              How much of your life do you spend at red lights? →
             </Link>
           </div>
           <div className="pt-8">
-            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">June 26, 2026</p>
-            <Link to="/journal/how-much-time-do-you-spend-waiting" className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground">
-              How much time do you spend waiting in a lifetime? →
+            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">September 4, 2026</p>
+            <Link to="/journal/what-percentage-of-your-life-do-you-spend-on-everything" className="font-serif text-lg italic text-foreground transition hover:text-muted-foreground">
+              What percentage of your life do you spend on everything? →
             </Link>
           </div>
         </div>

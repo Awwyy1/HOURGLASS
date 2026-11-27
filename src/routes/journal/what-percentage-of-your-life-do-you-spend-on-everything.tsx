@@ -47,6 +47,7 @@ const LABELS: Record<string, string> = {
   "how-much-time-do-you-spend-with-your-friends": "Friends",
   "how-much-of-your-life-do-you-spend-on-tiktok": "TikTok",
   "how-much-time-do-you-spend-waiting": "Waiting",
+  "how-much-of-your-life-do-you-spend-at-red-lights": "Red lights",
   "how-much-time-do-you-spend-on-youtube": "YouTube",
   "how-much-time-do-you-spend-watching-sports": "Watching sports",
   "how-much-of-your-life-do-you-spend-commuting": "Commuting",

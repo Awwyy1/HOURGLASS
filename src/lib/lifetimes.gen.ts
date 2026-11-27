@@ -357,6 +357,15 @@ export const LIFETIMES: Lifetime[] = [
     "share": 0.6
   },
   {
+    "slug": "how-much-of-your-life-do-you-spend-at-red-lights",
+    "title": "How much of your life do you spend at red lights?",
+    "hoursPerDay": 0.1,
+    "years": 0.375,
+    "span": 60,
+    "sleep": false,
+    "share": 0.5
+  },
+  {
     "slug": "how-much-time-do-you-spend-on-twitter-x",
     "title": "How much time do you spend on Twitter / X?",
     "hoursPerDay": 0.5,
