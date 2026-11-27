@@ -19,6 +19,7 @@ import { Route as WeeksRouteImport } from './routes/weeks'
 import { Route as JournalIndexRouteImport } from './routes/journal/index'
 import { Route as JournalHowManyDaysAreInALifetimeRouteImport } from './routes/journal/how-many-days-are-in-a-lifetime'
 import { Route as JournalHowManyHoursAreInALifetimeRouteImport } from './routes/journal/how-many-hours-are-in-a-lifetime'
+import { Route as JournalHowManySpotifyWrappedMinutesIsNormalRouteImport } from './routes/journal/how-many-spotify-wrapped-minutes-is-normal'
 import { Route as JournalHowMuchOfYourLifeDoYouSpendCommutingRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-commuting'
 import { Route as JournalHowMuchOfYourLifeDoYouSpendCookingRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-cooking'
 import { Route as JournalHowMuchOfYourLifeDoYouSpendDrivingRouteImport } from './routes/journal/how-much-of-your-life-do-you-spend-driving'
@@ -64,6 +65,7 @@ import { Route as JournalHowMuchTimeDoesTheAveragePersonSpendOnEmailRouteImport 
 import { Route as JournalHowMuchTimeDoesTheAveragePersonSpendOnSocialMediaRouteImport } from './routes/journal/how-much-time-does-the-average-person-spend-on-social-media'
 import { Route as JournalHowMuchTimeDoesTheAveragePersonSpendWatchingNetflixRouteImport } from './routes/journal/how-much-time-does-the-average-person-spend-watching-netflix'
 import { Route as JournalHowMuchVacationTimeDoYouGetInALifetimeRouteImport } from './routes/journal/how-much-vacation-time-do-you-get-in-a-lifetime'
+import { Route as JournalWhatPercentageOfYourLifeDoYouSpendOnEverythingRouteImport } from './routes/journal/what-percentage-of-your-life-do-you-spend-on-everything'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -115,6 +117,12 @@ const JournalHowManyHoursAreInALifetimeRoute =
   JournalHowManyHoursAreInALifetimeRouteImport.update({
     id: '/how-many-hours-are-in-a-lifetime',
     path: '/how-many-hours-are-in-a-lifetime',
+    getParentRoute: () => JournalRoute,
+  } as any)
+const JournalHowManySpotifyWrappedMinutesIsNormalRoute =
+  JournalHowManySpotifyWrappedMinutesIsNormalRouteImport.update({
+    id: '/how-many-spotify-wrapped-minutes-is-normal',
+    path: '/how-many-spotify-wrapped-minutes-is-normal',
     getParentRoute: () => JournalRoute,
   } as any)
 const JournalHowMuchOfYourLifeDoYouSpendCommutingRoute =
@@ -387,6 +395,12 @@ const JournalHowMuchVacationTimeDoYouGetInALifetimeRoute =
     path: '/how-much-vacation-time-do-you-get-in-a-lifetime',
     getParentRoute: () => JournalRoute,
   } as any)
+const JournalWhatPercentageOfYourLifeDoYouSpendOnEverythingRoute =
+  JournalWhatPercentageOfYourLifeDoYouSpendOnEverythingRouteImport.update({
+    id: '/what-percentage-of-your-life-do-you-spend-on-everything',
+    path: '/what-percentage-of-your-life-do-you-spend-on-everything',
+    getParentRoute: () => JournalRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -398,6 +412,7 @@ export interface FileRoutesByFullPath {
   '/weeks': typeof WeeksRoute
   '/journal/how-many-days-are-in-a-lifetime': typeof JournalHowManyDaysAreInALifetimeRoute
   '/journal/how-many-hours-are-in-a-lifetime': typeof JournalHowManyHoursAreInALifetimeRoute
+  '/journal/how-many-spotify-wrapped-minutes-is-normal': typeof JournalHowManySpotifyWrappedMinutesIsNormalRoute
   '/journal/how-much-of-your-life-do-you-spend-commuting': typeof JournalHowMuchOfYourLifeDoYouSpendCommutingRoute
   '/journal/how-much-of-your-life-do-you-spend-cooking': typeof JournalHowMuchOfYourLifeDoYouSpendCookingRoute
   '/journal/how-much-of-your-life-do-you-spend-driving': typeof JournalHowMuchOfYourLifeDoYouSpendDrivingRoute
@@ -443,6 +458,7 @@ export interface FileRoutesByFullPath {
   '/journal/how-much-time-does-the-average-person-spend-on-social-media': typeof JournalHowMuchTimeDoesTheAveragePersonSpendOnSocialMediaRoute
   '/journal/how-much-time-does-the-average-person-spend-watching-netflix': typeof JournalHowMuchTimeDoesTheAveragePersonSpendWatchingNetflixRoute
   '/journal/how-much-vacation-time-do-you-get-in-a-lifetime': typeof JournalHowMuchVacationTimeDoYouGetInALifetimeRoute
+  '/journal/what-percentage-of-your-life-do-you-spend-on-everything': typeof JournalWhatPercentageOfYourLifeDoYouSpendOnEverythingRoute
   '/journal/': typeof JournalIndexRoute
 }
 export interface FileRoutesByTo {
@@ -454,6 +470,7 @@ export interface FileRoutesByTo {
   '/weeks': typeof WeeksRoute
   '/journal/how-many-days-are-in-a-lifetime': typeof JournalHowManyDaysAreInALifetimeRoute
   '/journal/how-many-hours-are-in-a-lifetime': typeof JournalHowManyHoursAreInALifetimeRoute
+  '/journal/how-many-spotify-wrapped-minutes-is-normal': typeof JournalHowManySpotifyWrappedMinutesIsNormalRoute
   '/journal/how-much-of-your-life-do-you-spend-commuting': typeof JournalHowMuchOfYourLifeDoYouSpendCommutingRoute
   '/journal/how-much-of-your-life-do-you-spend-cooking': typeof JournalHowMuchOfYourLifeDoYouSpendCookingRoute
   '/journal/how-much-of-your-life-do-you-spend-driving': typeof JournalHowMuchOfYourLifeDoYouSpendDrivingRoute
@@ -499,6 +516,7 @@ export interface FileRoutesByTo {
   '/journal/how-much-time-does-the-average-person-spend-on-social-media': typeof JournalHowMuchTimeDoesTheAveragePersonSpendOnSocialMediaRoute
   '/journal/how-much-time-does-the-average-person-spend-watching-netflix': typeof JournalHowMuchTimeDoesTheAveragePersonSpendWatchingNetflixRoute
   '/journal/how-much-vacation-time-do-you-get-in-a-lifetime': typeof JournalHowMuchVacationTimeDoYouGetInALifetimeRoute
+  '/journal/what-percentage-of-your-life-do-you-spend-on-everything': typeof JournalWhatPercentageOfYourLifeDoYouSpendOnEverythingRoute
   '/journal': typeof JournalIndexRoute
 }
 export interface FileRoutesById {
@@ -512,6 +530,7 @@ export interface FileRoutesById {
   '/weeks': typeof WeeksRoute
   '/journal/how-many-days-are-in-a-lifetime': typeof JournalHowManyDaysAreInALifetimeRoute
   '/journal/how-many-hours-are-in-a-lifetime': typeof JournalHowManyHoursAreInALifetimeRoute
+  '/journal/how-many-spotify-wrapped-minutes-is-normal': typeof JournalHowManySpotifyWrappedMinutesIsNormalRoute
   '/journal/how-much-of-your-life-do-you-spend-commuting': typeof JournalHowMuchOfYourLifeDoYouSpendCommutingRoute
   '/journal/how-much-of-your-life-do-you-spend-cooking': typeof JournalHowMuchOfYourLifeDoYouSpendCookingRoute
   '/journal/how-much-of-your-life-do-you-spend-driving': typeof JournalHowMuchOfYourLifeDoYouSpendDrivingRoute
@@ -557,6 +576,7 @@ export interface FileRoutesById {
   '/journal/how-much-time-does-the-average-person-spend-on-social-media': typeof JournalHowMuchTimeDoesTheAveragePersonSpendOnSocialMediaRoute
   '/journal/how-much-time-does-the-average-person-spend-watching-netflix': typeof JournalHowMuchTimeDoesTheAveragePersonSpendWatchingNetflixRoute
   '/journal/how-much-vacation-time-do-you-get-in-a-lifetime': typeof JournalHowMuchVacationTimeDoYouGetInALifetimeRoute
+  '/journal/what-percentage-of-your-life-do-you-spend-on-everything': typeof JournalWhatPercentageOfYourLifeDoYouSpendOnEverythingRoute
   '/journal/': typeof JournalIndexRoute
 }
 export interface FileRouteTypes {
@@ -571,6 +591,7 @@ export interface FileRouteTypes {
     | '/weeks'
     | '/journal/how-many-days-are-in-a-lifetime'
     | '/journal/how-many-hours-are-in-a-lifetime'
+    | '/journal/how-many-spotify-wrapped-minutes-is-normal'
     | '/journal/how-much-of-your-life-do-you-spend-commuting'
     | '/journal/how-much-of-your-life-do-you-spend-cooking'
     | '/journal/how-much-of-your-life-do-you-spend-driving'
@@ -616,6 +637,7 @@ export interface FileRouteTypes {
     | '/journal/how-much-time-does-the-average-person-spend-on-social-media'
     | '/journal/how-much-time-does-the-average-person-spend-watching-netflix'
     | '/journal/how-much-vacation-time-do-you-get-in-a-lifetime'
+    | '/journal/what-percentage-of-your-life-do-you-spend-on-everything'
     | '/journal/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -627,6 +649,7 @@ export interface FileRouteTypes {
     | '/weeks'
     | '/journal/how-many-days-are-in-a-lifetime'
     | '/journal/how-many-hours-are-in-a-lifetime'
+    | '/journal/how-many-spotify-wrapped-minutes-is-normal'
     | '/journal/how-much-of-your-life-do-you-spend-commuting'
     | '/journal/how-much-of-your-life-do-you-spend-cooking'
     | '/journal/how-much-of-your-life-do-you-spend-driving'
@@ -672,6 +695,7 @@ export interface FileRouteTypes {
     | '/journal/how-much-time-does-the-average-person-spend-on-social-media'
     | '/journal/how-much-time-does-the-average-person-spend-watching-netflix'
     | '/journal/how-much-vacation-time-do-you-get-in-a-lifetime'
+    | '/journal/what-percentage-of-your-life-do-you-spend-on-everything'
     | '/journal'
   id:
     | '__root__'
@@ -684,6 +708,7 @@ export interface FileRouteTypes {
     | '/weeks'
     | '/journal/how-many-days-are-in-a-lifetime'
     | '/journal/how-many-hours-are-in-a-lifetime'
+    | '/journal/how-many-spotify-wrapped-minutes-is-normal'
     | '/journal/how-much-of-your-life-do-you-spend-commuting'
     | '/journal/how-much-of-your-life-do-you-spend-cooking'
     | '/journal/how-much-of-your-life-do-you-spend-driving'
@@ -729,6 +754,7 @@ export interface FileRouteTypes {
     | '/journal/how-much-time-does-the-average-person-spend-on-social-media'
     | '/journal/how-much-time-does-the-average-person-spend-watching-netflix'
     | '/journal/how-much-vacation-time-do-you-get-in-a-lifetime'
+    | '/journal/what-percentage-of-your-life-do-you-spend-on-everything'
     | '/journal/'
   fileRoutesById: FileRoutesById
 }
@@ -812,6 +838,13 @@ declare module '@tanstack/react-router' {
       path: '/how-many-hours-are-in-a-lifetime'
       fullPath: '/journal/how-many-hours-are-in-a-lifetime'
       preLoaderRoute: typeof JournalHowManyHoursAreInALifetimeRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/journal/how-many-spotify-wrapped-minutes-is-normal': {
+      id: '/journal/how-many-spotify-wrapped-minutes-is-normal'
+      path: '/how-many-spotify-wrapped-minutes-is-normal'
+      fullPath: '/journal/how-many-spotify-wrapped-minutes-is-normal'
+      preLoaderRoute: typeof JournalHowManySpotifyWrappedMinutesIsNormalRouteImport
       parentRoute: typeof JournalRoute
     }
     '/journal/how-much-of-your-life-do-you-spend-commuting': {
@@ -1129,12 +1162,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JournalHowMuchVacationTimeDoYouGetInALifetimeRouteImport
       parentRoute: typeof JournalRoute
     }
+    '/journal/what-percentage-of-your-life-do-you-spend-on-everything': {
+      id: '/journal/what-percentage-of-your-life-do-you-spend-on-everything'
+      path: '/what-percentage-of-your-life-do-you-spend-on-everything'
+      fullPath: '/journal/what-percentage-of-your-life-do-you-spend-on-everything'
+      preLoaderRoute: typeof JournalWhatPercentageOfYourLifeDoYouSpendOnEverythingRouteImport
+      parentRoute: typeof JournalRoute
+    }
   }
 }
 
 interface JournalRouteChildren {
   JournalHowManyDaysAreInALifetimeRoute: typeof JournalHowManyDaysAreInALifetimeRoute
   JournalHowManyHoursAreInALifetimeRoute: typeof JournalHowManyHoursAreInALifetimeRoute
+  JournalHowManySpotifyWrappedMinutesIsNormalRoute: typeof JournalHowManySpotifyWrappedMinutesIsNormalRoute
   JournalHowMuchOfYourLifeDoYouSpendCommutingRoute: typeof JournalHowMuchOfYourLifeDoYouSpendCommutingRoute
   JournalHowMuchOfYourLifeDoYouSpendCookingRoute: typeof JournalHowMuchOfYourLifeDoYouSpendCookingRoute
   JournalHowMuchOfYourLifeDoYouSpendDrivingRoute: typeof JournalHowMuchOfYourLifeDoYouSpendDrivingRoute
@@ -1180,6 +1221,7 @@ interface JournalRouteChildren {
   JournalHowMuchTimeDoesTheAveragePersonSpendOnSocialMediaRoute: typeof JournalHowMuchTimeDoesTheAveragePersonSpendOnSocialMediaRoute
   JournalHowMuchTimeDoesTheAveragePersonSpendWatchingNetflixRoute: typeof JournalHowMuchTimeDoesTheAveragePersonSpendWatchingNetflixRoute
   JournalHowMuchVacationTimeDoYouGetInALifetimeRoute: typeof JournalHowMuchVacationTimeDoYouGetInALifetimeRoute
+  JournalWhatPercentageOfYourLifeDoYouSpendOnEverythingRoute: typeof JournalWhatPercentageOfYourLifeDoYouSpendOnEverythingRoute
   JournalIndexRoute: typeof JournalIndexRoute
 }
 
@@ -1187,6 +1229,8 @@ const JournalRouteChildren: JournalRouteChildren = {
   JournalHowManyDaysAreInALifetimeRoute: JournalHowManyDaysAreInALifetimeRoute,
   JournalHowManyHoursAreInALifetimeRoute:
     JournalHowManyHoursAreInALifetimeRoute,
+  JournalHowManySpotifyWrappedMinutesIsNormalRoute:
+    JournalHowManySpotifyWrappedMinutesIsNormalRoute,
   JournalHowMuchOfYourLifeDoYouSpendCommutingRoute:
     JournalHowMuchOfYourLifeDoYouSpendCommutingRoute,
   JournalHowMuchOfYourLifeDoYouSpendCookingRoute:
@@ -1277,6 +1321,8 @@ const JournalRouteChildren: JournalRouteChildren = {
     JournalHowMuchTimeDoesTheAveragePersonSpendWatchingNetflixRoute,
   JournalHowMuchVacationTimeDoYouGetInALifetimeRoute:
     JournalHowMuchVacationTimeDoYouGetInALifetimeRoute,
+  JournalWhatPercentageOfYourLifeDoYouSpendOnEverythingRoute:
+    JournalWhatPercentageOfYourLifeDoYouSpendOnEverythingRoute,
   JournalIndexRoute: JournalIndexRoute,
 }
 
