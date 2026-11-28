@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { drawCard, type CardData, type CardFormat, type CardTheme } from "../lib/card";
+import { CardActions } from "./CardActions";
 
 /**
  * "Share my card": opens a sheet with the reader's card, ready for
@@ -75,7 +76,6 @@ function ShareSheet({
   );
   const [drawn, setDrawn] = useState<Record<string, Drawn>>({});
   const [error, setError] = useState(false);
-  const [copied, setCopied] = useState(false);
   const panel = useRef<HTMLDivElement>(null);
   const urls = useRef<string[]>([]);
   const drawnRef = useRef<Record<string, Drawn>>({});
@@ -136,46 +136,6 @@ function ShareSheet({
     };
   }, [onClose]);
 
-  const file = useMemo(
-    () =>
-      current ? new File([current.blob], `${filename}-${format}.png`, { type: "image/png" }) : null,
-    [current, filename, format],
-  );
-  const canShare =
-    !!file &&
-    typeof navigator !== "undefined" &&
-    !!navigator.canShare &&
-    navigator.canShare({ files: [file] });
-
-  const download = useCallback(() => {
-    if (!current) return;
-    const a = document.createElement("a");
-    a.href = current.url;
-    a.download = `${filename}-${format}.png`;
-    a.click();
-  }, [current, filename, format]);
-
-  const share = useCallback(async () => {
-    if (!file) return;
-    try {
-      await navigator.share({ files: [file], title: "My time, on a card" });
-    } catch (e) {
-      // Cancelling the share sheet is not an error; anything else falls back to a download.
-      if ((e as Error)?.name !== "AbortError") download();
-    }
-  }, [file, download]);
-
-  const copy = useCallback(async () => {
-    if (!link) return;
-    try {
-      await navigator.clipboard.writeText(link);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 1800);
-    } catch {
-      // clipboard unavailable: nothing to do
-    }
-  }, [link]);
-
   const seg = (active: boolean) =>
     `flex-1 px-3 py-2 text-[10px] uppercase tracking-[0.24em] transition ${
       active ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"
@@ -198,7 +158,7 @@ function ShareSheet({
         role="dialog"
         aria-modal="true"
         aria-label="Your card"
-        className="relative z-10 flex max-h-[94vh] w-full flex-col overflow-y-auto rounded-t-2xl bg-background p-5 outline-none shadow-2xl animate-[sheetUp_220ms_cubic-bezier(.2,.8,.2,1)] sm:max-w-[460px] sm:rounded-2xl sm:p-6"
+        className="relative z-10 max-h-[94vh] w-full overflow-y-auto rounded-t-2xl bg-background p-5 outline-none shadow-2xl animate-[sheetUp_220ms_cubic-bezier(.2,.8,.2,1)] sm:max-w-[460px] sm:rounded-2xl sm:p-6"
       >
         <div className="mb-4 flex items-center justify-between">
           <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
@@ -273,39 +233,9 @@ function ShareSheet({
           </div>
         </div>
 
-        <button
-          type="button"
-          disabled={!current}
-          onClick={canShare ? share : download}
-          className="mt-4 inline-flex w-full items-center justify-center gap-2.5 bg-foreground px-5 py-4 text-[11px] uppercase tracking-[0.28em] text-background transition hover:opacity-90 disabled:opacity-40"
-        >
-          {canShare ? (
-            <>
-              <ShareIcon /> Share
-            </>
-          ) : (
-            "Download image"
-          )}
-        </button>
-
-        <div className="mt-3 flex items-center justify-center gap-6 text-[10px] uppercase tracking-[0.24em] text-muted-foreground">
-          {canShare && (
-            <button type="button" onClick={download} className="transition hover:text-foreground">
-              Save image
-            </button>
-          )}
-          {link && (
-            <button type="button" onClick={copy} className="transition hover:text-foreground">
-              {copied ? "Link copied" : "Copy link"}
-            </button>
-          )}
+        <div className="mt-4">
+          <CardActions image={current ?? null} filename={filename} format={format} link={link} />
         </div>
-        <p className="mt-3 text-center text-[11px] leading-relaxed text-muted-foreground">
-          {format === "story"
-            ? "1080 × 1920, sized for Stories."
-            : "1080 × 1350, sized for the feed."}{" "}
-          Drawn on your device; nothing is uploaded.
-        </p>
       </div>
     </div>,
     document.body,
