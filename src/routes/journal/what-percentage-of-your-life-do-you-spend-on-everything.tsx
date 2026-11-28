@@ -7,6 +7,7 @@ import { AnswerBlock } from "../../components/AnswerBlock";
 import { FigureCard, FigurePanel } from "../../components/LifeFigure";
 import { Compare } from "../../components/BreakdownFigures";
 import { LIFETIMES, type Lifetime } from "../../lib/lifetimes.gen";
+import { labelFor } from "../../lib/habits";
 
 export const Route = createFileRoute(
   "/journal/what-percentage-of-your-life-do-you-spend-on-everything",
@@ -18,62 +19,13 @@ const TITLE = "What percentage of your life do you spend on everything?";
 const DESCRIPTION =
   "Sleep takes 31% of a life. A laptop, work and a phone each take a fifth or more of the waking rest. Every habit in this journal, ranked by its share.";
 
-/** Short names for the ranking; the full question is each article's title. */
-const LABELS: Record<string, string> = {
-  "how-much-of-your-life-do-you-spend-sitting": "Sitting",
-  "how-much-of-your-life-do-you-spend-sleeping": "Sleep",
-  "how-much-time-do-you-spend-alone": "Time alone",
-  "how-much-of-your-life-do-you-spend-on-your-laptop": "A laptop or desktop",
-  "how-much-of-your-life-do-you-spend-working": "Work",
-  "how-much-time-do-you-spend-on-your-phone": "A phone",
-  "how-much-time-do-you-spend-on-household-chores": "Household chores",
-  "how-much-time-does-the-average-person-spend-watching-netflix": "Netflix",
-  "how-much-time-does-the-average-person-spend-on-social-media": "Social media",
-  "how-much-of-your-life-do-you-spend-eating": "Eating",
-  "how-much-of-your-life-do-you-spend-in-meetings": "Meetings",
-  "how-much-time-does-the-average-person-spend-on-email": "Email",
-  "how-much-time-do-you-spend-listening-to-music": "Music",
-  "how-many-spotify-wrapped-minutes-is-normal": "Spotify",
-  "how-much-time-do-you-spend-getting-ready": "Getting ready",
-  "how-much-of-your-life-do-you-spend-driving": "Driving",
-  "how-much-time-do-you-spend-on-video-calls": "Video calls",
-  "how-much-time-do-you-spend-listening-to-podcasts": "Podcasts",
-  "how-much-time-do-you-spend-on-your-phone-in-bed": "A phone in bed",
-  "how-much-of-your-life-do-you-spend-in-school": "School",
-  "how-much-of-your-life-do-you-spend-cooking": "Cooking",
-  "how-much-of-your-life-do-you-spend-playing-video-games": "Video games",
-  "how-much-of-your-life-do-you-spend-reading-news": "Reading the news",
-  "how-much-time-do-you-spend-texting": "Texting",
-  "how-much-time-do-you-spend-with-your-friends": "Friends",
-  "how-much-of-your-life-do-you-spend-on-tiktok": "TikTok",
-  "how-much-time-do-you-spend-waiting": "Waiting",
-  "how-much-of-your-life-do-you-spend-at-red-lights": "Red lights",
-  "how-much-time-do-you-spend-on-youtube": "YouTube",
-  "how-much-time-do-you-spend-watching-sports": "Watching sports",
-  "how-much-of-your-life-do-you-spend-commuting": "Commuting",
-  "how-much-time-do-you-spend-shopping-online": "Shopping online",
-  "how-much-of-your-life-do-you-spend-exercising": "Exercise",
-  "how-much-time-do-you-spend-reading-books": "Reading books",
-  "how-much-of-your-life-do-you-spend-on-instagram": "Instagram",
-  "how-much-time-do-you-spend-grocery-shopping": "Grocery shopping",
-  "how-much-of-your-life-do-you-spend-in-the-shower": "Showering",
-  "how-much-time-do-you-spend-looking-for-lost-things": "Looking for lost things",
-  "how-much-of-your-life-do-you-spend-on-facebook": "Facebook",
-  "how-much-time-do-you-spend-on-twitter-x": "Twitter / X",
-  "how-much-time-do-you-spend-using-ai": "Using AI",
-  "how-much-time-do-you-spend-stuck-in-traffic": "Stuck in traffic",
-  "how-much-time-do-you-have-left-with-your-parents": "Visits with your parents",
-  "how-much-time-do-you-spend-on-linkedin": "LinkedIn",
-  "how-much-time-do-you-spend-on-dating-apps": "Dating apps",
-};
-
 /** States that run underneath most activities rather than competing with them. */
 const STATES = new Set([
   "how-much-of-your-life-do-you-spend-sitting",
   "how-much-time-do-you-spend-alone",
 ]);
 
-const label = (r: Lifetime) => LABELS[r.slug] ?? r.title;
+const label = (r: Lifetime) => labelFor(r.slug, r.title);
 const perDay = (h: number) =>
   h < 1 ? `${Math.round(h * 60)} min` : `${h.toFixed(1).replace(/\.0$/, "")} h`;
 const overLife = (y: number) => (y < 1 ? `${Math.round(y * 365)} days` : `${y} yrs`);
@@ -330,7 +282,7 @@ function Article() {
         <p className="font-serif text-[17px] italic text-foreground/75">
           Put your own numbers into the{" "}
           <a
-            href="/#calculator"
+            href="/calculator"
             className="underline underline-offset-2 hover:text-foreground transition"
           >
             Hourglass calculator

@@ -1,4 +1,8 @@
 import { useEffect, useRef, useState } from "react";
+import { useRouterState } from "@tanstack/react-router";
+import { ShareCardButton } from "./ShareCardButton";
+import { habitBySlug } from "../lib/habits";
+import type { CardData } from "../lib/card";
 
 /**
  * The infographic beside an article: the short answer first, then how one
@@ -181,10 +185,45 @@ function personalise(data: LifeFigureData, hours: number): LifeFigureData {
   };
 }
 
+/** The reader's figure as a share card. */
+function cardFor(
+  data: LifeFigureData,
+  hours: number,
+  slug: string,
+  accent?: [string, string],
+): CardData {
+  const { perYear, years } = spanOf(data);
+  const habit = habitBySlug(slug);
+  const sleep = slug.endsWith("-sleeping");
+  const lifeYears = (data.life.years / data.day.hours) * hours;
+  const days = (data.year.days / data.day.hours) * hours;
+  const dayWord = perYear === 365 ? "a day" : perYear === 180 ? "a school day" : "a working day";
+  const big =
+    lifeYears >= 1
+      ? lifeYears.toFixed(1).replace(/\.0$/, "")
+      : Math.round(lifeYears * 365).toLocaleString("en-US");
+  return {
+    label: habit?.card ?? "time",
+    big,
+    unit: lifeYears >= 1 ? (sleep ? "years asleep" : "waking years") : "waking days",
+    sentence: `At ${duration(hours)} ${dayWord}, over ${years} years.`,
+    stats: [
+      [duration(hours), dayWord],
+      [`${days < 10 ? days.toFixed(1) : fmtInt(days)} days`, "a year"],
+      [share(hours), "of the day"],
+    ],
+    dots: { filled: Math.min(lifeYears, years), total: years },
+    accent,
+  };
+}
+
 export function LifeFigure({ data, accent }: Props) {
   const base = data.day.hours;
   const [hours, setHours] = useState(base);
   const mine = hours !== base;
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const slug = pathname.replace(/^\/journal\//, "").replace(/\/$/, "");
+  const habit = habitBySlug(slug);
   const { answer, day, toYear, year, toLife, life, why } = mine ? personalise(data, hours) : data;
 
   // Habits with a set time (sleep) only make sense within a band around the
@@ -236,6 +275,16 @@ export function LifeFigure({ data, accent }: Props) {
             "Move it to your own daily time and the year and lifetime below follow."
           )}
         </p>
+        <ShareCardButton
+          className="mt-4"
+          card={cardFor(data, hours, slug, accent)}
+          filename={`hourglass-${habit?.id ?? "card"}`}
+          link={
+            habit
+              ? `https://www.justhourglass.me/calculator?habit=${habit.id}&t=${Math.round(hours * 60)}`
+              : undefined
+          }
+        />
       </div>
 
       <div className="border border-border bg-background px-5 py-5 sm:px-6">

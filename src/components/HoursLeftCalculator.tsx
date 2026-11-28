@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { StageTitle } from "./LifeFigure";
+import { ShareCardButton } from "./ShareCardButton";
 import { birthFromYear, isBirthYear, savedBirth } from "../lib/life";
 
 /**
@@ -120,6 +121,24 @@ export function HoursLeftCalculator() {
           See them as weeks →
         </Link>
       </p>
+
+      <ShareCardButton
+        className="mt-4"
+        filename="hourglass-hours-left"
+        link="https://www.justhourglass.me/journal/how-many-hours-are-in-a-lifetime"
+        card={{
+          label: "hours",
+          big: fmt(left),
+          unit: "hours left",
+          sentence: `Of the ${fmt(TOTAL)} in a ${LIFESPAN}-year life, born in ${year}.`,
+          stats: [
+            [`${Math.round(livedShare)}%`, "lived"],
+            [fmt(wakingLeft), "waking left"],
+            [`≈${fmt(Math.round(freeLeft / 1000) * 1000)}`, "free left"],
+          ],
+          dots: { filled: lived / YEAR_HOURS, total: LIFESPAN },
+        }}
+      />
     </div>
   );
 }

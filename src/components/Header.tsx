@@ -19,11 +19,14 @@ export function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-10 md:flex">
+          <Link to="/weeks" className="transition hover:text-foreground [&.active]:text-foreground">
+            Weeks
+          </Link>
           <Link
-            to="/weeks"
+            to="/calculator"
             className="transition hover:text-foreground [&.active]:text-foreground"
           >
-            Weeks
+            Calculator
           </Link>
           <Link
             to="/philosophy"
@@ -31,10 +34,7 @@ export function Header() {
           >
             Philosophy
           </Link>
-          <Link
-            to="/about"
-            className="transition hover:text-foreground [&.active]:text-foreground"
-          >
+          <Link to="/about" className="transition hover:text-foreground [&.active]:text-foreground">
             About
           </Link>
           <Link
@@ -107,6 +107,13 @@ export function Header() {
               className="text-[11px] uppercase tracking-[0.28em] text-muted-foreground transition hover:text-foreground [&.active]:text-foreground"
             >
               Weeks
+            </Link>
+            <Link
+              to="/calculator"
+              onClick={() => setOpen(false)}
+              className="text-[11px] uppercase tracking-[0.28em] text-muted-foreground transition hover:text-foreground [&.active]:text-foreground"
+            >
+              Calculator
             </Link>
             <Link
               to="/philosophy"

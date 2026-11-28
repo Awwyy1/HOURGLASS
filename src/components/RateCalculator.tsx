@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { StageTitle } from "./LifeFigure";
+import { ShareCardButton } from "./ShareCardButton";
 
 /**
  * "How often, and how long each time": turns a count per month and minutes
@@ -20,6 +21,8 @@ interface Props {
   years: number;
   /** e.g. "60 adult years". */
   yearsLabel: string;
+  /** Share card: what follows "MY", the file name, the article link and accent. */
+  share: { label: string; filename: string; link: string; accent?: [string, string] };
 }
 
 const fmt = (n: number) => Math.round(n).toLocaleString("en-US");
@@ -57,6 +60,7 @@ export function RateCalculator({
   minutesDefault,
   years,
   yearsLabel,
+  share,
 }: Props) {
   const [count, setCount] = useState(String(countDefault));
   const [minutes, setMinutes] = useState(String(minutesDefault));
@@ -113,6 +117,24 @@ export function RateCalculator({
           `The defaults match the average. Change them to your own and the totals follow, over ${yearsLabel}.`
         )}
       </p>
+
+      <ShareCardButton
+        className="mt-4"
+        filename={share.filename}
+        link={share.link}
+        card={{
+          label: share.label,
+          big: yearHours < 10 ? yearHours.toFixed(1) : fmt(yearHours),
+          unit: "hours a year",
+          sentence: `${fmt(c)} ${c === 1 ? "time" : "times"} a month, ${fmt(m)} minutes each.`,
+          stats: [
+            [`${fmt(lifeHours)} h`, `over ${years} years`],
+            [fmt(lifeHours / 16), "waking days"],
+            [fmt(lifeHours / 24), "full days"],
+          ],
+          accent: share.accent,
+        }}
+      />
     </div>
   );
 }

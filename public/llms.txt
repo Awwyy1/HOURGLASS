@@ -16,6 +16,7 @@ the text rather than footnoted.
 ## Core
 
 - [Home](https://www.justhourglass.me/): a life in weeks from a birth year, followed by the single-habit calculator.
+- [Habit calculator](https://www.justhourglass.me/calculator): pick one of the journal's habits, set your own daily time and get the lifetime total in waking years, as a card to share.
 - [Life in weeks](https://www.justhourglass.me/weeks): a whole life as a grid of 52-week rows, shaded by the habits that will take the weeks ahead.
 - [Journal](https://www.justhourglass.me/journal): all 51 articles.
 - [Philosophy](https://www.justhourglass.me/philosophy): on the arithmetic of attention.

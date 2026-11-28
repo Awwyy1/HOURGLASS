@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { ShareButton } from "../components/ShareCard";
+import { ShareCardButton } from "../components/ShareCardButton";
 import { PageSEO } from "../components/PageSEO";
 import { SiteSchema } from "../components/SiteSchema";
 import { LifeHero } from "../components/LifeHero";
@@ -116,13 +116,31 @@ function Index() {
               <Stat label="Weeks" value={formatNumber(totalWeeks, 1)} />
               <Stat label="Waking years" value={formatNumber(wakingYears, 2)} />
             </dl>
-            <ShareButton
-                activity={activity}
-                totalDays={totalDays}
-                totalHours={totalHours}
-                totalWeeks={totalWeeks}
-                wakingYears={wakingYears}
-              />
+            <ShareCardButton
+              className="mt-10"
+              filename={`hourglass-${(activity || "habit").toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+              card={{
+                label: activity.trim() || "habit",
+                big:
+                  wakingYears >= 1
+                    ? wakingYears.toFixed(1).replace(/\.0$/, "")
+                    : Math.round(wakingYears * 365).toLocaleString("en-US"),
+                unit: wakingYears >= 1 ? "waking years" : "waking days",
+                sentence: `At ${formatNumber(hoursPerDay, 1)} hours a day, over ${years} years.`,
+                stats: [
+                  [formatNumber(totalHours, 0), "hours"],
+                  [formatNumber(totalWeeks, 0), "weeks"],
+                  [formatNumber(totalDays, 0), "days"],
+                ],
+                dots: { filled: Math.min(wakingYears, years), total: years },
+              }}
+            />
+            <Link
+              to="/calculator"
+              className="mt-5 inline-block text-[10px] uppercase tracking-[0.32em] text-muted-foreground transition hover:text-foreground"
+            >
+              Or start from 45 habits with real averages →
+            </Link>
           </div>
         </div>
       </section>
