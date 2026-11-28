@@ -6,6 +6,7 @@ import { duration } from "../components/LifeFigure";
 import { GROUPS, HABITS, habitById, type Habit } from "../lib/habits";
 import { drawCard, type CardData, type CardFormat, type CardTheme } from "../lib/card";
 import { SITE, injectJsonLd, reportJsonLd } from "../lib/head";
+import { CardActions } from "../components/CardActions";
 
 export const Route = createFileRoute("/calculator")({
   validateSearch: (search: Record<string, unknown>): { habit?: string; t?: number } => {
@@ -455,7 +456,6 @@ function Studio({ card, filename }: { card: CardData; filename: string }) {
   const [format, setFormat] = useState<CardFormat>("post");
   const [theme, setTheme] = useState<CardTheme>("light");
   const [image, setImage] = useState<{ url: string; blob: Blob } | null>(null);
-  const [copied, setCopied] = useState(false);
   const last = useRef<string | null>(null);
   const cardKey = JSON.stringify(card);
 
@@ -480,44 +480,6 @@ function Studio({ card, filename }: { card: CardData; filename: string }) {
   }, [cardKey, format, theme]);
 
   useEffect(() => () => void (last.current && URL.revokeObjectURL(last.current)), []);
-
-  const file = useMemo(
-    () =>
-      image ? new File([image.blob], `${filename}-${format}.png`, { type: "image/png" }) : null,
-    [image, filename, format],
-  );
-  const canShare =
-    !!file &&
-    typeof navigator !== "undefined" &&
-    !!navigator.canShare &&
-    navigator.canShare({ files: [file] });
-
-  const download = useCallback(() => {
-    if (!image) return;
-    const a = document.createElement("a");
-    a.href = image.url;
-    a.download = `${filename}-${format}.png`;
-    a.click();
-  }, [image, filename, format]);
-
-  const share = useCallback(async () => {
-    if (!file) return;
-    try {
-      await navigator.share({ files: [file], title: "My time, on a card" });
-    } catch (e) {
-      if ((e as Error)?.name !== "AbortError") download();
-    }
-  }, [file, download]);
-
-  const copy = async () => {
-    try {
-      await navigator.clipboard.writeText(window.location.href);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 1800);
-    } catch {
-      // clipboard unavailable
-    }
-  };
 
   const seg = (active: boolean) =>
     `flex-1 px-3 py-2 text-[10px] uppercase tracking-[0.24em] transition ${
@@ -580,28 +542,12 @@ function Studio({ card, filename }: { card: CardData; filename: string }) {
       </div>
 
       <div className="mx-auto mt-4 max-w-[420px]">
-        <button
-          type="button"
-          disabled={!image}
-          onClick={canShare ? share : download}
-          className="inline-flex w-full items-center justify-center gap-2.5 border border-foreground bg-foreground px-5 py-4 text-[11px] uppercase tracking-[0.28em] text-background transition hover:bg-transparent hover:text-foreground disabled:opacity-40"
-        >
-          {canShare ? "Share my card" : "Download my card"}
-        </button>
-        <div className="mt-3 flex items-center justify-center gap-6 text-[10px] uppercase tracking-[0.24em] text-muted-foreground">
-          {canShare && (
-            <button type="button" onClick={download} className="transition hover:text-foreground">
-              Save image
-            </button>
-          )}
-          <button type="button" onClick={copy} className="transition hover:text-foreground">
-            {copied ? "Link copied" : "Copy link"}
-          </button>
-        </div>
-        <p className="mt-3 text-center text-[11px] leading-relaxed text-muted-foreground">
-          {format === "story" ? "1080 × 1920 for Stories." : "1080 × 1350 for the feed."} Drawn on
-          your device; nothing is uploaded.
-        </p>
+        <CardActions
+          image={image}
+          filename={filename}
+          format={format}
+          link={() => window.location.href}
+        />
       </div>
     </div>
   );
