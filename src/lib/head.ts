@@ -15,6 +15,7 @@ export const SITE = "https://www.justhourglass.me";
 /** Non-article pages that have a share card of their own. */
 const PAGE_IMAGES: Record<string, string> = {
   "/weeks": "/og-weeks.png",
+  "/calculator": "/og-calculator.png",
 };
 
 /** Canonical URL and share image for a path, the same in the browser and at build time. */

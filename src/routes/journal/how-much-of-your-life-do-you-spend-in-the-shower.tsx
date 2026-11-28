@@ -201,7 +201,7 @@ function Article() {
       <div className="mt-10 border-t border-border pt-8">
         <p className="font-serif text-[17px] italic text-foreground/75">
           Put your own numbers into the{" "}
-          <a href="/#calculator" className="underline underline-offset-2 hover:text-foreground transition">
+          <a href="/calculator" className="underline underline-offset-2 hover:text-foreground transition">
             Hourglass calculator
           </a>{" "}
           and see where your years actually go.

@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as CalculatorRouteImport } from './routes/calculator'
 import { Route as JournalRouteImport } from './routes/journal'
 import { Route as PhilosophyRouteImport } from './routes/philosophy'
 import { Route as PrivacyRouteImport } from './routes/privacy'
@@ -77,6 +78,11 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CalculatorRoute = CalculatorRouteImport.update({
+  id: '/calculator',
+  path: '/calculator',
   getParentRoute: () => rootRouteImport,
 } as any)
 const JournalRoute = JournalRouteImport.update({
@@ -419,6 +425,7 @@ const JournalWhatPercentageOfYourLifeDoYouSpendOnEverythingRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/calculator': typeof CalculatorRoute
   '/journal': typeof JournalRouteWithChildren
   '/philosophy': typeof PhilosophyRoute
   '/privacy': typeof PrivacyRoute
@@ -480,6 +487,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/calculator': typeof CalculatorRoute
   '/philosophy': typeof PhilosophyRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
@@ -541,6 +549,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/calculator': typeof CalculatorRoute
   '/journal': typeof JournalRouteWithChildren
   '/philosophy': typeof PhilosophyRoute
   '/privacy': typeof PrivacyRoute
@@ -604,6 +613,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/calculator'
     | '/journal'
     | '/philosophy'
     | '/privacy'
@@ -665,6 +675,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/calculator'
     | '/philosophy'
     | '/privacy'
     | '/terms'
@@ -725,6 +736,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/calculator'
     | '/journal'
     | '/philosophy'
     | '/privacy'
@@ -787,6 +799,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  CalculatorRoute: typeof CalculatorRoute
   JournalRoute: typeof JournalRouteWithChildren
   PhilosophyRoute: typeof PhilosophyRoute
   PrivacyRoute: typeof PrivacyRoute
@@ -808,6 +821,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/calculator': {
+      id: '/calculator'
+      path: '/calculator'
+      fullPath: '/calculator'
+      preLoaderRoute: typeof CalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/journal': {
@@ -1378,6 +1398,7 @@ const JournalRouteWithChildren =
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  CalculatorRoute: CalculatorRoute,
   JournalRoute: JournalRouteWithChildren,
   PhilosophyRoute: PhilosophyRoute,
   PrivacyRoute: PrivacyRoute,

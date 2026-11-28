@@ -76,7 +76,12 @@ function ArticleFigure() {
       }}
     >
       <FigureCard>
-        <WrappedCalculator windowDays={WINDOW_DAYS} average={15_800} benchmarks={BENCHMARKS} />
+        <WrappedCalculator
+          windowDays={WINDOW_DAYS}
+          average={15_800}
+          benchmarks={BENCHMARKS}
+          accent={["#1d7a4a", "#5fd391"]}
+        />
       </FigureCard>
       <FigureCard>
         <Compare
@@ -306,7 +311,7 @@ function Article() {
         <p className="font-serif text-[17px] italic text-foreground/75">
           Put your own numbers into the{" "}
           <a
-            href="/#calculator"
+            href="/calculator"
             className="underline underline-offset-2 hover:text-foreground transition"
           >
             Hourglass calculator

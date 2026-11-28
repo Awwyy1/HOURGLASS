@@ -197,7 +197,7 @@ function Article() {
         <p className="font-serif text-[17px] italic text-foreground/75">
           Put your own numbers into the{" "}
           <a
-            href="/#calculator"
+            href="/calculator"
             className="underline underline-offset-2 hover:text-foreground transition"
           >
             Hourglass calculator

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { StageTitle } from "./LifeFigure";
+import { ShareCardButton } from "./ShareCardButton";
 
 /**
  * Turns a Spotify Wrapped total into a day, a share of waking time and a
@@ -18,6 +19,8 @@ interface Props {
   /** The average listener, used until the reader enters their own total. */
   average: number;
   benchmarks: Benchmark[];
+  /** Accent for the share card: [light theme, dark theme]. */
+  accent?: [string, string];
 }
 
 const WAKING_MINUTES = 16 * 60;
@@ -30,7 +33,7 @@ function perDayLabel(mins: number) {
   return m ? `${h} h ${m} min` : `${h} h`;
 }
 
-export function WrappedCalculator({ windowDays, average, benchmarks }: Props) {
+export function WrappedCalculator({ windowDays, average, benchmarks, accent }: Props) {
   const [input, setInput] = useState("");
   const typed = Number(input.replace(/[^\d]/g, ""));
   const own = input.trim() !== "" && Number.isFinite(typed) && typed > 0;
@@ -119,6 +122,28 @@ export function WrappedCalculator({ windowDays, average, benchmarks }: Props) {
       </div>
 
       <p className="text-[13px] leading-normal text-foreground/85">{verdict}</p>
+
+      <ShareCardButton
+        className="mt-5"
+        filename="hourglass-music-year"
+        link="https://www.justhourglass.me/journal/how-many-spotify-wrapped-minutes-is-normal"
+        card={{
+          label: "music year",
+          big: fmt(total),
+          unit: "minutes listened",
+          sentence: `${perDayLabel(perDay)} a day, from January to mid-November.`,
+          stats: [
+            [perDayLabel(perDay), "a day"],
+            [`${share < 10 ? share.toFixed(1) : Math.round(share)}%`, "of waking hours"],
+            [
+              lifeYears < 1 ? `${fmt(lifeYears * 365)} days` : `${lifeYears.toFixed(1)} yrs`,
+              "over 60 years",
+            ],
+          ],
+          dots: { filled: Math.min(lifeYears, 60), total: 60 },
+          accent,
+        }}
+      />
     </div>
   );
 }

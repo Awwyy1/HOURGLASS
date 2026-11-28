@@ -36,6 +36,12 @@ function ArticleFigure() {
           minutesDefault={9}
           years={60}
           yearsLabel="60 adult years"
+          share={{
+            label: "time on hold",
+            filename: "hourglass-on-hold",
+            link: "https://www.justhourglass.me/journal/how-much-time-do-you-spend-on-hold",
+            accent: ["#8a5a1c", "#e2a65a"],
+          }}
         />
       </FigureCard>
       <FigureCard>
@@ -194,7 +200,7 @@ function Article() {
         <p className="font-serif text-[17px] italic text-foreground/75">
           Put your own numbers into the{" "}
           <a
-            href="/#calculator"
+            href="/calculator"
             className="underline underline-offset-2 hover:text-foreground transition"
           >
             Hourglass calculator
