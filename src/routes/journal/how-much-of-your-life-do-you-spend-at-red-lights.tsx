@@ -63,6 +63,7 @@ function Article() {
         title={TITLE}
         description={DESCRIPTION}
         datePublished="2026-09-11"
+        dateModified="2026-11-28"
         slug="how-much-of-your-life-do-you-spend-at-red-lights"
       />
       <Breadcrumbs
@@ -124,10 +125,13 @@ function Article() {
         </h2>
 
         <p>
-          The claim that people spend six months of their lives at red lights circulates widely and
-          is almost never traced to a study. Versions of it credit a navigation company with a
-          figure of twenty minutes a day, which over 80 years would come to more than 9,700 hours,
-          about thirteen months of full days, so the claim does not agree with its own arithmetic.
+          The claim that people spend six months of their lives at red lights goes back to 1988,
+          when Michael Fortino, president of a Pittsburgh consultancy called Priority Management,
+          reported the results of a year spent timing hundreds of people with a stopwatch. The same
+          study produced the five years people are said to spend waiting in line. Later versions
+          credit a navigation company with a figure of twenty minutes a day, which over 80 years
+          would come to more than 9,700 hours, about thirteen months of full days, so the claim does
+          not agree with its own arithmetic.
           Six months of full 24-hour days is about 4,400 hours, which is close to what the city
           ceiling above produces over 60 years. As a description of an ordinary driver, it is
           roughly double.
@@ -168,7 +172,7 @@ function Article() {
           },
           {
             q: "Is it true that we spend six months of our lives at red lights?",
-            a: "Only for heavy city drivers, and only when the time is counted in full 24-hour days. The figure is widely repeated without a traceable study behind it. Using measured driving time and the share of urban driving spent idling, an average driver comes to about three months of full days over 60 years, and a city driver to around five and a half.",
+            a: "Only for heavy city drivers, and only when the time is counted in full 24-hour days. The figure goes back to a 1988 stopwatch study by Priority Management, a Pittsburgh time-management consultancy, and has been repeated ever since. Using measured driving time and the share of urban driving spent idling, an average driver comes to about three months of full days over 60 years, and a city driver to around five and a half.",
           },
         ]}
       />

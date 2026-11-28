@@ -65,7 +65,7 @@ function Article() {
         title="How much time do you spend waiting in a lifetime?"
         description="Americans spend an estimated 37 minutes a day waiting — in lines, on hold, at traffic lights, in waiting rooms. Over a lifetime that adds up to more than two waking years spent doing nothing by requirement."
         datePublished="2026-06-26"
-        dateModified="2026-11-27"
+        dateModified="2026-11-28"
         slug="how-much-time-do-you-spend-waiting"
       />
       <Breadcrumbs
@@ -104,20 +104,33 @@ function Article() {
       <div className="text-[17px] leading-[1.85] text-foreground/85 space-y-6">
         <p>
           Research on daily time use has consistently found that Americans spend
-          somewhere between 30 and 40 minutes per day in passive waiting — time
+          somewhere between 30 and 40 minutes per day in passive waiting, meaning time
           physically held in place by a queue, a hold system, a traffic light, or
           an appointment that has not yet begun. A widely cited figure from time-use
-          researchers is 37 minutes per day. That number includes checkout lines,
-          waiting rooms, time on hold with customer service, and the dead time between
+          researchers is 37 minutes per day. That number includes{" "}
+          <Link
+            to="/journal/how-much-of-your-life-do-you-spend-waiting-in-line"
+            className="underline underline-offset-2 hover:text-foreground transition"
+          >
+            checkout lines
+          </Link>
+          , waiting rooms,{" "}
+          <Link
+            to="/journal/how-much-time-do-you-spend-on-hold"
+            className="underline underline-offset-2 hover:text-foreground transition"
+          >
+            time on hold
+          </Link>{" "}
+          with customer service, and the dead time between
           arriving somewhere and actually being seen or served. It does not include
           the waiting embedded in commutes, which is a related but separate category.
         </p>
 
         <p>
           At 37 minutes per day across 60 years of adult life, the total is around
-          13,505 hours, or roughly 844 waking days. Two and a third waking years spent
-          in a state of enforced inactivity — not chosen leisure, not rest, not work,
-          but the kind of time that belongs to you in theory and to the system in
+          13,505 hours, or roughly 844 waking days. That is two and a third waking
+          years of enforced inactivity, which is neither chosen leisure nor rest nor
+          work but the kind of time that belongs to you in theory and to the system in
           practice. The figure is comparable in size to the lifetime total for social
           media platforms that people actively worry about. Nobody worries about
           waiting because it arrives in pieces too small to register.
@@ -150,12 +163,12 @@ function Article() {
         </p>
 
         <p>
-          Traffic signals add another layer. A 2018 analysis of traffic light timing
-          in major US cities found that the average driver spends about two weeks per
-          year stopped at red lights. Over a 40-year driving life, that comes to
-          roughly 80 weeks, or a year and a half of time stopped at intersections.
-          That figure is for drivers only and sits on top of the general waiting total
-          rather than inside it.
+          Traffic signals add another layer. The AAA Foundation for Traffic Safety
+          puts the average American driver behind the wheel for about an hour a day,
+          and roughly six minutes of that hour is spent stopped at red lights, which
+          comes to about 36 hours a year and around 137 waking days over 60 years of
+          driving. Drivers who spend most of their time in city traffic come closer
+          to twice that.
         </p>
 
         <h2 className="pt-8 font-serif text-2xl italic text-foreground">
@@ -173,16 +186,14 @@ function Article() {
           is the same number regardless of whether those minutes were spent staring
           at a wall or refreshing a social feed. What has changed is that the
           discomfort of waiting has been dissolved by the phone, which also means
-          that the pressure to reduce waiting — to design systems that waste less of
-          people's time — has weakened in proportion.
+          that the pressure to design systems that waste less of people's time has
+          weakened in proportion.
         </p>
 
         <p className="text-muted-foreground">
-          Two years is what the waiting adds up to. It is time that was never offered
-          to you as a choice, which makes it different from the other large categories
-          in this project. You can decide to use your phone less. You cannot decide
-          to skip the queue. What you can do is know the number — and let it inform
-          how much patience you extend to systems that could be better designed.
+          About 37 minutes a day, 225 hours a year and 13,500 hours across an adult
+          life, which is just over two waking years spent in lines, waiting rooms,
+          hold queues and traffic, none of it chosen.
         </p>
       </div>
 

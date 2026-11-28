@@ -55,6 +55,7 @@ function Article() {
         title="How much of your life do you spend in school?"
         description="About 15,000 hours from kindergarten to the end of high school: 6.5 hours a day, 180 days a year, for 13 years. That is 2.6 waking years. Work out your own."
         datePublished="2026-08-05"
+        dateModified="2026-11-28"
         slug="how-much-of-your-life-do-you-spend-in-school"
       />
       <Breadcrumbs
@@ -101,8 +102,16 @@ function Article() {
           Homework sits on top of that. Surveys of American high school students
           consistently find between six and seven hours of assigned work per
           week, which adds roughly 250 hours a year during the later grades and
-          somewhat less earlier on. Counting it, the schooling total lands
-          somewhere near 18,000 hours, or a little over three waking years. For
+          somewhat less earlier on, so that the twelve years from first grade to
+          graduation hold{" "}
+          <Link
+            to="/journal/how-much-time-do-you-spend-on-homework"
+            className="underline underline-offset-2 hover:text-foreground transition"
+          >
+            about 1,730 hours of homework
+          </Link>
+          . Counting it, the schooling total lands near 17,000 hours, or just
+          under three waking years. For
           anyone who then completes a four-year degree, the classroom and study
           hours add several thousand more, though the range there is wide enough
           that a single average would be misleading.
@@ -168,7 +177,7 @@ function Article() {
         </p>
 
         <p className="text-muted-foreground">
-          About two and a half waking years in the building, and a little over
+          About two and a half waking years in the building, and just under
           three once homework is included. It is the one large number in this
           journal that nobody chose for themselves, and the one whose
           consequences run furthest past the hours it contains. Whether it was
@@ -181,7 +190,7 @@ function Article() {
         faqs={[
           {
             q: "How many hours do you spend in school in a lifetime?",
-            a: "Around 15,200 hours for a full kindergarten-through-high-school education in the United States, based on roughly 180 school days a year at about six and a half hours a day across thirteen years. In waking terms that is just over two and a half years. Adding homework, which surveys put at six to seven hours a week for high school students, brings the total closer to 18,000 hours, or a little over three waking years."
+            a: "Around 15,200 hours for a full kindergarten-through-high-school education in the United States, based on roughly 180 school days a year at about six and a half hours a day across thirteen years. In waking terms that is just over two and a half years. Adding homework, which surveys put at six to seven hours a week for high school students, brings the total to about 17,000 hours, or just under three waking years."
           },
           {
             q: "Which country's students spend the most time in school?",

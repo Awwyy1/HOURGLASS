@@ -153,6 +153,12 @@ const META: Record<string, Meta> = {
     card: "time in school",
     group: "Work and school",
   },
+  "how-much-time-do-you-spend-on-homework": {
+    id: "homework",
+    label: "Homework",
+    card: "homework",
+    group: "Work and school",
+  },
   "how-much-time-do-you-spend-on-household-chores": {
     id: "chores",
     label: "Household chores",
@@ -213,6 +219,12 @@ const META: Record<string, Meta> = {
     card: "red lights",
     group: "On the move",
   },
+  "how-much-of-your-life-do-you-spend-waiting-in-line": {
+    id: "queues",
+    label: "Waiting in line",
+    card: "time in line",
+    group: "On the move",
+  },
   "how-much-time-do-you-spend-stuck-in-traffic": {
     id: "traffic",
     label: "Stuck in traffic",
@@ -241,6 +253,12 @@ const META: Record<string, Meta> = {
     id: "sitting",
     label: "Sitting",
     card: "time sitting",
+    group: "Body and rest",
+  },
+  "how-much-of-your-life-do-you-spend-on-the-toilet": {
+    id: "toilet",
+    label: "The toilet",
+    card: "toilet time",
     group: "Body and rest",
   },
   "how-much-of-your-life-do-you-spend-exercising": {
